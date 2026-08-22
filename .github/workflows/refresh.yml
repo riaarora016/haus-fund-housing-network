@@ -1,0 +1,54 @@
+name: refresh
+# Nightly scrapes + inbox read + normalize (09:15 UTC = 02:15 PT). Mondays additionally send the weekly
+# availability-check emails and the Ria+Elliot digest. Secrets: see README "GitHub Actions secrets".
+on:
+  schedule:
+    - cron: '15 9 * * *'     # nightly
+    - cron: '0 16 * * 1'     # Monday 09:00 PT: weekly send + digest
+  workflow_dispatch:
+    inputs:
+      send:
+        description: 'Force the weekly email send'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency: refresh
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      SHEET_ID: ${{ secrets.SHEET_ID }}
+      GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+      GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+      GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+      GMAIL_FROM: ${{ vars.GMAIL_FROM || 'Biopunk Housing <housing@biopunk.house>' }}
+      DIGEST_TO: ${{ vars.DIGEST_TO }}
+      SENDER_NAME: ${{ vars.SENDER_NAME || 'Ria Arora' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Scrape booking pages (1 bed × 30 nights @ +14d and +45d)
+        run: npx tsx refresh/scrape-booking.ts
+      - name: Scrape listings (LoopNet / Crexi / Zillow / Apartments.com)
+        run: npx tsx refresh/scrape-listings.ts
+      - name: Poll inbox (and send on Mondays)
+        run: npx tsx refresh/poll-inbox.ts ${{ (github.event.inputs.send == 'true' || github.event.schedule == '0 16 * * 1') && '--send' || '' }}
+      - name: Normalize → CHANGELOG → rebuild → push to Sheet
+        run: npx tsx refresh/normalize.ts
+      - name: Weekly digest (Mondays)
+        if: github.event.schedule == '0 16 * * 1' || github.event.inputs.send == 'true'
+        run: npx tsx refresh/weekly-digest.ts
+      - name: Commit state + changelog
+        run: |
+          git config user.name 'biopunk-refresh[bot]'
+          git config user.email 'housing@biopunk.house'
+          git add refresh/state refresh/CHANGELOG.md data/properties.json data/geocache.json
+          git diff --cached --quiet || git commit -m "refresh: $(date -u +%Y-%m-%d)"
+          git push

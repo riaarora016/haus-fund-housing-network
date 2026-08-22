@@ -1,0 +1,680 @@
+{
+  "10 Hallam St, SoMa, San Francisco, CA": {
+    "lat": 37.7753463,
+    "lng": -122.4082196,
+    "precision": "address",
+    "display": "10, Hallam Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "10 Hallam St, SoMa, San Francisco, CA"
+  },
+  "10 Washington St, Jack London Square, Oakland, CA": {
+    "lat": 37.7958828,
+    "lng": -122.2779178,
+    "precision": "address",
+    "display": "10, Washington Street, Jack London Square, Downtown Oakland, Oakland, Alameda County, California, 94607, United States",
+    "query": "10 Washington St, Jack London Square, Oakland, CA"
+  },
+  "1000 Market, San Francisco, CA": {
+    "lat": 37.7820274,
+    "lng": -122.4110428,
+    "precision": "address",
+    "display": "1000;1010;1020, Market Street, West SoMa, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "1000 Market, San Francisco, CA"
+  },
+  "1028 Market St, Mid-Market, San Francisco, CA": null,
+  "1040 Folsom St, SoMa, San Francisco, CA": {
+    "lat": 37.7779557,
+    "lng": -122.406729,
+    "precision": "address",
+    "display": "1040;1042;1044, Folsom Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "1040 Folsom St, SoMa, San Francisco, CA"
+  },
+  "1045 Mission St, SoMa, San Francisco, CA": {
+    "lat": 37.7798232,
+    "lng": -122.4100147,
+    "precision": "address",
+    "display": "1045, Mission Street, West SoMa, Tenderloin, South of Market, San Francisco, California, 94103, United States",
+    "query": "1045 Mission St, SoMa, San Francisco, CA"
+  },
+  "1049 Market St, San Francisco, CA": {
+    "lat": 37.7811221,
+    "lng": -122.4110427,
+    "precision": "address",
+    "display": "1049;1051, Market Street, West SoMa, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "1049 Market St, San Francisco, CA"
+  },
+  "1080 Bush St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7896899,
+    "lng": -122.4150249,
+    "precision": "address",
+    "display": "Leonardo daVinci Apartments, 1080, Bush Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+    "query": "1080 Bush St, Nob Hill, San Francisco, CA"
+  },
+  "1080 Folsom St, SoMa, San Francisco, CA": {
+    "lat": 37.7772552,
+    "lng": -122.4076397,
+    "precision": "address",
+    "display": "1080;1082;1084, Folsom Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "1080 Folsom St, SoMa, San Francisco, CA"
+  },
+  "1105 Larkin St, Nob Hill/TL, San Francisco, CA": null,
+  "1124 Leavenworth St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7916303,
+    "lng": -122.4155868,
+    "precision": "address",
+    "display": "1124, Leavenworth Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+    "query": "1124 Leavenworth St, Nob Hill, San Francisco, CA"
+  },
+  "114–120 Powell St, Union Square, San Francisco, CA": {
+    "lat": 37.7915651,
+    "lng": -122.4091395,
+    "precision": "address",
+    "display": "Powell Street, Union Square, Nob Hill, South of Market, San Francisco, California, 94108, United States",
+    "query": "114–120 Powell St, Union Square, San Francisco, CA"
+  },
+  "1155 Jones St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7921278,
+    "lng": -122.4145042,
+    "precision": "address",
+    "display": "Nob Hill Place Apartments, 1155, Jones Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+    "query": "1155 Jones St, Nob Hill, San Francisco, CA"
+  },
+  "1162 Folsom St, SoMa, San Francisco, CA": {
+    "lat": 37.775814,
+    "lng": -122.4095005,
+    "precision": "address",
+    "display": "1162, Folsom Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "1162 Folsom St, SoMa, San Francisco, CA"
+  },
+  "121 7th St, SoMa, San Francisco, CA": {
+    "lat": 37.778881,
+    "lng": -122.4098304,
+    "precision": "address",
+    "display": "Best Western Americana Hotel, 121, 7th Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "121 7th St, SoMa, San Francisco, CA"
+  },
+  "1214 Polk St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7880474,
+    "lng": -122.4200695,
+    "precision": "address",
+    "display": "1214, Polk Street, Polk Gulch, Tenderloin, South of Market, San Francisco, California, 94109, United States",
+    "query": "1214 Polk St, Nob Hill, San Francisco, CA"
+  },
+  "1221 Jones St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7926944,
+    "lng": -122.4147167,
+    "precision": "address",
+    "display": "1221, Jones Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+    "query": "1221 Jones St, Nob Hill, San Francisco, CA"
+  },
+  "1231 Market St, Mid-Market SF, San Francisco, CA": null,
+  "1321 Mission St , SoMa, San Francisco, CA": {
+    "lat": 37.7758821,
+    "lng": -122.4147674,
+    "precision": "address",
+    "display": "The Margot, 1321, Mission Street, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "1321 Mission St , SoMa, San Francisco, CA"
+  },
+  "140 7th St, SoMa, San Francisco, CA": {
+    "lat": 37.7785016,
+    "lng": -122.4104942,
+    "precision": "address",
+    "display": "Carriage Inn, 140, 7th Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "140 7th St, SoMa, San Francisco, CA"
+  },
+  "140 Turk St, San Francisco, CA": {
+    "lat": 37.7832062,
+    "lng": -122.4114819,
+    "precision": "address",
+    "display": "140, Turk Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "140 Turk St, San Francisco, CA"
+  },
+  "1412 Market, San Francisco, CA": {
+    "lat": 37.7763133,
+    "lng": -122.4181543,
+    "precision": "address",
+    "display": "Inn at Market, 1412, Market Street, Tenderloin, Mission, San Francisco, California, 94102, United States",
+    "query": "1412 Market, San Francisco, CA"
+  },
+  "1431 Jackson St, Lakeside, Downtown Oakland, CA": {
+    "lat": 37.8027258,
+    "lng": -122.2652132,
+    "precision": "address",
+    "display": "Hill Castle Apartment Hotel, 1431, Jackson Street, Civic Center, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "1431 Jackson St, Lakeside, Downtown Oakland, CA"
+  },
+  "1431 Jefferson St, Downtown Oakland, CA": {
+    "lat": 37.8061379,
+    "lng": -122.2747899,
+    "precision": "address",
+    "display": "Residence Inn and AC Hotel, 1431, Jefferson Street, San Pablo Gateway, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "1431 Jefferson St, Downtown Oakland, CA"
+  },
+  "149 New Montgomery St, SoMa, San Francisco, CA": {
+    "lat": 37.7869729,
+    "lng": -122.3995855,
+    "precision": "address",
+    "display": "149, New Montgomery Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
+    "query": "149 New Montgomery St, SoMa, San Francisco, CA"
+  },
+  "149–161 Hyde St, San Francisco, CA": {
+    "lat": 37.8061965,
+    "lng": -122.4204771,
+    "precision": "address",
+    "display": "Hyde Street, Fisherman's Wharf, San Francisco, California, 90214, United States",
+    "query": "149–161 Hyde St, San Francisco, CA"
+  },
+  "150 Hegenberger Rd, Oakland, CA": {
+    "lat": 37.73045,
+    "lng": -122.1991447,
+    "precision": "address",
+    "display": "Oakland Airport Executive Hotel, 150, Hegenberger Road, Oakland, Alameda County, California, 94614, United States",
+    "query": "150 Hegenberger Rd, Oakland, CA"
+  },
+  "1500 Ralston Ave, Belmont, CA": {
+    "lat": 37.515251,
+    "lng": -122.283712,
+    "precision": "address",
+    "display": "1500, Ralston Avenue, Belmont, San Mateo County, California, 94002, United States",
+    "query": "1500 Ralston Ave, Belmont, CA"
+  },
+  "1500 Valencia St, San Francisco, CA": {
+    "lat": 37.7485921,
+    "lng": -122.4208334,
+    "precision": "address",
+    "display": "1500, Valencia Street, Mission, San Francisco, California, 94110, United States",
+    "query": "1500 Valencia St, San Francisco, CA"
+  },
+  "1533 Franklin St, Cathedral Hill, San Francisco, CA": null,
+  "1570 Sutter St, Lower Nob Hill, San Francisco, CA": {
+    "lat": 37.7887069,
+    "lng": -122.4127333,
+    "precision": "address",
+    "display": "Sutter Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94108, United States",
+    "query": "1570 Sutter St, Lower Nob Hill, San Francisco, CA"
+  },
+  "16 Turk St, Mid-Market, San Francisco, CA": null,
+  "16 Turk St, San Francisco, CA": {
+    "lat": 37.7835383,
+    "lng": -122.409405,
+    "precision": "address",
+    "display": "Found Study, 10;12;14;16;2;4;6;8, Turk Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "16 Turk St, San Francisco, CA"
+  },
+  "1665 Haight St, Haight, San Francisco, CA": {
+    "lat": 37.7694086,
+    "lng": -122.4499082,
+    "precision": "address",
+    "display": "The Red Victorian, 1659;1665, Haight Street, Cole Valley, Haight-Ashbury, Richmond District, San Francisco, California, 94117, United States",
+    "query": "1665 Haight St, Haight, San Francisco, CA"
+  },
+  "1815 Alice St, Downtown Oakland, CA": {
+    "lat": 37.8054584,
+    "lng": -122.2649597,
+    "precision": "address",
+    "display": "Ora Apartments, 1815, Alice Street, Lakeside, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "1815 Alice St, Downtown Oakland, CA"
+  },
+  "18501 Van Zandt Resort Rd, Philo, CA": null,
+  "1870 Sacramento St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7914183,
+    "lng": -122.4237236,
+    "precision": "address",
+    "display": "1870, Sacramento Street, Polk Gulch, Nob Hill, South of Market, San Francisco, California, 94164, United States",
+    "query": "1870 Sacramento St, Nob Hill, San Francisco, CA"
+  },
+  "19251 San Ramon Valley Blvd, San Ramon, CA": {
+    "lat": 37.7446497,
+    "lng": -121.957418,
+    "precision": "address",
+    "display": "Harlan House, 19251, San Ramon Valley Boulevard, San Ramon, Contra Costa County, California, 94583, United States",
+    "query": "19251 San Ramon Valley Blvd, San Ramon, CA"
+  },
+  "2001 Allston Way, Berkeley, CA": {
+    "lat": 37.8693892,
+    "lng": -122.2699825,
+    "precision": "address",
+    "display": "Berkeley YMCA, 2001, Allston Way, Downtown Berkeley, Berkeley, Alameda County, California, 94704, United States",
+    "query": "2001 Allston Way, Berkeley, CA"
+  },
+  "2072 Mission St, Mission, San Francisco, CA": {
+    "lat": 37.7638575,
+    "lng": -122.4198675,
+    "precision": "address",
+    "display": "2072;2074, Mission Street, Mission, San Francisco, California, 94143, United States",
+    "query": "2072 Mission St, Mission, San Francisco, CA"
+  },
+  "215 2nd St, SoMa, San Francisco, CA": {
+    "lat": 37.786706,
+    "lng": -122.3977583,
+    "precision": "address",
+    "display": "215, 2nd Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
+    "query": "215 2nd St, SoMa, San Francisco, CA"
+  },
+  "221 7th St, San Francisco, CA": {
+    "lat": 37.7778394,
+    "lng": -122.4088444,
+    "precision": "address",
+    "display": "217;219;221, 7th Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "221 7th St, San Francisco, CA"
+  },
+  "221 7th St, SoMa, San Francisco, CA": {
+    "lat": 37.7778394,
+    "lng": -122.4088444,
+    "precision": "address",
+    "display": "217;219;221, 7th Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "221 7th St, SoMa, San Francisco, CA"
+  },
+  "2211 Mission St, Mission, San Francisco, CA": {
+    "lat": 37.7615527,
+    "lng": -122.41902,
+    "precision": "address",
+    "display": "2211, Mission Street, Mission, San Francisco, California, 94143, United States",
+    "query": "2211 Mission St, Mission, San Francisco, CA"
+  },
+  "2225 Telegraph Ave, Uptown Oakland, CA": {
+    "lat": 37.811579,
+    "lng": -122.2694757,
+    "precision": "address",
+    "display": "Moxy Oakland Downtown, 2225, Telegraph Avenue, Uptown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "2225 Telegraph Ave, Uptown Oakland, CA"
+  },
+  "2230 Lombard St, San Francisco, CA": {
+    "lat": 37.7998498,
+    "lng": -122.4384428,
+    "precision": "address",
+    "display": "Travel Inn, 2230, Lombard Street, Cow Hollow, Marina District, San Francisco, California, 94123, United States",
+    "query": "2230 Lombard St, San Francisco, CA"
+  },
+  "2235 3rd St, Dogpatch, San Francisco, CA": {
+    "lat": 37.7612661,
+    "lng": -122.3887991,
+    "precision": "address",
+    "display": "2235, 3rd Street, Pier 70, Mission Bay, San Francisco, California, 94107, United States",
+    "query": "2235 3rd St, Dogpatch, San Francisco, CA"
+  },
+  "2350–2380 Valley St, CA": null,
+  "2353 Lombard St, Marina, San Francisco, CA": {
+    "lat": 37.7991265,
+    "lng": -122.4400422,
+    "precision": "address",
+    "display": "2347;2349;2351;2353, Lombard Street, Cow Hollow, Marina District, San Francisco, California, 94123, United States",
+    "query": "2353 Lombard St, Marina, San Francisco, CA"
+  },
+  "2424 Lombard St, Marina, San Francisco, CA": {
+    "lat": 37.7993832,
+    "lng": -122.4415485,
+    "precision": "address",
+    "display": "2424, Lombard Street, Cow Hollow, Marina District, San Francisco, California, 94123, United States",
+    "query": "2424 Lombard St, Marina, San Francisco, CA"
+  },
+  "2436 Mission St, San Francisco, CA": {
+    "lat": 37.7580073,
+    "lng": -122.4190976,
+    "precision": "address",
+    "display": "2436, Mission Street, Mission, San Francisco, California, 94110, United States",
+    "query": "2436 Mission St, San Francisco, CA"
+  },
+  "246 McAllister St, Civic Center, San Francisco, CA": {
+    "lat": 37.7808999,
+    "lng": -122.4161432,
+    "precision": "address",
+    "display": "Abigail Hotel, 246, McAllister Street, Civic Center, South of Market, San Francisco, California, 94102, United States",
+    "query": "246 McAllister St, Civic Center, San Francisco, CA"
+  },
+  "25 Magnolia Ave, San Rafael, CA": {
+    "lat": 37.9814398,
+    "lng": -122.5091224,
+    "precision": "address",
+    "display": "25, Magnolia Avenue, Dominican, San Rafael, Marin County, California, 94901, United States",
+    "query": "25 Magnolia Ave, San Rafael, CA"
+  },
+  "251 9th St, SoMa, San Francisco, CA": {
+    "lat": 37.7745016,
+    "lng": -122.4121878,
+    "precision": "address",
+    "display": "249;251, 9th Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
+    "query": "251 9th St, SoMa, San Francisco, CA"
+  },
+  "2655 Hyde St, Fisherman's Wharf, San Francisco, CA": {
+    "lat": 37.8055058,
+    "lng": -122.4206033,
+    "precision": "address",
+    "display": "Suites at Fisherman's Wharf, 2655, Hyde Street, Fisherman's Wharf, North Beach, San Francisco, California, 90214, United States",
+    "query": "2655 Hyde St, Fisherman's Wharf, San Francisco, CA"
+  },
+  "2660 3rd St, Dogpatch, San Francisco, CA": {
+    "lat": 37.7559775,
+    "lng": -122.3886084,
+    "precision": "address",
+    "display": "Windsor at Dogpatch, 2660, 3rd Street, Dogpatch, Potrero Hill, San Francisco, California, 94107, United States",
+    "query": "2660 3rd St, Dogpatch, San Francisco, CA"
+  },
+  "2766–2770 Mission St , Mission, San Francisco, CA": {
+    "lat": 37.7416709,
+    "lng": -122.4224332,
+    "precision": "address",
+    "display": "Mission Street, Bernal Heights, Mission, San Francisco, California, 94110, United States",
+    "query": "2766–2770 Mission St , Mission, San Francisco, CA"
+  },
+  "300 Lake St, Inner Richmond, San Francisco, CA": {
+    "lat": 37.7880521,
+    "lng": -122.4625476,
+    "precision": "address",
+    "display": "300, Lake Street, Jordan Park, Inner Richmond, Richmond District, San Francisco, California, 94129, United States",
+    "query": "300 Lake St, Inner Richmond, San Francisco, CA"
+  },
+  "312 Mason St, San Francisco, CA": {
+    "lat": 37.7864902,
+    "lng": -122.4095565,
+    "precision": "address",
+    "display": "Hi Hostel Downtown, 312, Mason Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "312 Mason St, San Francisco, CA"
+  },
+  "325 Octavia St, Hayes Valley, San Francisco, CA": {
+    "lat": 37.7751103,
+    "lng": -122.4244116,
+    "precision": "address",
+    "display": "325, Octavia Street, Hayes Valley, Western Addition, San Francisco, California, 94102, United States",
+    "query": "325 Octavia St, Hayes Valley, San Francisco, CA"
+  },
+  "333 12th St, SoMa, San Francisco, CA": {
+    "lat": 37.7705505,
+    "lng": -122.413996,
+    "precision": "address",
+    "display": "333, 12th Street, Civic Center, Mission, San Francisco, California, 94103, United States",
+    "query": "333 12th St, SoMa, San Francisco, CA"
+  },
+  "3491 20th St, Mission, San Francisco, CA": {
+    "lat": 37.7585678,
+    "lng": -122.4187603,
+    "precision": "address",
+    "display": "3491, 20th Street, Mission, San Francisco, California, 94110, United States",
+    "query": "3491 20th St, Mission, San Francisco, CA"
+  },
+  "3500 Mountain Blvd, Oakland hills, CA": {
+    "lat": 37.8030952,
+    "lng": -122.1881395,
+    "precision": "address",
+    "display": "Brennan Hall, 3500, Mountain Boulevard, Oakland Hills, Oakland, Alameda County, California, 94613, United States",
+    "query": "3500 Mountain Blvd, Oakland hills, CA"
+  },
+  "361 Turk St, Tenderloin, San Francisco, CA": {
+    "lat": 37.7824057,
+    "lng": -122.4149833,
+    "precision": "address",
+    "display": "361 TL Residences, 361, Turk Street, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "361 Turk St, Tenderloin, San Francisco, CA"
+  },
+  "3711 19th Ave, San Francisco, CA": {
+    "lat": 37.7299819,
+    "lng": -122.4747375,
+    "precision": "address",
+    "display": "19th Avenue, San Francisco, California, 94312, United States",
+    "query": "3711 19th Ave, San Francisco, CA"
+  },
+  "385 14th St, Downtown Oakland, CA": {
+    "lat": 37.8038293,
+    "lng": -122.2695974,
+    "precision": "address",
+    "display": "385, 14th Street, Downtown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "385 14th St, Downtown Oakland, CA"
+  },
+  "392 11th St, Oakland, CA": {
+    "lat": 37.8018505,
+    "lng": -122.2710423,
+    "precision": "address",
+    "display": "Lux Pub and Club, 392, 11th Street, Chinatown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "392 11th St, Oakland, CA"
+  },
+  "410 Avenue of the Palms, Treasure Island, San Francisco, CA": null,
+  "411 O'Farrell St, San Francisco, CA": {
+    "lat": 37.7858648,
+    "lng": -122.41166,
+    "precision": "address",
+    "display": "Orange Village Hostel, 411, O'Farrell Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "411 O'Farrell St, San Francisco, CA"
+  },
+  "415–417 15th St, Downtown Oakland, CA": {
+    "lat": 37.805661,
+    "lng": -122.2724305,
+    "precision": "address",
+    "display": "15th Street, Downtown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "415–417 15th St, Downtown Oakland, CA"
+  },
+  "418–432 Geary St, San Francisco, CA": {
+    "lat": 37.7877973,
+    "lng": -122.4048281,
+    "precision": "address",
+    "display": "Geary Street, Union Square, Financial District, South of Market, San Francisco, California, 94108, United States",
+    "query": "418–432 Geary St, San Francisco, CA"
+  },
+  "420 Hayes St, Hayes Valley, San Francisco, CA": {
+    "lat": 37.7769132,
+    "lng": -122.4234037,
+    "precision": "address",
+    "display": "420, Hayes Street, Hayes Valley, Western Addition, San Francisco, California, 94102, United States",
+    "query": "420 Hayes St, Hayes Valley, San Francisco, CA"
+  },
+  "447 17th St, Uptown Oakland, CA": {
+    "lat": 37.8064714,
+    "lng": -122.2695393,
+    "precision": "address",
+    "display": "447, 17th Street, Uptown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "447 17th St, Uptown Oakland, CA"
+  },
+  "469 Van Buren, CA": {
+    "lat": 37.8105415,
+    "lng": -122.251778,
+    "precision": "address",
+    "display": "469, Van Buren Avenue, Adams Point, Downtown Oakland, Oakland, Alameda County, California, 94610, United States",
+    "query": "469 Van Buren, CA"
+  },
+  "494 Broadway, North Beach, San Francisco, CA": {
+    "lat": 37.7982715,
+    "lng": -122.4053066,
+    "precision": "address",
+    "display": "Green Tortoise Hostel, 494, Broadway, Telegraph Hill, Financial District, South of Market, San Francisco, California, 94133, United States",
+    "query": "494 Broadway, North Beach, San Francisco, CA"
+  },
+  "50 3rd St, SoMa, San Francisco, CA": {
+    "lat": 37.7865463,
+    "lng": -122.4030879,
+    "precision": "address",
+    "display": "Hyatt Regency San Francisco Downtown SOMA, 50, 3rd Street, Union Square, Financial District, South of Market, San Francisco, California, 94103, United States",
+    "query": "50 3rd St, SoMa, San Francisco, CA"
+  },
+  "505 O'Farrell St, Tenderloin, San Francisco, CA": {
+    "lat": 37.7855481,
+    "lng": -122.4131289,
+    "precision": "address",
+    "display": "Vantaggio Suites, 505, O'Farrell Street, Little Saigon, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "505 O'Farrell St, Tenderloin, San Francisco, CA"
+  },
+  "520 S Van Ness Ave, Mission, San Francisco, CA": {
+    "lat": 37.764643,
+    "lng": -122.4178879,
+    "precision": "address",
+    "display": "Mission Hotel, 520, South Van Ness Avenue, Mission, San Francisco, California, 94110, United States",
+    "query": "520 S Van Ness Ave, Mission, San Francisco, CA"
+  },
+  "54 4th St, SoMa, San Francisco, CA": {
+    "lat": 37.7848766,
+    "lng": -122.405137,
+    "precision": "address",
+    "display": "The Mosser, 54, 4th Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94103, United States",
+    "query": "54 4th St, SoMa, San Francisco, CA"
+  },
+  "550 Guerrero St, Mission, San Francisco, CA": {
+    "lat": 37.762201,
+    "lng": -122.4241541,
+    "precision": "address",
+    "display": "550;552;554;556;558;560, Guerrero Street, Castro District, Mission, San Francisco, California, 94143, United States",
+    "query": "550 Guerrero St, Mission, San Francisco, CA"
+  },
+  "550 Guerrero St, San Francisco, CA": {
+    "lat": 37.762201,
+    "lng": -122.4241541,
+    "precision": "address",
+    "display": "550;552;554;556;558;560, Guerrero Street, Castro District, Mission, San Francisco, California, 94143, United States",
+    "query": "550 Guerrero St, San Francisco, CA"
+  },
+  "565 Page St, Lower Haight, San Francisco, CA": {
+    "lat": 37.772911,
+    "lng": -122.429971,
+    "precision": "address",
+    "display": "565, Page Street, Lower Haight, Western Addition, San Francisco, California, 95115, United States",
+    "query": "565 Page St, Lower Haight, San Francisco, CA"
+  },
+  "570 21st St, CA": {
+    "lat": 32.7111813,
+    "lng": -117.1449897,
+    "precision": "address",
+    "display": "570, 21st Street, Sherman Heights, Golden Hill, San Diego, San Diego County, California, 92102, United States",
+    "query": "570 21st St, CA"
+  },
+  "583–585 Eddy St, San Francisco, CA": {
+    "lat": 37.7842576,
+    "lng": -122.4101495,
+    "precision": "address",
+    "display": "Eddy Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94108, United States",
+    "query": "583–585 Eddy St, San Francisco, CA"
+  },
+  "610 Polk St , Van Ness corridor, San Francisco, CA": null,
+  "620 Post St, Nob Hill/Union Sq, San Francisco, CA": {
+    "lat": 37.7879647,
+    "lng": -122.4121173,
+    "precision": "address",
+    "display": "620, Post Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94108, United States",
+    "query": "620 Post St, Nob Hill/Union Sq, San Francisco, CA"
+  },
+  "620 Post St, San Francisco, CA": {
+    "lat": 37.7879647,
+    "lng": -122.4121173,
+    "precision": "address",
+    "display": "620, Post Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94108, United States",
+    "query": "620 Post St, San Francisco, CA"
+  },
+  "620–626 O'Farrell St, San Francisco, CA": {
+    "lat": 37.781525,
+    "lng": -122.4448685,
+    "precision": "address",
+    "display": "O'Farrell Street, Anza Vista, Western Addition, San Francisco, California, 94115, United States",
+    "query": "620–626 O'Farrell St, San Francisco, CA"
+  },
+  "680 Indiana St, Dogpatch, San Francisco, CA": {
+    "lat": 37.7618894,
+    "lng": -122.3918641,
+    "precision": "address",
+    "display": "O&M Building O, 680, Indiana Street, Dogpatch, Mission Bay, South of Market, San Francisco, California, 94107, United States",
+    "query": "680 Indiana St, Dogpatch, San Francisco, CA"
+  },
+  "680 Sacramento St, San Francisco, CA": {
+    "lat": 37.7937537,
+    "lng": -122.404174,
+    "precision": "address",
+    "display": "Pacific Tradewinds Hostel, 680, Sacramento Street, Financial District, South of Market, San Francisco, California, 94111, United States",
+    "query": "680 Sacramento St, San Francisco, CA"
+  },
+  "680 Sutter St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7890959,
+    "lng": -122.4116205,
+    "precision": "address",
+    "display": "Edgar Degas Apartments, 680, Sutter Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "query": "680 Sutter St, Nob Hill, San Francisco, CA"
+  },
+  "690 Gateway Blvd, South SF, CA": null,
+  "706 Polk St, San Francisco, CA": {
+    "lat": 37.7833532,
+    "lng": -122.4190431,
+    "precision": "address",
+    "display": "Hotel Epik, 700;702;704;706;708;710;712, Polk Street, Civic Center, South of Market, San Francisco, California, 94109, United States",
+    "query": "706 Polk St, San Francisco, CA"
+  },
+  "736 Jones St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7880913,
+    "lng": -122.4131841,
+    "precision": "address",
+    "display": "736, Jones Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94109, United States",
+    "query": "736 Jones St, Nob Hill, San Francisco, CA"
+  },
+  "749 Taylor St, San Francisco, CA": {
+    "lat": 37.7893863,
+    "lng": -122.4123658,
+    "precision": "address",
+    "display": "749, Taylor Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94108, United States",
+    "query": "749 Taylor St, San Francisco, CA"
+  },
+  "800 Indiana St, Dogpatch, San Francisco, CA": {
+    "lat": 37.7594401,
+    "lng": -122.3917351,
+    "precision": "address",
+    "display": "Avalon Dogpatch, 800, Indiana Street, Dogpatch, Potrero Hill, San Francisco, California, 94158, United States",
+    "query": "800 Indiana St, Dogpatch, San Francisco, CA"
+  },
+  "822 S Van Ness Ave, Mission, San Francisco, CA": {
+    "lat": 37.7599469,
+    "lng": -122.4173726,
+    "precision": "address",
+    "display": "822, South Van Ness Avenue, Mission, San Francisco, California, 94110, United States",
+    "query": "822 S Van Ness Ave, Mission, San Francisco, CA"
+  },
+  "825 Sutter St, Lower Nob Hill, San Francisco, CA": {
+    "lat": 37.788256,
+    "lng": -122.4139556,
+    "precision": "address",
+    "display": "817;819;821;823;825;827;829;831, Sutter Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94164, United States",
+    "query": "825 Sutter St, Lower Nob Hill, San Francisco, CA"
+  },
+  "860 E El Camino Real, Mountain View, CA": {
+    "lat": 37.3762516,
+    "lng": -122.0609847,
+    "precision": "address",
+    "display": "Hotel Avante, 860, East El Camino Real, Mountain View, Santa Clara County, California, 94040, United States",
+    "query": "860 E El Camino Real, Mountain View, CA"
+  },
+  "860 Sutter St, Nob Hill, San Francisco, CA": {
+    "lat": 37.7887597,
+    "lng": -122.4145936,
+    "precision": "address",
+    "display": "International House, 860, Sutter Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94109, United States",
+    "query": "860 Sutter St, Nob Hill, San Francisco, CA"
+  },
+  "899 Pine St, Nob Hill, San Francisco, CA": {
+    "lat": 37.790819,
+    "lng": -122.410453,
+    "precision": "address",
+    "display": "899, Pine Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94108, United States",
+    "query": "899 Pine St, Nob Hill, San Francisco, CA"
+  },
+  "905 California St, Nob Hill, San Francisco, CA": {
+    "lat": 37.791484,
+    "lng": -122.4092944,
+    "precision": "address",
+    "display": "Stanford Court San Francisco Hotel, 901;905, California Street, Union Square, Nob Hill, South of Market, San Francisco, California, 94108, United States",
+    "query": "905 California St, Nob Hill, San Francisco, CA"
+  },
+  "920 University Ave, Berkeley, CA": {
+    "lat": 37.8679506,
+    "lng": -122.2958049,
+    "precision": "address",
+    "display": "La Quinta Inn Berkeley, 920, University Avenue, West Berkeley, Berkeley, Alameda County, California, 94710, United States",
+    "query": "920 University Ave, Berkeley, CA"
+  },
+  "988 Broadway, Oakland, CA": {
+    "lat": 37.8012959,
+    "lng": -122.2728321,
+    "precision": "address",
+    "display": "Cafe Gabriela, 988, Broadway, Old Oakland Historic District, Downtown Oakland, Oakland, Alameda County, California, 94607, United States",
+    "query": "988 Broadway, Oakland, CA"
+  },
+  "Founders Hall, 188 Hooper St, Design District, San Francisco, CA": null,
+  "Howard & 6th St, SoMa, San Francisco, CA": {
+    "lat": 37.779741,
+    "lng": -122.4071746,
+    "precision": "address",
+    "display": "Cistern at 6th & Howard, 6th Street, West SoMa, Tenderloin, South of Market, San Francisco, California, 94103, United States",
+    "query": "Howard & 6th St, SoMa, San Francisco, CA"
+  },
+  "La Quinta 1036 N 4th St, CA": null,
+  "Uptown Oakland, on top of 19th St BART, CA": null
+}

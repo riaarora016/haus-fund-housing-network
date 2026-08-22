@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+:root { color-scheme: light dark; }
+html, body, #root { height: 100%; }
+body { @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 text-[13px] antialiased; }
+.th { @apply sticky top-0 z-10 bg-neutral-100 dark:bg-neutral-900 text-left font-medium text-[11px] uppercase tracking-wide text-neutral-600 dark:text-neutral-400 px-2 py-1.5 border-b border-neutral-200 dark:border-neutral-800 whitespace-nowrap select-none cursor-pointer; }
+.td { @apply px-2 py-1 border-b border-neutral-100 dark:border-neutral-900 whitespace-nowrap align-top; }
+.chip { @apply inline-block rounded px-1.5 py-0.5 text-[11px] leading-4 border; }
+.btn { @apply rounded border border-neutral-300 dark:border-neutral-700 px-2 py-1 text-[12px] hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-50; }
+.input { @apply rounded border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-2 py-1 text-[12px]; }
+.leaflet-container { @apply bg-neutral-200 dark:bg-neutral-900; }

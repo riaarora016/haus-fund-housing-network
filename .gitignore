@@ -1,0 +1,11 @@
+node_modules/
+web/node_modules/
+web/dist/
+.env
+.env.local
+web/.env
+web/.env.local
+*.log
+refresh/state/*.tmp
+.DS_Store
+service-account.json

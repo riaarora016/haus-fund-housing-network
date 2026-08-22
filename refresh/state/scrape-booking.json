@@ -1,0 +1,159 @@
+[
+  {
+    "adapter": "pricetext",
+    "id": "inv-20-mission-sf-20mish",
+    "name": "20 Mission SF (20mish)",
+    "url": "https://20mish.com/",
+    "at": "2026-08-22T21:27:06.723Z",
+    "ok": true,
+    "price_now": 1550,
+    "price_private_now": 1625,
+    "beds_available": null,
+    "bookable": false,
+    "min_stay_nights": null,
+    "evidence": "monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Mission District of San Francisco. We're artists, technologists, organizers, and curious humans who enjoy both shared dinners & private spaces. Rooms are $1625/mo, including all uti"
+  },
+  {
+    "adapter": "urbanests",
+    "id": "inv-221-7th-street-residences",
+    "name": "221 7th Street Residences",
+    "url": "https://www.urbanests.com/properties/221-7th-street-residences",
+    "at": "2026-08-22T21:25:43.928Z",
+    "ok": true,
+    "price_now": 1095,
+    "price_private_now": 1095,
+    "beds_available": null,
+    "bookable": false,
+    "min_stay_nights": 90,
+    "evidence": "per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San Francisco, CA, USA Single Rooms from $1095 1, 2, 3 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot + Cold) Wo"
+  },
+  {
+    "adapter": "hostelworld",
+    "id": "inv-amsterdam-hostel",
+    "name": "Amsterdam Hostel",
+    "url": "https://www.hostelworld.com/hostels/p/17927/amsterdam-hostel/",
+    "at": "2026-08-22T21:25:48.459Z",
+    "ok": true,
+    "price_now": 690,
+    "price_private_now": null,
+    "beds_available": null,
+    "bookable": true,
+    "min_stay_nights": 1,
+    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre 10+ staying Free WiFi View all 26 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About In 2021, Amsterdam Hostel became a signatory of the Global Tourism Plastics Initiative (GTPI), ",
+    "windows": [
+      {
+        "window": {
+          "checkin": "2026-09-05",
+          "checkout": "2026-10-05",
+          "nights": 30,
+          "guests": 1
+        },
+        "nightly": 23,
+        "available": true
+      },
+      {
+        "window": {
+          "checkin": "2026-10-06",
+          "checkout": "2026-11-05",
+          "nights": 30,
+          "guests": 1
+        },
+        "nightly": 23,
+        "available": true
+      }
+    ]
+  },
+  {
+    "adapter": "urbanests",
+    "id": "inv-european-hostel",
+    "name": "European Hostel",
+    "url": "https://www.urbanests.com/properties/european-hostel",
+    "at": "2026-08-22T21:26:06.621Z",
+    "ok": true,
+    "price_now": 545,
+    "price_private_now": null,
+    "beds_available": null,
+    "bookable": false,
+    "min_stay_nights": null,
+    "evidence": "per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, sextuple I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot + Cold) Work Space High-S"
+  },
+  {
+    "adapter": "foundstudy",
+    "id": "inv-found-study-16-turk-st",
+    "name": "FOUND Study 16 Turk St",
+    "url": "https://www.foundstudy.com/sanfrancisco",
+    "at": "2026-08-22T21:26:09.534Z",
+    "ok": false,
+    "price_now": null,
+    "price_private_now": null,
+    "beds_available": null,
+    "bookable": null,
+    "min_stay_nights": null,
+    "evidence": "Guest Area Please enter the password below. Go",
+    "needs_adapter": "no monthly $ figures in rendered text (prices may be in an iframe/booking widget)"
+  },
+  {
+    "adapter": "pricetext",
+    "id": "inv-hive-coliving-was-tribe",
+    "name": "Hive Coliving (was Tribe)",
+    "url": "https://www.hivecolivingsf.com/rooms-doubles",
+    "at": "2026-08-22T21:27:10.802Z",
+    "ok": true,
+    "price_now": 800,
+    "price_private_now": null,
+    "beds_available": null,
+    "bookable": false,
+    "min_stay_nights": 120,
+    "evidence": "monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover attainable, fun rooms with great roommates! Apply Now! 1 Book an interview 2 Tour our property 3 Sign your lease & you’re ready to move in! Get a Tour Details FAQs Why Hive Galle"
+  },
+  {
+    "adapter": "hostelworld",
+    "id": "inv-orange-village-hostel",
+    "name": "Orange Village Hostel",
+    "url": "https://www.hostelworld.com/hostels/p/39781/orange-village-hostel/",
+    "at": "2026-08-22T21:27:14.654Z",
+    "ok": true,
+    "price_now": 690,
+    "price_private_now": null,
+    "beds_available": null,
+    "bookable": true,
+    "min_stay_nights": 1,
+    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centre 20+ staying Free WiFi Free Breakfast View all 50 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About Welcome to the Orange Village Hostel! Located in the heart of San Francisc",
+    "windows": [
+      {
+        "window": {
+          "checkin": "2026-09-05",
+          "checkout": "2026-10-05",
+          "nights": 30,
+          "guests": 1
+        },
+        "nightly": 23,
+        "available": true
+      },
+      {
+        "window": {
+          "checkin": "2026-10-06",
+          "checkout": "2026-11-05",
+          "nights": 30,
+          "guests": 1
+        },
+        "nightly": 23,
+        "available": true
+      }
+    ]
+  },
+  {
+    "adapter": "urbanests",
+    "id": "inv-upmarket-residences",
+    "name": "UpMarket Residences",
+    "url": "https://www.urbanests.com/properties/upmarket-residences",
+    "at": "2026-08-22T21:27:31.051Z",
+    "ok": true,
+    "price_now": 995,
+    "price_private_now": 995,
+    "beds_available": null,
+    "bookable": false,
+    "min_stay_nights": 90,
+    "evidence": "per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Francisco, California, USA Single Rooms from $995 1, 2 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot + Cold) "
+  }
+]
