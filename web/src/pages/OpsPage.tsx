@@ -25,15 +25,15 @@ export function OpsPage() {
   const selected = selectedId ? rows.find((r) => r.id === selectedId) : undefined;
   if (!data) return <div className="p-6 text-neutral-500">loading…</div>;
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-screen">
       <Header data={data} visible={visible.filter((p) => !p.baseline)} />
       <FiltersBar f={f} set={set} rows={rows} showAudience />
       <div className="flex items-center gap-1 px-2 py-1 border-b border-neutral-200 dark:border-neutral-800 text-[12px]">
         {(['table', 'map', 'verify'] as const).map((t) => <button key={t} onClick={() => setTab(t)} className={`btn ${tab === t ? 'bg-neutral-800 text-white dark:bg-neutral-200 dark:text-black' : ''}`}>{t === 'table' ? `ranked table (${visible.filter((p) => !p.baseline).length})` : t === 'map' ? 'map' : 'verify queue'}</button>)}
         <span className="ml-auto text-neutral-500">default sort: score desc · click headers to sort · click a row for the drawer · <Link className="underline" to="/find">founder view →</Link></span>
       </div>
-      <div className="flex grow min-h-0">
-        <div className="grow min-w-0 h-full">
+      <div className="flex grow min-h-0 overflow-hidden">
+        <div className="grow min-w-0 min-h-0 h-full relative">
           {tab === 'table' && <RankedTable rows={visible} sort={f.sort} dir={f.dir} onSort={(k) => set({ sort: k, dir: f.sort === k && f.dir === 'desc' ? 'asc' : 'desc' })} onSelect={select} selected={selectedId} />}
           {tab === 'map' && <MapView rows={visible} onSelect={select} selected={selectedId} />}
           {tab === 'verify' && <VerifyQueue rows={visible} onSelect={select} />}

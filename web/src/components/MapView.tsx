@@ -1,4 +1,5 @@
-import { MapContainer, TileLayer, CircleMarker, Marker, Popup, Tooltip } from 'react-leaflet';
+import { useEffect } from 'react';
+import { MapContainer, TileLayer, CircleMarker, Marker, Popup, Tooltip, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import type { Property } from '../lib/types';
 import { FRONTIER } from '../lib/types';
@@ -7,10 +8,24 @@ import { adjScore, fmtMoney } from '../lib/staleness';
 const frontierIcon = L.divIcon({ className: '', html: '<div style="width:18px;height:18px;border-radius:4px;background:#0ea5e9;border:2px solid white;box-shadow:0 0 0 2px #0369a1;transform:rotate(45deg)"></div>', iconSize: [18, 18], iconAnchor: [9, 9] });
 const color = (s: number | null) => (s == null ? '#9ca3af' : s >= 80 ? '#10b981' : s >= 60 ? '#84cc16' : s >= 40 ? '#f59e0b' : '#9ca3af');
 
+// Leaflet measures its container once on mount; in a flex layout that can happen before the final size → re-measure on any resize.
+function Resizer() {
+  const map = useMap();
+  useEffect(() => {
+    const el = map.getContainer();
+    const ro = new ResizeObserver(() => map.invalidateSize());
+    ro.observe(el);
+    const t = setTimeout(() => map.invalidateSize(), 50);
+    return () => { ro.disconnect(); clearTimeout(t); };
+  }, [map]);
+  return null;
+}
+
 export function MapView({ rows, onSelect, selected }: { rows: Property[]; onSelect: (p: Property) => void; selected?: string }) {
   const pts = rows.filter((p) => p.lat != null && p.lng != null);
   return (
-    <MapContainer center={[37.785, -122.41]} zoom={13} className="h-full w-full" preferCanvas>
+    <MapContainer center={[37.785, -122.41]} zoom={13} style={{ height: '100%', width: '100%' }} preferCanvas>
+      <Resizer />
       <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={[FRONTIER.lat, FRONTIER.lng]} icon={frontierIcon}><Tooltip permanent direction="right" offset={[10, 0]}>Frontier Tower · 995 Market</Tooltip></Marker>
       {pts.map((p) => { const s = adjScore(p); return (
