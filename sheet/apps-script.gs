@@ -1,5 +1,5 @@
 /**
- * Google Apps Script web app — the only "write" endpoint the static site has. Handles the founder view's
+ * Google Apps Script web app - the only "write" endpoint the static site has. Handles the founder view's
  * "I took a bed here" button: decrements beds_available on the Inventory tab, stamps last_verified=now,
  * verified_via=resident, and appends a line to the "Outreach log" tab. No auth (the sheet is the DB; CLAUDE.md).
  *

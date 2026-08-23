@@ -1,0 +1,40 @@
+"NOTE: Who to call first, second, third. Grouped by channel in Elliot's preference order: owners (pocket deals), receivers, brokers, institutions, operators. Landlord objection script: this is a 3-month program with visa-bound residents; everyone vacates at program end, so there is no tenant-rights exposure. Ask for: block of beds from Sept 15, monthly rate per bed, kitchen access, minimum term."
+Call #,Channel,Property,Contact,Phone,Email / path,Template,Score,Beds,$/bed,Walk min,Kitchen,Walk-in ready,Flag,The play
+1,owner,Mosser SRO,Mosser Companies,(415) 673-1608,mosserliving.com/contact,sro-master-lease,88.75,361,1250,3,communal,yes,,Master-lease the rooms he can't fill
+2,owner,Hotel Union Square,"Owner Mahmood Alam (Faizan Corp, Ukiah)",(510) 862-3333 (per 2023 CEQA filing),"alam786@aol.com ⚠ · CA SoS lookup: ""Hotel Union Square LLC""",sro-master-lease,40,131,1750,8,none,unknown,verify number first,Catch owner before he commits to hotel use
+3,receiver,149-161 Hyde St,Listing broker - see LoopNet (round-5 find), - ,LoopNet 149-161 Hyde St,receiver-or-lender,72.5,44,2100,6,private,unknown,,Diligence all three; Hegenberger = most capacity per dollar on the board
+4,receiver,Veritas & Ballast portfolios,Receiver / lender - identify via SF Assessor-Recorder deed pull, - ,Prospect Hill Capital (Veritas) / RBC (Ballast),receiver-or-lender,59,,,10,private,unknown,,Building-level master-lease conversations
+5,receiver,Parkmerced,Leasing; receiver = Douglas Wilson Companies,(415) 689-6252,lease@rentbt.com,receiver-or-lender,47.5,120,1500,50,private,unknown,,60-120 bed corporate block at a steep discount
+6,receiver,Hotel Whitcomb floors,Blackstone Real Estate - asset mgmt; 'exploring new operators', - ,via Blackstone RE press office / Hotel Whitcomb GM,receiver-or-lender,40,80,1850,3,none,unknown,,Pitch Blackstone Mortgage Trust as the interim operator
+7,receiver,Stanford Court,Eastdil Secured SF - ask for the Stanford Court deal team,(415) 228-2900,101 California St #2950,receiver-or-lender,40,60,2000,20,none,unknown,,Pitch receiver a guaranteed 50-60 room block
+8,broker,Boston Hotel (SRO),Jag Patel - Lee & Associates,(415) 517-9856,jpatel@lee-associates.com,sro-master-lease,84.5,32,1300,6,communal,unknown,,"Lowball both; Blue broker: Theodore Wong (Compass), 650-228-9930"
+9,broker,Crystal Hotel,Richard Ehmer - The Ehmer Group,(415) 225-5176,rehmer@ehmergroup.com,sro-master-lease,78,45,500,32,communal,unknown,,"Call broker Richard Ehmer, (415) 225-5176 · rehmer@ehmergroup.com"
+10,broker,Blue Hotel,Theodore Wong - Compass Commercial,(650) 228-9930, - ,femme-house,66.5,13,1300,10,unknown,unknown,,"Lowball both; Blue broker: Theodore Wong (Compass), 650-228-9930"
+11,broker,Embassy Hotel,CBRE Hotels - SF listing team (ask for 610 Polk St),CBRE SF (415) 772-0123 - verify,cbre.com/properties,sro-master-lease,40,84,1200,14,none,unknown,,CBRE Hotels listing team; lowball buy or master lease to owner
+12,broker,Motel 6 Civic Center,Richard Ehmer + Jeramie Hamilton - Ehmer Group,(415) 225-5176 / (650) 454-5982,rehmer@ehmergroup.com,sro-master-lease,40,68,1850,10,none,unknown,,Lease + option pitch
+13,broker,Union Square Plaza Hotel,Ryan Clark - KW Commercial,(605) 228-6402 ⚠,LoopNet/Crexi form,sro-master-lease,40,69,1850,10,none,unknown,verify number first,Master lease + option
+14,institution,AAU dorm,"AAU Housing Office - existing landlord, warm intro",via 79 New Montgomery switchboard,academyart.edu/campus-athletics/housing,dorm-institution,89,120,650,16,communal,unknown,,One motivated seller - M&M brokers
+15,institution,AAU dorm,"AAU Housing Office - existing landlord, warm intro",via 79 New Montgomery switchboard,academyart.edu/campus-athletics/housing,dorm-institution,88,114,650,17,communal,yes,,One motivated seller - M&M brokers
+16,institution,AAU dorm,"AAU Housing Office - existing landlord, warm intro",via 79 New Montgomery switchboard,academyart.edu/campus-athletics/housing,dorm-institution,88,100,650,14,communal,yes,,One motivated seller - M&M brokers
+17,institution,AAU dorm,"AAU Housing Office - existing landlord, warm intro",via 79 New Montgomery switchboard,academyart.edu/campus-athletics/housing,dorm-institution,84,72,650,18,communal,unknown,,One motivated seller - M&M brokers
+18,institution,1055-1069 Pine St,Marcus & Millichap: Jim Wright · J.J. Taughinbaugh · Taylor Flynn · Yuri Sergunin,(650) 391-1837 · (650) 391-1807 · (415) 963-3042 · (650) 391-1764 · SF office (415) 963-3000,jim.wright@ / jj.taughinbaugh@ / taylor.flynn@ / yuri.sergunin@marcusmillichap.com,dorm-institution,74.5,80,1300,20,communal,unknown,,Lease / seller-finance
+19,institution,CCA surplus dorms,"Charles Eden, NCCD President → Capstone Management → housing@cca.edu",(512) 322-9650,geden@nccdevelopment.org,dorm-institution,70,270,650,35,communal,yes,,Call CCA administration/housing about a 2026-27 block
+20,institution,1538 Polk St + AAU cluster pairing,Brian Leung / Jeremy Lee - Compass Commercial,(415) 278-7838 / (650) 219-3989,brian.leung@compass.com · jeremy.lee@compass.com,dorm-institution,60.5,43,2100,22,private,unknown,,Pair with an AAU dorm lease
+21,institution,Salvation Army McFee Center,Catherine Bassick - Douglas Elliman (listing broker), - ,elliman.com agent profile,dorm-institution,42,96,,35,communal,no,,"Broker: Catherine Marcus Bassick, Douglas Elliman Commercial"
+22,operator,Brownstone Shared Housing,James Stallworth,(650) 470-9278,hey@brownstone.live,co-living-block,100,400,950,3,communal,yes,,Bridge - cheapest
+23,operator,Urbanests,Reservations/partnerships,(415) 949-0067,reservations@urbanests.com,co-living-block,100,440,845,10,communal,yes,,Block or partnership/sublease inquiry
+24,operator,European Hostel,,(415) 949-0067,reservations@urbanests.com,co-living-block,97,25,545,10,communal,yes,,
+25,operator,Hive Coliving (was Tribe), - ,(845) 304-8555,hivecolivingsf.com,co-living-block,97,80,588,10,communal,yes,,Portfolio takeover / block
+26,operator,UpMarket Residences,,(415) 949-0067,reservations@urbanests.com,co-living-block,94,110,995,11,communal,yes,,
+27,operator,221 7th Street Residences,,(415) 949-0067,reservations@urbanests.com,co-living-block,87.13,22,1195,9,communal,yes,,
+28,operator,251 9th Street Residences,,(415) 949-0067,reservations@urbanests.com,co-living-block,85.13,22,1195,12,communal,yes,,
+29,operator,FOUND Study 16 Turk St,Group/institutional advisor · SF GM,(917) 551-5588 · (628) 246-9210 ⚠,gm@sf.foundstudy.com,co-living-block,84,,850,5,communal,yes,verify number first,
+30,operator,Sweden House,,(415) 949-0067,reservations@urbanests.com,co-living-block,81.13,35,1395,11,communal,yes,,
+31,operator,UrbaNests 1080 Folsom Residences,Reservations/partnerships,(415) 949-0067,reservations@urbanests.com,co-living-block,79,,1200,9,communal,yes,,
+32,operator,The Bartlett Residences,,(415) 949-0067,reservations@urbanests.com,co-living-block,76.63,10,1295,10,communal,yes,,
+33,operator,The Herbert Residences,,(415) 949-0067,reservations@urbanests.com,co-living-block,76.63,12,1295,9,communal,yes,,
+34,unknown,FOUND Study SF,Group/institutional advisor · SF GM,(917) 551-5588 · (628) 246-9210 ⚠ · corporate (866) 341-2818,gm@sf.foundstudy.com,sro-master-lease,92.5,144,1300,5,communal,yes,verify number first,Group contract (they already do university blocks)
+35,unknown,Monroe Residence Club, - ,(415) 474-6200,reservations@monroeresidenceclub.com,sro-master-lease,73,50,1600,27,communal,yes,,Direct approach
+36,unknown,Kenmore Residence Club, - ,(415) 776-5815,office@kenmorehotelsf.com,sro-master-lease,69,50,1800,26,communal,yes,,Direct approach
+37,unknown,Villages at Treasure Island,John Stewart Co. leasing,(415) 834-0211,jsco.net form,sro-master-lease,67.92,45,1083,45,private,yes,,Confirm 2026-27 unit runway with John Stewart Co.
+38,unknown,Presidio Residences,Main / West office,(844) 808-6177 · (844) 729-8087,leasing@presidio-residences.com,sro-master-lease,42,30,1800,60,private,yes,,Interest-form queue; slow at scale

@@ -19,7 +19,7 @@ export const pricetext: Adapter = {
     const priv = text.match(/private[^$]{0,80}\$\s?(\d{1,2},?\d{3})/i); r.price_private_now = priv ? Number(priv[1].replace(/,/g, '')) : null;
     const term = text.match(/(\d+)\s*-?\s*month\s*(?:lease|minimum|min)/i); r.min_stay_nights = term ? Number(term[1]) * 30 : null;
     r.bookable = false; r.ok = true;
-    r.evidence = `monthly from $${r.price_now}${monthly.length ? ' (explicit /mo)' : ' (loose $ match — verify)'} — ${text.slice(0, 300)}`;
+    r.evidence = `monthly from $${r.price_now}${monthly.length ? ' (explicit /mo)' : ' (loose $ match - verify)'} - ${text.slice(0, 300)}`;
     return r;
   },
 };

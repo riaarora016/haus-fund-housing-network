@@ -1,5 +1,5 @@
-// Scoring — implements CLAUDE.md "Scoring (0–100)" exactly. Deterministic; no dates involved.
-// The Step-6 staleness penalty (-10 for 15–45d old verification) is applied in the FRONT END,
+// Scoring - implements CLAUDE.md "Scoring (0-100)" exactly. Deterministic; no dates involved.
+// The Step-6 staleness penalty (-10 for 15-45d old verification) is applied in the FRONT END,
 // because it depends on "today" and build.ts must produce identical output run-to-run.
 import type { Property, ScoreBreakdown } from './schema';
 
@@ -21,7 +21,7 @@ export function scoreProperty(p: Property): { score: number; breakdown: ScoreBre
   const notes: string[] = [];
   const caps: string[] = [];
 
-  // 1. Transit (35) — ≤10 min walk = full; ≥45 = 0; East Bay / outside SF = 0.
+  // 1. Transit (35) - ≤10 min walk = full; ≥45 = 0; East Bay / outside SF = 0.
   let transit = 0;
   if (p.east_bay || !['SF-priority', 'SF-other'].includes(p.region)) {
     transit = 0;
@@ -35,7 +35,7 @@ export function scoreProperty(p: Property): { score: number; breakdown: ScoreBre
     }
   }
 
-  // 2. Price per bed (30) — ≤$1,000 full, linear to 0 at $2,200; unknown = 5.
+  // 2. Price per bed (30) - ≤$1,000 full, linear to 0 at $2,200; unknown = 5.
   let price: number;
   if (p.price_per_bed_est == null) { price = WEIGHTS.price_unknown_pts; notes.push('price: unknown → 5'); }
   else { price = lerp(p.price_per_bed_est, WEIGHTS.target_price, WEIGHTS.max_price, WEIGHTS.price); notes.push(`price: $${p.price_per_bed_est}/bed`); }
@@ -44,15 +44,15 @@ export function scoreProperty(p: Property): { score: number; breakdown: ScoreBre
   const kitchen = p.kitchen === 'communal' || p.kitchen === 'private' ? 15 : p.kitchen === 'unknown' ? 5 : 0;
   notes.push(`kitchen: ${p.kitchen}`);
 
-  // 4. Bed-count fit (20) — 40–60 full; 20–39 = 12 (pair candidate); <20 = 4; >100 = 15; 61–100 = 12 (matches workbook: Embassy 84 → 12).
+  // 4. Bed-count fit (20) - 40-60 full; 20-39 = 12 (pair candidate); <20 = 4; >100 = 15; 61-100 = 12 (matches workbook: Embassy 84 → 12).
   let beds: number;
   const b = p.beds_est;
   if (b == null) { beds = 4; notes.push('beds: unknown → 4'); }
   else if (b >= 40 && b <= 60) beds = 20;
-  else if (b >= 20 && b < 40) { beds = 12; notes.push('beds: 20–39 → pair candidate'); }
+  else if (b >= 20 && b < 40) { beds = 12; notes.push('beds: 20-39 → pair candidate'); }
   else if (b < 20) beds = 4;
   else if (b > 100) beds = 15;
-  else { beds = 12; notes.push('beds: 61–100 → 12 (over ideal; partial take)'); }
+  else { beds = 12; notes.push('beds: 61-100 → 12 (over ideal; partial take)'); }
 
   let score = transit + price + kitchen + beds;
 

@@ -1,7 +1,7 @@
 ---
 template: original-team-template
-use_for: "Reference — what Alex/Giulia already send (10–15 rooms, 3–6 months)"
-subject: "Group housing inquiry — Biopunk/Haus Fund"
+use_for: "Reference - what Alex/Giulia already send (10-15 rooms, 3-6 months)"
+subject: "Group housing inquiry - Biopunk/Haus Fund"
 ---
 
 To whom it may concern,

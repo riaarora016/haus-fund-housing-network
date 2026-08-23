@@ -2,6 +2,7 @@
   {
     "id": "inv-1214-polk-street-residences",
     "name": "1214 Polk Street Residences",
+    "name_detail": "",
     "address": "1214 Polk St, Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -32,6 +33,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -53,7 +59,7 @@
         "transit: 19 min (Notion tracker)",
         "price: $1395/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 73.125,
@@ -96,6 +102,7 @@
   {
     "id": "inv-20-mission-sf-20mish",
     "name": "20 Mission SF (20mish)",
+    "name_detail": "",
     "address": "3491 20th St, Mission",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -126,6 +133,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -152,7 +164,7 @@
     "score_sheet": 57.5,
     "contact_name": "Resident manager Stephanie",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "Interest form: forms.gle/5tP3NrDf7ZgKzRtm7 · Discord via 20mish.com",
@@ -162,7 +174,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "Site (Aug 2026): rooms $1,625/mo all-in; 40 rooms; 650+ credit, 2.5x income. | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi",
+    "notes": "Site (Aug 2026): rooms $1,625/mo all-in; 40 rooms; 650+ credit, 2.5x income. | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": 2,
@@ -189,6 +201,7 @@
   {
     "id": "inv-221-7th-street-residences",
     "name": "221 7th Street Residences",
+    "name_detail": "",
     "address": "221 7th St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -219,6 +232,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -240,7 +258,7 @@
         "transit: 9 min (Notion tracker)",
         "price: $1195/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 87.125,
@@ -256,7 +274,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "Page (Aug 2026): private $1,095–1,195; 2-person $695–795; 3-person $595–645; 3–4 month minimum. | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San",
+    "notes": "Page (Aug 2026): private $1,095-1,195; 2-person $695-795; 3-person $595-645; 3-4 month minimum. | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -283,6 +301,7 @@
   {
     "id": "inv-2436-mission-residences",
     "name": "2436 Mission Residences",
+    "name_detail": "",
     "address": "2436 Mission St",
     "neighborhood": "Mission",
     "neighborhood_raw": "2436 Mission St",
@@ -313,6 +332,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house",
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -376,6 +401,7 @@
   {
     "id": "inv-251-9th-street-residences",
     "name": "251 9th Street Residences",
+    "name_detail": "",
     "address": "251 9th St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -406,6 +432,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -427,7 +458,7 @@
         "transit: 12 min (Notion tracker)",
         "price: $1195/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 85.125,
@@ -470,6 +501,7 @@
   {
     "id": "inv-371-columbus-residences",
     "name": "371 Columbus Residences",
+    "name_detail": "",
     "address": "North Beach",
     "neighborhood": "North Beach",
     "neighborhood_raw": "North Beach",
@@ -500,6 +532,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -521,7 +558,7 @@
         "transit: 30 min (Notion tracker)",
         "price: $1195/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 67.125,
@@ -564,6 +601,7 @@
   {
     "id": "inv-524-columbus-residences",
     "name": "524 Columbus Residences",
+    "name_detail": "",
     "address": "North Beach",
     "neighborhood": "North Beach",
     "neighborhood_raw": "North Beach",
@@ -594,6 +632,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -657,6 +700,7 @@
   {
     "id": "inv-556-green-st-residences",
     "name": "556 Green St Residences",
+    "name_detail": "",
     "address": "North Beach",
     "neighborhood": "North Beach",
     "neighborhood_raw": "North Beach",
@@ -687,6 +731,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -708,7 +757,7 @@
         "transit: 29 min (Notion tracker)",
         "price: $1300/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 65.5,
@@ -750,7 +799,8 @@
   },
   {
     "id": "inv-620-post-st-residences-fitzgerald-co-living-curr",
-    "name": "620 Post St Residences (Fitzgerald co-living) — CURRENT",
+    "name": "620 Post St Residences (Fitzgerald co-living)",
+    "name_detail": "CURRENT",
     "address": "620 Post St, Nob Hill/Union Sq",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill/Union Sq",
@@ -781,6 +831,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [],
     "aau": false,
     "baseline": true,
@@ -800,7 +855,7 @@
         "transit: 15 min (Notion tracker)",
         "price: $1595/bed",
         "kitchen: unknown",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 62.125,
@@ -814,7 +869,7 @@
     "source_links": [],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "Current deal — no scraping; Elliot owns this relationship.",
+    "notes": "Current deal - no scraping; Elliot owns this relationship.",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -841,6 +896,7 @@
   {
     "id": "inv-908-coliving",
     "name": "908 Coliving",
+    "name_detail": "",
     "address": "SF (verify)",
     "neighborhood": "SF (verify)",
     "neighborhood_raw": "SF (verify)",
@@ -871,6 +927,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -933,6 +994,7 @@
   {
     "id": "inv-adelaide-hostel",
     "name": "Adelaide Hostel",
+    "name_detail": "",
     "address": "Isadora Duncan Ln (Taylor/Post)",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Isadora Duncan Ln (Taylor/Post)",
@@ -963,6 +1025,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1027,6 +1094,7 @@
   {
     "id": "inv-amsterdam-hostel",
     "name": "Amsterdam Hostel",
+    "name_detail": "",
     "address": "749 Taylor St (Union Sq)",
     "neighborhood": "Union Square",
     "neighborhood_raw": "749 Taylor St (Union Sq)",
@@ -1057,6 +1125,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1121,6 +1194,7 @@
   {
     "id": "inv-avalon-dogpatch",
     "name": "Avalon Dogpatch",
+    "name_detail": "",
     "address": "800 Indiana St, Dogpatch",
     "neighborhood": "Dogpatch",
     "neighborhood_raw": "Dogpatch",
@@ -1143,7 +1217,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": 3500,
-    "price_raw": "Verify (~$3–4k+)",
+    "price_raw": "Verify (~$3-4k+)",
     "monthly_total_45_est": 157500,
     "kitchen": "private",
     "kitchen_raw": "Yes (in-unit)",
@@ -1151,6 +1225,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1213,6 +1290,7 @@
   {
     "id": "inv-avalon-hayes-valley",
     "name": "Avalon Hayes Valley",
+    "name_detail": "",
     "address": "325 Octavia St, Hayes Valley",
     "neighborhood": "Hayes Valley",
     "neighborhood_raw": "Hayes Valley",
@@ -1243,6 +1321,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1305,6 +1386,7 @@
   {
     "id": "inv-blok-living-lower-haight",
     "name": "Blok Living Lower Haight",
+    "name_detail": "",
     "address": "565 Page St, Lower Haight",
     "neighborhood": "Lower Haight",
     "neighborhood_raw": "Lower Haight",
@@ -1335,6 +1417,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1397,6 +1484,7 @@
   {
     "id": "inv-blueground-furnished-apts",
     "name": "Blueground Furnished Apts",
+    "name_detail": "",
     "address": "149 New Montgomery St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -1427,6 +1515,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1489,6 +1580,7 @@
   {
     "id": "inv-bposhtels-sf-union-square",
     "name": "Bposhtels SF Union Square",
+    "name_detail": "",
     "address": "Union Square area (verify)",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Union Square area (verify)",
@@ -1519,6 +1611,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1584,6 +1681,7 @@
   {
     "id": "inv-brick-iron-lofts",
     "name": "Brick + Iron Lofts",
+    "name_detail": "",
     "address": "2235 3rd St, Dogpatch",
     "neighborhood": "Dogpatch",
     "neighborhood_raw": "Dogpatch",
@@ -1614,6 +1712,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1676,6 +1777,7 @@
   {
     "id": "inv-chapter-san-francisco",
     "name": "Chapter San Francisco",
+    "name_detail": "",
     "address": "1533 Franklin St, Cathedral Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Cathedral Hill",
@@ -1706,6 +1808,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1768,6 +1875,7 @@
   {
     "id": "inv-city-gardens-apartments",
     "name": "City Gardens Apartments",
+    "name_detail": "",
     "address": "333 12th St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -1798,6 +1906,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "expansion"
@@ -1860,6 +1973,7 @@
   {
     "id": "inv-european-hostel",
     "name": "European Hostel",
+    "name_detail": "",
     "address": "Civic Center",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -1876,7 +1990,7 @@
     "type": "hostel",
     "type_raw": "Hostel / co-living",
     "rooms": 25,
-    "capacity_raw": "25 rooms (4–6p shared)",
+    "capacity_raw": "25 rooms (4-6p shared)",
     "beds_est": 25,
     "occupancy_assumption": 1,
     "price_per_room_low": null,
@@ -1890,6 +2004,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -1911,7 +2030,7 @@
         "transit: 10 min (Notion tracker)",
         "price: $545/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 97,
@@ -1928,7 +2047,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "Monthly $545/bed on UrbaNests; nightly on Hostelworld (id 38114). | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad,",
+    "notes": "Monthly $545/bed on UrbaNests; nightly on Hostelworld (id 38114). | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 - Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 - Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 - Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad,",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -1954,7 +2073,8 @@
   },
   {
     "id": "inv-fitzgerald-hotel-nightly-hotel-side-current",
-    "name": "Fitzgerald Hotel (nightly hotel side) — CURRENT",
+    "name": "Fitzgerald Hotel (nightly hotel side)",
+    "name_detail": "CURRENT",
     "address": "620 Post St",
     "neighborhood": "Union Square",
     "neighborhood_raw": "620 Post St",
@@ -1977,7 +2097,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": 3300,
-    "price_raw": "~$110–140/night",
+    "price_raw": "~$110-140/night",
     "monthly_total_45_est": 148500,
     "kitchen": "none",
     "kitchen_raw": "No (mini-fridge/microwave only)",
@@ -1985,6 +2105,11 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [],
     "aau": false,
     "baseline": true,
@@ -2046,6 +2171,7 @@
   {
     "id": "inv-found-study-16-turk-st",
     "name": "FOUND Study 16 Turk St",
+    "name_detail": "",
     "address": "16 Turk St, Mid-Market",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Mid-Market",
@@ -2076,6 +2202,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2113,7 +2242,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "Shared from $850, private $1,650+; $250 membership + $80 application fee; 4–12 month leases typical (amberstudent/apartments.com, Aug 2026).",
+    "notes": "Shared from $850, private $1,650+; $250 membership + $80 application fee; 4-12 month leases typical (amberstudent/apartments.com, Aug 2026).",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -2140,6 +2269,7 @@
   {
     "id": "inv-found-study-nob-hill",
     "name": "Found Study (Nob Hill)",
+    "name_detail": "",
     "address": "Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -2170,6 +2300,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2234,6 +2367,7 @@
   {
     "id": "inv-foundry-coliving",
     "name": "Foundry Coliving",
+    "name_detail": "",
     "address": "550 Guerrero St, Mission",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -2250,7 +2384,7 @@
     "type": "co-living",
     "type_raw": "Founder co-living",
     "rooms": null,
-    "capacity_raw": "~15–20",
+    "capacity_raw": "~15-20",
     "beds_est": null,
     "occupancy_assumption": null,
     "price_per_room_low": null,
@@ -2264,6 +2398,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2289,7 +2428,7 @@
       ]
     },
     "score_sheet": 39.5,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(415) 610-2405",
     "contact_email": "support@foundry.today",
@@ -2328,6 +2467,7 @@
   {
     "id": "inv-furnished-quarters-sf",
     "name": "Furnished Quarters SF",
+    "name_detail": "",
     "address": "1162 Folsom St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -2358,6 +2498,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2420,6 +2565,7 @@
   {
     "id": "inv-globe-hotel-soma",
     "name": "Globe Hotel SoMa",
+    "name_detail": "",
     "address": "10 Hallam St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -2450,6 +2596,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2514,6 +2663,7 @@
   {
     "id": "inv-green-tortoise-hostel",
     "name": "Green Tortoise Hostel",
+    "name_detail": "",
     "address": "494 Broadway, North Beach",
     "neighborhood": "North Beach",
     "neighborhood_raw": "North Beach",
@@ -2544,6 +2694,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2608,6 +2763,7 @@
   {
     "id": "inv-harcourt-hotel-residence",
     "name": "Harcourt Hotel (residence)",
+    "name_detail": "",
     "address": "1105 Larkin St, Nob Hill/TL",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill/TL",
@@ -2630,7 +2786,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": 1000,
-    "price_raw": "~$200–250/wk",
+    "price_raw": "~$200-250/wk",
     "monthly_total_45_est": 45000,
     "kitchen": "communal",
     "kitchen_raw": "Shared",
@@ -2638,6 +2794,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2700,6 +2861,7 @@
   {
     "id": "inv-hi-fisherman-s-wharf-hostel",
     "name": "HI Fisherman's Wharf Hostel",
+    "name_detail": "",
     "address": "Fort Mason",
     "neighborhood": "Marina",
     "neighborhood_raw": "Fort Mason",
@@ -2730,6 +2892,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2794,6 +2961,7 @@
   {
     "id": "inv-hi-san-francisco-downtown",
     "name": "HI San Francisco Downtown",
+    "name_detail": "",
     "address": "312 Mason St",
     "neighborhood": "Union Square",
     "neighborhood_raw": "312 Mason St",
@@ -2824,6 +2992,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2889,6 +3062,7 @@
   {
     "id": "inv-hive-coliving-bunks",
     "name": "Hive Coliving (bunks)",
+    "name_detail": "",
     "address": "SF (verify block)",
     "neighborhood": "SF (verify)",
     "neighborhood_raw": "SF (verify block)",
@@ -2919,6 +3093,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -2944,7 +3123,7 @@
       ]
     },
     "score_sheet": 49,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(845) 304-8555",
     "contact_email": "",
@@ -2983,6 +3162,7 @@
   {
     "id": "inv-hive-coliving-was-tribe",
     "name": "Hive Coliving (was Tribe)",
+    "name_detail": "",
     "address": "1040 Folsom St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -3013,6 +3193,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3038,7 +3223,7 @@
       ]
     },
     "score_sheet": 61.5,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(845) 304-8555",
     "contact_email": "",
@@ -3051,7 +3236,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "Site (Aug 2026): doubles $900 m2m / $800 on 4-mo lease; privates $1,275 / $1,175; +$150 utilities. 50 bedrooms, 12 baths. Apply via form + interview; no live widget. | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att",
+    "notes": "Site (Aug 2026): doubles $900 m2m / $800 on 4-mo lease; privates $1,275 / $1,175; +$150 utilities. 50 bedrooms, 12 baths. Apply via form + interview; no live widget. | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -3078,6 +3263,7 @@
   {
     "id": "inv-hotel-epik-residences",
     "name": "Hotel Epik Residences",
+    "name_detail": "",
     "address": "706 Polk St",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "706 Polk St",
@@ -3108,6 +3294,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house",
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3171,6 +3363,7 @@
   {
     "id": "inv-hotel-fiona",
     "name": "Hotel Fiona",
+    "name_detail": "",
     "address": "140 7th St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -3201,6 +3394,11 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3264,6 +3462,7 @@
   {
     "id": "inv-hyatt-regency-sf-downtown-soma",
     "name": "Hyatt Regency SF Downtown SoMa",
+    "name_detail": "",
     "address": "50 3rd St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -3294,6 +3493,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3356,6 +3558,7 @@
   {
     "id": "inv-ith-pacific-tradewinds",
     "name": "ITH Pacific Tradewinds",
+    "name_detail": "",
     "address": "680 Sacramento St (Chinatown/FiDi)",
     "neighborhood": "FiDi",
     "neighborhood_raw": "680 Sacramento St (Chinatown/FiDi)",
@@ -3386,6 +3589,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3450,6 +3658,7 @@
   {
     "id": "inv-kenmore-residence-hotel",
     "name": "Kenmore Residence Hotel",
+    "name_detail": "",
     "address": "1570 Sutter St, Lower Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Lower Nob Hill",
@@ -3480,6 +3689,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3505,7 +3719,7 @@
       ]
     },
     "score_sheet": 48,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(415) 776-5815",
     "contact_email": "office@kenmorehotelsf.com",
@@ -3544,6 +3758,7 @@
   {
     "id": "inv-landing-furnished-apts",
     "name": "Landing Furnished Apts",
+    "name_detail": "",
     "address": "215 2nd St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -3574,6 +3789,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3636,6 +3854,7 @@
   {
     "id": "inv-larkspur-landing-extended-stay",
     "name": "Larkspur Landing Extended Stay",
+    "name_detail": "",
     "address": "690 Gateway Blvd, South SF",
     "neighborhood": "South SF",
     "neighborhood_raw": "South SF",
@@ -3666,6 +3885,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3728,6 +3950,7 @@
   {
     "id": "inv-lovely-north-beach-chinatown-hotel",
     "name": "Lovely North Beach / Chinatown Hotel",
+    "name_detail": "",
     "address": "North Beach",
     "neighborhood": "North Beach",
     "neighborhood_raw": "North Beach",
@@ -3758,6 +3981,11 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3779,7 +4007,7 @@
         "transit: 29 min (Notion tracker)",
         "price: $1600/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 63,
@@ -3822,6 +4050,7 @@
   {
     "id": "inv-mission-control",
     "name": "Mission Control",
+    "name_detail": "",
     "address": "2211 Mission St, Mission",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -3852,6 +4081,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -3914,6 +4148,7 @@
   {
     "id": "inv-mission-dolores-manor",
     "name": "Mission Dolores Manor",
+    "name_detail": "",
     "address": "822 S Van Ness Ave, Mission",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -3944,6 +4179,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4006,6 +4246,7 @@
   {
     "id": "inv-monroe-residence-club",
     "name": "Monroe Residence Club",
+    "name_detail": "",
     "address": "1870 Sacramento St, Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -4036,6 +4277,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4061,7 +4307,7 @@
       ]
     },
     "score_sheet": 52,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(415) 474-6200",
     "contact_email": "reservations@monroeresidenceclub.com",
@@ -4100,6 +4346,7 @@
   {
     "id": "inv-neighbourgood-mission",
     "name": "Neighbourgood Mission",
+    "name_detail": "",
     "address": "2072 Mission St, Mission",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -4130,6 +4377,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4192,6 +4442,7 @@
   {
     "id": "inv-nob-hill-place",
     "name": "Nob Hill Place",
+    "name_detail": "",
     "address": "1155 Jones St, Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -4222,6 +4473,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4284,6 +4538,7 @@
   {
     "id": "inv-nob-hill-tower",
     "name": "Nob Hill Tower",
+    "name_detail": "",
     "address": "1221 Jones St, Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -4314,6 +4569,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4376,6 +4634,7 @@
   {
     "id": "inv-o-m-apartments",
     "name": "O&M Apartments",
+    "name_detail": "",
     "address": "680 Indiana St, Dogpatch",
     "neighborhood": "Dogpatch",
     "neighborhood_raw": "Dogpatch",
@@ -4406,6 +4665,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4468,6 +4730,7 @@
   {
     "id": "inv-orange-village-hostel",
     "name": "Orange Village Hostel",
+    "name_detail": "",
     "address": "Central SF (nr Union Sq)",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Central SF (nr Union Sq)",
@@ -4498,6 +4761,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4536,7 +4804,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "Nightly $28–36 (Hostelworld, Aug 2026). | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr",
+    "notes": "Nightly $28-36 (Hostelworld, Aug 2026). | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -4563,6 +4831,7 @@
   {
     "id": "inv-panoramic-residences",
     "name": "Panoramic Residences",
+    "name_detail": "",
     "address": "1321 Mission St (9th & Mission), SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -4593,6 +4862,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4654,6 +4928,7 @@
   {
     "id": "inv-podshare-sf-marina",
     "name": "PodShare SF Marina",
+    "name_detail": "",
     "address": "2424 Lombard St, Marina",
     "neighborhood": "Marina",
     "neighborhood_raw": "Marina",
@@ -4684,6 +4959,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4746,6 +5026,7 @@
   {
     "id": "inv-prism",
     "name": "Prism",
+    "name_detail": "",
     "address": "1028 Market St, Mid-Market",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Mid-Market",
@@ -4776,6 +5057,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4838,6 +5122,7 @@
   {
     "id": "inv-samesun-san-francisco",
     "name": "Samesun San Francisco",
+    "name_detail": "",
     "address": "North Beach (verify)",
     "neighborhood": "North Beach",
     "neighborhood_raw": "North Beach (verify)",
@@ -4868,6 +5153,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -4933,6 +5223,7 @@
   {
     "id": "inv-soma-house",
     "name": "Soma House",
+    "name_detail": "",
     "address": "121 7th St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -4963,6 +5254,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5025,6 +5319,7 @@
   {
     "id": "inv-soma-residences",
     "name": "SOMA Residences",
+    "name_detail": "",
     "address": "1045 Mission St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -5055,6 +5350,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "expansion"
@@ -5077,7 +5377,7 @@
         "transit: 5 min (Notion tracker)",
         "price: $2100/bed",
         "kitchen: private",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 64.5,
@@ -5118,6 +5418,7 @@
   {
     "id": "inv-standard-union-square-hotels-adante-powell-union",
     "name": "Standard Union Square hotels (Adante, Powell, Union Sq Plaza, Ram's, etc.)",
+    "name_detail": "",
     "address": "Union Sq / SoMa",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Union Sq / SoMa",
@@ -5148,6 +5449,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5210,6 +5514,7 @@
   {
     "id": "inv-suites-at-fisherman-s-wharf",
     "name": "Suites at Fisherman's Wharf",
+    "name_detail": "",
     "address": "2655 Hyde St, Fisherman's Wharf",
     "neighborhood": "Fisherman's Wharf",
     "neighborhood_raw": "Fisherman's Wharf",
@@ -5240,6 +5545,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5302,6 +5610,7 @@
   {
     "id": "inv-sweden-house",
     "name": "Sweden House",
+    "name_detail": "",
     "address": "Tenderloin",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Tenderloin",
@@ -5332,6 +5641,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5353,7 +5667,7 @@
         "transit: 11 min (Notion tracker)",
         "price: $1395/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 81.125,
@@ -5369,7 +5683,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "570 O'Farrell St; 39–40 rooms; weekly/monthly rates; shared baths per floor.",
+    "notes": "570 O'Farrell St; 39-40 rooms; weekly/monthly rates; shared baths per floor.",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -5396,6 +5710,7 @@
   {
     "id": "inv-the-6th-collective-coliving",
     "name": "The 6th Collective Coliving",
+    "name_detail": "",
     "address": "Howard & 6th St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -5426,6 +5741,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5461,7 +5781,7 @@
     "source_links": [],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "No operator site found yet — needs an adapter / a phone call.",
+    "notes": "No operator site found yet - needs an adapter / a phone call.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": 2,
@@ -5488,6 +5808,7 @@
   {
     "id": "inv-the-annex-at-hayes-valley",
     "name": "The Annex at Hayes Valley",
+    "name_detail": "",
     "address": "420 Hayes St, Hayes Valley",
     "neighborhood": "Hayes Valley",
     "neighborhood_raw": "Hayes Valley",
@@ -5518,6 +5839,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5580,6 +5906,7 @@
   {
     "id": "inv-the-bartlett-residences",
     "name": "The Bartlett Residences",
+    "name_detail": "",
     "address": "Union Square",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Union Square",
@@ -5610,6 +5937,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house",
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5673,6 +6006,7 @@
   {
     "id": "inv-the-herbert-residences",
     "name": "The Herbert Residences",
+    "name_detail": "",
     "address": "Union Square (~161 Powell St)",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Union Square (~161 Powell St)",
@@ -5703,6 +6037,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house",
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5766,6 +6106,7 @@
   {
     "id": "inv-the-mission-hotel-apartments",
     "name": "The Mission Hotel Apartments",
+    "name_detail": "",
     "address": "520 S Van Ness Ave, Mission",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -5796,6 +6137,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5858,6 +6204,7 @@
   {
     "id": "inv-the-mosser-hotel",
     "name": "The Mosser Hotel",
+    "name_detail": "",
     "address": "54 4th St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -5888,6 +6235,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -5950,6 +6300,7 @@
   {
     "id": "inv-the-perramont",
     "name": "The Perramont",
+    "name_detail": "",
     "address": "Castro",
     "neighborhood": "Castro",
     "neighborhood_raw": "Castro",
@@ -5980,6 +6331,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house",
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6043,6 +6400,7 @@
   {
     "id": "inv-the-pinnacle-at-nob-hill",
     "name": "The Pinnacle at Nob Hill",
+    "name_detail": "",
     "address": "899 Pine St, Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -6073,6 +6431,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6135,6 +6496,7 @@
   {
     "id": "inv-the-red-victorian",
     "name": "The Red Victorian",
+    "name_detail": "",
     "address": "1665 Haight St, Haight",
     "neighborhood": "Haight",
     "neighborhood_raw": "Haight",
@@ -6165,6 +6527,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house",
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6226,6 +6594,7 @@
   {
     "id": "inv-tl-residences",
     "name": "TL Residences",
+    "name_detail": "",
     "address": "361 Turk St, Tenderloin",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Tenderloin",
@@ -6256,6 +6625,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "expansion"
@@ -6318,6 +6692,7 @@
   {
     "id": "inv-upmarket-residences",
     "name": "UpMarket Residences",
+    "name_detail": "",
     "address": "221 7th St",
     "neighborhood": "SoMa",
     "neighborhood_raw": "221 7th St",
@@ -6348,6 +6723,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6384,7 +6764,7 @@
     ],
     "source": "sheet-inventory",
     "play": "",
-    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr",
+    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr",
     "outreach_status": "contacted",
     "contacted_by": "Alex",
     "notion_round": 1,
@@ -6411,6 +6791,7 @@
   {
     "id": "inv-urbanests-1080-folsom-residences",
     "name": "UrbaNests 1080 Folsom Residences",
+    "name_detail": "",
     "address": "1080 Folsom St, SoMa",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -6441,6 +6822,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6505,6 +6891,7 @@
   {
     "id": "inv-usa-hostels-sf",
     "name": "USA Hostels SF",
+    "name_detail": "",
     "address": "411 O'Farrell St",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "411 O'Farrell St",
@@ -6527,7 +6914,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": 1050,
-    "price_raw": "$30–40/night",
+    "price_raw": "$30-40/night",
     "monthly_total_45_est": 47250,
     "kitchen": "communal",
     "kitchen_raw": "Yes",
@@ -6535,6 +6922,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "stale-verify",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6599,6 +6989,7 @@
   {
     "id": "inv-vantaggio-suites-abigail",
     "name": "Vantaggio Suites Abigail",
+    "name_detail": "",
     "address": "246 McAllister St, Civic Center",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -6629,6 +7020,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6691,6 +7085,7 @@
   {
     "id": "inv-vantaggio-suites-garland",
     "name": "Vantaggio Suites Garland",
+    "name_detail": "",
     "address": "505 O'Farrell St, Tenderloin",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Tenderloin",
@@ -6721,6 +7116,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6783,6 +7181,7 @@
   {
     "id": "inv-vela-marina",
     "name": "VELA Marina",
+    "name_detail": "",
     "address": "2353 Lombard St, Marina",
     "neighborhood": "Marina",
     "neighborhood_raw": "Marina",
@@ -6813,6 +7212,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6875,6 +7277,7 @@
   {
     "id": "inv-villa-nob-hill-furnished-apts",
     "name": "Villa Nob Hill Furnished Apts",
+    "name_detail": "",
     "address": "1124 Leavenworth St, Nob Hill",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -6905,6 +7308,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6967,6 +7373,7 @@
   {
     "id": "inv-vybe-living-operator",
     "name": "Vybe Living (operator)",
+    "name_detail": "",
     "address": "SoMa / TL / Mission rooms",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa / TL / Mission rooms",
@@ -6989,7 +7396,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": 1500,
-    "price_raw": "$1,200–1,800",
+    "price_raw": "$1,200-1,800",
     "monthly_total_45_est": 67500,
     "kitchen": "communal",
     "kitchen_raw": "Yes",
@@ -6997,6 +7404,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "alum-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -7059,6 +7471,7 @@
   {
     "id": "inv-windsor-at-dogpatch",
     "name": "Windsor at Dogpatch",
+    "name_detail": "",
     "address": "2660 3rd St, Dogpatch",
     "neighborhood": "Dogpatch",
     "neighborhood_raw": "Dogpatch",
@@ -7089,6 +7502,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -7150,7 +7566,8 @@
   },
   {
     "id": "pl-1055-1069-pine-st-80-unit-ex-dorm",
-    "name": "1055–1069 Pine St — 80-unit ex-dorm",
+    "name": "1055-1069 Pine St",
+    "name_detail": "80-unit ex-dorm",
     "address": "Nob Hill, SF (part of AAU cluster)",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -7181,6 +7598,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "on-market",
+    "deal_channel": "institution",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "expansion"
@@ -7203,7 +7625,7 @@
         "transit: 20 min (est. by neighborhood (geocode in portal))",
         "price: $1300/bed",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 74.5,
@@ -7213,7 +7635,7 @@
     "contact_email": "jim.wright@ / jj.taughinbaugh@ / taylor.flynn@ / yuri.sergunin@marcusmillichap.com",
     "contact_verify": false,
     "contact_path": "",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
       "LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
       "Crexi: https://www.crexi.com/properties/2305070/california-1055-1069-pine-st"
@@ -7246,8 +7668,9 @@
   },
   {
     "id": "pl-149-161-hyde-st",
-    "name": "149–161 Hyde St",
-    "address": "149–161 Hyde St, SF",
+    "name": "149-161 Hyde St",
+    "name_detail": "",
+    "address": "149-161 Hyde St, SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
     "region": "SF-priority",
@@ -7277,6 +7700,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -7301,9 +7729,9 @@
       ]
     },
     "score_sheet": 72.5,
-    "contact_name": "Listing broker — see LoopNet (round-5 find)",
+    "contact_name": "Listing broker - see LoopNet (round-5 find)",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "LoopNet 149-161 Hyde St",
@@ -7342,6 +7770,7 @@
   {
     "id": "pl-150-hegenberger-rd-hotel",
     "name": "150 Hegenberger Rd hotel",
+    "name_detail": "",
     "address": "150 Hegenberger Rd, Oakland",
     "neighborhood": "Oakland Airport area",
     "neighborhood_raw": "Oakland Airport area",
@@ -7364,7 +7793,7 @@
     "price_per_room_low": 900,
     "price_per_room_high": 1300,
     "price_per_bed_est": 1100,
-    "price_raw": "$8.1M (~$50–55k/key)",
+    "price_raw": "$8.1M (~$50-55k/key)",
     "monthly_total_45_est": 49500,
     "kitchen": "none",
     "kitchen_raw": "none",
@@ -7372,6 +7801,9 @@
     "furnished": true,
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -7436,7 +7868,8 @@
   },
   {
     "id": "pl-1515-webster-top-floors-vacant-ex-co-living-spac",
-    "name": "1515 Webster top floors — vacant ex-co-living space",
+    "name": "1515 Webster top floors",
+    "name_detail": "vacant ex-co-living space",
     "address": "Julia Morgan YWCA building, Downtown Oakland",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
@@ -7467,6 +7900,9 @@
     "furnished": true,
     "bath": "unknown",
     "status": "dark",
+    "deal_channel": "operator",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -7486,7 +7922,7 @@
         "transit: region=East Bay → 0 (outside SF; see CLAUDE.md geography rule)",
         "price: unknown → 5",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 32,
@@ -7503,7 +7939,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Pitch Envision Academy interim revenue on the residential floors",
-    "notes": "A charter school owns a landmark with purpose-built co-living floors sitting empty. A master lease gives them revenue toward their own teacher-housing goal later — an easy mission-aligned pitch.",
+    "notes": "A charter school owns a landmark with purpose-built co-living floors sitting empty. A master lease gives them revenue toward their own teacher-housing goal later - an easy mission-aligned pitch.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -7530,6 +7966,7 @@
   {
     "id": "pl-1538-polk-st-aau-cluster-pairing",
     "name": "1538 Polk St + AAU cluster pairing",
+    "name_detail": "",
     "address": "Polk Gulch / Lower Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -7560,6 +7997,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "institution",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -7584,7 +8026,7 @@
       ]
     },
     "score_sheet": 60.5,
-    "contact_name": "Brian Leung / Jeremy Lee — Compass Commercial",
+    "contact_name": "Brian Leung / Jeremy Lee - Compass Commercial",
     "contact_org": "",
     "contact_phone": "(415) 278-7838 / (650) 219-3989",
     "contact_email": "brian.leung@compass.com · jeremy.lee@compass.com",
@@ -7596,7 +8038,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Pair with an AAU dorm lease",
-    "notes": "Cheap 43-unit building walking distance from the AAU dorm cluster — a purchase-or-lease complement if AAU only gives up one building.",
+    "notes": "Cheap 43-unit building walking distance from the AAU dorm cluster - a purchase-or-lease complement if AAU only gives up one building.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -7622,7 +8064,8 @@
   },
   {
     "id": "pl-17th-broadway-class-a-2br-block",
-    "name": "17th & Broadway — Class A 2BR block",
+    "name": "17th & Broadway",
+    "name_detail": "Class A 2BR block",
     "address": "447 17th St, Uptown Oakland",
     "neighborhood": "Uptown Oakland",
     "neighborhood_raw": "Uptown Oakland",
@@ -7645,7 +8088,7 @@
     "price_per_room_low": 3500,
     "price_per_room_high": 3811,
     "price_per_bed_est": 1828,
-    "price_raw": "~$1,750–1,900/bed with negotiated concessions",
+    "price_raw": "~$1,750-1,900/bed with negotiated concessions",
     "monthly_total_45_est": 82260,
     "kitchen": "private",
     "kitchen_raw": "private",
@@ -7653,6 +8096,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -7688,7 +8134,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Corporate block (already on SilverDoor)",
-    "notes": "Pool, 34th-floor open-air lounge, furnished options; already sells through corporate-housing channels, so a 20–25 unit block is a familiar ask.",
+    "notes": "Pool, 34th-floor open-air lounge, furnished options; already sells through corporate-housing channels, so a 20-25 unit block is a familiar ask.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -7715,6 +8161,7 @@
   {
     "id": "pl-1900-broadway-co-living-block-verified-pricing",
     "name": "1900 Broadway co-living block (verified pricing)",
+    "name_detail": "",
     "address": "Uptown Oakland, on top of 19th St BART",
     "neighborhood": "Uptown Oakland",
     "neighborhood_raw": "Uptown Oakland",
@@ -7737,7 +8184,7 @@
     "price_per_room_low": 1400,
     "price_per_room_high": 1660,
     "price_per_bed_est": 1530,
-    "price_raw": "$1,803/bed listed · 4 wks free → ~$1,660 effective · block deal ≈ $1,400–1,550",
+    "price_raw": "$1,803/bed listed · 4 wks free → ~$1,660 effective · block deal ≈ $1,400-1,550",
     "monthly_total_45_est": 68850,
     "kitchen": "private",
     "kitchen_raw": "private",
@@ -7745,6 +8192,9 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "owner",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "bridge-sept",
       "expansion"
@@ -7776,15 +8226,15 @@
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "live1900.com · stakspace.com",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
       "Apartments.com: https://www.apartments.com/1900-broadway-oakland-ca/bht2eec/",
       "live1900.com: https://www.live1900.com/",
-      "Zillow — 23 units: https://www.zillow.com/apartments/oakland-ca/1900-broadway/Ch7XFs/"
+      "Zillow - 23 units: https://www.zillow.com/apartments/oakland-ca/1900-broadway/Ch7XFs/"
     ],
     "source": "sheet-pipeline",
-    "play": "Negotiate 40–60 bed block",
-    "notes": "Verified live: co-living beds from $1,803 with 4 weeks free; ~23 units on Zillow = leverage. STAK sells Bronze/Silver/Gold apartment+coworking packages ('up to $60k/yr savings') — the group-block product exists in all but name. For 40–60 beds, go over the leasing office (844-932-4196) to owner Behring Companies (Colin Behring).",
+    "play": "Negotiate 40-60 bed block",
+    "notes": "Verified live: co-living beds from $1,803 with 4 weeks free; ~23 units on Zillow = leverage. STAK sells Bronze/Silver/Gold apartment+coworking packages ('up to $60k/yr savings') - the group-block product exists in all but name. For 40-60 beds, go over the leasing office (844-932-4196) to owner Behring Companies (Colin Behring).",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -7810,7 +8260,8 @@
   },
   {
     "id": "pl-1919-market-st-foreclosed-new-build-co-living",
-    "name": "1919 Market St — foreclosed new-build co-living",
+    "name": "1919 Market St",
+    "name_detail": "foreclosed new-build co-living",
     "address": "West Oakland (former Greyhound terminal site)",
     "neighborhood": "West Oakland",
     "neighborhood_raw": "West Oakland",
@@ -7841,6 +8292,9 @@
     "furnished": true,
     "bath": "unknown",
     "status": "sold",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -7878,7 +8332,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Pitch new low-basis owner",
-    "notes": "Newly built by oWow with co-living-style layouts — unusually well suited to 40–60 beds. Owner at a 36% haircut basis needs income.",
+    "notes": "Newly built by oWow with co-living-style layouts - unusually well suited to 40-60 beds. Owner at a 36% haircut basis needs income.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -7905,6 +8359,7 @@
   {
     "id": "pl-20mish",
     "name": "20mish",
+    "name_detail": "",
     "address": "Mission District, SF",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -7935,6 +8390,12 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house",
+      "femme-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "femme-house"
@@ -7962,7 +8423,7 @@
     "score_sheet": 54.375,
     "contact_name": "Resident manager Stephanie",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "Interest form: forms.gle/5tP3NrDf7ZgKzRtm7 · Discord via 20mish.com",
@@ -7998,7 +8459,8 @@
   },
   {
     "id": "pl-3700-california-st-vacant-hospital-campus-years",
-    "name": "3700 California St — vacant hospital campus, years of runway",
+    "name": "3700 California St",
+    "name_detail": "vacant hospital campus, years of runway",
     "address": "Presidio Heights, SF (former CPMC campus)",
     "neighborhood": "Presidio Heights",
     "neighborhood_raw": "Presidio Heights",
@@ -8021,7 +8483,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": null,
-    "price_raw": "Owner Prado Group still in environmental review — no construction start",
+    "price_raw": "Owner Prado Group still in environmental review - no construction start",
     "monthly_total_45_est": null,
     "kitchen": "unknown",
     "kitchen_raw": "unknown",
@@ -8029,6 +8491,9 @@
     "furnished": "unknown",
     "bath": "unknown",
     "status": "dark",
+    "deal_channel": "owner",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -8056,18 +8521,18 @@
     "score_sheet": 14,
     "contact_name": "Prado Group",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "pradogroup.com contact · 3700calsf.com",
     "contact_section": "Bargains / distressed",
     "source_links": [
-      "SF YIMBY — EIR: https://sfyimby.com/2025/04/environmental-review-available-for-3700-california-street-in-presidio-heights-san-francisco.html",
+      "SF YIMBY - EIR: https://sfyimby.com/2025/04/environmental-review-available-for-3700-california-street-in-presidio-heights-san-francisco.html",
       "SF Standard: https://sfstandard.com/2024/04/20/prado-group-redeveloping-hospitals-presidio-heights/"
     ],
     "source": "sheet-pipeline",
     "play": "Pitch Prado Group an interim activation lease",
-    "notes": "Multi-year-vacant campus with a carrying-cost-burdened owner and 1–2+ years before demolition — textbook interim master lease. Caveat: hospital floorplates need change-of-use work; target the support/office buildings first.",
+    "notes": "Multi-year-vacant campus with a carrying-cost-burdened owner and 1-2+ years before demolition - textbook interim master lease. Caveat: hospital floorplates need change-of-use work; target the support/office buildings first.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8094,6 +8559,7 @@
   {
     "id": "pl-392-11th-st-oakland",
     "name": "392 11th St, Oakland",
+    "name_detail": "",
     "address": "392 11th St, Oakland",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
@@ -8124,6 +8590,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -8143,7 +8612,7 @@
         "transit: region=East Bay → 0 (outside SF; see CLAUDE.md geography rule)",
         "price: unknown → 5",
         "kitchen: private",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 32,
@@ -8187,7 +8656,8 @@
   },
   {
     "id": "pl-aau-dorm-1080-bush-st",
-    "name": "AAU dorm — 1080 Bush St",
+    "name": "AAU dorm",
+    "name_detail": "1080 Bush St",
     "address": "1080 Bush St, Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -8218,6 +8688,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "institution",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "expansion"
@@ -8243,22 +8718,22 @@
       ]
     },
     "score_sheet": 88,
-    "contact_name": "AAU Housing Office — existing landlord, warm intro",
+    "contact_name": "AAU Housing Office - existing landlord, warm intro",
     "contact_org": "",
     "contact_phone": "via 79 New Montgomery switchboard",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "academyart.edu/campus-athletics/housing",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
-      "TRD — $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
+      "TRD - $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
       "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
       "AAU housing page: https://www.academyart.edu/campus-athletics/housing/",
       "736 Jones: https://www.apartments.com/academy-of-art-university-san-francisco-ca/s6esxj6/"
     ],
     "source": "sheet-pipeline",
-    "play": "One motivated seller — M&M brokers",
-    "notes": "Round-4 check: none of the dorms is formally listed — the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page — mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
+    "play": "One motivated seller - M&M brokers",
+    "notes": "Round-4 check: none of the dorms is formally listed - the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page - mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8284,7 +8759,8 @@
   },
   {
     "id": "pl-aau-dorm-680-sutter-st",
-    "name": "AAU dorm — 680 Sutter St",
+    "name": "AAU dorm",
+    "name_detail": "680 Sutter St",
     "address": "680 Sutter St, Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -8315,6 +8791,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "institution",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -8336,26 +8817,26 @@
         "transit: 14 min (est. by neighborhood (geocode in portal))",
         "price: $650/bed",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 88,
-    "contact_name": "AAU Housing Office — existing landlord, warm intro",
+    "contact_name": "AAU Housing Office - existing landlord, warm intro",
     "contact_org": "",
     "contact_phone": "via 79 New Montgomery switchboard",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "academyart.edu/campus-athletics/housing",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
-      "TRD — $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
+      "TRD - $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
       "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
       "AAU housing page: https://www.academyart.edu/campus-athletics/housing/",
       "736 Jones: https://www.apartments.com/academy-of-art-university-san-francisco-ca/s6esxj6/"
     ],
     "source": "sheet-pipeline",
-    "play": "One motivated seller — M&M brokers",
-    "notes": "Round-4 check: none of the dorms is formally listed — the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page — mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
+    "play": "One motivated seller - M&M brokers",
+    "notes": "Round-4 check: none of the dorms is formally listed - the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page - mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8381,7 +8862,8 @@
   },
   {
     "id": "pl-aau-dorm-736-jones-st",
-    "name": "AAU dorm — 736 Jones St",
+    "name": "AAU dorm",
+    "name_detail": "736 Jones St",
     "address": "736 Jones St, Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -8412,6 +8894,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "dark",
+    "deal_channel": "institution",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house",
+      "femme-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "q1-2027",
@@ -8435,26 +8923,26 @@
         "transit: 18 min (est. by neighborhood (geocode in portal))",
         "price: $650/bed",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 84,
-    "contact_name": "AAU Housing Office — existing landlord, warm intro",
+    "contact_name": "AAU Housing Office - existing landlord, warm intro",
     "contact_org": "",
     "contact_phone": "via 79 New Montgomery switchboard",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "academyart.edu/campus-athletics/housing",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
-      "TRD — $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
+      "TRD - $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
       "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
       "AAU housing page: https://www.academyart.edu/campus-athletics/housing/",
       "736 Jones: https://www.apartments.com/academy-of-art-university-san-francisco-ca/s6esxj6/"
     ],
     "source": "sheet-pipeline",
-    "play": "One motivated seller — M&M brokers",
-    "notes": "Round-4 check: none of the dorms is formally listed — the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page — mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
+    "play": "One motivated seller - M&M brokers",
+    "notes": "Round-4 check: none of the dorms is formally listed - the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page - mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8480,7 +8968,8 @@
   },
   {
     "id": "pl-aau-dorm-860-sutter-st",
-    "name": "AAU dorm — 860 Sutter St",
+    "name": "AAU dorm",
+    "name_detail": "860 Sutter St",
     "address": "860 Sutter St, Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -8511,6 +9000,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "dark",
+    "deal_channel": "institution",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "q1-2027",
@@ -8537,22 +9031,22 @@
       ]
     },
     "score_sheet": 89,
-    "contact_name": "AAU Housing Office — existing landlord, warm intro",
+    "contact_name": "AAU Housing Office - existing landlord, warm intro",
     "contact_org": "",
     "contact_phone": "via 79 New Montgomery switchboard",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "academyart.edu/campus-athletics/housing",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
-      "TRD — $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
+      "TRD - $130M portfolio: https://therealdeal.com/san-francisco/2025/10/22/san-francisco-art-academy-to-sell-130-million-portfolio/",
       "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
       "AAU housing page: https://www.academyart.edu/campus-athletics/housing/",
       "736 Jones: https://www.apartments.com/academy-of-art-university-san-francisco-ca/s6esxj6/"
     ],
     "source": "sheet-pipeline",
-    "play": "One motivated seller — M&M brokers",
-    "notes": "Round-4 check: none of the dorms is formally listed — the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page — mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
+    "play": "One motivated seller - M&M brokers",
+    "notes": "Round-4 check: none of the dorms is formally listed - the $130M portfolio never included them (its residential pieces, 1055 Pine and 1946 Van Ness, are under contract). AAU's facilities page still shows all four as student housing, though 736 Jones and 860 Sutter were dropped from the current-housing page - mixed signals that only a direct ask resolves. Two routes: the existing landlord relationship, and Marcus & Millichap (handling ALL AAU dispositions) for an off-market approach. Comp: the Commodore dorm-hotel traded at ~$13M (~$115k/key).",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8578,7 +9072,8 @@
   },
   {
     "id": "pl-ac-hotel-residence-inn-oakland-lender-seized-1-y",
-    "name": "AC Hotel / Residence Inn Oakland — lender-seized, 1 yr old",
+    "name": "AC Hotel / Residence Inn Oakland",
+    "name_detail": "lender-seized, 1 yr old",
     "address": "1431 Jefferson St, Downtown Oakland",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
@@ -8609,6 +9104,9 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -8646,7 +9144,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Approach the lender",
-    "notes": "Brand-new extended-stay product (kitchens!) under lender control — arguably the best hotel-side target in Oakland for quality per dollar.",
+    "notes": "Brand-new extended-stay product (kitchens!) under lender control - arguably the best hotel-side target in Oakland for quality per dollar.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8673,6 +9171,7 @@
   {
     "id": "pl-adams-point-cluster-6-listings",
     "name": "Adams Point cluster (6 listings)",
+    "name_detail": "",
     "address": "469 Van Buren + 286 Lenox + 303 Lee + 369 Palm, Lake Merritt, Oakland",
     "neighborhood": "Lake Merritt, Oakland",
     "neighborhood_raw": "Lake Merritt, Oakland",
@@ -8695,7 +9194,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": null,
-    "price_raw": "Pairs $11.9–12.1M",
+    "price_raw": "Pairs $11.9-12.1M",
     "monthly_total_45_est": null,
     "kitchen": "private",
     "kitchen_raw": "private",
@@ -8703,6 +9202,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -8725,7 +9227,7 @@
       ]
     },
     "score_sheet": 35,
-    "contact_name": "Matt Treadway — The Lapham Company",
+    "contact_name": "Matt Treadway - The Lapham Company",
     "contact_org": "",
     "contact_phone": "(415) 640-6411 · office (510) 594-7600",
     "contact_email": "info@laphamcompany.com",
@@ -8737,7 +9239,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Lease or buy any two, 3-min walk apart",
-    "notes": "Six active multifamily listings in one walkable pocket near Lake Merritt/19th St BART. Best pairing: 469 Van Buren + 286 Lenox ≈ 50–60 beds. Oakland's softness makes lease-with-option pitches credible on all of them.",
+    "notes": "Six active multifamily listings in one walkable pocket near Lake Merritt/19th St BART. Best pairing: 469 Van Buren + 286 Lenox ≈ 50-60 beds. Oakland's softness makes lease-with-option pitches credible on all of them.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8763,7 +9265,8 @@
   },
   {
     "id": "pl-alameda-point-beq-city-signs-as-is-5-yr-leases",
-    "name": "Alameda Point BEQ — city signs as-is 5-yr leases",
+    "name": "Alameda Point BEQ",
+    "name_detail": "city signs as-is 5-yr leases",
     "address": "Alameda Point (former Naval Air Station), Alameda",
     "neighborhood": "Alameda",
     "neighborhood_raw": "Alameda",
@@ -8794,6 +9297,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "dark",
+    "deal_channel": "broker",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -8857,7 +9363,8 @@
   },
   {
     "id": "pl-atlas-oakland-3-per-2br-math-works",
-    "name": "Atlas Oakland — 3-per-2BR math works",
+    "name": "Atlas Oakland",
+    "name_detail": "3-per-2BR math works",
     "address": "385 14th St, Downtown Oakland",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
@@ -8888,6 +9395,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -8907,7 +9417,7 @@
         "transit: region=East Bay → 0 (outside SF; see CLAUDE.md geography rule)",
         "price: $1613/bed",
         "kitchen: private",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 46.675,
@@ -8923,7 +9433,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Call for block pricing ($500 look-and-lease running)",
-    "notes": "Oakland's tallest residential tower with lease-up pressure. Same submarket economics as 1900 Broadway — play them against each other.",
+    "notes": "Oakland's tallest residential tower with lease-up pressure. Same submarket economics as 1900 Broadway - play them against each other.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -8949,7 +9459,8 @@
   },
   {
     "id": "pl-baseline-fitzgerald-co-living-floors-current-dea",
-    "name": "BASELINE — Fitzgerald co-living floors (current deal)",
+    "name": "Fitzgerald co-living floors (current deal)",
+    "name_detail": "current deal (baseline)",
     "address": "620 Post St, Nob Hill/Union Sq, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -8980,6 +9491,11 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -9001,7 +9517,7 @@
         "transit: 15 min (est. by neighborhood (geocode in portal))",
         "price: $1595/bed",
         "kitchen: unknown",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 62.125,
@@ -9014,7 +9530,7 @@
     "contact_section": "",
     "source_links": [],
     "source": "sheet-pipeline",
-    "play": "Current deal — every row is compared to this",
+    "play": "Current deal - every row is compared to this",
     "notes": "Move-in Sept 27. Common room has mini-fridge + sink; confirm full kitchen.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
@@ -9041,7 +9557,8 @@
   },
   {
     "id": "pl-baseline-fitzgerald-hotel-nightly-side",
-    "name": "BASELINE — Fitzgerald Hotel nightly side",
+    "name": "Fitzgerald Hotel nightly side",
+    "name_detail": "current deal (baseline)",
     "address": "620 Post St, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -9064,7 +9581,7 @@
     "price_per_room_low": 3300,
     "price_per_room_high": 3300,
     "price_per_bed_est": 3300,
-    "price_raw": "~$110–140/night (~$3,300/mo)",
+    "price_raw": "~$110-140/night (~$3,300/mo)",
     "monthly_total_45_est": 148500,
     "kitchen": "none",
     "kitchen_raw": "none",
@@ -9072,6 +9589,11 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [],
     "aau": false,
     "baseline": true,
@@ -9133,6 +9655,7 @@
   {
     "id": "pl-berkeley-rooming-house-block-white-house-g-house",
     "name": "Berkeley rooming-house block (White House / G-House / Piedmont Palace / TBG)",
+    "name_detail": "",
     "address": "Piedmont Ave + Haste/Dwight, Southside Berkeley",
     "neighborhood": "Berkeley",
     "neighborhood_raw": "Berkeley",
@@ -9155,7 +9678,7 @@
     "price_per_room_low": 1050,
     "price_per_room_high": 1480,
     "price_per_bed_est": 1265,
-    "price_raw": "$1,050–1,480/bed",
+    "price_raw": "$1,050-1,480/bed",
     "monthly_total_45_est": 56925,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -9163,6 +9686,9 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -9193,14 +9719,14 @@
     "contact_path": "",
     "contact_section": "Pairs & clusters",
     "source_links": [
-      "White House — och.berkeley.edu: https://och.berkeley.edu/housing/property/white-house-rooming-house-3-blocks-to-ucb-southside-large-private-and-shared-furnished-rooms/ocp8826vp1",
+      "White House - och.berkeley.edu: https://och.berkeley.edu/housing/property/white-house-rooming-house-3-blocks-to-ucb-southside-large-private-and-shared-furnished-rooms/ocp8826vp1",
       "G-House: https://www.homes.com/property/g-house-berkeley-ca/17qx1jtb58wqq/",
       "Piedmont Palace: https://www.homes.com/property/piedmont-palace-berkeley-ca/ktkh0krec3rf3/",
       "TBG: https://tbgpm.com/"
     ],
     "source": "sheet-pipeline",
-    "play": "Block-book across 2–3 buildings; TBG = one operator",
-    "notes": "An operating cluster of by-the-bed furnished buildings within ~3 blocks, with Aug/Sept academic-year move-ins. Lowest execution risk of any pair play; BART to SF. TBG manages multiple adjacent buildings — a single master-lease counterparty.",
+    "play": "Block-book across 2-3 buildings; TBG = one operator",
+    "notes": "An operating cluster of by-the-bed furnished buildings within ~3 blocks, with Aug/Sept academic-year move-ins. Lowest execution risk of any pair play; BART to SF. TBG manages multiple adjacent buildings - a single master-lease counterparty.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -9227,7 +9753,8 @@
   {
     "id": "pl-blue-hotel",
     "name": "Blue Hotel",
-    "address": "620–626 O'Farrell St, SF",
+    "name_detail": "",
+    "address": "620-626 O'Farrell St, SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
     "region": "SF-priority",
@@ -9257,6 +9784,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "femme-house"
+    ],
     "timeline_tags": [
       "femme-house"
     ],
@@ -9281,12 +9813,12 @@
       ]
     },
     "score_sheet": 66.5,
-    "contact_name": "Theodore Wong — Compass Commercial",
+    "contact_name": "Theodore Wong - Compass Commercial",
     "contact_org": "",
     "contact_phone": "(650) 228-9930",
     "contact_email": "",
     "contact_verify": false,
-    "contact_path": "—",
+    "contact_path": " - ",
     "contact_section": "On-market listings",
     "source_links": [
       "Blue Hotel LoopNet: https://www.loopnet.com/Listing/620-OFarrell-St-San-Francisco-CA/25102642/",
@@ -9322,6 +9854,7 @@
   {
     "id": "pl-boston-hotel-sro",
     "name": "Boston Hotel (SRO)",
+    "name_detail": "",
     "address": "140 Turk St, SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -9352,6 +9885,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "femme-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "femme-house"
@@ -9374,11 +9912,11 @@
         "transit: 6 min (est. by neighborhood (geocode in portal))",
         "price: $1300/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 84.5,
-    "contact_name": "Jag Patel — Lee & Associates",
+    "contact_name": "Jag Patel - Lee & Associates",
     "contact_org": "",
     "contact_phone": "(415) 517-9856",
     "contact_email": "jpatel@lee-associates.com",
@@ -9419,6 +9957,7 @@
   {
     "id": "pl-brownstone-shared-housing",
     "name": "Brownstone Shared Housing",
+    "name_detail": "",
     "address": "1049 Market St + 12 Mint Plaza, SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -9441,7 +9980,7 @@
     "price_per_room_low": 700,
     "price_per_room_high": 1200,
     "price_per_bed_est": 950,
-    "price_raw": "$700–1,200/pod ≈ $28–60k/mo",
+    "price_raw": "$700-1,200/pod ≈ $28-60k/mo",
     "monthly_total_45_est": 42750,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -9449,6 +9988,11 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "expansion"
@@ -9486,7 +10030,7 @@
       "KQED: https://www.kqed.org/news/12080289/700-a-month-sleeping-pods-make-sf-more-affordable-but-at-what-cost"
     ],
     "source": "sheet-pipeline",
-    "play": "Bridge — cheapest",
+    "play": "Bridge - cheapest",
     "notes": "Pods, not rooms. Density trade-off. | Cheapest possible block, now permitted, timing matches September. Pods, not rooms.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
@@ -9513,7 +10057,8 @@
   },
   {
     "id": "pl-cca-surplus-dorms-perfect-bridge-year",
-    "name": "CCA surplus dorms — perfect bridge year",
+    "name": "CCA surplus dorms",
+    "name_detail": "perfect bridge year",
     "address": "Founders Hall, 188 Hooper St, Design District, SF",
     "neighborhood": "Design District / Potrero",
     "neighborhood_raw": "Design District / Potrero",
@@ -9544,6 +10089,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "institution",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "q1-2027",
@@ -9580,11 +10130,11 @@
     "source_links": [
       "NCCD project page: https://nccdevelopment.org/master-portfolio/california-college-of-the-arts",
       "CCA intern-housing precedent: https://portal.cca.edu/thriving/housing-dining-resed/resident-halls/summer-intern-housing-cca/",
-      "SF Standard — closure: https://sfstandard.com/2026/01/16/cca-president-david-howse-closure-shocked-art-world/"
+      "SF Standard - closure: https://sfstandard.com/2026/01/16/cca-president-david-howse-closure-shocked-art-world/"
     ],
     "source": "sheet-pipeline",
     "play": "Call CCA administration/housing about a 2026-27 block",
-    "notes": "~270 surplus beds 2026-27. Attack order: Charles Eden, NCCD (512) 322-9650 geden@nccdevelopment.org → Capstone Management → housing@cca.edu. Precedent: Blattner Hall rents to non-CCA interns at $69/night. | Round-5 deep-dive strengthens this: Founders Hall is ~520 beds, owned via a $90M P3 with NCCD — and a bondholder-side owner has every incentive to backfill empty beds. PRECEDENT EXISTS: CCA already rents beds to non-CCA interns at Blattner Hall ($69/night, run by Capstone Management). Attack order: (1) Charles Eden, NCCD President, 512-322-9650, geden@nccdevelopment.org; (2) Capstone Management Partners; (3) housing@cca.edu / (415) 703-9500.",
+    "notes": "~270 surplus beds 2026-27. Attack order: Charles Eden, NCCD (512) 322-9650 geden@nccdevelopment.org → Capstone Management → housing@cca.edu. Precedent: Blattner Hall rents to non-CCA interns at $69/night. | Round-5 deep-dive strengthens this: Founders Hall is ~520 beds, owned via a $90M P3 with NCCD - and a bondholder-side owner has every incentive to backfill empty beds. PRECEDENT EXISTS: CCA already rents beds to non-CCA interns at Blattner Hall ($69/night, run by Capstone Management). Attack order: (1) Charles Eden, NCCD President, 512-322-9650, geden@nccdevelopment.org; (2) Capstone Management Partners; (3) housing@cca.edu / (415) 703-9500.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -9610,7 +10160,8 @@
   },
   {
     "id": "pl-courtyard-oakland-downtown-owner-will-take-any-e",
-    "name": "Courtyard Oakland Downtown — owner will take any exit",
+    "name": "Courtyard Oakland Downtown",
+    "name_detail": "owner will take any exit",
     "address": "988 Broadway, Oakland (Chinatown edge)",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
@@ -9641,6 +10192,9 @@
     "furnished": true,
     "bath": "private",
     "status": "dark",
+    "deal_channel": "receiver",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -9677,7 +10231,7 @@
       "SF YIMBY: https://sfyimby.com/2026/04/preliminary-application-for-hotel-to-housing-conversion-at-988-broadway-downtown-oakland.html"
     ],
     "source": "sheet-pipeline",
-    "play": "3–5 yr master lease during entitlement",
+    "play": "3-5 yr master lease during entitlement",
     "notes": "Gaw Capital has tried everything with this building (and already lost the Marriott City Center next door to foreclosure). A residential master lease during their apartment-conversion entitlement fits their playbook exactly.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
@@ -9704,8 +10258,9 @@
   },
   {
     "id": "pl-crystal-hotel-residential-master-lease-available",
-    "name": "Crystal Hotel — 'Residential Master Lease available'",
-    "address": "2766–2770 Mission St (at ~24th), Mission, SF",
+    "name": "Crystal Hotel",
+    "name_detail": "'Residential Master Lease available'",
+    "address": "2766-2770 Mission St (at ~24th), Mission, SF",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
     "region": "SF-other",
@@ -9735,6 +10290,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -9759,20 +10319,20 @@
       ]
     },
     "score_sheet": 78,
-    "contact_name": "Richard Ehmer — The Ehmer Group",
+    "contact_name": "Richard Ehmer - The Ehmer Group",
     "contact_org": "",
     "contact_phone": "(415) 225-5176",
     "contact_email": "rehmer@ehmergroup.com",
     "contact_verify": false,
     "contact_path": "",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
       "LoopNet listing: https://www.loopnet.com/Listing/2766-2770-Mission-St-San-Francisco-CA/30746850/",
       "Showcase: https://www.showcase.com/2766-2770-mission-st-san-francisco-ca-94110/30746850/"
     ],
     "source": "sheet-pipeline",
     "play": "Call broker Richard Ehmer, (415) 225-5176 · rehmer@ehmergroup.com",
-    "notes": "Published master-lease terms $500/room = $22,500/mo for all 45 rooms. Only 31/45 rooms permitted — pull Chapter 41 split from DBI. | CONFIRMED master-lease terms on the Realmo mirror: $500/room/month = $22,500/mo for the WHOLE 45-room building — less than half the low end of budget, and rooms at this exact building retail at $1,575/mo all-in (a 3x spread). $450k of recent cap-ex incl. soft-story seismic. Diligence flags: only 31 of 45 rooms are permitted; pull the Chapter 41 residential/tourist split from DBI; 24th & Mission street conditions are improving under 2026 police surge but still rough. Someone already branded it 'Crystal Startup Hotel' once — the concept fits.",
+    "notes": "Published master-lease terms $500/room = $22,500/mo for all 45 rooms. Only 31/45 rooms permitted - pull Chapter 41 split from DBI. | CONFIRMED master-lease terms on the Realmo mirror: $500/room/month = $22,500/mo for the WHOLE 45-room building - less than half the low end of budget, and rooms at this exact building retail at $1,575/mo all-in (a 3x spread). $450k of recent cap-ex incl. soft-story seismic. Diligence flags: only 31 of 45 rooms are permitted; pull the Chapter 41 residential/tourist split from DBI; 24th & Mission street conditions are improving under 2026 police surge but still rough. Someone already branded it 'Crystal Startup Hotel' once - the concept fits.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -9799,6 +10359,7 @@
   {
     "id": "pl-downtown-berkeley-ymca-hotel-residence",
     "name": "Downtown Berkeley YMCA Hotel & Residence",
+    "name_detail": "",
     "address": "2001 Allston Way, Berkeley (1 block from BART)",
     "neighborhood": "Berkeley",
     "neighborhood_raw": "Berkeley",
@@ -9821,7 +10382,7 @@
     "price_per_room_low": 1200,
     "price_per_room_high": 1400,
     "price_per_bed_est": 1300,
-    "price_raw": "$45–67/night rack ≈ $1,350–2,000/mo — block deal should land $1,200–1,400",
+    "price_raw": "$45-67/night rack ≈ $1,350-2,000/mo - block deal should land $1,200-1,400",
     "monthly_total_45_est": 58500,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -9829,6 +10390,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "institution",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -9863,7 +10427,7 @@
       "ymca.org: https://www.ymca.org/locations/downtown-berkeley-branch-ymca"
     ],
     "source": "sheet-pipeline",
-    "play": "Negotiate 40–60 room block with YMCA of the East Bay",
+    "play": "Negotiate 40-60 room block with YMCA of the East Bay",
     "notes": "Still-operating budget residence with soft demand and a nonprofit owner. Gym membership included; walkable Berkeley + BART to SF. Pairs naturally with the Southside rooming-house cluster for a Berkeley split-campus.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
@@ -9890,7 +10454,8 @@
   },
   {
     "id": "pl-east-bay-foreclosure-hotels-new-owners",
-    "name": "East Bay foreclosure hotels — new owners",
+    "name": "East Bay foreclosure hotels",
+    "name_detail": "new owners",
     "address": "Hyatt House Pleasanton / Pleasant Hill / Hyatt Place Newark",
     "neighborhood": "Pleasanton / Pleasant Hill / Newark",
     "neighborhood_raw": "Pleasanton / Pleasant Hill / Newark",
@@ -9913,7 +10478,7 @@
     "price_per_room_low": 1500,
     "price_per_room_high": 2500,
     "price_per_bed_est": 2000,
-    "price_raw": "New owners paid $6k–27k/key",
+    "price_raw": "New owners paid $6k-27k/key",
     "monthly_total_45_est": 90000,
     "kitchen": "private",
     "kitchen_raw": "private",
@@ -9921,6 +10486,9 @@
     "furnished": true,
     "bath": "private",
     "status": "active",
+    "deal_channel": "receiver",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -9956,7 +10524,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Master-lease pitch to foreclosure buyers",
-    "notes": "Buyers at these bases can profitably lease 40–60 extended-stay suites well inside budget. Tri-Valley location is the tradeoff.",
+    "notes": "Buyers at these bases can profitably lease 40-60 extended-stay suites well inside budget. Tri-Valley location is the tradeoff.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -9982,7 +10550,8 @@
   },
   {
     "id": "pl-embassy-hotel-84-rooms-on-market-unencumbered",
-    "name": "Embassy Hotel — 84 rooms, on-market, unencumbered",
+    "name": "Embassy Hotel",
+    "name_detail": "84 rooms, on-market, unencumbered",
     "address": "610 Polk St (at Turk), Van Ness corridor, SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -10005,7 +10574,7 @@
     "price_per_room_low": 1100,
     "price_per_room_high": 1300,
     "price_per_bed_est": 1200,
-    "price_raw": "For sale via CBRE Hotels; rack rate $55–64/night = struggling",
+    "price_raw": "For sale via CBRE Hotels; rack rate $55-64/night = struggling",
     "monthly_total_45_est": 54000,
     "kitchen": "none",
     "kitchen_raw": "none",
@@ -10013,6 +10582,11 @@
     "furnished": true,
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "expansion"
@@ -10037,24 +10611,24 @@
         "transit: 14 min (est. by neighborhood (geocode in portal))",
         "price: $1200/bed",
         "kitchen: none",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 40,
-    "contact_name": "CBRE Hotels — SF listing team (ask for 610 Polk St)",
+    "contact_name": "CBRE Hotels - SF listing team (ask for 610 Polk St)",
     "contact_org": "",
-    "contact_phone": "CBRE SF (415) 772-0123 — verify",
+    "contact_phone": "CBRE SF (415) 772-0123 - verify",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "cbre.com/properties",
     "contact_section": "Report §6e",
     "source_links": [
-      "Hotel News Resource — CBRE listing: https://www.hotelnewsresource.com/article131697.html",
+      "Hotel News Resource - CBRE listing: https://www.hotelnewsresource.com/article131697.html",
       "Hotel site: https://www.theembassyhotelsf.com/"
     ],
     "source": "sheet-pipeline",
     "play": "CBRE Hotels listing team; lowball buy or master lease to owner",
-    "notes": "The best size/location/price fit found in round 5: fee simple, no brand, no management contract, non-union — nothing standing between the owner and a master lease. At $55/night rack the hotel grosses ~$1,400/room/month at FULL occupancy; a guaranteed $1,100–1,300/room master lease beats their reality.",
+    "notes": "The best size/location/price fit found in round 5: fee simple, no brand, no management contract, non-union - nothing standing between the owner and a master lease. At $55/night rack the hotel grosses ~$1,400/room/month at FULL occupancy; a guaranteed $1,100-1,300/room master lease beats their reality.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10080,8 +10654,9 @@
   },
   {
     "id": "pl-ferns-hotel-price-cut-income-hungry",
-    "name": "Ferns Hotel — price-cut, income-hungry",
-    "address": "415–417 15th St, Downtown Oakland",
+    "name": "Ferns Hotel",
+    "name_detail": "price-cut, income-hungry",
+    "address": "415-417 15th St, Downtown Oakland",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
     "region": "East Bay",
@@ -10111,6 +10686,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -10130,7 +10708,7 @@
         "transit: region=East Bay → 0 (outside SF; see CLAUDE.md geography rule)",
         "price: $1075/bed",
         "kitchen: communal",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 55.125,
@@ -10145,8 +10723,8 @@
       "Offering brochure (PDF): https://images3.loopnet.com/d2/fcQavuW6QnYRr5iaTP1pTcdxUIxr5FCekoZrGvUWJoQ/document.pdf"
     ],
     "source": "sheet-pipeline",
-    "play": "Lowball master lease ≈ $800–900/room matches current gross",
-    "notes": "Recently rehabbed (20 units redone, new boiler, solar), 1 block to 19th St BART. Broker Fred Lewis, (209) 522-9999. A master lease at $800–900/room roughly equals what the whole building earns today.",
+    "play": "Lowball master lease ≈ $800-900/room matches current gross",
+    "notes": "Recently rehabbed (20 units redone, new boiler, solar), 1 block to 19th St BART. Broker Fred Lewis, (209) 522-9999. A master lease at $800-900/room roughly equals what the whole building earns today.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10172,7 +10750,8 @@
   },
   {
     "id": "pl-found-study-sf-built-for-exactly-this",
-    "name": "FOUND Study SF — built for exactly this",
+    "name": "FOUND Study SF",
+    "name_detail": "built for exactly this",
     "address": "16 Turk St / 25 Mason St, Mid-Market SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -10195,7 +10774,7 @@
     "price_per_room_low": 1400,
     "price_per_room_high": 3800,
     "price_per_bed_est": 1300,
-    "price_raw": "$700–1,900/bed ALL-IN (furniture, wifi, utilities), 4/5/9/12-mo terms",
+    "price_raw": "$700-1,900/bed ALL-IN (furniture, wifi, utilities), 4/5/9/12-mo terms",
     "monthly_total_45_est": 58500,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -10203,6 +10782,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house",
+      "femme-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "q1-2027",
@@ -10244,7 +10829,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Group contract (they already do university blocks)",
-    "notes": "$700–1,900/bed all-in, 4/5/9/12-month terms, group contracts. Also in Notion tracker (shared from $850). | Purpose-built student residence with flexible Aug/Sept move-ins and existing institutional partnerships (USF). Interiors far nicer than any SRO; the block outside is still Tenderloin-edge.",
+    "notes": "$700-1,900/bed all-in, 4/5/9/12-month terms, group contracts. Also in Notion tracker (shared from $850). | Purpose-built student residence with flexible Aug/Sept move-ins and existing institutional partnerships (USF). Interiors far nicer than any SRO; the block outside is still Tenderloin-edge.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10271,6 +10856,7 @@
   {
     "id": "pl-foundry-coliving-4-houses",
     "name": "Foundry Coliving (4 houses)",
+    "name_detail": "",
     "address": "550 Guerrero St + 3 SF houses",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -10293,7 +10879,7 @@
     "price_per_room_low": 1990,
     "price_per_room_high": 2190,
     "price_per_bed_est": 2090,
-    "price_raw": "$1,990–2,190/room rack",
+    "price_raw": "$1,990-2,190/room rack",
     "monthly_total_45_est": 94050,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -10301,6 +10887,11 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -10325,7 +10916,7 @@
       ]
     },
     "score_sheet": 45.75,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(415) 610-2405",
     "contact_email": "support@foundry.today",
@@ -10364,7 +10955,8 @@
   },
   {
     "id": "pl-hill-castle-apartments-160-units-at-43k-unit-bas",
-    "name": "Hill Castle Apartments — 160 units at $43k/unit basis",
+    "name": "Hill Castle Apartments",
+    "name_detail": "160 units at $43k/unit basis",
     "address": "1431 Jackson St, Lakeside, Downtown Oakland",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
@@ -10395,6 +10987,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "owner",
+    "walk_in_ready": "yes",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -10425,14 +11020,14 @@
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "hillcastle.gaehwiler.com",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
       "Hoodline, Apr 2026: https://hoodline.com/2026/04/oakland-s-hill-castle-dumps-for-6-95-million-in-downtown-fire-sale/",
       "Building leasing page: https://hillcastle.gaehwiler.com/contactus.aspx"
     ],
     "source": "sheet-pipeline",
-    "play": "Now run by MAG Management — property office (510) 444-6004",
-    "notes": "Deep-dive done: buyer is almost certainly the Gaehwiler family (SF owner-operator; their MAG Management runs the building and it's already on their web platform). Studios $1,250–1,575, 1BRs $1,650–1,875, actively leasing with flex terms = classic lease-up pressure. Blocks from Lake Merritt + 12th St BART, Walk Score 98. Direct-deal family operator: MAG main (415) 550-0300; Lana August, tenancy manager, (415) 720-0820, lana.august@magmanagement.com; property office (510) 444-6004.",
+    "play": "Now run by MAG Management - property office (510) 444-6004",
+    "notes": "Deep-dive done: buyer is almost certainly the Gaehwiler family (SF owner-operator; their MAG Management runs the building and it's already on their web platform). Studios $1,250-1,575, 1BRs $1,650-1,875, actively leasing with flex terms = classic lease-up pressure. Blocks from Lake Merritt + 12th St BART, Walk Score 98. Direct-deal family operator: MAG main (415) 550-0300; Lana August, tenancy manager, (415) 720-0820, lana.august@magmanagement.com; property office (510) 444-6004.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10459,6 +11054,7 @@
   {
     "id": "pl-hive-coliving-was-tribe",
     "name": "Hive Coliving (was Tribe)",
+    "name_detail": "",
     "address": "1040 Folsom St, SoMa, SF",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -10481,7 +11077,7 @@
     "price_per_room_low": 950,
     "price_per_room_high": 1400,
     "price_per_bed_est": 588,
-    "price_raw": "Triples $475–600, privates $1,275–1,400 + $150 util",
+    "price_raw": "Triples $475-600, privates $1,275-1,400 + $150 util",
     "monthly_total_45_est": 26460,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -10489,6 +11085,12 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house",
+      "femme-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "q1-2027",
@@ -10512,11 +11114,11 @@
         "transit: 10 min (est. by neighborhood (geocode in portal))",
         "price: $588/bed",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 97,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(845) 304-8555",
     "contact_email": "",
@@ -10556,6 +11158,7 @@
   {
     "id": "pl-holy-names-university-dorms",
     "name": "Holy Names University dorms",
+    "name_detail": "",
     "address": "3500 Mountain Blvd, Oakland hills",
     "neighborhood": "Oakland Hills",
     "neighborhood_raw": "Oakland Hills",
@@ -10578,7 +11181,7 @@
     "price_per_room_low": 1100,
     "price_per_room_high": 1500,
     "price_per_bed_est": 650,
-    "price_raw": "Pitch: interim 2–4 yr master lease",
+    "price_raw": "Pitch: interim 2-4 yr master lease",
     "monthly_total_45_est": 29250,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -10586,6 +11189,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "dark",
+    "deal_channel": "institution",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -10610,7 +11216,7 @@
       ]
     },
     "score_sheet": 60,
-    "contact_name": "Dan Cardenas / Luis Guerra — BH Properties",
+    "contact_name": "Dan Cardenas / Luis Guerra - BH Properties",
     "contact_org": "",
     "contact_phone": "341-236-7757 / 602-899-5635",
     "contact_email": "daniel.cardenas@bhproperties.com · luis.guerra@bhproperties.com",
@@ -10624,7 +11230,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "BH Properties runs an interim-leasing site",
-    "notes": "Verified: BH's interim-leasing site advertises the 181,200 sf Upper Campus Complex (contains the residence halls) plus dining, gym, theatre — and one building is already 'reserved,' so interim deals are getting done. Contacts: Dan Cardenas 341-236-7757, daniel.cardenas@bhproperties.com · Luis Guerra 602-899-5635. Downside: hillside, car-dependent.",
+    "notes": "Verified: BH's interim-leasing site advertises the 181,200 sf Upper Campus Complex (contains the residence halls) plus dining, gym, theatre - and one building is already 'reserved,' so interim deals are getting done. Contacts: Dan Cardenas 341-236-7757, daniel.cardenas@bhproperties.com · Luis Guerra 602-899-5635. Downside: hillside, car-dependent.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10650,7 +11256,8 @@
   },
   {
     "id": "pl-hotel-avante-wild-palms-one-owner-both-in-defaul",
-    "name": "Hotel Avante + Wild Palms — one owner, both in default (Peninsula)",
+    "name": "Hotel Avante + Wild Palms",
+    "name_detail": "one owner, both in default (Peninsula)",
     "address": "860 E El Camino Real, Mountain View + 801 E Fremont Ave, Sunnyvale",
     "neighborhood": "Mountain View / Sunnyvale",
     "neighborhood_raw": "Mountain View / Sunnyvale",
@@ -10681,6 +11288,9 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -10715,7 +11325,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "One conversation: owners Stephen Conley (JdV founder) & Jeffrey Eisenberg",
-    "notes": "A hospitality-literate owner facing a matured loan — a master lease that stabilizes NOI pre-foreclosure is a lifeline for him. 91-room Avante fits the cohort exactly; Wild Palms adds 200+ rooms of expansion. Peninsula/Caltrain geography if the program wants a South Bay campus.",
+    "notes": "A hospitality-literate owner facing a matured loan - a master lease that stabilizes NOI pre-foreclosure is a lifeline for him. 91-room Avante fits the cohort exactly; Wild Palms adds 200+ rooms of expansion. Peninsula/Caltrain geography if the program wants a South Bay campus.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10741,8 +11351,9 @@
   },
   {
     "id": "pl-hotel-union-square-131-rooms-dark-since-2021",
-    "name": "Hotel Union Square — 131 rooms, dark since 2021",
-    "address": "114–120 Powell St, Union Square, SF",
+    "name": "Hotel Union Square",
+    "name_detail": "131 rooms, dark since 2021",
+    "address": "114-120 Powell St, Union Square, SF",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Union Square",
     "region": "SF-priority",
@@ -10772,6 +11383,11 @@
     "furnished": true,
     "bath": "private",
     "status": "dark",
+    "deal_channel": "owner",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "expansion"
@@ -10805,13 +11421,13 @@
     "contact_email": "alam786@aol.com ⚠ · CA SoS lookup: \"Hotel Union Square LLC\"",
     "contact_verify": true,
     "contact_path": "",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
       "SF Standard: https://sfstandard.com/2025/09/26/shuttered-union-square-hotel-finds-new-buyer/"
     ],
     "source": "sheet-pipeline",
     "play": "Catch owner before he commits to hotel use",
-    "notes": "Shuttered ~5 years; sold Sept 2025 to investor Mahmood Alam at ~$229k/key with no announced plan. A low-basis owner holding a dark building = ideal master-lease counterparty. 131 genuinely nice rooms covers 60 people twice over; target $1,500–2,000/room.",
+    "notes": "Shuttered ~5 years; sold Sept 2025 to investor Mahmood Alam at ~$229k/key with no announced plan. A low-basis owner holding a dark building = ideal master-lease counterparty. 131 genuinely nice rooms covers 60 people twice over; target $1,500-2,000/room.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10837,7 +11453,8 @@
   },
   {
     "id": "pl-hotel-whitcomb-floors-blackstone-wants-an-interi",
-    "name": "Hotel Whitcomb floors — Blackstone wants an interim operator",
+    "name": "Hotel Whitcomb floors",
+    "name_detail": "Blackstone wants an interim operator",
     "address": "1231 Market St, Mid-Market SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -10868,6 +11485,11 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "expansion"
@@ -10892,13 +11514,13 @@
         "transit: 3 min (est. by neighborhood (geocode in portal))",
         "price: $1850/bed",
         "kitchen: none",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 40,
-    "contact_name": "Blackstone Real Estate — asset mgmt; 'exploring new operators'",
+    "contact_name": "Blackstone Real Estate - asset mgmt; 'exploring new operators'",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "via Blackstone RE press office / Hotel Whitcomb GM",
@@ -10908,7 +11530,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Pitch Blackstone Mortgage Trust as the interim operator",
-    "notes": "UPGRADED from ruled-out: the lender is publicly looking for exactly what we are — an interim operator for a building that already housed people for 33 months (city shelter contract, ~$108M). Take a floor block, not the whole 459. Condition needs inspection after years dark.",
+    "notes": "UPGRADED from ruled-out: the lender is publicly looking for exactly what we are - an interim operator for a building that already housed people for 33 months (city shelter contract, ~$108M). Take a floor block, not the whole 459. Condition needs inspection after years dark.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -10935,6 +11557,7 @@
   {
     "id": "pl-kenmore-residence-club",
     "name": "Kenmore Residence Club",
+    "name_detail": "",
     "address": "1570 Sutter St, Lower Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -10965,6 +11588,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house",
+      "femme-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "femme-house"
@@ -10990,7 +11619,7 @@
       ]
     },
     "score_sheet": 69,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(415) 776-5815",
     "contact_email": "office@kenmorehotelsf.com",
@@ -11003,7 +11632,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Direct approach",
-    "notes": "Operating boarding houses — private rooms, shared baths, meals included. The meals-included master-lease target.",
+    "notes": "Operating boarding houses - private rooms, shared baths, meals included. The meals-included master-lease target.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11029,8 +11658,9 @@
   },
   {
     "id": "pl-mason-at-hive-auction-july-28-12-days",
-    "name": "⏰ Mason at Hive — auction JULY 28 (12 days)",
-    "address": "2350–2380 Valley St + 421 24th St, Uptown Oakland",
+    "name": "⏰ Mason at Hive",
+    "name_detail": "auction JULY 28 (12 days)",
+    "address": "2350-2380 Valley St + 421 24th St, Uptown Oakland",
     "neighborhood": "Uptown Oakland",
     "neighborhood_raw": "Uptown Oakland",
     "region": "East Bay",
@@ -11060,6 +11690,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -11096,7 +11729,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Track the auction; approach the winner (or reverting lender) immediately after",
-    "notes": "Foreclosure auction was July 28, 2026 — find out who won. | Verified July 16: auction still ON for July 28, no postponement/bankruptcy — and the building is already VACANT (FPI Management shows it closed), so the winner inherits 105 empty modern units and needs occupancy from day one. Ghielmetti says he's 'working with lenders on a resolution' — a pre-auction workout is possible; pitch both sides. Lenders: Chicago Title + Bellwether Enterprise.",
+    "notes": "Foreclosure auction was July 28, 2026 - find out who won. | Verified July 16: auction still ON for July 28, no postponement/bankruptcy - and the building is already VACANT (FPI Management shows it closed), so the winner inherits 105 empty modern units and needs occupancy from day one. Ghielmetti says he's 'working with lenders on a resolution' - a pre-auction workout is possible; pitch both sides. Lenders: Chicago Title + Bellwether Enterprise.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11123,6 +11756,7 @@
   {
     "id": "pl-monroe-residence-club",
     "name": "Monroe Residence Club",
+    "name_detail": "",
     "address": "1870 Sacramento St, Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -11153,6 +11787,12 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house",
+      "femme-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "femme-house"
@@ -11178,7 +11818,7 @@
       ]
     },
     "score_sheet": 73,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
     "contact_phone": "(415) 474-6200",
     "contact_email": "reservations@monroeresidenceclub.com",
@@ -11191,7 +11831,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Direct approach",
-    "notes": "Operating boarding houses — private rooms, shared baths, meals included. The meals-included master-lease target.",
+    "notes": "Operating boarding houses - private rooms, shared baths, meals included. The meals-included master-lease target.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11217,7 +11857,8 @@
   },
   {
     "id": "pl-moran-telegraph-arts-one-lender-175-units",
-    "name": "Moran + Telegraph Arts — one lender, 175 units",
+    "name": "Moran + Telegraph Arts",
+    "name_detail": "one lender, 175 units",
     "address": "570 21st St + 471 26th St, Uptown Oakland (0.4 mi apart)",
     "neighborhood": "Uptown Oakland",
     "neighborhood_raw": "Uptown Oakland",
@@ -11248,6 +11889,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -11312,7 +11956,8 @@
   },
   {
     "id": "pl-mosser-sro-1000-market-st-owner-stuck",
-    "name": "Mosser SRO — 1000 Market St (owner stuck)",
+    "name": "Mosser SRO",
+    "name_detail": "1000 Market St (owner stuck)",
     "address": "1000 Market / Turk St, Mid-Market SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -11335,7 +11980,7 @@
     "price_per_room_low": 1100,
     "price_per_room_high": 1400,
     "price_per_bed_est": 1250,
-    "price_raw": "Owner tried converting rooms to tourist use — rejected by Planning (Mar 2025)",
+    "price_raw": "Owner tried converting rooms to tourist use - rejected by Planning (Mar 2025)",
     "monthly_total_45_est": 56250,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -11343,6 +11988,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "active",
+    "deal_channel": "owner",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "q1-2027",
@@ -11382,7 +12032,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Master-lease the rooms he can't fill",
-    "notes": "An owner who publicly argued residential SRO doesn't pencil, now stuck with rooms he can't convert. A block lease at $1,100–1,400/room solves his problem and yours.",
+    "notes": "An owner who publicly argued residential SRO doesn't pencil, now stuck with rooms he can't convert. A block lease at $1,100-1,400/room solves his problem and yours.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11409,7 +12059,8 @@
   {
     "id": "pl-motel-6-civic-center",
     "name": "Motel 6 Civic Center",
-    "address": "583–585 Eddy St, San Francisco",
+    "name_detail": "",
+    "address": "583-585 Eddy St, San Francisco",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
     "region": "SF-priority",
@@ -11431,7 +12082,7 @@
     "price_per_room_low": 1200,
     "price_per_room_high": 2500,
     "price_per_bed_est": 1850,
-    "price_raw": "Listed $8–9M (~$118–132k/key), 14.4% cap",
+    "price_raw": "Listed $8-9M (~$118-132k/key), 14.4% cap",
     "monthly_total_45_est": 83250,
     "kitchen": "none",
     "kitchen_raw": "none",
@@ -11439,6 +12090,11 @@
     "furnished": true,
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -11462,11 +12118,11 @@
         "transit: 10 min (est. by neighborhood (geocode in portal))",
         "price: $1850/bed",
         "kitchen: none",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 40,
-    "contact_name": "Richard Ehmer + Jeramie Hamilton — Ehmer Group",
+    "contact_name": "Richard Ehmer + Jeramie Hamilton - Ehmer Group",
     "contact_org": "",
     "contact_phone": "(415) 225-5176 / (650) 454-5982",
     "contact_email": "rehmer@ehmergroup.com",
@@ -11479,7 +12135,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Lease + option pitch",
-    "notes": "Exact target size with 60+ headroom; a 14% cap listing = distress-signal pricing. 2–3 blocks from the Boston/Blue pair — could anchor a Tenderloin cluster at scale.",
+    "notes": "Exact target size with 60+ headroom; a 14% cap listing = distress-signal pricing. 2-3 blocks from the Boston/Blue pair - could anchor a Tenderloin cluster at scale.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11506,6 +12162,7 @@
   {
     "id": "pl-motel-6-lombard-st",
     "name": "Motel 6 Lombard St",
+    "name_detail": "",
     "address": "2230 Lombard St, SF (Marina)",
     "neighborhood": "Marina",
     "neighborhood_raw": "Marina",
@@ -11528,7 +12185,7 @@
     "price_per_room_low": 1500,
     "price_per_room_high": 2500,
     "price_per_bed_est": 2000,
-    "price_raw": "Listed $6.5–7M (~$225k/key)",
+    "price_raw": "Listed $6.5-7M (~$225k/key)",
     "monthly_total_45_est": 90000,
     "kitchen": "none",
     "kitchen_raw": "none",
@@ -11536,6 +12193,9 @@
     "furnished": true,
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -11555,11 +12215,11 @@
         "transit: 50 min (est. by neighborhood (geocode in portal))",
         "price: $2000/bed",
         "kitchen: none",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 17,
-    "contact_name": "Taylor Flynn — Marcus & Millichap",
+    "contact_name": "Taylor Flynn - Marcus & Millichap",
     "contact_org": "",
     "contact_phone": "(415) 963-3042",
     "contact_email": "taylor.flynn@marcusmillichap.com",
@@ -11571,7 +12231,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Lease pitch (needs pairing)",
-    "notes": "Best neighborhood of the motel options; pair with a second building. Note: Lombard motel row shows no distress — pricing power is against you here.",
+    "notes": "Best neighborhood of the motel options; pair with a second building. Note: Lombard motel row shows no distress - pricing power is against you here.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11597,7 +12257,8 @@
   },
   {
     "id": "pl-moxy-oakland-receiver-held-built-2021",
-    "name": "Moxy Oakland — receiver-held, built 2021",
+    "name": "Moxy Oakland",
+    "name_detail": "receiver-held, built 2021",
     "address": "2225 Telegraph Ave, Uptown Oakland",
     "neighborhood": "Uptown Oakland",
     "neighborhood_raw": "Uptown Oakland",
@@ -11620,7 +12281,7 @@
     "price_per_room_low": 1000,
     "price_per_room_high": 1400,
     "price_per_bed_est": 1200,
-    "price_raw": "Receiver collecting $0 — pitch $1,000–1,400/room",
+    "price_raw": "Receiver collecting $0 - pitch $1,000-1,400/room",
     "monthly_total_45_est": 54000,
     "kitchen": "none",
     "kitchen_raw": "none",
@@ -11628,6 +12289,9 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -11652,13 +12316,13 @@
       ]
     },
     "score_sheet": 40,
-    "contact_name": "Michelle Russo, receiver — HotelAVE; also Acore Capital West Coast asset mgmt",
+    "contact_name": "Michelle Russo, receiver - HotelAVE; also Acore Capital West Coast asset mgmt",
     "contact_org": "",
     "contact_phone": "via hotelave.com",
     "contact_email": "",
     "contact_verify": false,
-    "contact_path": "—",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_path": " - ",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
       "SF Standard: https://sfstandard.com/2026/01/20/oakland-moxy-hotel-closed/",
       "TRD: https://therealdeal.com/san-francisco/2026/01/21/moxy-hotel-shutters-in-oakland-after-loan-default/",
@@ -11666,7 +12330,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Approach receiver Michelle Russo (HotelAVE)",
-    "notes": "Re-verified July 16: zero movement since January — no sale motion, no auction. Receiver Michelle Russo (HotelAVE) has a dark, brand-new 172-room building earning $0; a master lease is a receiver's dream. Second door: developer Tidewater Capital still carries a live '2225 Telegraph' page in its listings portfolio (tidewatercap.com/listings/2225-telegraph) — call them too, plus Acore's West Coast asset management.",
+    "notes": "Re-verified July 16: zero movement since January - no sale motion, no auction. Receiver Michelle Russo (HotelAVE) has a dark, brand-new 172-room building earning $0; a master lease is a receiver's dream. Second door: developer Tidewater Capital still carries a live '2225 Telegraph' page in its listings portfolio (tidewatercap.com/listings/2225-telegraph) - call them too, plus Acore's West Coast asset management.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11692,7 +12356,8 @@
   },
   {
     "id": "pl-ndnu-belmont-six-mothballed-residence-halls",
-    "name": "NDNU Belmont — six mothballed residence halls",
+    "name": "NDNU Belmont",
+    "name_detail": "six mothballed residence halls",
     "address": "1500 Ralston Ave, Belmont (Caltrain ~1 mi)",
     "neighborhood": "Belmont",
     "neighborhood_raw": "Belmont",
@@ -11723,6 +12388,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "dark",
+    "deal_channel": "institution",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -11760,7 +12428,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Approach UC Investments (landlord) + NDNU (operator) jointly",
-    "notes": "Round-5 check: NDNU's own site says 'on-campus housing is not available' — six residence buildings sit mothballed and NO public document accounts for them. That silence is the opening: nobody else is pitching for these beds. Peninsula option; bed counts need a direct ask.",
+    "notes": "Round-5 check: NDNU's own site says 'on-campus housing is not available' - six residence buildings sit mothballed and NO public document accounts for them. That silence is the opening: nobody else is pitching for these beds. Peninsula option; bed counts need a direct ask.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11786,7 +12454,8 @@
   },
   {
     "id": "pl-ora-apartments-reo-on-market-now",
-    "name": "Ora Apartments — REO, on market now",
+    "name": "Ora Apartments",
+    "name_detail": "REO, on market now",
     "address": "1815 Alice St, Downtown Oakland",
     "neighborhood": "Downtown Oakland",
     "neighborhood_raw": "Downtown Oakland",
@@ -11817,6 +12486,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -11879,7 +12551,8 @@
   },
   {
     "id": "pl-parkmerced-bulk-units-from-a-receiver",
-    "name": "Parkmerced — bulk units from a receiver",
+    "name": "Parkmerced",
+    "name_detail": "bulk units from a receiver",
     "address": "3711 19th Ave, SF (SW corner, near SFSU)",
     "neighborhood": "Parkmerced",
     "neighborhood_raw": "Parkmerced",
@@ -11910,6 +12583,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "expansion"
     ],
@@ -11946,8 +12624,8 @@
       "SF Standard: https://sfstandard.com/2025/04/18/parkmerced-billion-dollar-housing-project-timeline/"
     ],
     "source": "sheet-pipeline",
-    "play": "60–120 bed corporate block at a steep discount",
-    "notes": "The fastest 60+ beds in SF at scale: 2–3BR townhomes at 2/room lands near $1,500/bed. Not charming, but September-ready and endlessly scalable. Rent-control structuring needs counsel.",
+    "play": "60-120 bed corporate block at a steep discount",
+    "notes": "The fastest 60+ beds in SF at scale: 2-3BR townhomes at 2/room lands near $1,500/bed. Not charming, but September-ready and endlessly scalable. Rent-control structuring needs counsel.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -11973,7 +12651,8 @@
   },
   {
     "id": "pl-presidio-residences-national-park-living-at-targ",
-    "name": "Presidio Residences — national-park living at target price",
+    "name": "Presidio Residences",
+    "name_detail": "national-park living at target price",
     "address": "Presidio, SF (24 neighborhoods, 1,100+ units)",
     "neighborhood": "Presidio",
     "neighborhood_raw": "Presidio",
@@ -12004,6 +12683,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [
+      "femme-house"
+    ],
     "timeline_tags": [
       "femme-house"
     ],
@@ -12025,7 +12709,7 @@
         "transit: 60 min (est. by neighborhood (geocode in portal))",
         "price: $1800/bed",
         "kitchen: private",
-        "beds: 20–39 → pair candidate"
+        "beds: 20-39 → pair candidate"
       ]
     },
     "score_sheet": 42,
@@ -12042,7 +12726,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Interest-form queue; slow at scale",
-    "notes": "Exceptional setting at exactly the number. Blockers: queue + Presidio-employee priority + you'd need 10–15 homes. Realistic for 15–25 people over time — a satellite, not the main campus.",
+    "notes": "Exceptional setting at exactly the number. Blockers: queue + Presidio-employee priority + you'd need 10-15 homes. Realistic for 15-25 people over time - a satellite, not the main campus.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12068,7 +12752,8 @@
   },
   {
     "id": "pl-salvation-army-mcfee-center-96-bed-building-in-e",
-    "name": "Salvation Army McFee Center — 96-bed building in entitlement limbo",
+    "name": "Salvation Army McFee Center",
+    "name_detail": "96-bed building in entitlement limbo",
     "address": "1500 Valencia St + 3500 Cesar Chavez, Mission, SF",
     "neighborhood": "Mission",
     "neighborhood_raw": "Mission",
@@ -12091,7 +12776,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": null,
-    "price_raw": "Listed Feb 2026 at $58M (land play) — interim income wanted",
+    "price_raw": "Listed Feb 2026 at $58M (land play) - interim income wanted",
     "monthly_total_45_est": null,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -12099,6 +12784,11 @@
     "furnished": true,
     "bath": "shared",
     "status": "on-market",
+    "deal_channel": "institution",
+    "walk_in_ready": "no",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "expansion"
@@ -12121,13 +12811,13 @@
         "transit: 35 min (est. by neighborhood (geocode in portal))",
         "price: unknown → 5",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 42,
-    "contact_name": "Catherine Bassick — Douglas Elliman (listing broker)",
+    "contact_name": "Catherine Bassick - Douglas Elliman (listing broker)",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "elliman.com agent profile",
@@ -12138,7 +12828,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Broker: Catherine Marcus Bassick, Douglas Elliman Commercial",
-    "notes": "$58M is a land-value ask that will take years to close and entitle. A seller holding a 96-bed residential building through a long sale/entitlement cycle is a textbook interim-master-lease counterparty — holding income strengthens their sale.",
+    "notes": "$58M is a land-value ask that will take years to close and entitle. A seller holding a 96-bed residential building through a long sale/entitlement cycle is a textbook interim-master-lease counterparty - holding income strengthens their sale.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12165,6 +12855,7 @@
   {
     "id": "pl-san-jose-distress-cluster",
     "name": "San Jose distress cluster",
+    "name_detail": "",
     "address": "La Quinta 1036 N 4th St (59 rms, built 2023) + Fontaine Rd cluster (256 rms)",
     "neighborhood": "San Jose",
     "neighborhood_raw": "San Jose",
@@ -12195,6 +12886,9 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -12227,11 +12921,11 @@
     "source_links": [
       "TRD, May 2026: https://therealdeal.com/san-francisco/2026/05/28/another-bay-area-hotel-flops-into-loan-default/",
       "TRD, Jun 2026: https://therealdeal.com/san-francisco/2026/06/05/another-san-jose-hotel-falls-into-default/",
-      "Hoodline — Fontaine: https://hoodline.com/2026/02/san-jose-motel-boss-slams-bankruptcy-brakes-on-foreclosure-fight/"
+      "Hoodline - Fontaine: https://hoodline.com/2026/02/san-jose-motel-boss-slams-bankruptcy-brakes-on-foreclosure-fight/"
     ],
     "source": "sheet-pipeline",
     "play": "Pitch owners/lenders; new-build La Quinta is the quality pick",
-    "notes": "La Quinta: $16M construction loan in default on a 2023 building — new-build quality at distress leverage, near Civic Center VTA. Fontaine Rd: Fontaine Inn + Motel 6/Super 8 (204 rms) both in default; East SJ location is car-dependent. Only relevant if the program considers a South Bay campus.",
+    "notes": "La Quinta: $16M construction loan in default on a 2023 building - new-build quality at distress leverage, near Civic Center VTA. Fontaine Rd: Fontaine Inn + Motel 6/Super 8 (204 rms) both in default; East SJ location is car-dependent. Only relevant if the program considers a South Bay campus.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12258,6 +12952,7 @@
   {
     "id": "pl-san-ramon-assisted-living-facility",
     "name": "San Ramon assisted-living facility",
+    "name_detail": "",
     "address": "19251 San Ramon Valley Blvd, San Ramon",
     "neighborhood": "San Ramon",
     "neighborhood_raw": "San Ramon",
@@ -12280,7 +12975,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": null,
-    "price_raw": "Listed $4.995M (~$69k/bed) — still unsold (leverage)",
+    "price_raw": "Listed $4.995M (~$69k/bed) - still unsold (leverage)",
     "monthly_total_45_est": null,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -12288,6 +12983,9 @@
     "furnished": "unknown",
     "bath": "unknown",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -12307,11 +13005,11 @@
         "transit: region=East Bay → 0 (outside SF; see CLAUDE.md geography rule)",
         "price: unknown → 5",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 32,
-    "contact_name": "Ken Kho — Legacy Real Estate, Fremont",
+    "contact_name": "Ken Kho - Legacy Real Estate, Fremont",
     "contact_org": "",
     "contact_phone": "(510) 396-5408 / office (510) 744-3500",
     "contact_email": "ken@kho.net",
@@ -12323,7 +13021,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Lease-with-option or lowball",
-    "notes": "Most beds per dollar in the region; commercial kitchen + dining hall built in. Still on the market as of July 2026 — which is itself negotiating leverage. Broker: Ken Kho.",
+    "notes": "Most beds per dollar in the region; commercial kitchen + dining hall built in. Still on the market as of July 2026 - which is itself negotiating leverage. Broker: Ken Kho.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12349,8 +13047,9 @@
   },
   {
     "id": "pl-santa-sabina-center-closed-convent-retreat",
-    "name": "Santa Sabina Center — closed convent retreat",
-    "address": "25 Magnolia Ave, San Rafael (25–30 min to SF)",
+    "name": "Santa Sabina Center",
+    "name_detail": "closed convent retreat",
+    "address": "25 Magnolia Ave, San Rafael (25-30 min to SF)",
     "neighborhood": "San Rafael",
     "neighborhood_raw": "San Rafael",
     "region": "North Bay",
@@ -12380,6 +13079,9 @@
     "furnished": "unknown",
     "bath": "unknown",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -12401,11 +13103,11 @@
         "transit: region=North Bay → 0 (outside SF; see CLAUDE.md geography rule)",
         "price: unknown → 5",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 32,
-    "contact_name": "Dominic Dutra — 3D Strategies",
+    "contact_name": "Dominic Dutra - 3D Strategies",
     "contact_org": "",
     "contact_phone": "(510) 366-9931",
     "contact_email": "ddutra@3Dstrategies.com",
@@ -12414,11 +13116,11 @@
     "contact_section": "Bargains / distressed",
     "source_links": [
       "Listing background: https://phillipacriswell.com/blog/historic-bay-area-retreat-will-go-for-sale",
-      "Yelp — closed: https://www.yelp.com/biz/santa-sabina-center-san-rafael"
+      "Yelp - closed: https://www.yelp.com/biz/santa-sabina-center-san-rafael"
     ],
     "source": "sheet-pipeline",
     "play": "Mission-aligned lease-to-own pitch",
-    "notes": "Dominican Sisters closed it Feb 2026. The buyer pool for convents is tiny — a residential-education story plus lease-to-own could win at a low number. Turnkey: dining hall, library, conference space.",
+    "notes": "Dominican Sisters closed it Feb 2026. The buyer pool for convents is tiny - a residential-education story plus lease-to-own could win at a low number. Turnkey: dining hall, library, conference space.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12444,7 +13146,8 @@
   },
   {
     "id": "pl-sf-archdiocese-liquidation-get-in-before-the-bro",
-    "name": "SF Archdiocese liquidation — get in before the brokers",
+    "name": "SF Archdiocese liquidation",
+    "name_detail": "get in before the brokers",
     "address": "Citywide SF + St. Vincent's, San Rafael",
     "neighborhood": "Citywide / San Rafael",
     "neighborhood_raw": "Citywide / San Rafael",
@@ -12467,7 +13170,7 @@
     "price_per_room_low": null,
     "price_per_room_high": null,
     "price_per_bed_est": null,
-    "price_raw": "$395M abuse settlement (June 30, 2026) forces sales over 6–18 months",
+    "price_raw": "$395M abuse settlement (June 30, 2026) forces sales over 6-18 months",
     "monthly_total_45_est": null,
     "kitchen": "unknown",
     "kitchen_raw": "unknown",
@@ -12475,6 +13178,9 @@
     "furnished": "unknown",
     "bath": "unknown",
     "status": "dark",
+    "deal_channel": "institution",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -12502,19 +13208,19 @@
     "score_sheet": 14,
     "contact_name": "Catholic Charities: Tony Alioto; Archdiocese Real Property office",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "AVAlioto@CatholicCharitiesSF.org",
     "contact_verify": false,
     "contact_path": "",
     "contact_section": "Bargains / distressed",
     "source_links": [
-      "ABC — settlement: https://abcnews.com/US/wireStory/san-francisco-archdiocese-agrees-pay-395-million-settle-134323951",
+      "ABC - settlement: https://abcnews.com/US/wireStory/san-francisco-archdiocese-agrees-pay-395-million-settle-134323951",
       "Catholic Charities: https://catholiccharitiessf.org/st-vincents-school-for-boys/housing-site/",
-      "KTVU — surplus list: https://www.ktvu.com/news/advocates-of-sex-abuse-victims-want-sf-archdiocese-to-sell-unused-property-as-reparations"
+      "KTVU - surplus list: https://www.ktvu.com/news/advocates-of-sex-abuse-victims-want-sf-archdiocese-to-sell-unused-property-as-reparations"
     ],
     "source": "sheet-pipeline",
     "play": "Archdiocese Real Property office + Catholic Charities (Tony Alioto, AVAlioto@CatholicCharitiesSF.org)",
-    "notes": "No public sale list exists yet — which is exactly why to call now. Flagged surplus: St. Thomas the Apostle school (~$25M), Menlo Park seminary acreage, St. Vincent's San Rafael (development 5+ years out; historic dorm buildings could take an interim lease). Oakland Diocese settled $143.5M — same dynamic.",
+    "notes": "No public sale list exists yet - which is exactly why to call now. Flagged surplus: St. Thomas the Apostle school (~$25M), Menlo Park seminary acreage, St. Vincent's San Rafael (development 5+ years out; historic dorm buildings could take an interim lease). Oakland Diocese settled $143.5M - same dynamic.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12541,6 +13247,7 @@
   {
     "id": "pl-sonder-leaseholds-oakland-surplus-cca-wind-down",
     "name": "Sonder leaseholds · Oakland surplus · CCA wind-down",
+    "name_detail": "",
     "address": "Various",
     "neighborhood": "Various",
     "neighborhood_raw": "Various",
@@ -12571,6 +13278,9 @@
     "furnished": "unknown",
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "institution",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -12604,13 +13314,13 @@
     "contact_path": "",
     "contact_section": "",
     "source_links": [
-      "Hotel Dive — Sonder: https://www.hoteldive.com/news/sonder-properties-available-leasehold-interest-after-bankruptcy/808243/",
+      "Hotel Dive - Sonder: https://www.hoteldive.com/news/sonder-properties-available-leasehold-interest-after-bankruptcy/808243/",
       "Oakland surplus: https://www.oaklandca.gov/Business/Oakland-Economic-Development/City-Property/City-Property-for-Sale-or-Lease",
-      "KQED — CCA: https://www.kqed.org/arts/13985359/california-college-of-the-arts-closing-vanderbilt-university"
+      "KQED - CCA: https://www.kqed.org/arts/13985359/california-college-of-the-arts-closing-vanderbilt-university"
     ],
     "source": "sheet-pipeline",
     "play": "Three cheap calls",
-    "notes": "Gordon Brothers — Sonder leasehold assumptions, furnished buildings. | Sonder's bankruptcy leaseholds are turnkey furnished. Oakland lists surplus city property. CCA (closing, Vanderbilt buying) has ~750 beds vs ~484 remaining students — a bridge-year block lease of surplus beds is a real conversation.",
+    "notes": "Gordon Brothers - Sonder leasehold assumptions, furnished buildings. | Sonder's bankruptcy leaseholds are turnkey furnished. Oakland lists surplus city property. CCA (closing, Vanderbilt buying) has ~750 beds vs ~484 remaining students - a bridge-year block lease of surplus beds is a real conversation.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12636,7 +13346,8 @@
   },
   {
     "id": "pl-st-anne-s-home-closed-6-acre-care-campus",
-    "name": "St. Anne's Home — closed 6-acre care campus",
+    "name": "St. Anne's Home",
+    "name_detail": "closed 6-acre care campus",
     "address": "300 Lake St, Inner Richmond, SF",
     "neighborhood": "Inner Richmond",
     "neighborhood_raw": "Inner Richmond",
@@ -12667,6 +13378,11 @@
     "furnished": "unknown",
     "bath": "unknown",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "no",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027",
       "expansion"
@@ -12689,11 +13405,11 @@
         "transit: 55 min (est. by neighborhood (geocode in portal))",
         "price: unknown → 5",
         "kitchen: communal",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 32,
-    "contact_name": "Greg Zielinski — Zielinski Companies (runs the sale for the order)",
+    "contact_name": "Greg Zielinski - Zielinski Companies (runs the sale for the order)",
     "contact_org": "",
     "contact_phone": "(800) 489-2150 / (314) 644-2150",
     "contact_email": "mail@zielinskico.com",
@@ -12706,7 +13422,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Interim master lease from whoever wins it",
-    "notes": "Closed 2025 after 124 years (Little Sisters of the Poor). Any developer buyer faces a 3–6 year rezoning window — a ~100-bed interim lease of a fully built residential building is very plausible. Chase the winning bidder.",
+    "notes": "Closed 2025 after 124 years (Little Sisters of the Poor). Any developer buyer faces a 3-6 year rezoning window - a ~100-bed interim lease of a fully built residential building is very plausible. Chase the winning bidder.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12732,7 +13448,8 @@
   },
   {
     "id": "pl-stanford-court-4-star-nob-hill-receiver-in-place",
-    "name": "Stanford Court — 4-star Nob Hill, receiver in place",
+    "name": "Stanford Court",
+    "name_detail": "4-star Nob Hill, receiver in place",
     "address": "905 California St, Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -12763,6 +13480,11 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -12789,7 +13511,7 @@
       ]
     },
     "score_sheet": 40,
-    "contact_name": "Eastdil Secured SF — ask for the Stanford Court deal team",
+    "contact_name": "Eastdil Secured SF - ask for the Stanford Court deal team",
     "contact_org": "",
     "contact_phone": "(415) 228-2900",
     "contact_email": "",
@@ -12798,11 +13520,11 @@
     "contact_section": "Bargains / distressed",
     "source_links": [
       "TRD, Mar 2026: https://therealdeal.com/san-francisco/2026/03/03/nob-hill-hotel-hits-market-again-as-foreclosure-looms/",
-      "SFist — case background: https://sfist.com/2025/01/17/nob-hills-posh-stanford-court-hotel-hit-with-foreclosure-lawsuit-over-claims-of-missed-mortgage-payments/"
+      "SFist - case background: https://sfist.com/2025/01/17/nob-hills-posh-stanford-court-hotel-hit-with-foreclosure-lawsuit-over-claims-of-missed-mortgage-payments/"
     ],
     "source": "sheet-pipeline",
-    "play": "Pitch receiver a guaranteed 50–60 room block",
-    "notes": "Foreclosure trial was held July 13 — no published outcome yet (press lags bench rulings; check the SF Superior Court docket: Deutsche Bank AG v. Pine & Powell Partners). Either way the live counterparties are unchanged: receiver Chad Crandell (CHMWarnick) + Eastdil. A guaranteed 50–60 room block at $1,800–2,200 is 4-star quality — the 'much nicer rooms' winner.",
+    "play": "Pitch receiver a guaranteed 50-60 room block",
+    "notes": "Foreclosure trial was held July 13 - no published outcome yet (press lags bench rulings; check the SF Superior Court docket: Deutsche Bank AG v. Pine & Powell Partners). Either way the live counterparties are unchanged: receiver Chad Crandell (CHMWarnick) + Eastdil. A guaranteed 50-60 room block at $1,800-2,200 is 4-star quality - the 'much nicer rooms' winner.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12828,7 +13550,8 @@
   },
   {
     "id": "pl-surestay-plus-richmond-active-default-108-rooms",
-    "name": "SureStay Plus Richmond — active default, 108 rooms",
+    "name": "SureStay Plus Richmond",
+    "name_detail": "active default, 108 rooms",
     "address": "Richmond (near I-80, ~20 min to Oakland)",
     "neighborhood": "Richmond (East Bay)",
     "neighborhood_raw": "Richmond (East Bay)",
@@ -12859,6 +13582,9 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -12883,9 +13609,9 @@
       ]
     },
     "score_sheet": 40,
-    "contact_name": "monitor — pitch whoever takes the keys",
+    "contact_name": "monitor - pitch whoever takes the keys",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "via Bisnow coverage / county filings",
@@ -12895,7 +13621,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Watch for receiver/auction; pitch the lender",
-    "notes": "Live distress in progress — the next Hyatt House-style giveaway could be here. Location is the tradeoff; monitor and pitch whoever takes the keys.",
+    "notes": "Live distress in progress - the next Hyatt House-style giveaway could be here. Location is the tradeoff; monitor and pitch whoever takes the keys.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -12921,7 +13647,8 @@
   },
   {
     "id": "pl-the-commodore-ambiguous-verify-by-phone",
-    "name": "The Commodore — ambiguous, verify by phone",
+    "name": "The Commodore",
+    "name_detail": "ambiguous, verify by phone",
     "address": "825 Sutter St, Lower Nob Hill, SF",
     "neighborhood": "Nob Hill",
     "neighborhood_raw": "Nob Hill",
@@ -12952,6 +13679,9 @@
     "furnished": true,
     "bath": "shared",
     "status": "sold",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -12978,9 +13708,9 @@
       ]
     },
     "score_sheet": 0,
-    "contact_name": "—",
+    "contact_name": " - ",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "SF Assessor-Recorder deed pull (Oct 2025) or ask the M&M team above",
@@ -12990,8 +13720,8 @@
       "ApartmentRatings: https://www.apartmentratings.com/ca/san-francisco/the-commodore_9199332346275178284/"
     ],
     "source": "sheet-pipeline",
-    "play": "Title pull + call — possible whole-building lease",
-    "notes": "Verified: still CLOSED, buyer never publicly named — pull the Oct 2025 grant deed at the SF Assessor-Recorder to find the LLC, or ask Marcus & Millichap (they market AAU's remaining portfolio and likely know the buyer). Vacant + recently traded at ~$115k/key = strong master-lease candidate once the owner is found.",
+    "play": "Title pull + call - possible whole-building lease",
+    "notes": "Verified: still CLOSED, buyer never publicly named - pull the Oct 2025 grant deed at the SF Assessor-Recorder to find the LLC, or ask Marcus & Millichap (they market AAU's remaining portfolio and likely know the buyer). Vacant + recently traded at ~$115k/key = strong master-lease candidate once the owner is found.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -13018,6 +13748,7 @@
   {
     "id": "pl-the-land-wellness-eco-retreat",
     "name": "The Land Wellness & Eco-Retreat",
+    "name_detail": "",
     "address": "18501 Van Zandt Resort Rd, Philo (Mendocino Co.)",
     "neighborhood": "Philo (Mendocino)",
     "neighborhood_raw": "Philo (Mendocino)",
@@ -13048,6 +13779,9 @@
     "furnished": "unknown",
     "bath": "unknown",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -13070,7 +13804,7 @@
       ]
     },
     "score_sheet": 35,
-    "contact_name": "Tim Allen — Coldwell Banker Carmel",
+    "contact_name": "Tim Allen - Coldwell Banker Carmel",
     "contact_org": "",
     "contact_phone": "(831) 214-1990",
     "contact_email": "tim@timallenproperties.com",
@@ -13081,7 +13815,7 @@
       "FindTheDivine listings: https://findthedivine.com/retreats-online/listing-category/retreat-centers-sale/"
     ],
     "source": "sheet-pipeline",
-    "play": "Lease pitch — remote campus only",
+    "play": "Lease pitch - remote campus only",
     "notes": "Fully solves capacity + events, but 2.5 hrs out. Closer alternative now on the board: Santa Sabina (San Rafael).",
     "outreach_status": "not-contacted",
     "contacted_by": "",
@@ -13109,7 +13843,8 @@
   {
     "id": "pl-union-square-plaza-hotel",
     "name": "Union Square Plaza Hotel",
-    "address": "418–432 Geary St, San Francisco",
+    "name_detail": "",
+    "address": "418-432 Geary St, San Francisco",
     "neighborhood": "Union Square",
     "neighborhood_raw": "Union Square",
     "region": "SF-priority",
@@ -13139,6 +13874,11 @@
     "furnished": true,
     "bath": "private",
     "status": "on-market",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -13162,11 +13902,11 @@
         "transit: 10 min (est. by neighborhood (geocode in portal))",
         "price: $1850/bed",
         "kitchen: none",
-        "beds: 61–100 → 12 (over ideal; partial take)"
+        "beds: 61-100 → 12 (over ideal; partial take)"
       ]
     },
     "score_sheet": 40,
-    "contact_name": "Ryan Clark — KW Commercial",
+    "contact_name": "Ryan Clark - KW Commercial",
     "contact_org": "",
     "contact_phone": "(605) 228-6402 ⚠",
     "contact_email": "",
@@ -13179,7 +13919,7 @@
     ],
     "source": "sheet-pipeline",
     "play": "Master lease + option",
-    "notes": "Whole cohort + staff in one operating hotel. Still renting rooms from $63/night — starved for occupancy; a guaranteed master lease is found money.",
+    "notes": "Whole cohort + staff in one operating hotel. Still renting rooms from $63/night - starved for occupancy; a guaranteed master lease is found money.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -13205,7 +13945,8 @@
   },
   {
     "id": "pl-university-inn-suites-berkeley-everyone-is-motiv",
-    "name": "University Inn & Suites Berkeley — everyone is motivated",
+    "name": "University Inn & Suites Berkeley",
+    "name_detail": "everyone is motivated",
     "address": "920 University Ave, Berkeley",
     "neighborhood": "Berkeley",
     "neighborhood_raw": "Berkeley",
@@ -13236,6 +13977,9 @@
     "furnished": true,
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "institution",
+    "walk_in_ready": "no",
+    "houses": [],
     "timeline_tags": [],
     "aau": false,
     "baseline": false,
@@ -13298,7 +14042,8 @@
   },
   {
     "id": "pl-urbanests-partnership-angle",
-    "name": "Urbanests — partnership angle",
+    "name": "Urbanests",
+    "name_detail": "partnership angle",
     "address": "1412 Market (ex-Inn at Market) + SoMa buildings",
     "neighborhood": "SoMa",
     "neighborhood_raw": "SoMa",
@@ -13321,7 +14066,7 @@
     "price_per_room_low": 595,
     "price_per_room_high": 1095,
     "price_per_bed_est": 845,
-    "price_raw": "$595–1,095/bed; 'tech dorm' rooms $1,000",
+    "price_raw": "$595-1,095/bed; 'tech dorm' rooms $1,000",
     "monthly_total_45_est": 38025,
     "kitchen": "communal",
     "kitchen_raw": "communal",
@@ -13329,6 +14074,11 @@
     "furnished": true,
     "bath": "unknown",
     "status": "active",
+    "deal_channel": "operator",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "q1-2027",
@@ -13363,12 +14113,12 @@
     "contact_path": "",
     "contact_section": "Premium value & co-living / bridge",
     "source_links": [
-      "TRD — co-living bounce-back: https://therealdeal.com/san-francisco/2025/04/01/co-living-biz-bounces-back-with-ai-boom-in-sf/",
+      "TRD - co-living bounce-back: https://therealdeal.com/san-francisco/2025/04/01/co-living-biz-bounces-back-with-ai-boom-in-sf/",
       "Urbanests: https://www.urbanests.com/post/the-new-hacker-houses-why-co-living-is-the-secret-engine-of-san-francisco-s-ai-boom"
     ],
     "source": "sheet-pipeline",
     "play": "Block or partnership/sublease inquiry",
-    "notes": "Competitor watch: UrbaNests handed back ~560 SoMa rooms — trace those landlords. | They converted the Inn at Market into an AI hacker house and have master-leased buildings before — could be a partner that runs a building FOR the program, not just a landlord.",
+    "notes": "Competitor watch: UrbaNests handed back ~560 SoMa rooms - trace those landlords. | They converted the Inn at Market into an AI hacker house and have master-leased buildings before - could be a partner that runs a building FOR the program, not just a landlord.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -13394,7 +14144,8 @@
   },
   {
     "id": "pl-veritas-ballast-portfolios-bank-controlled-sf-bu",
-    "name": "Veritas & Ballast portfolios — bank-controlled SF buildings",
+    "name": "Veritas & Ballast portfolios",
+    "name_detail": "bank-controlled SF buildings",
     "address": "Tenderloin / Civic Center / citywide SF",
     "neighborhood": "Civic Center",
     "neighborhood_raw": "Civic Center",
@@ -13425,6 +14176,9 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "receivership",
+    "deal_channel": "receiver",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "q1-2027"
     ],
@@ -13450,20 +14204,20 @@
       ]
     },
     "score_sheet": 59,
-    "contact_name": "Receiver / lender — identify via SF Assessor-Recorder deed pull",
+    "contact_name": "Receiver / lender - identify via SF Assessor-Recorder deed pull",
     "contact_org": "",
-    "contact_phone": "—",
+    "contact_phone": " - ",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "Prospect Hill Capital (Veritas) / RBC (Ballast)",
     "contact_section": "Report §6b",
     "source_links": [
       "Mission Local: https://missionlocal.org/2025/09/sf-veritas-foreclosure-652-million-debt/",
-      "Multifamily Dive — Ballast: https://www.multifamilydive.com/news/goldman-sachs-ballast-investments-distressed-loans-san-francisco/722955/"
+      "Multifamily Dive - Ballast: https://www.multifamilydive.com/news/goldman-sachs-ballast-investments-distressed-loans-san-francisco/722955/"
     ],
     "source": "sheet-pipeline",
     "play": "Building-level master-lease conversations",
-    "notes": "Portfolio play — no single building identified yet; find the receiver/lender contact first. | SF's two mega-distress portfolios. Whoever holds these post-auction inherits scattered vacancy in exactly the neighborhoods with SRO/studio stock. Worth a call to receiver Wald Realty Advisors / Hamilton Zanze.",
+    "notes": "Portfolio play - no single building identified yet; find the receiver/lender contact first. | SF's two mega-distress portfolios. Whoever holds these post-auction inherits scattered vacancy in exactly the neighborhoods with SRO/studio stock. Worth a call to receiver Wald Realty Advisors / Hamilton Zanze.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -13489,7 +14243,8 @@
   },
   {
     "id": "pl-villages-at-treasure-island-cheapest-beds-in-sf",
-    "name": "Villages at Treasure Island — cheapest beds in SF proper",
+    "name": "Villages at Treasure Island",
+    "name_detail": "cheapest beds in SF proper",
     "address": "410 Avenue of the Palms, Treasure Island, SF",
     "neighborhood": "Treasure Island",
     "neighborhood_raw": "Treasure Island",
@@ -13512,7 +14267,7 @@
     "price_per_room_low": 2600,
     "price_per_room_high": 3900,
     "price_per_bed_est": 1083,
-    "price_raw": "From ~$2,600/townhome = $870–1,300/bed",
+    "price_raw": "From ~$2,600/townhome = $870-1,300/bed",
     "monthly_total_45_est": 48735,
     "kitchen": "private",
     "kitchen_raw": "private",
@@ -13520,6 +14275,11 @@
     "furnished": "unknown",
     "bath": "private",
     "status": "active",
+    "deal_channel": "unknown",
+    "walk_in_ready": "yes",
+    "houses": [
+      "punk-house"
+    ],
     "timeline_tags": [
       "bridge-sept",
       "expansion"
@@ -13558,8 +14318,8 @@
       "tisf.com: https://www.tisf.com/live-here"
     ],
     "source": "sheet-pipeline",
-    "play": "Confirm 2026–27 unit runway with John Stewart Co.",
-    "notes": "Whole homes with living rooms and yards at pod prices. 15–20 townhomes = 40–60 beds. Caveats: redevelopment is phasing interim housing out (confirm runway), and it's a ferry/Muni commute.",
+    "play": "Confirm 2026-27 unit runway with John Stewart Co.",
+    "notes": "Whole homes with living rooms and yards at pod prices. 15-20 townhomes = 40-60 beds. Caveats: redevelopment is phasing interim housing out (confirm runway), and it's a ferry/Muni commute.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,
@@ -13585,7 +14345,8 @@
   },
   {
     "id": "pl-waterfront-hotel-closed-actively-brokered",
-    "name": "Waterfront Hotel — closed, actively brokered",
+    "name": "Waterfront Hotel",
+    "name_detail": "closed, actively brokered",
     "address": "10 Washington St, Jack London Square, Oakland",
     "neighborhood": "Jack London Sq, Oakland",
     "neighborhood_raw": "Jack London Sq, Oakland",
@@ -13608,7 +14369,7 @@
     "price_per_room_low": 1200,
     "price_per_room_high": 1800,
     "price_per_bed_est": 1500,
-    "price_raw": "Leasehold, 'fully unencumbered' — unsold a year+",
+    "price_raw": "Leasehold, 'fully unencumbered' - unsold a year+",
     "monthly_total_45_est": 67500,
     "kitchen": "none",
     "kitchen_raw": "none",
@@ -13616,6 +14377,9 @@
     "furnished": true,
     "bath": "private",
     "status": "dark",
+    "deal_channel": "broker",
+    "walk_in_ready": "unknown",
+    "houses": [],
     "timeline_tags": [
       "expansion"
     ],
@@ -13640,20 +14404,20 @@
       ]
     },
     "score_sheet": 32.5,
-    "contact_name": "Jared Kelso / Steve Michels — Berkadia",
+    "contact_name": "Jared Kelso / Steve Michels - Berkadia",
     "contact_org": "",
     "contact_phone": "646-432-7480 / 646-432-7475",
     "contact_email": "",
     "contact_verify": false,
     "contact_path": "Port of Oakland + CIM consent needed",
-    "contact_section": "⭐ Jewels — call these first",
+    "contact_section": "⭐ Jewels - call these first",
     "source_links": [
       "Berkadia listing: https://properties.berkadia.com/waterfront-hotel-414425/",
-      "CBS — closure: https://www.cbsnews.com/sanfrancisco/news/oakland-landmark-waterfront-hotel-jack-london-square-closes/"
+      "CBS - closure: https://www.cbsnews.com/sanfrancisco/news/oakland-landmark-waterfront-hotel-jack-london-square-closes/"
     ],
     "source": "sheet-pipeline",
     "play": "Call Berkadia (Kelso / Michels)",
-    "notes": "Verified July 2026: still unsold after 18 months, no price guidance — a stuck listing. Contacts: Jared Kelso 646-432-7480 / Steve Michels 646-432-7475 (Berkadia). Caveat: leasehold — land is Port of Oakland, ground lease runs through CIM Group, so Port consent likely needed. Comp: Homewood Suites Oakland just sold at $42k/key.",
+    "notes": "Verified July 2026: still unsold after 18 months, no price guidance - a stuck listing. Contacts: Jared Kelso 646-432-7480 / Steve Michels 646-432-7475 (Berkadia). Caveat: leasehold - land is Port of Oakland, ground lease runs through CIM Group, so Port consent likely needed. Comp: Homewood Suites Oakland just sold at $42k/key.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,

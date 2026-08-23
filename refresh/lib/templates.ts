@@ -23,8 +23,8 @@ export function templateFor(p: Property): string {
 export function varsFor(p: Property, sender = process.env.SENDER_NAME ?? 'Ria Arora'): Record<string, string | number | null> {
   const now = new Date();
   return {
-    name: p.name.split(' — ')[0], address: p.address, rooms: p.rooms ?? p.beds_est, beds: p.beds_est, price_ask: p.price_per_bed_est ? `$${p.price_per_bed_est.toLocaleString()}/bed` : '$1,000/bed',
-    contact_name: (p.contact_name.split(/[—,(·]/)[0] || 'there').trim(), sender_name: sender, month: now.toLocaleString('en-US', { month: 'long', year: 'numeric' }),
-    arrival: 'September 15', nights: 30, cohort: '40–50',
+    name: p.name.split(' - ')[0], address: p.address, rooms: p.rooms ?? p.beds_est, beds: p.beds_est, price_ask: p.price_per_bed_est ? `$${p.price_per_bed_est.toLocaleString()}/bed` : '$1,000/bed',
+    contact_name: (p.contact_name.split(/[-,(·]/)[0] || 'there').trim(), sender_name: sender, month: now.toLocaleString('en-US', { month: 'long', year: 'numeric' }),
+    arrival: 'September 15', nights: 30, cohort: '40-50',
   };
 }

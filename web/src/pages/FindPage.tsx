@@ -40,7 +40,7 @@ export function FindPage() {
     const url = import.meta.env.VITE_RESIDENT_WEBHOOK_URL;
     if (!url) { location.href = `mailto:${import.meta.env.VITE_HOUSING_EMAIL ?? 'housing@biopunk.house'}?subject=${encodeURIComponent(`I took a bed at ${p.name}`)}&body=${encodeURIComponent(`Row id: ${p.id}\nArrival: ${f.arrival}, ${f.nights} nights.\nPlease decrement beds_available and mark verified_via=resident.`)}`; return; }
     setTaken((t) => ({ ...t, [p.id]: 'saving…' }));
-    try { const r = await fetch(url, { method: 'POST', body: JSON.stringify({ id: p.id, action: 'took_bed', who: 'founder (site)' }), headers: { 'Content-Type': 'text/plain' } }); const j = await r.json(); setTaken((t) => ({ ...t, [p.id]: j.ok ? `recorded ✓ (${j.beds_available ?? '—'} left)` : `error: ${j.error}` })); }
+    try { const r = await fetch(url, { method: 'POST', body: JSON.stringify({ id: p.id, action: 'took_bed', who: 'founder (site)' }), headers: { 'Content-Type': 'text/plain' } }); const j = await r.json(); setTaken((t) => ({ ...t, [p.id]: j.ok ? `recorded ✓ (${j.beds_available ?? '-'} left)` : `error: ${j.error}` })); }
     catch (e) { setTaken((t) => ({ ...t, [p.id]: `error: ${(e as Error).message}` })); }
   };
   if (!data) return <div className="p-6 text-neutral-500">loading…</div>;
@@ -54,9 +54,9 @@ export function FindPage() {
         <label className="text-[11px]">room<select className="input w-full" value={f.shared ? 'shared' : 'private'} onChange={(e) => set({ shared: e.target.value === 'shared' })}><option value="shared">shared OK (cheapest bed)</option><option value="private">private only</option></select></label>
         <label className="text-[11px]">kitchen<select className="input w-full" value={f.kitchen ? '1' : '0'} onChange={(e) => set({ kitchen: e.target.value === '1' })}><option value="1">required</option><option value="0">not required</option></select></label>
         <label className="text-[11px]">max walk (min)<input type="number" step={5} className="input w-full" value={f.walk} onChange={(e) => set({ walk: +e.target.value })} /></label>
-        <label className="text-[11px] flex items-end gap-1 pb-1"><input type="checkbox" checked={f.unverified} onChange={(e) => set({ unverified: e.target.checked })} />show "unverified — ask"</label>
+        <label className="text-[11px] flex items-end gap-1 pb-1"><input type="checkbox" checked={f.unverified} onChange={(e) => set({ unverified: e.target.checked })} />show "unverified - ask"</label>
       </form>
-      <div className="text-[11px] text-neutral-500">{results.length} matches · every price and bed count shows the date it was verified — a number without a date is an estimate, not an offer · <button className="underline" onClick={() => navigator.clipboard.writeText(location.href)}>copy link to this search</button></div>
+      <div className="text-[11px] text-neutral-500">{results.length} matches · every price and bed count shows the date it was verified - a number without a date is an estimate, not an offer · <button className="underline" onClick={() => navigator.clipboard.writeText(location.href)}>copy link to this search</button></div>
       <div className="space-y-2">
         {results.map(({ p, fr, price }) => (
           <div key={p.id} className={`rounded border border-neutral-200 dark:border-neutral-800 p-2 ${fr.level === 'unverified' ? 'opacity-70' : ''}`}>
@@ -68,7 +68,7 @@ export function FindPage() {
             </div>
             <div className="mt-1 flex flex-wrap gap-2 items-center text-[12px]">
               {p.booking_url && <a className="btn" href={p.booking_url} target="_blank" rel="noreferrer">{p.bookable_online ? 'book online ↗' : 'operator page ↗'}</a>}
-              {p.contact_email && <a className="btn" href={`mailto:${p.contact_email.match(/[\w.+-]+@[\w.-]+/)?.[0]}?subject=${encodeURIComponent(`Bed from ${f.arrival} for ${f.nights} nights — Biopunk`)}`}>email operator</a>}
+              {p.contact_email && <a className="btn" href={`mailto:${p.contact_email.match(/[\w.+-]+@[\w.-]+/)?.[0]}?subject=${encodeURIComponent(`Bed from ${f.arrival} for ${f.nights} nights - Biopunk`)}`}>email operator</a>}
               {p.contact_phone && <a className="btn" href={`tel:${p.contact_phone.replace(/\D/g, '').slice(0, 10)}`}>call {p.contact_phone.split('·')[0]}</a>}
               {p.min_stay_nights != null && <span className="text-neutral-500">min stay {p.min_stay_nights} nights</span>}
               <button className="btn ml-auto" onClick={() => took(p)} disabled={!!taken[p.id]}>{taken[p.id] ?? 'I took a bed here'}</button>

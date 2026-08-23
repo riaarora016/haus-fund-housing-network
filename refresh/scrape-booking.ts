@@ -52,5 +52,5 @@ const windows = (): Window[] => [14, 45].map((d) => { const ci = addDays(new Dat
   fs.writeFileSync(out, JSON.stringify(merged, null, 2) + '\n');
   const ok = results.filter((r) => r.ok).length, na = results.filter((r) => r.needs_adapter).length, err = results.filter((r) => r.error).length;
   console.log(`\nscrape-booking done: ${ok} read, ${na} need adapter work, ${err} errors → ${out}. Next: npx tsx refresh/normalize.ts`);
-  if (na) { console.log('\nNeeds adapter work:'); for (const r of results.filter((r) => r.needs_adapter)) console.log(`  - ${r.name} (${r.adapter || '—'}): ${r.needs_adapter}`); }
+  if (na) { console.log('\nNeeds adapter work:'); for (const r of results.filter((r) => r.needs_adapter)) console.log(`  - ${r.name} (${r.adapter || '-'}): ${r.needs_adapter}`); }
 })();

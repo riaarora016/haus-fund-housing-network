@@ -1,12 +1,12 @@
 ---
 template: weekly-availability-check
 use_for: "The automated weekly email (AI-assisted inbox) to every operator on Inventory"
-subject: "Quick availability check — Biopunk housing ({{month}})"
+subject: "Quick availability check - Biopunk housing ({{month}})"
 ---
 
 Hi {{contact_name}},
 
-Quick check for our founders' housing list — three questions:
+Quick check for our founders' housing list - three questions:
 1. Beds/rooms available from {{date}} (30+ nights)?
 2. Monthly rate at 30+ nights, private and shared?
 3. Any change to kitchen/common-space access?

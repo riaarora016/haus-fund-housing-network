@@ -1,4 +1,4 @@
-// Nightly: for rows with LoopNet / Crexi / Zillow / Apartments.com URLs — is the listing still live? price? days on market?
+// Nightly: for rows with LoopNet / Crexi / Zillow / Apartments.com URLs - is the listing still live? price? days on market?
 // Gone → status=stale-verify, confidence=low (applied by normalize.ts).
 //   npx tsx refresh/scrape-listings.ts [--limit N]
 import fs from 'node:fs';
@@ -35,8 +35,8 @@ const arg = (k: string) => { const i = process.argv.indexOf(k); return i > -1 ? 
         const dom = text.match(/(\d+)\s*days? on (?:market|loopnet|crexi)/i); res.days_on_market = dom ? Number(dom[1]) : null;
         res.note = 'live';
       } else res.note = `unclear (HTTP ${status}, ${text.length} chars)`;
-      console.log(`${res.live === true ? '✓' : res.live === false ? '✗' : '?'} ${row.name.slice(0, 40)} — ${res.note} ${res.price_text ?? ''} ${res.days_on_market != null ? `${res.days_on_market}d` : ''}`);
-    } catch (e) { res.note = `error: ${(e as Error).message.split('\n')[0].slice(0, 120)}`; console.log(`! ${row.name.slice(0, 40)} — ${res.note}`); }
+      console.log(`${res.live === true ? '✓' : res.live === false ? '✗' : '?'} ${row.name.slice(0, 40)} - ${res.note} ${res.price_text ?? ''} ${res.days_on_market != null ? `${res.days_on_market}d` : ''}`);
+    } catch (e) { res.note = `error: ${(e as Error).message.split('\n')[0].slice(0, 120)}`; console.log(`! ${row.name.slice(0, 40)} - ${res.note}`); }
     finally { await page.close(); }
     results.push(res);
   }

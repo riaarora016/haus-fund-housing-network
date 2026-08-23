@@ -1,4 +1,4 @@
-// Read the Sheet's PUBLISHED CSV (no credentials needed) — the same thing the web app reads — and
+// Read the Sheet's PUBLISHED CSV (no credentials needed) - the same thing the web app reads - and
 // write it to data/sheet-snapshot.json so you can diff what the team edited vs the local build.
 //   PIPELINE_CSV_URL=... INVENTORY_CSV_URL=... npx tsx data/pull-from-sheet.ts
 import 'dotenv/config';

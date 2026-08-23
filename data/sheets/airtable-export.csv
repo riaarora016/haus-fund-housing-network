@@ -1,0 +1,2 @@
+"NOTE: Rows with status=confirmed, flat columns, ready to import into the Airtable CRM (Google Sheets is for drafting; Airtable is set in stone). Mark a row confirmed in Pipeline/Inventory and re-run push-to-sheet."
+Name,Address,Neighborhood,Type,Beds,$/bed agreed,Monthly total,Kitchen,Contact,Phone,Email,House,Move-in,Notes,id

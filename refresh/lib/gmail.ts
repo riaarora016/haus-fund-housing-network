@@ -1,4 +1,4 @@
-// Gmail API (housing@biopunk.house). OAuth2 refresh-token flow — run `npx tsx refresh/gmail-auth.ts` once to mint it.
+// Gmail API (housing@biopunk.house). OAuth2 refresh-token flow - run `npx tsx refresh/gmail-auth.ts` once to mint it.
 // Env: GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN, GMAIL_FROM (e.g. "Biopunk Housing <housing@biopunk.house>").
 import 'dotenv/config';
 import { google, gmail_v1 } from 'googleapis';

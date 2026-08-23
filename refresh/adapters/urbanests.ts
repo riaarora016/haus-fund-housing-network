@@ -20,7 +20,7 @@ export const urbanests: Adapter = {
     const term = text.match(/(\d+)\s*-?\s*(\d+)?\s*month/i);
     r.min_stay_nights = term ? Number(term[1]) * 30 : null;
     r.bookable = false; r.ok = true;
-    r.evidence = `per-person from $${r.price_now}${r.price_private_now ? `; single from $${r.price_private_now}` : ''}${term ? `; min ${term[0]}` : ''} — ${text.slice(0, 300)}`;
+    r.evidence = `per-person from $${r.price_now}${r.price_private_now ? `; single from $${r.price_private_now}` : ''}${term ? `; min ${term[0]}` : ''} - ${text.slice(0, 300)}`;
     return r;
   },
 };

@@ -12,6 +12,6 @@ http.createServer(async (req, res) => {
   const code = new URL(req.url!, 'http://localhost:8765').searchParams.get('code');
   if (!code) { res.end('no code'); return; }
   const { tokens } = await o.getToken(code);
-  res.end('Done — you can close this tab.');
+  res.end('Done - you can close this tab.');
   console.log(`\nGMAIL_REFRESH_TOKEN=${tokens.refresh_token}\n`); process.exit(0);
 }).listen(8765);

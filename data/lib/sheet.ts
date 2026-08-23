@@ -1,6 +1,6 @@
 // Google Sheets access shared by push-to-sheet / pull-from-sheet / refresh jobs.
-// Auth: a service-account JSON in .env (GOOGLE_SERVICE_ACCOUNT_JSON — the raw JSON string — or
-// GOOGLE_APPLICATION_CREDENTIALS — a path). SHEET_ID = the id in the sheet URL.
+// Auth: a service-account JSON in .env (GOOGLE_SERVICE_ACCOUNT_JSON - the raw JSON string - or
+// GOOGLE_APPLICATION_CREDENTIALS - a path). SHEET_ID = the id in the sheet URL.
 // The service account's client_email must be shared on the Sheet as Editor.
 import 'dotenv/config';
 import fs from 'node:fs';

@@ -13,7 +13,7 @@ export function rowToCells(p: Property): string[] { return SHEET_COLUMNS.map((c)
 const NUM = new Set(['lat','lng','dist_to_frontier_mi','transit_min_to_frontier','walk_min_from_frontier','rooms','beds_est','occupancy_assumption',
   'price_per_room_low','price_per_room_high','price_per_bed_est','monthly_total_45_est','score','score_sheet','notion_round','beds_available','price_now','price_private_now','min_stay_nights']);
 const BOOL = new Set(['east_bay','priority_neighborhood','aau','baseline','contact_verify','bookable_online','do_not_email']);
-const LIST = new Set(['timeline_tags','source_links']);
+const LIST = new Set(['timeline_tags','source_links','houses']);
 const JSONC = new Set(['score_breakdown']);
 export function cellsToRow(obj: Record<string, string>): Property {
   const out: any = {};

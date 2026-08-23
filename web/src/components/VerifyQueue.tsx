@@ -22,7 +22,7 @@ export function VerifyQueue({ rows, onSelect }: { rows: Property[]; onSelect: (p
           <td className="td whitespace-normal min-w-64"><span className="font-medium">{p.name}</span><div className="text-[11px] text-neutral-500">{p.address}</div></td>
           <td className="td"><Status s={p.status} /></td><td className="td font-mono text-right">{p.score}</td>
           <td className="td" onClick={(e) => e.stopPropagation()}><Phone v={p.contact_phone} /></td><td className="td max-w-64 whitespace-normal" onClick={(e) => e.stopPropagation()}><Email v={p.contact_email || p.contact_path} /></td>
-          <td className="td">{p.audience === 'inventory' ? <Fresh p={p} /> : '—'}</td><td className="td text-neutral-500">{p.last_checked_raw}</td></tr>)}</tbody></table>
+          <td className="td">{p.audience === 'inventory' ? <Fresh p={p} /> : '-'}</td><td className="td text-neutral-500">{p.last_checked_raw}</td></tr>)}</tbody></table>
     </div>
   );
 }

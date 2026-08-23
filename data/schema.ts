@@ -1,4 +1,4 @@
-// Canonical row schema — see CLAUDE.md "Canonical row schema" + Step 6 additions.
+// Canonical row schema - see CLAUDE.md "Canonical row schema" + Step 6 additions.
 // One row = one property. properties.json is sorted by id and never hand-edited.
 
 export type PropertyType =
@@ -7,7 +7,7 @@ export type PropertyType =
 export type Kitchen = 'private' | 'communal' | 'none' | 'unknown';
 export type Status =
   | 'active' | 'dark' | 'receivership' | 'on-market' | 'taken' | 'sold'
-  | 'stale-verify' | 'ruled-out';
+  | 'stale-verify' | 'ruled-out' | 'confirmed';
 export type TimelineTag = 'bridge-sept' | 'q1-2027' | 'femme-house' | 'alum-house' | 'expansion';
 export type OutreachStatus =
   | 'not-contacted' | 'contacted' | 'called' | 'emailed' | 'toured' | 'loi' | 'dead';
@@ -15,6 +15,11 @@ export type Audience = 'pipeline' | 'inventory';
 export type VerifiedVia = 'booking-page' | 'listing' | 'email' | 'call' | 'resident' | 'manual';
 export type Confidence = 'high' | 'med' | 'low';
 export type Sept15 = true | false | 'unknown';
+// How we reach the decision-maker. Elliot's channel preference: pocket deals (owner) first, then receivers, brokers, institutions, operators.
+export type DealChannel = 'owner' | 'receiver' | 'broker' | 'institution' | 'operator' | 'unknown';
+// Elliot: "if we have to retrofit a space, it takes forever for permitting... we don't want to do that."
+export type WalkInReady = 'yes' | 'no' | 'unknown';
+export type House = 'punk-house' | 'femme-house' | 'alum-house';
 export type Region = 'SF-priority' | 'SF-other' | 'East Bay' | 'Peninsula' | 'North Bay' | 'Remote';
 
 export interface ScoreBreakdown {
@@ -30,6 +35,7 @@ export interface ScoreBreakdown {
 export interface Property {
   id: string;
   name: string;
+  name_detail: string;           // the tagline that used to sit after the dash in the workbook name
   address: string;
   neighborhood: string;          // normalized to CLAUDE.md list where possible
   neighborhood_raw: string;      // as it appears in the source
@@ -63,6 +69,9 @@ export interface Property {
   bath: 'private' | 'shared' | 'unknown';
 
   status: Status;
+  deal_channel: DealChannel;
+  walk_in_ready: WalkInReady;
+  houses: House[];               // which Biopunk house(s) this building could serve
   timeline_tags: TimelineTag[];
   aau: boolean;
   baseline: boolean;
@@ -115,12 +124,12 @@ export interface Property {
 
 // Column order for the Google Sheet tabs + CSV. Keep stable: the web app parses by header name.
 export const SHEET_COLUMNS: (keyof Property)[] = [
-  'id','name','address','neighborhood','neighborhood_raw','region','east_bay','priority_neighborhood',
+  'id','name','name_detail','address','neighborhood','neighborhood_raw','region','east_bay','priority_neighborhood',
   'lat','lng','geo_precision','dist_to_frontier_mi','transit_min_to_frontier','walk_min_from_frontier','walk_source',
   'type','type_raw','rooms','capacity_raw','beds_est','occupancy_assumption',
   'price_per_room_low','price_per_room_high','price_per_bed_est','price_raw','monthly_total_45_est',
   'kitchen','kitchen_raw','common_space','furnished','bath',
-  'status','timeline_tags','aau','baseline','sept15_ready','cluster_id','related_id','tier',
+  'status','deal_channel','walk_in_ready','houses','timeline_tags','aau','baseline','sept15_ready','cluster_id','related_id','tier',
   'score','score_breakdown','score_sheet',
   'contact_name','contact_org','contact_phone','contact_email','contact_verify','contact_path','contact_section',
   'source_links','source','play','notes','outreach_status','contacted_by','notion_round','last_checked','last_checked_raw',
