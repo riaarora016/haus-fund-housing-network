@@ -14,10 +14,8 @@ const slim = sf.map((p) => ({
   phone: p.contact_phone, email: p.contact_email, lastVerified: p.last_verified, verifiedVia: p.verified_via,
   minStay: p.min_stay_nights, priority: p.priority_neighborhood, tags: p.timeline_tags, play: p.play,
 })).sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
-const baseline = props.find((p) => p.baseline && p.audience === 'pipeline' && p.type === 'co-living');
 const meta = {
   generated: '2026-08-23', frontier: { lat: 37.78255, lng: -122.40935, name: 'Frontier Tower', address: '995 Market St' },
-  baseline: baseline ? { price: baseline.price_per_bed_est, beds: baseline.beds_est } : null,
   count: slim.length, bookableNow: slim.filter((p) => p.audience === 'inventory').length,
 };
 const out = { meta, properties: slim };

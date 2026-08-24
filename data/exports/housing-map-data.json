@@ -7,10 +7,6 @@
       "name": "Frontier Tower",
       "address": "995 Market St"
     },
-    "baseline": {
-      "price": 1595,
-      "beds": 20
-    },
     "count": 111,
     "bookableNow": 74
   },

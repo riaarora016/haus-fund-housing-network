@@ -9,3 +9,4 @@ web/.env.local
 refresh/state/*.tmp
 .DS_Store
 service-account.json
+data/tiles/
