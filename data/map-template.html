@@ -98,9 +98,9 @@ header.top { border-bottom: 1px solid var(--hair); background: var(--panel); }
 .attrib a { color: inherit; }
 .pin { cursor: pointer; }
 .pin.dim { opacity: .15; }
-.pin.sel { stroke: var(--ink); stroke-width: 7; }
-.ring { fill: none; stroke: var(--anchor); stroke-opacity: .55; stroke-dasharray: 14 18; stroke-width: 7; }
-.ring-l { fill: var(--anchor); font-size: 30px; font-family: var(--font-mono); opacity: .85; paint-order: stroke; stroke: var(--panel); stroke-width: 8px; stroke-linejoin: round; }
+.pin.sel { stroke: var(--ink); }
+.ring { fill: none; stroke: var(--anchor); stroke-opacity: .55; }
+.ring-l { fill: var(--anchor); font-family: var(--font-mono); opacity: .85; paint-order: stroke; stroke: var(--panel); stroke-linejoin: round; }
 
 /* list */
 .listwrap { border-left: 1px solid var(--hair); background: var(--panel); overflow-y: auto; }
@@ -245,17 +245,18 @@ function buildMap(){
   [[0.5,'~10 min walk'],[1,'~20 min walk']].forEach(([mi,lab])=>{
     const r = mi * pxPerMile;
     s += `<circle class="ring" cx="${fx}" cy="${fy}" r="${r.toFixed(0)}"/>`;
-    s += `<text class="ring-l" x="${fx}" y="${(fy - r - 10).toFixed(0)}" text-anchor="middle">${lab}</text>`;
+    s += `<text class="ring-l" x="${fx}" data-ry="${(fy - r).toFixed(0)}" y="${(fy - r).toFixed(0)}" text-anchor="middle">${lab}</text>`;
   });
-  // pins
+  // pins: like Google Maps, markers keep a constant SCREEN size; rescale() converts these
+  // base pixel radii into map units on every zoom, so dots separate as you zoom in.
   s += '<g class="pins">';
   for(const p of P){ if(p.lat==null) continue;
-    const r = p.beds ? Math.max(16, Math.min(40, 13 + 3*Math.sqrt(p.beds))) : 17;
-    s += `<circle class="pin" data-id="${p.id}" cx="${px(p.lng).toFixed(0)}" cy="${py(p.lat).toFixed(0)}" r="${r.toFixed(0)}" fill="${scoreColor(p.score)}" stroke="#fff" stroke-width="4.5" opacity="${p.geo==='neighborhood'?0.62:0.94}"><title>${esc(p.name)}</title></circle>`;
+    const baseR = p.beds ? Math.max(5, Math.min(9, 4 + Math.sqrt(p.beds) * 0.55)) : 5.5;
+    s += `<circle class="pin" data-id="${p.id}" data-r="${baseR.toFixed(1)}" cx="${px(p.lng).toFixed(0)}" cy="${py(p.lat).toFixed(0)}" r="6" fill="${scoreColor(p.score)}" stroke="#fff" opacity="${p.geo==='neighborhood'?0.62:0.94}"><title>${esc(p.name)}</title></circle>`;
   }
   s += '</g>';
-  // Frontier anchor
-  s += `<g style="pointer-events:none"><rect x="${(fx-26).toFixed(0)}" y="${(fy-26).toFixed(0)}" width="52" height="52" rx="9" fill="var(--anchor)" stroke="#fff" stroke-width="7" transform="rotate(45 ${fx} ${fy})"/><text x="${fx}" y="${(fy-46).toFixed(0)}" text-anchor="middle" fill="var(--anchor)" font-weight="700" font-size="34" font-family="var(--font-ui)" paint-order="stroke" stroke="var(--panel)" stroke-width="9" stroke-linejoin="round">Frontier Tower</text></g>`;
+  // Frontier anchor: drawn in screen units around the origin, positioned+scaled by rescale()
+  s += `<g id="anchor" style="pointer-events:none"><rect x="-8" y="-8" width="16" height="16" rx="3" fill="var(--anchor)" stroke="#fff" stroke-width="2.2" transform="rotate(45)"/><text x="0" y="-15" text-anchor="middle" fill="var(--anchor)" font-weight="700" font-size="12" font-family="var(--font-ui)" paint-order="stroke" stroke="var(--panel)" stroke-width="3.5" stroke-linejoin="round">Frontier Tower</text></g>`;
   svg.innerHTML = s;
   svg.querySelectorAll('.pin').forEach(el => el.addEventListener('click', e => { if(!moved) openSheet(el.getAttribute('data-id')); e.stopPropagation(); }));
 }
@@ -264,11 +265,33 @@ function buildMap(){
 const HOME = { x: 0, y: 0, w: MW, h: MH };
 let view = { ...HOME };
 function clampView(){
-  view.w = Math.min(MW, Math.max(MW/8, view.w)); view.h = view.w * (MH/MW);
+  view.w = Math.min(MW, Math.max(MW/16, view.w)); view.h = view.w * (MH/MW);
   view.x = Math.min(MW - view.w, Math.max(0, view.x));
   view.y = Math.min(MH - view.h, Math.max(0, view.y));
 }
-function applyView(){ clampView(); svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`); }
+function applyView(){ clampView(); svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`); rescale(); }
+// keep markers, rings and labels a constant size on screen (k = map units per screen pixel)
+const FX = () => px(F.lng), FY = () => py(F.lat);
+function rescale(){
+  const rect = svg.getBoundingClientRect(); if(!rect.width) return;
+  const k = view.w / rect.width;
+  svg.querySelectorAll('.pin').forEach(el => {
+    el.setAttribute('r', (parseFloat(el.dataset.r) * k).toFixed(1));
+    el.setAttribute('stroke-width', (el.classList.contains('sel') ? 2.6 * k : 1.6 * k).toFixed(1));
+  });
+  svg.querySelectorAll('.ring').forEach(el => {
+    el.setAttribute('stroke-width', (1.4 * k).toFixed(1));
+    el.setAttribute('stroke-dasharray', `${(4 * k).toFixed(1)} ${(6 * k).toFixed(1)}`);
+  });
+  svg.querySelectorAll('.ring-l').forEach(el => {
+    el.setAttribute('font-size', (11 * k).toFixed(1));
+    el.setAttribute('stroke-width', (3 * k).toFixed(1));
+    el.setAttribute('y', (parseFloat(el.dataset.ry) - 6 * k).toFixed(0));
+  });
+  const a = svg.querySelector('#anchor');
+  if(a) a.setAttribute('transform', `translate(${FX().toFixed(1)} ${FY().toFixed(1)}) scale(${k.toFixed(3)})`);
+}
+new ResizeObserver(() => rescale()).observe(svg);
 function zoomAt(cx, cy, factor){
   const nw = view.w / factor;
   view.x = cx - (cx - view.x) / factor;
@@ -354,6 +377,7 @@ function openSheet(id){
   const p = P.find(x=>x.id===id); if(!p) return;
   document.querySelectorAll('.pin').forEach(el=>el.classList.toggle('sel', el.getAttribute('data-id')===id));
   document.querySelectorAll('.card').forEach(el=>el.classList.toggle('sel', el.getAttribute('data-id')===id));
+  rescale();
   const shared = state.room==='shared', price = priceFor(p,shared);
   const kv = (k,v)=>`<div class="kv"><div class="k">${k}</div><div class="val">${v}</div></div>`;
   const tel = (p.phone||'').match(/\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/);
@@ -383,7 +407,7 @@ function openSheet(id){
   $('#sheet').classList.add('open'); $('#sheet').setAttribute('aria-hidden','false'); $('#scrim').classList.add('open');
   $('#sclose').addEventListener('click', closeSheet);
 }
-function closeSheet(){ $('#sheet').classList.remove('open'); $('#sheet').setAttribute('aria-hidden','true'); $('#scrim').classList.remove('open'); document.querySelectorAll('.pin.sel,.card.sel').forEach(el=>el.classList.remove('sel')); }
+function closeSheet(){ $('#sheet').classList.remove('open'); $('#sheet').setAttribute('aria-hidden','true'); $('#scrim').classList.remove('open'); document.querySelectorAll('.pin.sel,.card.sel').forEach(el=>el.classList.remove('sel')); rescale(); }
 $('#scrim').addEventListener('click', closeSheet);
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
 
