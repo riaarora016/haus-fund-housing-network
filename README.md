@@ -191,3 +191,10 @@ No em dashes anywhere: the build replaces every long dash coming out of the work
 - Confirming `sept15_ready` for anything that matters: the data says "unknown" for 68 rows.
 - Phone-only operators (Harcourt, Mission Hotel, 6th Collective, Fitzgerald) - no site to scrape, no email on file.
 - Reviewing `data/join-log.md` after any workbook change: contact joins are fuzzy on purpose and logged.
+
+## The two shareable deliverables
+
+Both are generated from `data/properties.json` (which the refresh engine keeps current), so they regenerate cleanly after every build.
+
+1. **Google Sheet — the working tracker.** `npm run export:xlsx` writes `data/exports/biopunk-housing-tracker.xlsx` (also mirrored per-tab to `data/sheets/*.csv`). Tabs: Start here, Priority list (every building, tiered Tier 1-4 with the Fitzgerald baseline pinned, contacts + phone + which template inline), Punk / Femme / Alum House, Call order, Bookable now, Templates, Outreach log, Airtable export. Upload it to Drive and open with Google Sheets (File - Save as Google Sheets for a native copy), or import it into the existing Sheet. The live copy is at the shared Google Sheet link.
+2. **Bed Finder map — the shareable UI.** `npm run build:map-artifact` writes `data/exports/biopunk-housing-map.html`, a single self-contained page (SF map drawn from coordinates since the artifact sandbox blocks map tiles) that anyone can open: filter by move-in, budget, shared/private, kitchen, walk time and house; pins coloured by fit and sized by beds; click for a detail card that compares to the Fitzgerald. It is a snapshot; to refresh it after new verifications, rerun the command and republish. The always-live version is the `/find` route of the web app, which reads the Sheet CSV and updates as the weekly email loop confirms availability.

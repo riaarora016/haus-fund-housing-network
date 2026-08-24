@@ -1,0 +1,421 @@
+<title>Biopunk Bed Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root {
+  --ground: #f5f7f5; --panel: #ffffff; --panel-2: #eef1ee; --ink: #131e1a; --muted: #5b6b64;
+  --hair: #dde3df; --hair-2: #e8ece9;
+  --accent: #0e9b8a; --accent-ink: #0a5d53; --accent-wash: #dcefec;
+  --indigo: #5b5bd6; --water: #dfe9ef; --land: #fbfcfb;
+  --s-high: #2fb170; --s-mid: #86c13a; --s-low: #d9822b; --s-none: #9aa6a0;
+  --fresh: #2fb170; --amber: #d9822b; --rose: #d1495b;
+  --shadow: 0 1px 2px rgba(19,30,26,.06), 0 8px 24px rgba(19,30,26,.07);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-ui: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+:root:not([data-theme="light"]) { }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0d1512; --panel: #14201c; --panel-2: #1a2723; --ink: #e8efeb; --muted: #93a49c;
+    --hair: #263630; --hair-2: #1e2b26;
+    --accent: #34c7b3; --accent-ink: #7fe0d2; --accent-wash: #123430;
+    --indigo: #9a9af0; --water: #16242c; --land: #16211d;
+    --s-high: #34c78a; --s-mid: #9bd94a; --s-low: #e6963f; --s-none: #64726b;
+    --fresh: #34c78a; --amber: #e6963f; --rose: #e06479;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0d1512; --panel: #14201c; --panel-2: #1a2723; --ink: #e8efeb; --muted: #93a49c;
+  --hair: #263630; --hair-2: #1e2b26;
+  --accent: #34c7b3; --accent-ink: #7fe0d2; --accent-wash: #123430;
+  --indigo: #9a9af0; --water: #16242c; --land: #16211d;
+  --s-high: #34c78a; --s-mid: #9bd94a; --s-low: #e6963f; --s-none: #64726b;
+  --fresh: #34c78a; --amber: #e6963f; --rose: #e06479;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--ground); color: var(--ink); font-family: var(--font-ui); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; margin: 0; text-wrap: balance; }
+button, input, select { font: inherit; color: inherit; }
+a { color: var(--accent-ink); }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+/* shell */
+.app { display: grid; grid-template-rows: auto 1fr; height: 100%; min-height: 100vh; }
+header.top { border-bottom: 1px solid var(--hair); background: var(--panel); }
+.top-in { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding: 12px 20px; }
+.brand { display: flex; align-items: baseline; gap: 10px; margin-right: auto; }
+.brand .mark { font-family: var(--font-display); font-size: 22px; font-weight: 600; letter-spacing: -.01em; }
+.brand .mark b { color: var(--accent-ink); font-weight: 600; }
+.brand .sub { font-size: 12.5px; color: var(--muted); }
+.stat { display: flex; flex-direction: column; line-height: 1.15; }
+.stat .n { font-family: var(--font-mono); font-size: 15px; font-weight: 600; }
+.stat .l { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.stat .n .hl { color: var(--accent-ink); }
+.theme-btn { border: 1px solid var(--hair); background: var(--panel-2); border-radius: 8px; padding: 6px 10px; cursor: pointer; font-size: 12px; }
+.theme-btn:hover { border-color: var(--accent); }
+
+.body { display: grid; grid-template-columns: 264px 1fr 340px; min-height: 0; }
+@media (max-width: 1080px) { .body { grid-template-columns: 1fr; grid-auto-rows: auto; } .rail, .listwrap { max-height: none; } .mapwrap { height: 62vh; } }
+
+/* filter rail */
+.rail { border-right: 1px solid var(--hair); background: var(--panel); padding: 16px 16px 28px; overflow-y: auto; }
+.rail h2 { font-size: 15px; margin-bottom: 2px; }
+.rail .lead { font-size: 12.5px; color: var(--muted); margin: 2px 0 16px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 5px; }
+.field input[type=date], .field input[type=number], .field select { width: 100%; padding: 7px 9px; border: 1px solid var(--hair); border-radius: 8px; background: var(--ground); }
+.field input:focus, .field select:focus, .seg button:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.seg { display: flex; border: 1px solid var(--hair); border-radius: 8px; overflow: hidden; }
+.seg button { flex: 1; border: 0; background: var(--ground); padding: 7px 4px; cursor: pointer; font-size: 12.5px; color: var(--muted); }
+.seg button[aria-pressed=true] { background: var(--accent); color: #fff; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--hair); background: var(--ground); border-radius: 999px; padding: 5px 11px; cursor: pointer; font-size: 12.5px; color: var(--muted); }
+.chip[aria-pressed=true] { border-color: var(--accent); background: var(--accent-wash); color: var(--accent-ink); font-weight: 600; }
+.rail .reset { margin-top: 6px; width: 100%; border: 1px solid var(--hair); background: var(--ground); border-radius: 8px; padding: 8px; cursor: pointer; font-size: 12.5px; }
+.rail .reset:hover { border-color: var(--accent); }
+.honesty { margin-top: 18px; padding: 11px 12px; border: 1px dashed var(--hair); border-radius: 10px; font-size: 11.5px; color: var(--muted); line-height: 1.45; }
+.honesty b { color: var(--ink); }
+
+/* map */
+.mapwrap { position: relative; background: var(--ground); overflow: hidden; min-height: 0; }
+#map { width: 100%; height: 100%; display: block; }
+.map-legend { position: absolute; left: 14px; bottom: 14px; background: color-mix(in srgb, var(--panel) 88%, transparent); backdrop-filter: blur(6px); border: 1px solid var(--hair); border-radius: 10px; padding: 9px 11px; font-size: 11px; box-shadow: var(--shadow); }
+.map-legend .row { display: flex; align-items: center; gap: 7px; margin: 2px 0; color: var(--muted); }
+.map-legend .row b { color: var(--ink); font-weight: 600; }
+.dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.map-hint { position: absolute; right: 14px; top: 12px; font-size: 11px; color: var(--muted); background: color-mix(in srgb, var(--panel) 80%, transparent); padding: 4px 9px; border-radius: 999px; border: 1px solid var(--hair); }
+.pin { cursor: pointer; transition: transform .12s ease; transform-box: fill-box; transform-origin: center; }
+.pin:hover { transform: scale(1.35); }
+.pin.dim { opacity: .16; }
+.pin.sel { stroke: var(--ink); stroke-width: 2.4; }
+.ring { fill: none; stroke: var(--muted); stroke-opacity: .28; stroke-dasharray: 3 5; }
+.ring-l { fill: var(--muted); font-size: 11px; font-family: var(--font-mono); opacity: .6; }
+.nb-l { fill: var(--muted); font-size: 12px; font-family: var(--font-ui); font-weight: 600; opacity: .62; letter-spacing: .01em; }
+.street { stroke: var(--muted); stroke-opacity: .3; stroke-width: 1.4; fill: none; }
+.street-l { fill: var(--muted); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; opacity: .55; }
+
+/* list */
+.listwrap { border-left: 1px solid var(--hair); background: var(--panel); overflow-y: auto; }
+.listhead { position: sticky; top: 0; background: var(--panel); border-bottom: 1px solid var(--hair); padding: 11px 15px; display: flex; align-items: baseline; justify-content: space-between; z-index: 2; }
+.listhead .c { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); }
+.listhead .c b { color: var(--accent-ink); }
+.sortsel { border: 1px solid var(--hair); background: var(--ground); border-radius: 7px; padding: 4px 7px; font-size: 12px; }
+.card { padding: 12px 15px; border-bottom: 1px solid var(--hair-2); cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; }
+.card:hover, .card.sel { background: var(--panel-2); }
+.card .nm { font-weight: 600; font-size: 13.5px; }
+.card .meta { grid-column: 1; font-size: 12px; color: var(--muted); }
+.card .price { grid-column: 2; grid-row: 1 / span 2; text-align: right; }
+.card .price .p { font-family: var(--font-mono); font-weight: 600; font-size: 14px; }
+.card .price .v { font-size: 10px; color: var(--muted); }
+.badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; grid-column: 1 / -1; }
+.b { font-size: 10.5px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--hair); color: var(--muted); white-space: nowrap; }
+.b.fresh { border-color: color-mix(in srgb, var(--fresh) 45%, var(--hair)); color: var(--fresh); }
+.b.amber { border-color: color-mix(in srgb, var(--amber) 45%, var(--hair)); color: var(--amber); }
+.b.ask { border-style: dashed; }
+.b.k { color: var(--accent-ink); border-color: color-mix(in srgb, var(--accent) 40%, var(--hair)); }
+.b.s15 { color: var(--fresh); border-color: color-mix(in srgb, var(--fresh) 45%, var(--hair)); }
+.empty { padding: 40px 20px; text-align: center; color: var(--muted); }
+
+/* detail sheet */
+.sheet { position: fixed; inset: 0 0 0 auto; width: min(440px, 100%); background: var(--panel); border-left: 1px solid var(--hair); box-shadow: var(--shadow); transform: translateX(100%); transition: transform .22s cubic-bezier(.3,.7,.3,1); z-index: 40; overflow-y: auto; }
+.sheet.open { transform: none; }
+.sheet-h { position: sticky; top: 0; background: var(--panel); border-bottom: 1px solid var(--hair); padding: 16px 18px 13px; }
+.sheet-h .close { position: absolute; right: 14px; top: 14px; border: 1px solid var(--hair); background: var(--ground); border-radius: 8px; width: 30px; height: 30px; cursor: pointer; }
+.sheet-h h3 { font-size: 18px; padding-right: 34px; }
+.sheet-h .addr { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.sheet-b { padding: 16px 18px 30px; }
+.kv { display: grid; grid-template-columns: 116px 1fr; gap: 3px 10px; padding: 7px 0; border-bottom: 1px solid var(--hair-2); }
+.kv .k { color: var(--muted); font-size: 12px; }
+.kv .val { font-size: 13px; }
+.big { font-family: var(--font-mono); font-size: 22px; font-weight: 600; }
+.cmp { margin: 14px 0; padding: 12px 13px; border: 1px solid color-mix(in srgb, var(--indigo) 30%, var(--hair)); border-radius: 11px; background: color-mix(in srgb, var(--indigo) 7%, transparent); }
+.cmp .t { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--indigo); font-weight: 700; margin-bottom: 6px; }
+.cmp .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; font-size: 12.5px; }
+.cmp .up { color: var(--fresh); font-weight: 600; } .cmp .dn { color: var(--rose); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0 4px; }
+.btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--hair); background: var(--ground); border-radius: 9px; padding: 9px 13px; cursor: pointer; text-decoration: none; color: var(--ink); font-size: 13px; font-weight: 500; }
+.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn:hover { border-color: var(--accent); }
+.note { font-size: 12px; color: var(--muted); margin-top: 12px; line-height: 1.5; }
+.scrim { position: fixed; inset: 0; background: rgba(6,12,10,.34); opacity: 0; pointer-events: none; transition: opacity .22s; z-index: 30; }
+.scrim.open { opacity: 1; pointer-events: auto; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="top-in">
+      <div class="brand">
+        <span class="mark"><b>Biopunk</b> Bed Finder</span>
+        <span class="sub">housing near Frontier Tower &middot; SF only</span>
+      </div>
+      <div class="stat"><span class="n" id="st-match">0</span><span class="l">match your search</span></div>
+      <div class="stat"><span class="n" id="st-book">0</span><span class="l">bookable now</span></div>
+      <div class="stat"><span class="n">Sept 1&ndash;27</span><span class="l">gap before Fitzgerald</span></div>
+      <div class="stat"><span class="n"><span class="hl">~$1,000</span></span><span class="l">target / bed / mo</span></div>
+      <button class="theme-btn" id="theme" aria-label="Toggle theme">Theme</button>
+    </div>
+  </header>
+  <div class="body">
+    <aside class="rail">
+      <h2>Find a bed</h2>
+      <p class="lead">Tell us what you need. Everything shown is real inventory the team is tracking; prices with a date were checked on that date.</p>
+      <div class="field"><label for="f-arrival">Move in</label><input type="date" id="f-arrival" value="2026-09-15"></div>
+      <div class="field"><label for="f-nights">Nights</label><input type="number" id="f-nights" min="1" value="30"></div>
+      <div class="field"><label for="f-max">Max $/month</label><input type="number" id="f-max" step="50" value="1500"></div>
+      <div class="field"><label>Room</label><div class="seg" id="f-room"><button data-v="shared" aria-pressed="true">Shared ok</button><button data-v="private" aria-pressed="false">Private only</button></div></div>
+      <div class="field"><label>Kitchen</label><div class="seg" id="f-kitchen"><button data-v="1" aria-pressed="true">Required</button><button data-v="0" aria-pressed="false">Any</button></div></div>
+      <div class="field"><label for="f-walk">Max walk to Frontier (min)</label><input type="number" id="f-walk" step="5" value="25"></div>
+      <div class="field"><label>Which house</label><div class="chips" id="f-house">
+        <button class="chip" data-v="" aria-pressed="true">Any</button>
+        <button class="chip" data-v="punk-house" aria-pressed="false">Punk (40&ndash;50)</button>
+        <button class="chip" data-v="femme-house" aria-pressed="false">Femme</button>
+        <button class="chip" data-v="alum-house" aria-pressed="false">Alum</button>
+      </div></div>
+      <div class="field"><label>Show</label><div class="chips" id="f-scope">
+        <button class="chip" data-v="bookable" aria-pressed="true">Bookable now</button>
+        <button class="chip" data-v="all" aria-pressed="false">All options</button>
+        <button class="chip" data-v="unver" aria-pressed="false">Include unverified</button>
+      </div></div>
+      <button class="reset" id="reset">Reset filters</button>
+      <div class="honesty"><b>How to read this.</b> A price with a check-date came from the operator&rsquo;s own booking page or a reply from them. A price with no date is an estimate from research, not an offer. Bed counts are never guessed: if we haven&rsquo;t confirmed a number, it says &ldquo;ask&rdquo;. Call or email before you count on anything.</div>
+    </aside>
+
+    <div class="mapwrap">
+      <svg id="map" role="img" aria-label="Map of San Francisco housing near Frontier Tower"></svg>
+      <div class="map-hint">Click a dot for details</div>
+      <div class="map-legend" id="legend"></div>
+    </div>
+
+    <section class="listwrap">
+      <div class="listhead">
+        <span class="c"><b id="lc">0</b> places</span>
+        <select class="sortsel" id="sort">
+          <option value="score">Best fit</option>
+          <option value="price">Cheapest</option>
+          <option value="walk">Closest to Frontier</option>
+          <option value="beds">Most beds</option>
+        </select>
+      </div>
+      <div id="list"></div>
+    </section>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="sheet" id="sheet" aria-hidden="true"></aside>
+
+<script id="data" type="application/json">/*__DATA__*/</script>
+<script>
+const DB = JSON.parse(document.getElementById('data').textContent);
+const P = DB.properties, META = DB.meta, F = META.frontier;
+const $ = (s, r=document) => r.querySelector(s);
+const fmt$ = n => n == null ? '&mdash;' : '$' + Math.round(n).toLocaleString();
+const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const walkOf = p => p.walk;
+const priceFor = (p, shared) => shared ? (p.priceNow ?? p.price) : (p.pricePriv ?? (p.type==='hostel'? null : (p.priceNow ?? p.price)));
+const kitchenOk = k => k==='communal' || k==='private';
+const DAY = 86400000, NOW = Date.parse(META.generated + 'T12:00:00Z');
+function fresh(p){ if(!p.lastVerified) return {lv:'ask',d:null}; const d=Math.floor((NOW-Date.parse(p.lastVerified))/DAY); return {lv: d<=7?'green':d<=14?'amber':d<=45?'grey':'ask', d}; }
+
+// ---- state ----
+const state = { room:'shared', kitchen:true, house:'', scope:'bookable', sort:'score' };
+const num = id => +$('#'+id).value;
+
+// ---- projection ----
+const B = { lngMin:-122.487, lngMax:-122.371, latMin:37.723, latMax:37.817 };
+const VB = 1000, cos = Math.cos(37.78*Math.PI/180);
+const spanLng = (B.lngMax-B.lngMin)*cos, spanLat = (B.latMax-B.latMin);
+const MW = VB, MH = Math.round(VB * spanLat/spanLng);
+const PADX=54, PADY=48;
+const px = lng => PADX + ( (lng-B.lngMin)*cos / spanLng ) * (MW-2*PADX);
+const py = lat => PADY + ( (B.latMax-lat) / spanLat ) * (MH-2*PADY);
+const scoreColor = s => s==null?'var(--s-none)': s>=80?'var(--s-high)': s>=60?'var(--s-mid)': s>=40?'var(--s-low)':'var(--s-none)';
+
+// waterfront (real lat/lng, NE + E shoreline) -> bay polygon to the top-right
+const SHORE = [[37.8095,-122.423],[37.8085,-122.412],[37.8075,-122.404],[37.803,-122.398],[37.7965,-122.393],[37.79,-122.388],[37.7825,-122.3865],[37.775,-122.385],[37.767,-122.3845],[37.758,-122.385],[37.749,-122.3825],[37.74,-122.3785],[37.731,-122.379]];
+function buildMap(){
+  const svg = $('#map'); svg.setAttribute('viewBox', `0 0 ${MW} ${MH}`);
+  let s = '';
+  // land plate
+  s += `<rect x="0" y="0" width="${MW}" height="${MH}" fill="var(--land)"/>`;
+  // bay water polygon: shoreline points then to top-right & right-bottom corners
+  let poly = SHORE.map(([la,ln])=>`${px(ln).toFixed(1)},${py(la).toFixed(1)}`).join(' ');
+  poly += ` ${MW},${py(37.731).toFixed(1)} ${MW},0 ${px(-122.423).toFixed(1)},0`;
+  s += `<polygon points="${poly}" fill="var(--water)"/>`;
+  s += `<polyline points="${SHORE.map(([la,ln])=>`${px(ln).toFixed(1)},${py(la).toFixed(1)}`).join(' ')}" fill="none" stroke="var(--muted)" stroke-opacity=".3" stroke-width="1.5"/>`;
+  s += `<text class="street-l" x="${px(-122.383)}" y="${py(37.796)}" transform="rotate(-38 ${px(-122.383)} ${py(37.796)})">San Francisco Bay</text>`;
+  // Market St diagonal (Castro -> Embarcadero), Frontier sits on it
+  s += `<line class="street" x1="${px(-122.435)}" y1="${py(37.763)}" x2="${px(-122.3946)}" y2="${py(37.7935)}"/>`;
+  s += `<text class="street-l" x="${px(-122.417)}" y="${py(37.775)-6}" transform="rotate(-37 ${px(-122.417)} ${py(37.775)})">Market St</text>`;
+  // distance rings around Frontier (0.5 / 1 / 1.5 mi)
+  const fx=px(F.lng), fy=py(F.lat);
+  const miPerLat = 69.0, pxPerMi = ((MH-2*PADY)/spanLat)/miPerLat;
+  [[0.5,'~10 min'],[1,'~20 min'],[1.5,'~30 min']].forEach(([mi,lab])=>{
+    const r = mi*pxPerMi; s += `<circle class="ring" cx="${fx}" cy="${fy}" r="${r.toFixed(1)}"/>`;
+    s += `<text class="ring-l" x="${fx}" y="${(fy-r-4).toFixed(1)}" text-anchor="middle">${lab} walk</text>`;
+  });
+  // neighborhood labels
+  const NB = {'SoMa':[37.7785,-122.404],'Nob Hill':[37.793,-122.416],'Civic Center':[37.7805,-122.417],'Union Square':[37.788,-122.4075],'FiDi':[37.794,-122.400],'North Beach':[37.800,-122.410],'Mission':[37.760,-122.4148],'Marina':[37.803,-122.437],'Hayes Valley':[37.776,-122.424],'Dogpatch':[37.758,-122.389],'Castro':[37.762,-122.435],'Haight':[37.770,-122.446]};
+  for(const [n,[la,ln]] of Object.entries(NB)) s += `<text class="nb-l" x="${px(ln).toFixed(1)}" y="${py(la).toFixed(1)}" text-anchor="middle">${n}</text>`;
+  // pins
+  for(const p of P){ if(p.lat==null) continue;
+    const r = p.beds ? Math.max(5, Math.min(13, 4+Math.sqrt(p.beds))) : 5.5;
+    s += `<circle class="pin" data-id="${p.id}" cx="${px(p.lng).toFixed(1)}" cy="${py(p.lat).toFixed(1)}" r="${r.toFixed(1)}" fill="${scoreColor(p.score)}" stroke="#fff" stroke-width="1.4" opacity="${p.geo==='neighborhood'?0.6:0.92}"><title>${esc(p.name)}</title></circle>`;
+  }
+  // Frontier anchor (drawn last, on top)
+  s += `<g style="pointer-events:none"><rect x="${(fx-9).toFixed(1)}" y="${(fy-9).toFixed(1)}" width="18" height="18" rx="3" fill="var(--indigo)" stroke="#fff" stroke-width="2.5" transform="rotate(45 ${fx} ${fy})"/><text x="${fx}" y="${(fy-16).toFixed(1)}" text-anchor="middle" fill="var(--indigo)" font-weight="700" font-size="12" font-family="var(--font-ui)">Frontier Tower</text></g>`;
+  svg.innerHTML = s;
+  svg.querySelectorAll('.pin').forEach(el => el.addEventListener('click', () => openSheet(el.getAttribute('data-id'))));
+}
+
+// ---- legend ----
+$('#legend').innerHTML = `
+  <div class="row"><span style="width:11px;height:11px;border-radius:3px;background:var(--indigo);transform:rotate(45deg);display:inline-block;border:1.5px solid #fff"></span> <b>Frontier Tower</b> (995 Market)</div>
+  <div class="row"><span class="dot" style="background:var(--s-high)"></span> strong fit &nbsp;<span class="dot" style="background:var(--s-mid)"></span> good &nbsp;<span class="dot" style="background:var(--s-low)"></span> ok &nbsp;<span class="dot" style="background:var(--s-none)"></span> stretch</div>
+  <div class="row">bigger dot = more beds &middot; faded = approx. location</div>`;
+
+// ---- matching ----
+function matches(p){
+  const arrivalOk = true;
+  if(state.scope==='bookable' && p.audience!=='inventory') return false;
+  if(p.status==='stale-verify' && state.scope!=='unver') { if(!fresh(p).d && state.scope!=='unver') {} }
+  const fr = fresh(p);
+  if(state.scope!=='unver' && (fr.lv==='ask')) return false;
+  if(state.house && !(p.houses||[]).includes(state.house)) return false;
+  if(state.kitchen && !kitchenOk(p.kitchen)) return false;
+  const w = walkOf(p); if(w!=null && w > num('f-walk')) return false;
+  const price = priceFor(p, state.room==='shared');
+  const max = num('f-max');
+  if(price!=null && price > max) return false;
+  if(price==null && state.scope!=='unver' && fr.lv!=='ask') { /* unknown price still shows, marked ask */ }
+  if(state.room==='private' && p.type==='hostel') return false;
+  if(p.minStay!=null && p.minStay > num('f-nights')) return false;
+  return true;
+}
+function sortKey(p){ const shared=state.room==='shared'; switch(state.sort){
+  case 'price': return priceFor(p,shared) ?? 99999;
+  case 'walk': return walkOf(p) ?? 999;
+  case 'beds': return -(p.beds ?? 0);
+  default: return -(p.score ?? 0); } }
+
+let current = [];
+function render(){
+  current = P.filter(matches).sort((a,b)=> sortKey(a)-sortKey(b) || (b.score??0)-(a.score??0));
+  const ids = new Set(current.map(p=>p.id));
+  document.querySelectorAll('.pin').forEach(el=> el.classList.toggle('dim', !ids.has(el.getAttribute('data-id'))));
+  const shared = state.room==='shared';
+  $('#list').innerHTML = current.length ? current.map(p=>{
+    const fr=fresh(p), price=priceFor(p,shared);
+    const vtxt = p.lastVerified ? `checked ${p.lastVerified.slice(5,10)}` : 'estimate';
+    const badges = [];
+    if(p.sept15===true) badges.push('<span class="b s15">Sept 15 ready</span>');
+    if(kitchenOk(p.kitchen)) badges.push(`<span class="b k">${p.kitchen} kitchen</span>`);
+    else badges.push('<span class="b">no kitchen</span>');
+    if(fr.lv==='green'||fr.lv==='amber') badges.push(`<span class="b ${fr.lv==='green'?'fresh':'amber'}">verified ${fr.d}d ago</span>`);
+    else if(fr.lv==='grey') badges.push(`<span class="b amber">verified ${fr.d}d ago</span>`);
+    else badges.push('<span class="b ask">unverified &middot; ask</span>');
+    if(p.walkIn==='yes') badges.push('<span class="b">walk-in ready</span>');
+    return `<div class="card" data-id="${p.id}">
+      <div class="nm">${esc(p.name)}</div>
+      <div class="price"><div class="p">${price!=null?fmt$(price):'ask'}</div><div class="v">${price!=null?'/mo &middot; '+vtxt:'no price yet'}</div></div>
+      <div class="meta">${esc(p.neighborhood)} &middot; ${esc(p.type)} &middot; ${walkOf(p)??'?'} min &middot; ${p.beds?p.beds+' beds':'beds: ask'}</div>
+      <div class="badges">${badges.join('')}</div>
+    </div>`; }).join('') : `<div class="empty">Nothing verified matches this search.<br>Loosen a filter, or switch &ldquo;Show&rdquo; to include unverified places to ask about.</div>`;
+  $('#list').querySelectorAll('.card').forEach(el=>{
+    const id=el.getAttribute('data-id');
+    el.addEventListener('click',()=>openSheet(id));
+    el.addEventListener('mouseenter',()=>highlight(id,true));
+    el.addEventListener('mouseleave',()=>highlight(id,false));
+  });
+  $('#lc').textContent = current.length; $('#st-match').textContent = current.length;
+  $('#st-book').textContent = current.filter(p=>p.audience==='inventory').length;
+}
+function highlight(id,on){ const el=document.querySelector(`.pin[data-id="${id}"]`); if(el) el.style.transform = on?'scale(1.5)':''; }
+
+// ---- detail sheet ----
+function openSheet(id){
+  const p = P.find(x=>x.id===id); if(!p) return;
+  document.querySelectorAll('.pin').forEach(el=>el.classList.toggle('sel', el.getAttribute('data-id')===id));
+  document.querySelectorAll('.card').forEach(el=>el.classList.toggle('sel', el.getAttribute('data-id')===id));
+  const shared = state.room==='shared', price = priceFor(p,shared), fr = fresh(p);
+  const bp = META.baseline;
+  const d = v => v>0?`+${v}`:`${v}`;
+  let cmp = '';
+  if(bp){
+    const dp = (price!=null&&bp.price!=null)? d(Math.round(price-bp.price)) : null;
+    cmp = `<div class="cmp"><div class="t">vs the current deal (Fitzgerald, ${fmt$(bp.price)}/bed, ~${bp.beds} beds, no kitchen, Sept 27)</div><div class="grid">
+      <div>Price: ${dp!=null?`<span class="${(price-bp.price)<=0?'up':'dn'}">${dp}/bed</span>`:'unknown'}</div>
+      <div>Kitchen: ${kitchenOk(p.kitchen)?'<span class="up">yes (they have none)</span>':(p.kitchen==='none'?'<span class="dn">also none</span>':'unknown')}</div>
+      <div>Beds: ${p.beds!=null?`${p.beds} vs ${bp.beds}`:'ask'}</div>
+      <div>Move-in: ${p.sept15===true?'<span class="up">Sept 15, beats Sept 27</span>':(p.sept15===false?'no':'ask')}</div>
+    </div></div>`;
+  }
+  const kv = (k,v)=>`<div class="kv"><div class="k">${k}</div><div class="val">${v}</div></div>`;
+  const tel = (p.phone||'').match(/\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/);
+  const mail = (p.email||'').match(/[\w.+-]+@[\w.-]+/);
+  const acts = [];
+  if(p.bookingUrl) acts.push(`<a class="btn ${p.bookable?'primary':''}" href="${esc(p.bookingUrl)}" target="_blank" rel="noopener">${p.bookable?'Book online':'Operator page'} &#8599;</a>`);
+  if(mail) acts.push(`<a class="btn" href="mailto:${mail[0]}?subject=${encodeURIComponent('Bed from '+$('#f-arrival').value+' for '+num('f-nights')+' nights — Biopunk')}">Email</a>`);
+  if(tel) acts.push(`<a class="btn" href="tel:${tel[0].replace(/\D/g,'')}">Call ${esc(tel[0])}</a>`);
+  $('#sheet').innerHTML = `
+    <div class="sheet-h"><button class="close" id="sclose" aria-label="Close">&times;</button>
+      <h3>${esc(p.name)}</h3>${p.detail?`<div class="addr">${esc(p.detail)}</div>`:''}
+      <div class="addr">${esc(p.address)}</div></div>
+    <div class="sheet-b">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:2px"><span class="big">${price!=null?fmt$(price):'ask'}</span><span style="color:var(--muted);font-size:12.5px">${price!=null?'/ month ('+(shared?'shared bed':'private')+')':'price not confirmed'}</span></div>
+      <div style="color:var(--muted);font-size:12px;margin-bottom:12px">${p.lastVerified?`checked ${p.lastVerified.slice(0,10)} via ${esc(p.verifiedVia)}`:'estimate from research, not a live quote'}</div>
+      ${cmp}
+      ${kv('Neighborhood', esc(p.neighborhood))}
+      ${kv('Walk to Frontier', (walkOf(p)??'?')+' min')}
+      ${kv('Kitchen', esc(p.kitchen))}
+      ${kv('Beds', p.beds!=null?p.beds:'ask (never estimated)')}
+      ${kv('Type', esc(p.type))}
+      ${kv('Move-in Sept 15', p.sept15===true?'yes':p.sept15===false?'no':'ask')}
+      ${kv('Walk-in ready', esc(p.walkIn))}
+      ${p.minStay!=null?kv('Min stay', p.minStay+' nights'):''}
+      ${p.pricePriv!=null?kv('Private room', fmt$(p.pricePriv)+'/mo'):''}
+      ${p.houses&&p.houses.length?kv('Fits', p.houses.join(', ')):''}
+      <div class="actions">${acts.join('')||'<span class="note">No public contact on file yet &mdash; the team is sourcing it.</span>'}</div>
+      ${p.play?`<div class="note"><b style="color:var(--ink)">Angle:</b> ${esc(p.play)}</div>`:''}
+      <div class="note">Confirm availability before you rely on this. If you take a bed here, tell the housing team so they update the count for everyone.</div>
+    </div>`;
+  $('#sheet').classList.add('open'); $('#sheet').setAttribute('aria-hidden','false'); $('#scrim').classList.add('open');
+  $('#sclose').addEventListener('click', closeSheet);
+}
+function closeSheet(){ $('#sheet').classList.remove('open'); $('#sheet').setAttribute('aria-hidden','true'); $('#scrim').classList.remove('open'); document.querySelectorAll('.pin.sel,.card.sel').forEach(el=>el.classList.remove('sel')); }
+$('#scrim').addEventListener('click', closeSheet);
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
+
+// ---- wire filters ----
+function seg(id, key, cast){ $('#'+id).querySelectorAll('button').forEach(b=> b.addEventListener('click', ()=>{
+  $('#'+id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); state[key]=cast?cast(b.dataset.v):b.dataset.v; render(); })); }
+seg('f-room','room'); seg('f-kitchen','kitchen', v=>v==='1');
+function chips(id, key){ $('#'+id).querySelectorAll('.chip').forEach(b=> b.addEventListener('click', ()=>{
+  $('#'+id).querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); state[key]=b.dataset.v; render(); })); }
+chips('f-house','house'); chips('f-scope','scope');
+['f-max','f-walk','f-nights','f-arrival'].forEach(id=> $('#'+id).addEventListener('input', render));
+$('#sort').addEventListener('change', e=>{ state.sort=e.target.value; render(); });
+$('#reset').addEventListener('click', ()=>{
+  $('#f-arrival').value='2026-09-15'; $('#f-nights').value=30; $('#f-max').value=1500; $('#f-walk').value=25;
+  Object.assign(state,{room:'shared',kitchen:true,house:'',scope:'bookable',sort:'score'});
+  $('#f-room').querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed', i===0));
+  $('#f-kitchen').querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed', i===0));
+  $('#f-house').querySelectorAll('.chip').forEach((b,i)=>b.setAttribute('aria-pressed', i===0));
+  $('#f-scope').querySelectorAll('.chip').forEach((b,i)=>b.setAttribute('aria-pressed', i===0));
+  $('#sort').value='score'; render();
+});
+// theme toggle (cycles system -> light -> dark)
+$('#theme').addEventListener('click', ()=>{ const r=document.documentElement; const cur=r.getAttribute('data-theme');
+  r.setAttribute('data-theme', cur==='dark'?'light':'dark'); });
+
+buildMap(); render();
+</script>

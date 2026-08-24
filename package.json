@@ -15,7 +15,10 @@
     "refresh": "npm run refresh:booking && npm run refresh:listings && npm run refresh:inbox && npm run refresh:normalize",
     "typecheck": "tsc --noEmit",
     "web:dev": "npm --prefix web run dev",
-    "web:build": "npm --prefix web run build"
+    "web:build": "npm --prefix web run build",
+    "export:xlsx": "tsx data/export-xlsx.ts",
+    "export:map": "tsx data/export-map.ts",
+    "build:map-artifact": "tsx data/export-map.ts && tsx data/build-map-artifact.ts"
   },
   "keywords": [],
   "author": "",
