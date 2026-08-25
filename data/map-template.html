@@ -96,9 +96,16 @@ header.top { border-bottom: 1px solid var(--hair); background: var(--panel); }
 .zbtn:hover { background: var(--panel-2); }
 .attrib { position: absolute; right: 6px; bottom: 6px; font-size: 10px; color: var(--muted); background: color-mix(in srgb, var(--panel) 78%, transparent); padding: 2px 7px; border-radius: 6px; }
 .attrib a { color: inherit; }
-.pin { cursor: pointer; }
-.pin.dim { opacity: .15; }
-.pin.sel { stroke: var(--ink); }
+.mk { cursor: pointer; }
+.mk.dim { opacity: .12; pointer-events: none; }
+.mk .mdot { stroke: #fff; }
+.mk .pill rect { fill: var(--panel); stroke: color-mix(in srgb, var(--ink) 22%, transparent); }
+.mk .pill text { fill: var(--ink); font-weight: 700; font-family: var(--font-ui); }
+.mk .pill.est text { fill: var(--muted); font-weight: 600; }
+.mk:hover .pill rect { stroke: var(--accent); }
+.mk.sel .pill rect { fill: var(--accent); stroke: var(--accent); }
+.mk.sel .pill text { fill: #fff; }
+.mk.sel .mdot { stroke: var(--accent); }
 .ring { fill: none; stroke: var(--anchor); stroke-opacity: .55; }
 .ring-l { fill: var(--anchor); font-family: var(--font-mono); opacity: .85; paint-order: stroke; stroke: var(--panel); stroke-linejoin: round; }
 
@@ -224,7 +231,7 @@ const state = { room:'shared', kitchen:true, scope:'bookable', sort:'score' };
 const num = id => +$('#'+id).value;
 
 // ---- Web Mercator projection aligned to the tile grid ----
-const TZ = TILESET.z, TX0 = TILESET.x0, TY0 = TILESET.y0, TCOLS = TILESET.cols, TROWS = TILESET.rows, TS = 256;
+const TZ = TILESET.base.z, TX0 = TILESET.base.x0, TY0 = TILESET.base.y0, TCOLS = TILESET.base.cols, TROWS = TILESET.base.rows, TS = 256;
 const N = 2 ** TZ;
 const mx = lng => ((lng + 180) / 360) * N;
 const my = lat => { const r = lat * Math.PI / 180; return ((1 - Math.asinh(Math.tan(r)) / Math.PI) / 2) * N; };
@@ -234,11 +241,19 @@ const MW = TCOLS * TS, MH = TROWS * TS;
 const scoreColor = s => s==null?'var(--s-none)': s>=80?'var(--s-high)': s>=60?'var(--s-mid)': s>=40?'var(--s-low)':'var(--s-none)';
 
 const svg = $('#map');
+const BASE = TILESET.base, HI = TILESET.hi;
+const markers = new Map();
+let chipOrder = [];
+function tileLayer(L, cls){
+  if(!L) return '';
+  let out = `<g class="tiles ${cls}">`;
+  const f = TS * (2 ** (TZ - L.z));   // map units per tile of this level (TZ grid)
+  for(const t of L.tiles) out += `<image href="data:image/png;base64,${t.d}" x="${(t.x * f - TX0 * TS).toFixed(1)}" y="${(t.y * f - TY0 * TS).toFixed(1)}" width="${(f + 0.6).toFixed(1)}" height="${(f + 0.6).toFixed(1)}"/>`;
+  return out + '</g>';
+}
 function buildMap(){
-  let s = '<g class="tiles">';
-  for(const t of TILESET.tiles) s += `<image href="data:image/png;base64,${t.d}" x="${(t.x-TX0)*TS}" y="${(t.y-TY0)*TS}" width="${TS+0.6}" height="${TS+0.6}"/>`;
-  s += '</g>';
-  // walk-time rings around Frontier (0.5 mi ~ 10 min, 1 mi ~ 20 min)
+  let s = tileLayer(BASE, 'base') + `<g id="hitiles" style="display:none">${tileLayer(HI, 'hi')}</g>`;
+  // walk-time rings around Frontier
   const fx = px(F.lng), fy = py(F.lat);
   const mileDeg = 1 / (69.17 * Math.cos(F.lat * Math.PI / 180));
   const pxPerMile = px(F.lng + mileDeg) - fx;
@@ -247,38 +262,104 @@ function buildMap(){
     s += `<circle class="ring" cx="${fx}" cy="${fy}" r="${r.toFixed(0)}"/>`;
     s += `<text class="ring-l" x="${fx}" data-ry="${(fy - r).toFixed(0)}" y="${(fy - r).toFixed(0)}" text-anchor="middle">${lab}</text>`;
   });
-  // pins: like Google Maps, markers keep a constant SCREEN size; rescale() converts these
-  // base pixel radii into map units on every zoom, so dots separate as you zoom in.
-  s += '<g class="pins">';
+  // markers: Google-style price chips over a small dot. The chip is drawn in screen units around
+  // the anchor and the whole group is scaled by rescale(); overlapping chips collapse to dots.
+  s += '<g class="mks">';
   for(const p of P){ if(p.lat==null) continue;
-    const baseR = p.beds ? Math.max(5, Math.min(9, 4 + Math.sqrt(p.beds) * 0.55)) : 5.5;
-    s += `<circle class="pin" data-id="${p.id}" data-r="${baseR.toFixed(1)}" cx="${px(p.lng).toFixed(0)}" cy="${py(p.lat).toFixed(0)}" r="6" fill="${scoreColor(p.score)}" stroke="#fff" opacity="${p.geo==='neighborhood'?0.62:0.94}"><title>${esc(p.name)}</title></circle>`;
+    const shared = true;
+    const priceEst = p.priceNow ?? p.price;
+    const label = priceEst != null ? (p.lastVerified ? '$' + Math.round(p.priceNow ?? priceEst).toLocaleString() : '~$' + Math.round(priceEst).toLocaleString()) : null;
+    const w = label ? label.length * 7.6 + 18 : 0;
+    const est = label && !p.lastVerified;
+    s += `<g class="mk" data-id="${p.id}" data-x="${px(p.lng).toFixed(1)}" data-y="${py(p.lat).toFixed(1)}" data-w="${w.toFixed(0)}"><title>${esc(p.name)}${label ? ' · ' + label + '/mo' : ''}</title>`
+      + `<circle class="mdot" r="4.5" fill="${scoreColor(p.score)}" stroke-width="1.6" opacity="${p.geo==='neighborhood'?0.62:0.95}"/>`
+      + (label ? `<g class="pill${est ? ' est' : ''}" visibility="hidden"><rect x="${(-w/2).toFixed(0)}" y="-33" width="${w.toFixed(0)}" height="23" rx="11.5"/><text y="-16.5" text-anchor="middle" font-size="12.5">${label}</text></g>` : '')
+      + `</g>`;
   }
   s += '</g>';
-  // Frontier anchor: drawn in screen units around the origin, positioned+scaled by rescale()
+  // Frontier anchor: screen units around origin, positioned+scaled by rescale()
   s += `<g id="anchor" style="pointer-events:none"><rect x="-8" y="-8" width="16" height="16" rx="3" fill="var(--anchor)" stroke="#fff" stroke-width="2.2" transform="rotate(45)"/><text x="0" y="-15" text-anchor="middle" fill="var(--anchor)" font-weight="700" font-size="12" font-family="var(--font-ui)" paint-order="stroke" stroke="var(--panel)" stroke-width="3.5" stroke-linejoin="round">Frontier Tower</text></g>`;
   svg.innerHTML = s;
-  svg.querySelectorAll('.pin').forEach(el => el.addEventListener('click', e => { if(!moved) openSheet(el.getAttribute('data-id')); e.stopPropagation(); }));
+  markers.clear();
+  svg.querySelectorAll('.mk').forEach(el => {
+    markers.set(el.getAttribute('data-id'), el);
+    el.addEventListener('click', e => { if(!moved) openSheet(el.getAttribute('data-id')); e.stopPropagation(); });
+  });
+  chipOrder = P.filter(p => p.lat != null).slice().sort((a,b) => (b.score ?? 0) - (a.score ?? 0));
 }
 
-// ---- pan & zoom (viewBox-based) ----
+// ---- pan & zoom: smooth like a map app (rAF-animated viewBox) ----
 const HOME = { x: 0, y: 0, w: MW, h: MH };
 let view = { ...HOME };
 function clampView(){
-  view.w = Math.min(MW, Math.max(MW/16, view.w)); view.h = view.w * (MH/MW);
+  view.w = Math.min(MW, Math.max(MW/24, view.w)); view.h = view.w * (MH/MW);
   view.x = Math.min(MW - view.w, Math.max(0, view.x));
   view.y = Math.min(MH - view.h, Math.max(0, view.y));
 }
 function applyView(){ clampView(); svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`); rescale(); }
-// keep markers, rings and labels a constant size on screen (k = map units per screen pixel)
+let anim = null;
+function animateTo(target, ms = 220){
+  if(anim) cancelAnimationFrame(anim);
+  const from = { ...view }, t0 = performance.now();
+  const to = { ...target };
+  const step = (t) => {
+    const u = Math.min(1, (t - t0) / ms), e = 1 - (1 - u) ** 3;
+    view = { x: from.x + (to.x - from.x) * e, y: from.y + (to.y - from.y) * e, w: from.w + (to.w - from.w) * e, h: 0 };
+    applyView();
+    if(u < 1) anim = requestAnimationFrame(step); else anim = null;
+  };
+  anim = requestAnimationFrame(step);
+}
+function zoomTargetAt(cx, cy, factor, base = view){
+  const nw = base.w / factor;
+  return { x: cx - (cx - base.x) / factor, y: cy - (cy - base.y) / factor, w: nw, h: 0 };
+}
+function clientToMap(ev){
+  const r = svg.getBoundingClientRect();
+  return [ view.x + (ev.clientX - r.left) / r.width * view.w, view.y + (ev.clientY - r.top) / r.height * view.h ];
+}
+svg.addEventListener('wheel', ev => { ev.preventDefault(); const [cx, cy] = clientToMap(ev);
+  animateTo(zoomTargetAt(cx, cy, ev.deltaY < 0 ? 1.45 : 1/1.45), 180); }, { passive: false });
+svg.addEventListener('dblclick', ev => { ev.preventDefault(); const [cx, cy] = clientToMap(ev); animateTo(zoomTargetAt(cx, cy, 2), 260); });
+let panning = null, moved = false;
+svg.addEventListener('pointerdown', ev => { if(anim){ cancelAnimationFrame(anim); anim = null; } panning = { id: ev.pointerId, x: ev.clientX, y: ev.clientY, vx: view.x, vy: view.y, captured: false }; moved = false; });
+svg.addEventListener('pointermove', ev => { if(!panning) return; const r = svg.getBoundingClientRect();
+  const dx = (ev.clientX - panning.x) / r.width * view.w, dy = (ev.clientY - panning.y) / r.height * view.h;
+  if(Math.abs(ev.clientX - panning.x) + Math.abs(ev.clientY - panning.y) > 4 && !moved){
+    moved = true; svg.classList.add('panning');
+    // capture only once a real drag starts, so plain clicks still reach the markers
+    panning.captured = true; svg.setPointerCapture(panning.id);
+  }
+  if(moved){ view.x = panning.vx - dx; view.y = panning.vy - dy; applyView(); } });
+svg.addEventListener('pointerup', () => { panning = null; svg.classList.remove('panning'); });
+$('#zin').addEventListener('click', () => animateTo(zoomTargetAt(view.x + view.w/2, view.y + view.h/2, 1.5)));
+$('#zout').addEventListener('click', () => animateTo(zoomTargetAt(view.x + view.w/2, view.y + view.h/2, 1/1.5)));
+$('#zfit').addEventListener('click', () => animateTo({ ...HOME }, 280));
+function focusOn(p){ if(p.lat==null) return; const w = MW/8; animateTo({ x: px(p.lng) - w/2, y: py(p.lat) - w*(MH/MW)/2, w, h: 0 }, 320); }
+
+// Everything marker-sized stays constant on screen (k = map units per screen pixel), and price
+// chips collide like Google Maps: best score wins the space, the rest show as dots until you zoom.
 const FX = () => px(F.lng), FY = () => py(F.lat);
 function rescale(){
   const rect = svg.getBoundingClientRect(); if(!rect.width) return;
   const k = view.w / rect.width;
-  svg.querySelectorAll('.pin').forEach(el => {
-    el.setAttribute('r', (parseFloat(el.dataset.r) * k).toFixed(1));
-    el.setAttribute('stroke-width', (el.classList.contains('sel') ? 2.6 * k : 1.6 * k).toFixed(1));
-  });
+  const hi = svg.querySelector('#hitiles'); if(hi) hi.style.display = (HI && k < 0.85) ? '' : 'none';
+  const shown = [];
+  const vw = rect.width, vh = rect.height;
+  for(const p of chipOrder){
+    const el = markers.get(p.id); if(!el) continue;
+    const mxv = parseFloat(el.dataset.x), myv = parseFloat(el.dataset.y);
+    el.setAttribute('transform', `translate(${mxv} ${myv}) scale(${k.toFixed(4)})`);
+    const pill = el.querySelector('.pill'); if(!pill) continue;
+    if(el.classList.contains('dim')){ pill.setAttribute('visibility', 'hidden'); continue; }
+    const sxv = (mxv - view.x) / k, syv = (myv - view.y) / k;
+    const w = parseFloat(el.dataset.w), box = { x: sxv - w/2 - 2, y: syv - 35, w: w + 4, h: 27 };
+    const onscreen = sxv > -60 && sxv < vw + 60 && syv > -40 && syv < vh + 60;
+    const collides = shown.some(b => box.x < b.x + b.w && b.x < box.x + box.w && box.y < b.y + b.h && b.y < box.y + box.h);
+    if(onscreen && !collides && !(Math.abs(sxv - (FX()-view.x)/k) < 60 && Math.abs(syv - (FY()-view.y)/k) < 46)){
+      pill.setAttribute('visibility', 'visible'); shown.push(box);
+    } else pill.setAttribute('visibility', 'hidden');
+  }
   svg.querySelectorAll('.ring').forEach(el => {
     el.setAttribute('stroke-width', (1.4 * k).toFixed(1));
     el.setAttribute('stroke-dasharray', `${(4 * k).toFixed(1)} ${(6 * k).toFixed(1)}`);
@@ -292,34 +373,12 @@ function rescale(){
   if(a) a.setAttribute('transform', `translate(${FX().toFixed(1)} ${FY().toFixed(1)}) scale(${k.toFixed(3)})`);
 }
 new ResizeObserver(() => rescale()).observe(svg);
-function zoomAt(cx, cy, factor){
-  const nw = view.w / factor;
-  view.x = cx - (cx - view.x) / factor;
-  view.y = cy - (cy - view.y) / factor;
-  view.w = nw; applyView();
-}
-function clientToMap(ev){
-  const r = svg.getBoundingClientRect();
-  return [ view.x + (ev.clientX - r.left) / r.width * view.w, view.y + (ev.clientY - r.top) / r.height * view.h ];
-}
-svg.addEventListener('wheel', ev => { ev.preventDefault(); const [cx, cy] = clientToMap(ev); zoomAt(cx, cy, ev.deltaY < 0 ? 1.25 : 0.8); }, { passive: false });
-let panning = null, moved = false;
-svg.addEventListener('pointerdown', ev => { panning = { x: ev.clientX, y: ev.clientY, vx: view.x, vy: view.y }; moved = false; svg.classList.add('panning'); svg.setPointerCapture(ev.pointerId); });
-svg.addEventListener('pointermove', ev => { if(!panning) return; const r = svg.getBoundingClientRect();
-  const dx = (ev.clientX - panning.x) / r.width * view.w, dy = (ev.clientY - panning.y) / r.height * view.h;
-  if(Math.abs(ev.clientX - panning.x) + Math.abs(ev.clientY - panning.y) > 4) moved = true;
-  view.x = panning.vx - dx; view.y = panning.vy - dy; applyView(); });
-svg.addEventListener('pointerup', () => { panning = null; svg.classList.remove('panning'); });
-$('#zin').addEventListener('click', () => zoomAt(view.x + view.w/2, view.y + view.h/2, 1.4));
-$('#zout').addEventListener('click', () => zoomAt(view.x + view.w/2, view.y + view.h/2, 1/1.4));
-$('#zfit').addEventListener('click', () => { view = { ...HOME }; applyView(); });
-function focusOn(p){ if(p.lat==null) return; const w = MW/4; view = { x: px(p.lng) - w/2, y: py(p.lat) - w*(MH/MW)/2, w, h: w*(MH/MW) }; applyView(); }
 
 // ---- legend ----
 $('#legend').innerHTML = `
   <div class="row"><span style="width:11px;height:11px;border-radius:3px;background:var(--anchor);transform:rotate(45deg);display:inline-block;border:1.5px solid #fff"></span> <b>Frontier Tower</b> (995 Market)</div>
   <div class="row"><span class="dot" style="background:var(--s-high)"></span> strong fit &nbsp;<span class="dot" style="background:var(--s-mid)"></span> good &nbsp;<span class="dot" style="background:var(--s-low)"></span> ok &nbsp;<span class="dot" style="background:var(--s-none)"></span> stretch</div>
-  <div class="row">bigger dot = more beds &middot; faded = approx. location &middot; drag to pan, scroll to zoom</div>`;
+  <div class="row">chips show $/month (~ means estimate) &middot; zoom in and more chips appear &middot; drag to pan, scroll or double-click to zoom</div>`;
 
 // ---- matching ----
 function matches(p){
@@ -344,7 +403,7 @@ let current = [];
 function render(){
   current = P.filter(matches).sort((a,b)=> sortKey(a)-sortKey(b) || (b.score??0)-(a.score??0));
   const ids = new Set(current.map(p=>p.id));
-  document.querySelectorAll('.pin').forEach(el=> el.classList.toggle('dim', !ids.has(el.getAttribute('data-id'))));
+  document.querySelectorAll('.mk').forEach(el=> el.classList.toggle('dim', !ids.has(el.getAttribute('data-id'))));
   const shared = state.room==='shared';
   $('#list').innerHTML = current.length ? current.map(p=>{
     const fr=fresh(p), price=priceFor(p,shared);
@@ -368,6 +427,7 @@ function render(){
   });
   $('#lc').textContent = current.length; $('#st-match').textContent = current.length;
   $('#st-book').textContent = current.filter(p=>p.audience==='inventory').length;
+  rescale();
 }
 $('#st-verified').textContent = P.filter(p=>p.lastVerified).length;
 $('#st-updated').textContent = META.generated;
@@ -375,7 +435,7 @@ $('#st-updated').textContent = META.generated;
 // ---- detail sheet ----
 function openSheet(id){
   const p = P.find(x=>x.id===id); if(!p) return;
-  document.querySelectorAll('.pin').forEach(el=>el.classList.toggle('sel', el.getAttribute('data-id')===id));
+  document.querySelectorAll('.mk').forEach(el=>el.classList.toggle('sel', el.getAttribute('data-id')===id));
   document.querySelectorAll('.card').forEach(el=>el.classList.toggle('sel', el.getAttribute('data-id')===id));
   rescale();
   const shared = state.room==='shared', price = priceFor(p,shared);
@@ -407,7 +467,7 @@ function openSheet(id){
   $('#sheet').classList.add('open'); $('#sheet').setAttribute('aria-hidden','false'); $('#scrim').classList.add('open');
   $('#sclose').addEventListener('click', closeSheet);
 }
-function closeSheet(){ $('#sheet').classList.remove('open'); $('#sheet').setAttribute('aria-hidden','true'); $('#scrim').classList.remove('open'); document.querySelectorAll('.pin.sel,.card.sel').forEach(el=>el.classList.remove('sel')); rescale(); }
+function closeSheet(){ $('#sheet').classList.remove('open'); $('#sheet').setAttribute('aria-hidden','true'); $('#scrim').classList.remove('open'); document.querySelectorAll('.mk.sel,.card.sel').forEach(el=>el.classList.remove('sel')); rescale(); }
 $('#scrim').addEventListener('click', closeSheet);
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
 

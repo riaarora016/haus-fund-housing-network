@@ -65,8 +65,8 @@ const start = [
   [''],
   ['TABS'],
   ['Priority list - every building, ranked. Tier 1 = call this week. Contacts, phone, and which template to use are on the row. Duplicates across sources appear once.'],
-  ["Call order - the same thing as a phone queue, grouped the way Elliot works deals: owners (pocket deals) first, then receivers, brokers, institutions, operators."],
-  ['Punk House / Femme House / Alum House - candidates per house. Punk = 40-50 people, 35+ beds. Femme = ~10-12 women, kitchen required (backups to 2550 Van Ness). Alum = operating places one person can book into, opens Sept 1.'],
+  ['Punk House / Femme House / Alum House - one call sheet per house, already in calling order. Phone, contact and which template to use are on every row; rows without a phone number sit below the divider until someone digs one up.'],
+  ['Scoring explained - how the 0-100 number is built, in plain words, with two worked examples.'],
   ['Bookable now - beds someone can get today, cheapest first, with the date each price was verified. A price with no date is an estimate, not an offer.'],
   ['Templates - outreach emails + call scripts. The dorm-institution one never mentions the residency (AAU rule: person-to-person, top-down, never automated).'],
   ['Outreach log - one row per touch. Fill it in as calls happen.'],
@@ -90,8 +90,40 @@ function add(name: string, rows: any[][], widths?: number[]) {
 }
 add('Start here', start, [160]);
 add('Priority list', [PRIORITY_HEADER, ...priority], [7, 20, 30, 26, 30, 14, 6, 9, 22, 10, 8, 8, 11, 11, 30, 22, 30, 16, 11, 18, 22, 7, 40]);
+const scoringExplained: any[][] = [
+  ['How the score works'],
+  ['Every building gets 0 to 100 points. The number is only a sorting tool: it puts the places most worth a call at the top. It is built from the four things the team said matter, in this order: how close it is to Frontier Tower, what a bed costs, whether people can cook, and whether the building is the right size.'],
+  [''],
+  ['THE FOUR PARTS'],
+  ['1. Distance to Frontier Tower', 'up to 35 points', 'A 10 minute walk or less gets all 35. Points fall steadily to 0 at 45 minutes. East Bay and anything outside SF gets 0 here, which is why those sink to the bottom without being deleted.'],
+  ['2. Price per bed', 'up to 30 points', 'At or under $1,000 a month per bed gets all 30. Points fall steadily to 0 at $2,200. If we have no price yet it gets 5 points, not 0, so unknowns stay visible instead of vanishing.'],
+  ['3. Kitchen', 'up to 15 points', 'A communal or private kitchen gets all 15. No kitchen gets 0. Unknown gets 5. This is heavy on purpose: three months without a kitchen is what nearly broke people last time.'],
+  ['4. Building size', 'up to 20 points', '40 to 60 beds is the sweet spot and gets all 20 (one building fits the whole cohort). 20 to 39 beds gets 12 (works as a pair of buildings). Over 100 gets 12 to 15 (more than we need, but workable). Under 20 gets 4. Unknown gets 4.'],
+  [''],
+  ['AFTER ADDING THOSE UP, TWO RULES CAN OVERRIDE'],
+  ['Dead deals score 0', '', 'Anything taken, sold or ruled out drops to 0 no matter how good it looked.'],
+  ['Tourist hotel with no kitchen caps at 40', '', 'Even if it is cheap and close, a hotel where nobody can cook can never rank above 40. That is the failure mode of the current setup and the score is built to never recommend it again.'],
+  [''],
+  ['ONE BONUS'],
+  ['Ready for move-in gets +5', '', 'A building that can take people on arrival day beats one that makes everyone wait, so confirmed early availability adds 5 points (capped at 100).'],
+  [''],
+  ['READING THE NUMBER'],
+  ['80 and up', 'strong fit', 'close, affordable, has a kitchen, right size. Call these first.'],
+  ['60 to 79', 'good', 'one thing is off, usually price or distance. Worth a call.'],
+  ['40 to 59', 'ok', 'two things are off, or a cap kicked in. Backups.'],
+  ['under 40', 'stretch', 'far, expensive, no kitchen, or dead. Kept for the record.'],
+  [''],
+  ['WORKED EXAMPLE: European Hostel'],
+  ['10 min walk = 35 · $545/bed = 30 · communal kitchen = 15 · 25 beds = 12 · move-in ready = +5. Total 97. That is why it sits at the top.'],
+  [''],
+  ['WORKED EXAMPLE: a dark tourist hotel in Union Square'],
+  ['8 min walk = 35 · $1,750/bed = 11 · no kitchen = 0 · 131 beds = 15. Sum is 61, but the no-kitchen hotel cap pulls it down to 40. Good building, wrong setup for us.'],
+  [''],
+  ['Change the weights in one place (data/score.ts in the repo, or the Weights tab in the source workbook) and every score recalculates the same way for every building. No hand-tuning per row.'],
+];
+add('Scoring explained', scoringExplained, [44, 14, 110]);
 const tabs = buildTabs(props);
-for (const t of tabs.filter((t) => t.title !== 'Airtable export')) add(t.title, [[t.note ?? ''], t.header, ...t.rows], t.title === 'Call order' ? [6, 11, 26, 26, 20, 26, 16, 7, 6, 8, 8, 10, 11, 14, 36] : [5, 26, 24, 28, 14, 8, 9, 22, 10, 8, 9, 11, 11, 7, 11, 16, 26, 20, 26, 36, 30]);
+for (const t of tabs.filter((t) => t.title !== 'Airtable export')) add(t.title, [[t.note ?? ''], t.header, ...t.rows], [6, 27, 24, 26, 21, 27, 16, 7, 6, 9, 22, 10, 8, 11, 11, 11, 11, 18, 28, 14, 36, 30]);
 add('Bookable now', [['Property', 'Address', 'Neighborhood', '$/bed now', 'Verified', '$/bed est', 'Kitchen', 'Walk min', 'Min stay (nights)', 'Book online?', 'Booking link', 'Phone', 'Email'], ...bookable], [28, 30, 14, 9, 22, 9, 10, 8, 10, 10, 44, 20, 28]);
 add('Templates', [['Template', 'Use for', 'Subject', 'Body'], ...templates], [22, 40, 44, 110]);
 add('Outreach log', outreachLog, [10, 30, 12, 12, 22, 34, 10, 10, 10, 18, 12, 40]);
