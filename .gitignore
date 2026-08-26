@@ -11,3 +11,4 @@ refresh/state/*.tmp
 service-account.json
 data/tiles/
 data/tiles/
+data/tiles-sat/

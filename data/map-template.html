@@ -1,4 +1,4 @@
-<title>Biopunk Housing Tracker</title>
+<title>Biopunk Housing Inventory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -11,7 +11,7 @@
   --s-high: #199e63; --s-mid: #6faa2c; --s-low: #d9822b; --s-none: #8a968f;
   --fresh: #199e63; --amber: #d9822b; --rose: #d1495b;
   --shadow: 0 1px 2px rgba(19,30,26,.06), 0 8px 24px rgba(19,30,26,.07);
-  --tile-filter: saturate(.82) contrast(1.02);
+  --tile-filter: none;
   --font-display: "Fraunces", Georgia, serif;
   --font-ui: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -25,7 +25,7 @@
     --s-high: #2fc783; --s-mid: #9bd94a; --s-low: #e6963f; --s-none: #64726b;
     --fresh: #2fc783; --amber: #e6963f; --rose: #e06479;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
-    --tile-filter: invert(1) hue-rotate(180deg) saturate(.55) brightness(.9) contrast(.92);
+    --tile-filter: brightness(.82) contrast(1.06) saturate(.95);
   }
 }
 :root[data-theme="dark"] {
@@ -36,7 +36,7 @@
   --s-high: #2fc783; --s-mid: #9bd94a; --s-low: #e6963f; --s-none: #64726b;
   --fresh: #2fc783; --amber: #e6963f; --rose: #e06479;
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
-  --tile-filter: invert(1) hue-rotate(180deg) saturate(.55) brightness(.9) contrast(.92);
+  --tile-filter: brightness(.82) contrast(1.06) saturate(.95);
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }
@@ -59,14 +59,17 @@ header.top { border-bottom: 1px solid var(--hair); background: var(--panel); }
 .theme-btn { border: 1px solid var(--hair); background: var(--panel-2); border-radius: 8px; padding: 6px 10px; cursor: pointer; font-size: 12px; }
 .theme-btn:hover { border-color: var(--accent); }
 
-.body { display: grid; grid-template-columns: 264px 1fr 340px; min-height: 0; }
-@media (max-width: 1080px) { .body { grid-template-columns: 1fr; grid-auto-rows: auto; } .mapwrap { height: 64vh; } }
+.body { display: grid; grid-template-columns: minmax(380px, 440px) 1fr; min-height: 0; }
+.left { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--hair); background: var(--panel); }
+@media (max-width: 900px) { .body { grid-template-columns: 1fr; grid-auto-rows: auto; } .mapwrap { height: 58vh; order: -1; } .left { border-right: 0; border-top: 1px solid var(--hair); } }
 
 /* filter rail */
-.rail { border-right: 1px solid var(--hair); background: var(--panel); padding: 16px 16px 28px; overflow-y: auto; }
+.rail { flex: 0 0 auto; padding: 14px 16px 10px; border-bottom: 1px solid var(--hair); }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; }
 .rail h2 { font-size: 15px; margin-bottom: 2px; }
 .rail .lead { font-size: 12.5px; color: var(--muted); margin: 2px 0 16px; }
-.field { margin-bottom: 14px; }
+.field { margin-bottom: 0; }
+.field.wide { grid-column: 1 / -1; }
 .field label { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 5px; }
 .field input[type=date], .field input[type=number], .field select { width: 100%; padding: 7px 9px; border: 1px solid var(--hair); border-radius: 8px; background: var(--ground); }
 .field input:focus, .field select:focus, .seg button:focus-visible, .chip:focus-visible, .zbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
@@ -106,11 +109,11 @@ header.top { border-bottom: 1px solid var(--hair); background: var(--panel); }
 .mk.sel .pill rect { fill: var(--accent); stroke: var(--accent); }
 .mk.sel .pill text { fill: #fff; }
 .mk.sel .mdot { stroke: var(--accent); }
-.ring { fill: none; stroke: var(--anchor); stroke-opacity: .55; }
-.ring-l { fill: var(--anchor); font-family: var(--font-mono); opacity: .85; paint-order: stroke; stroke: var(--panel); stroke-linejoin: round; }
+.ring { fill: none; stroke: #fff; stroke-opacity: .75; }
+.ring-l { fill: #fff; font-family: var(--font-mono); paint-order: stroke; stroke: rgba(10,20,16,.75); stroke-linejoin: round; }
 
 /* list */
-.listwrap { border-left: 1px solid var(--hair); background: var(--panel); overflow-y: auto; }
+.listwrap { flex: 1 1 auto; background: var(--panel); overflow-y: auto; min-height: 0; }
 .listhead { position: sticky; top: 0; background: var(--panel); border-bottom: 1px solid var(--hair); padding: 11px 15px; display: flex; align-items: baseline; justify-content: space-between; z-index: 2; }
 .listhead .c { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); }
 .listhead .c b { color: var(--accent-ink); }
@@ -157,7 +160,7 @@ header.top { border-bottom: 1px solid var(--hair); background: var(--panel); }
   <header class="top">
     <div class="top-in">
       <div class="brand">
-        <span class="mark"><b>Biopunk</b> Housing Tracker</span>
+        <span class="mark"><b>Biopunk</b> Housing Inventory</span>
         <span class="sub">places to live near Frontier Tower &middot; San Francisco</span>
       </div>
       <div class="stat"><span class="n" id="st-match">0</span><span class="l">match your search</span></div>
@@ -168,43 +171,45 @@ header.top { border-bottom: 1px solid var(--hair); background: var(--panel); }
     </div>
   </header>
   <div class="body">
-    <aside class="rail">
-      <h2>Find a place</h2>
-      <p class="lead">Set what you need and the map narrows down. Verified prices show the date they were checked; the system re-checks listings and emails operators on its own.</p>
-      <div class="field"><label for="f-arrival">Move in</label><input type="date" id="f-arrival" value="2026-09-15"></div>
-      <div class="field"><label for="f-nights">Nights</label><input type="number" id="f-nights" min="1" value="30"></div>
-      <div class="field"><label for="f-max">Max $/month</label><input type="number" id="f-max" step="50" value="1500"></div>
-      <div class="field"><label>Room</label><div class="seg" id="f-room"><button data-v="shared" aria-pressed="true">Shared ok</button><button data-v="private" aria-pressed="false">Private only</button></div></div>
-      <div class="field"><label>Kitchen</label><div class="seg" id="f-kitchen"><button data-v="1" aria-pressed="true">Required</button><button data-v="0" aria-pressed="false">Any</button></div></div>
-      <div class="field"><label for="f-walk">Max walk to Frontier (min)</label><input type="number" id="f-walk" step="5" value="25"></div>
-      <div class="field"><label>Show</label><div class="chips" id="f-scope">
-        <button class="chip" data-v="bookable" aria-pressed="true">Bookable now</button>
-        <button class="chip" data-v="all" aria-pressed="false">All tracked</button>
-        <button class="chip" data-v="unver" aria-pressed="false">Include unverified</button>
-      </div></div>
-      <button class="reset" id="reset">Reset filters</button>
-      <div class="honesty"><b>How to read this.</b> A price with a check-date came from the operator&rsquo;s own booking page or a reply from them. A price with no date is an estimate from research, not an offer. Bed counts are never guessed: if we haven&rsquo;t confirmed a number, it says &ldquo;ask&rdquo;. Confirm before you count on anything.</div>
-    </aside>
-
-    <div class="mapwrap">
-      <svg id="map" role="img" aria-label="Map of San Francisco housing near Frontier Tower"></svg>
-      <div class="zoomctl"><button class="zbtn" id="zin" aria-label="Zoom in">+</button><button class="zbtn" id="zout" aria-label="Zoom out">&minus;</button><button class="zbtn" id="zfit" aria-label="Reset view" style="font-size:12px">fit</button></div>
-      <div class="map-legend" id="legend"></div>
-      <div class="attrib">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+    <div class="left">
+      <aside class="rail">
+        <p class="lead" style="margin:0 0 10px">Set what you need; the map and list narrow down together. Prices with a date were checked on that date by the system.</p>
+        <div class="fields">
+          <div class="field"><label for="f-arrival">Move in</label><input type="date" id="f-arrival" value="2026-09-15"></div>
+          <div class="field"><label for="f-nights">Nights</label><input type="number" id="f-nights" min="1" value="30"></div>
+          <div class="field"><label for="f-max">Max $/month</label><input type="number" id="f-max" step="50" value="1500"></div>
+          <div class="field"><label for="f-walk">Max walk (min)</label><input type="number" id="f-walk" step="5" value="25"></div>
+          <div class="field"><label>Room</label><div class="seg" id="f-room"><button data-v="shared" aria-pressed="true">Shared ok</button><button data-v="private" aria-pressed="false">Private only</button></div></div>
+          <div class="field"><label>Kitchen</label><div class="seg" id="f-kitchen"><button data-v="1" aria-pressed="true">Required</button><button data-v="0" aria-pressed="false">Any</button></div></div>
+          <div class="field wide"><label>Show</label><div class="chips" id="f-scope">
+            <button class="chip" data-v="bookable" aria-pressed="true">Bookable now</button>
+            <button class="chip" data-v="all" aria-pressed="false">All tracked</button>
+            <button class="chip" data-v="unver" aria-pressed="false">Include unverified</button>
+            <button class="reset" id="reset" style="margin:0;width:auto;padding:5px 11px;border-radius:999px">Reset</button>
+          </div></div>
+        </div>
+      </aside>
+      <section class="listwrap">
+        <div class="listhead">
+          <span class="c"><b id="lc">0</b> places</span>
+          <select class="sortsel" id="sort">
+            <option value="score">Best fit</option>
+            <option value="price">Cheapest</option>
+            <option value="walk">Closest to Frontier</option>
+            <option value="beds">Most beds</option>
+          </select>
+        </div>
+        <div id="list"></div>
+        <div class="honesty" style="margin:12px 15px 20px"><b>How to read this.</b> A price with a check-date came from the operator&rsquo;s own booking page or a reply from them. A price with no date is an estimate from research, not an offer. Bed counts are never guessed: if we haven&rsquo;t confirmed a number, it says &ldquo;ask&rdquo;. Confirm before you count on anything.</div>
+      </section>
     </div>
 
-    <section class="listwrap">
-      <div class="listhead">
-        <span class="c"><b id="lc">0</b> places</span>
-        <select class="sortsel" id="sort">
-          <option value="score">Best fit</option>
-          <option value="price">Cheapest</option>
-          <option value="walk">Closest to Frontier</option>
-          <option value="beds">Most beds</option>
-        </select>
-      </div>
-      <div id="list"></div>
-    </section>
+    <div class="mapwrap">
+      <svg id="map" role="img" aria-label="Satellite map of San Francisco housing near Frontier Tower"></svg>
+      <div class="zoomctl"><button class="zbtn" id="zin" aria-label="Zoom in">+</button><button class="zbtn" id="zout" aria-label="Zoom out">&minus;</button><button class="zbtn" id="zfit" aria-label="Reset view" style="font-size:12px">fit</button></div>
+      <div class="map-legend" id="legend"></div>
+      <div class="attrib">Imagery &copy; Esri, Maxar, Earthstar Geographics</div>
+    </div>
   </div>
 </div>
 
@@ -231,7 +236,7 @@ const state = { room:'shared', kitchen:true, scope:'bookable', sort:'score' };
 const num = id => +$('#'+id).value;
 
 // ---- Web Mercator projection aligned to the tile grid ----
-const TZ = TILESET.base.z, TX0 = TILESET.base.x0, TY0 = TILESET.base.y0, TCOLS = TILESET.base.cols, TROWS = TILESET.base.rows, TS = 256;
+const TZ = TILESET.z, TX0 = TILESET.x0, TY0 = TILESET.y0, TCOLS = TILESET.cols, TROWS = TILESET.rows, TS = 256;
 const N = 2 ** TZ;
 const mx = lng => ((lng + 180) / 360) * N;
 const my = lat => { const r = lat * Math.PI / 180; return ((1 - Math.asinh(Math.tan(r)) / Math.PI) / 2) * N; };
@@ -244,11 +249,12 @@ const svg = $('#map');
 const BASE = TILESET.base, HI = TILESET.hi;
 const markers = new Map();
 let chipOrder = [];
-function tileLayer(L, cls){
-  if(!L) return '';
+function tileLayer(levels, cls){
   let out = `<g class="tiles ${cls}">`;
-  const f = TS * (2 ** (TZ - L.z));   // map units per tile of this level (TZ grid)
-  for(const t of L.tiles) out += `<image href="data:image/png;base64,${t.d}" x="${(t.x * f - TX0 * TS).toFixed(1)}" y="${(t.y * f - TY0 * TS).toFixed(1)}" width="${(f + 0.6).toFixed(1)}" height="${(f + 0.6).toFixed(1)}"/>`;
+  for(const L of levels){ if(!L) continue;
+    const f = TS * (2 ** (TZ - L.z));   // map units per tile of this level (TZ grid)
+    for(const t of L.tiles) out += `<image href="data:${L.mime};base64,${t.d}" x="${(t.x * f - TX0 * TS).toFixed(1)}" y="${(t.y * f - TY0 * TS).toFixed(1)}" width="${(f + 0.6).toFixed(1)}" height="${(f + 0.6).toFixed(1)}"/>`;
+  }
   return out + '</g>';
 }
 function buildMap(){
@@ -289,26 +295,33 @@ function buildMap(){
 }
 
 // ---- pan & zoom: smooth like a map app (rAF-animated viewBox) ----
-const HOME = { x: 0, y: 0, w: MW, h: MH };
-let view = { ...HOME };
-function clampView(){
-  view.w = Math.min(MW, Math.max(MW/24, view.w)); view.h = view.w * (MH/MW);
-  view.x = Math.min(MW - view.w, Math.max(0, view.x));
-  view.y = Math.min(MH - view.h, Math.max(0, view.y));
+let view = { x: 0, y: 0, w: MW, h: MH };
+function applyView(){
+  const rect = svg.getBoundingClientRect();
+  const a = rect.width > 0 && rect.height > 0 ? rect.height / rect.width : MH / MW;   // viewBox aspect always equals the container's,
+  const maxW = Math.max(MW, MH / a);                // so nothing gets letterboxed or cut off
+  view.w = Math.min(maxW, Math.max(MW/24, view.w));
+  view.h = view.w * a;
+  view.x = view.w >= MW ? (MW - view.w) / 2 : Math.min(MW - view.w, Math.max(0, view.x));
+  view.y = view.h >= MH ? (MH - view.h) / 2 : Math.min(MH - view.h, Math.max(0, view.y));
+  svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`); rescale();
 }
-function applyView(){ clampView(); svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`); rescale(); }
-let anim = null;
+function goHome(){ const rect = svg.getBoundingClientRect(); const a = rect.width > 0 && rect.height > 0 ? rect.height / rect.width : MH / MW; view = { x: 0, y: 0, w: Math.max(MW, MH / a), h: 0 }; applyView(); }
+let anim = null, animGuard = null;
 function animateTo(target, ms = 220){
   if(anim) cancelAnimationFrame(anim);
+  if(animGuard) clearTimeout(animGuard);
   const from = { ...view }, t0 = performance.now();
   const to = { ...target };
   const step = (t) => {
     const u = Math.min(1, (t - t0) / ms), e = 1 - (1 - u) ** 3;
     view = { x: from.x + (to.x - from.x) * e, y: from.y + (to.y - from.y) * e, w: from.w + (to.w - from.w) * e, h: 0 };
     applyView();
-    if(u < 1) anim = requestAnimationFrame(step); else anim = null;
+    if(u < 1) anim = requestAnimationFrame(step); else { anim = null; clearTimeout(animGuard); animGuard = null; }
   };
   anim = requestAnimationFrame(step);
+  // browsers pause animation frames in hidden tabs; land on the target anyway
+  animGuard = setTimeout(() => { if(anim){ cancelAnimationFrame(anim); anim = null; } view = { ...to, h: 0 }; applyView(); }, ms + 250);
 }
 function zoomTargetAt(cx, cy, factor, base = view){
   const nw = base.w / factor;
@@ -334,7 +347,7 @@ svg.addEventListener('pointermove', ev => { if(!panning) return; const r = svg.g
 svg.addEventListener('pointerup', () => { panning = null; svg.classList.remove('panning'); });
 $('#zin').addEventListener('click', () => animateTo(zoomTargetAt(view.x + view.w/2, view.y + view.h/2, 1.5)));
 $('#zout').addEventListener('click', () => animateTo(zoomTargetAt(view.x + view.w/2, view.y + view.h/2, 1/1.5)));
-$('#zfit').addEventListener('click', () => animateTo({ ...HOME }, 280));
+$('#zfit').addEventListener('click', () => goHome());
 function focusOn(p){ if(p.lat==null) return; const w = MW/8; animateTo({ x: px(p.lng) - w/2, y: py(p.lat) - w*(MH/MW)/2, w, h: 0 }, 320); }
 
 // Everything marker-sized stays constant on screen (k = map units per screen pixel), and price
@@ -343,7 +356,7 @@ const FX = () => px(F.lng), FY = () => py(F.lat);
 function rescale(){
   const rect = svg.getBoundingClientRect(); if(!rect.width) return;
   const k = view.w / rect.width;
-  const hi = svg.querySelector('#hitiles'); if(hi) hi.style.display = (HI && k < 0.85) ? '' : 'none';
+  const hi = svg.querySelector('#hitiles'); if(hi) hi.style.display = (HI && HI.length && k < 0.85) ? '' : 'none';
   const shown = [];
   const vw = rect.width, vh = rect.height;
   for(const p of chipOrder){
@@ -372,7 +385,7 @@ function rescale(){
   const a = svg.querySelector('#anchor');
   if(a) a.setAttribute('transform', `translate(${FX().toFixed(1)} ${FY().toFixed(1)}) scale(${k.toFixed(3)})`);
 }
-new ResizeObserver(() => rescale()).observe(svg);
+new ResizeObserver(() => applyView()).observe(svg);
 
 // ---- legend ----
 $('#legend').innerHTML = `
@@ -490,11 +503,11 @@ $('#reset').addEventListener('click', ()=>{
   $('#f-room').querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed', i===0));
   $('#f-kitchen').querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed', i===0));
   $('#f-scope').querySelectorAll('.chip').forEach((b,i)=>b.setAttribute('aria-pressed', i===0));
-  $('#sort').value='score'; view = { ...HOME }; applyView(); render();
+  $('#sort').value='score'; goHome(); render();
 });
 $('#theme').addEventListener('click', ()=>{ const r=document.documentElement;
   const eff = r.getAttribute('data-theme') ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   r.setAttribute('data-theme', eff==='dark' ? 'light' : 'dark'); });
 
-buildMap(); applyView(); render();
+buildMap(); goHome(); render();
 </script>
