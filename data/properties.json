@@ -40,7 +40,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus",
+      "safehaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -145,7 +146,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -250,7 +251,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -356,8 +357,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house",
-      "alum-house"
+      "femhaus",
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -462,7 +463,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -568,7 +569,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -673,7 +674,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -777,7 +778,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus",
+      "safehaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -882,7 +884,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [],
     "aau": false,
@@ -983,7 +985,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -1086,7 +1088,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -1192,7 +1194,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -1501,7 +1503,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -1706,7 +1708,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -1914,7 +1916,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -2017,7 +2019,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -2121,7 +2123,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -2229,7 +2231,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [],
     "aau": false,
@@ -2540,7 +2542,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -2646,7 +2648,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -2854,7 +2856,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -2959,7 +2961,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3064,7 +3066,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3169,7 +3171,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3277,7 +3279,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3384,7 +3386,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3492,8 +3494,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house",
-      "alum-house"
+      "femhaus",
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3598,7 +3600,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3805,7 +3807,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -3910,7 +3912,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -4218,7 +4220,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house"
+      "femhaus",
+      "safehaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -4323,7 +4326,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -4427,7 +4430,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -4531,7 +4534,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -5041,7 +5044,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -5148,7 +5151,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -5252,7 +5255,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -5457,7 +5460,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -5665,7 +5668,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -5973,7 +5976,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -6080,7 +6083,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -6185,7 +6188,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -6288,8 +6291,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house",
-      "alum-house"
+      "femhaus",
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -6394,8 +6397,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house",
-      "alum-house"
+      "femhaus",
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -6499,9 +6502,7 @@
     "status": "ruled-out",
     "deal_channel": "operator",
     "walk_in_ready": "yes",
-    "houses": [
-      "alum-house"
-    ],
+    "houses": [],
     "timeline_tags": [
       "bridge-sept"
     ],
@@ -6710,8 +6711,9 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house",
-      "alum-house"
+      "femhaus",
+      "alumhaus",
+      "safehaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -6916,8 +6918,9 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house",
-      "alum-house"
+      "femhaus",
+      "alumhaus",
+      "safehaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -7019,7 +7022,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -7124,7 +7127,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -7230,7 +7233,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -7848,7 +7851,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "alum-house"
+      "alumhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -8053,7 +8056,7 @@
     "deal_channel": "institution",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -8160,7 +8163,7 @@
     "deal_channel": "receiver",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -8474,7 +8477,7 @@
     "deal_channel": "institution",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -8887,8 +8890,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house",
-      "femme-house"
+      "punkhaus",
+      "femhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -9201,7 +9204,7 @@
     "deal_channel": "institution",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -9309,7 +9312,7 @@
     "deal_channel": "institution",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -9417,8 +9420,8 @@
     "deal_channel": "institution",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house",
-      "femme-house"
+      "punkhaus",
+      "femhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -9528,7 +9531,7 @@
     "deal_channel": "institution",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -10044,7 +10047,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -10147,7 +10150,7 @@
     "deal_channel": "unknown",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [],
     "aau": false,
@@ -10352,7 +10355,7 @@
     "deal_channel": "broker",
     "walk_in_ready": "unknown",
     "houses": [
-      "femme-house"
+      "femhaus"
     ],
     "timeline_tags": [
       "femme-house"
@@ -10459,7 +10462,7 @@
     "deal_channel": "broker",
     "walk_in_ready": "unknown",
     "houses": [
-      "femme-house"
+      "femhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -10569,7 +10572,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -10677,7 +10680,7 @@
     "deal_channel": "institution",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -10889,7 +10892,7 @@
     "deal_channel": "broker",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -11198,7 +11201,7 @@
     "deal_channel": "broker",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -11409,8 +11412,8 @@
     "deal_channel": "unknown",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house",
-      "femme-house"
+      "punkhaus",
+      "femhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -11521,7 +11524,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept"
@@ -11730,8 +11733,8 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house",
-      "femme-house"
+      "punkhaus",
+      "femhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -12045,7 +12048,7 @@
     "deal_channel": "owner",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -12153,7 +12156,7 @@
     "deal_channel": "receiver",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -12263,8 +12266,8 @@
     "deal_channel": "unknown",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house",
-      "femme-house"
+      "punkhaus",
+      "femhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -12473,8 +12476,8 @@
     "deal_channel": "unknown",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house",
-      "femme-house"
+      "punkhaus",
+      "femhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -12684,7 +12687,7 @@
     "deal_channel": "owner",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -12793,7 +12796,7 @@
     "deal_channel": "broker",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -13313,7 +13316,7 @@
     "deal_channel": "receiver",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "expansion"
@@ -13418,7 +13421,8 @@
     "deal_channel": "unknown",
     "walk_in_ready": "yes",
     "houses": [
-      "femme-house"
+      "femhaus",
+      "safehaus"
     ],
     "timeline_tags": [
       "femme-house"
@@ -13524,7 +13528,7 @@
     "deal_channel": "institution",
     "walk_in_ready": "no",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -14149,7 +14153,7 @@
     "deal_channel": "broker",
     "walk_in_ready": "no",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027",
@@ -14256,7 +14260,7 @@
     "deal_channel": "receiver",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -14670,7 +14674,7 @@
     "deal_channel": "broker",
     "walk_in_ready": "unknown",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "q1-2027"
@@ -14881,7 +14885,7 @@
     "deal_channel": "operator",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",
@@ -15094,7 +15098,7 @@
     "deal_channel": "unknown",
     "walk_in_ready": "yes",
     "houses": [
-      "punk-house"
+      "punkhaus"
     ],
     "timeline_tags": [
       "bridge-sept",

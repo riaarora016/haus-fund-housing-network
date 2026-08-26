@@ -47,11 +47,11 @@ function houseTab(props: Property[], house: House, title: string, note: string):
 }
 
 export function buildTabs(props: Property[]): Tab[] {
-  const punk = houseTab(props, 'punk-house', 'Punkhaus',
+  const punk = houseTab(props, 'punkhaus', 'Punkhaus',
     'Main cohort house, 40 to 50 people, buildings with 35+ beds in SF. This tab is the call sheet AND the log: make the call (Granola on), send Claude the notes, and Last outreach / Latest note / Next check on the row get filled in. Ask for: block of beds from Sept 15, monthly rate per bed, kitchen access, minimum term. Tenant-rights worry: 3-month program, visa-bound residents, everyone vacates at program end.');
-  const femme = houseTab(props, 'femme-house', 'Femhaus',
+  const femme = houseTab(props, 'femhaus', 'Femhaus',
     'Femme / safe house: about 10 to 12 women, kitchen required, 3 to 6 months. 2550 Van Ness (Minerva) is the live option; these are backups in calling order. Safety column matters double here. Calls made with Granola get logged onto the row by Claude.');
-  const alum = houseTab(props, 'alum-house', 'Alumhaus',
+  const alum = houseTab(props, 'alumhaus', 'Alumhaus',
     'Alum house and spillover: operating co-living, hostels and SROs under ~35 beds where one person can just book in. Call in order to confirm rates and holds; Granola notes get logged onto the row. Hive: toured by Elliot, great community reviews, no block available, actively looking for female residents.');
 
   const confirmed = props.filter((p) => p.status === 'confirmed');

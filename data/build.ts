@@ -243,6 +243,27 @@ function main() {
   L('\nNot merged on purpose: Mosser SRO 1000 Market (pipeline) vs The Mosser Hotel 54 4th St (inventory) - different buildings.');
 
 
+  // ----- safety: neighborhood default, then per-building hand checks from data/safety.json -----
+  const safetyCfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'safety.json'), 'utf8')) as { overrides: Record<string, any> };
+  for (const p of props) {
+    const inSF = ['SF-priority', 'SF-other'].includes(p.region);
+    if (inSF) {
+      // Civic Center bucket includes the Tenderloin and Mid-Market per the neighborhood normalisation
+      p.safety_flag = p.neighborhood === 'Civic Center' ? 'rough-block'
+        : ['SoMa', 'Mission', 'Union Square', 'Design District / Potrero'].includes(p.neighborhood) ? 'mixed'
+        : 'ok';
+    } else p.safety_flag = 'unknown';
+    const o = safetyCfg.overrides[p.id];
+    if (o) {
+      if (o.flag) p.safety_flag = o.flag;
+      if (o.reviews) p.safety_reviews = o.reviews;
+      if (o.rating) p.review_rating = o.rating;
+      if (o.note) p.safety_note = o.note;
+      if (o.status) p.status = STATUS(o.status);
+    }
+  }
+
+
   // ----- Elliot-derived fields: clean name, deal channel, walk-in ready, house assignment -----
   const BROKER_RE = /broker|CBRE|colliers|marcus & millichap|compass|kw commercial|\bJLL\b|eastdil|berkadia|lee & associates|ehmer|legacy real estate|coldwell|\bNAI\b|lapham|kinetic|3D strategies|zielinski/i;
   const OWNER_RE = /owner|property office|mosser companies|mag management|faizan|patel|gaehwiler|behring|prado group|tidewater/i;
@@ -271,10 +292,12 @@ function main() {
     const dead = ['taken', 'sold', 'ruled-out'].includes(p.status);
     const kitchenYes = p.kitchen === 'communal' || p.kitchen === 'private';
     p.houses = [];
-    if (!dead && inSF && (p.beds_est == null ? p.rooms != null && p.rooms >= 35 : p.beds_est >= 35)) p.houses.push('punk-house');
-    if (!dead && inSF && (p.timeline_tags.includes('femme-house') || (kitchenYes && p.beds_est != null && p.beds_est >= 8 && p.beds_est <= 20))) p.houses.push('femme-house');
-    if (!dead && inSF && p.audience === 'inventory' && ['co-living', 'hostel', 'sro-hotel'].includes(p.type) && p.status === 'active' && (p.beds_est == null || p.beds_est < 35)) p.houses.push('alum-house');
-    if (p.baseline) p.houses = ['punk-house'];
+    if (!dead && inSF && (p.beds_est == null ? p.rooms != null && p.rooms >= 35 : p.beds_est >= 35)) p.houses.push('punkhaus');
+    if (!dead && inSF && (p.timeline_tags.includes('femme-house') || (kitchenYes && p.beds_est != null && p.beds_est >= 8 && p.beds_est <= 20))) p.houses.push('femhaus');
+    if (!dead && inSF && p.audience === 'inventory' && ['co-living', 'hostel', 'sro-hotel'].includes(p.type) && p.status === 'active' && (p.beds_est == null || p.beds_est < 35)) p.houses.push('alumhaus');
+    // safehaus: a calm block is the whole point, plus a kitchen and a size a small group can hold
+    if (!dead && inSF && kitchenYes && p.safety_flag === 'ok' && p.beds_est != null && p.beds_est >= 8 && p.beds_est <= 30) p.houses.push('safehaus');
+    if (p.baseline) p.houses = ['punkhaus'];
   }
 
   // ----- geocode (from cache only) + transit -----
@@ -290,26 +313,6 @@ function main() {
       p.dist_to_frontier_mi = distToFrontier(p.lat, p.lng);
       // heuristic transit only for real (address-level) geocodes - a neighbourhood centroid is not a commute
       if (p.walk_min_from_frontier == null && p.geo_precision === 'address') p.transit_min_to_frontier = transitHeuristicMin(p.dist_to_frontier_mi, p.east_bay || !['SF-priority','SF-other'].includes(p.region));
-    }
-  }
-
-  // ----- safety: neighborhood default, then per-building hand checks from data/safety.json -----
-  const safetyCfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'safety.json'), 'utf8')) as { overrides: Record<string, any> };
-  for (const p of props) {
-    const inSF = ['SF-priority', 'SF-other'].includes(p.region);
-    if (inSF) {
-      // Civic Center bucket includes the Tenderloin and Mid-Market per the neighborhood normalisation
-      p.safety_flag = p.neighborhood === 'Civic Center' ? 'rough-block'
-        : ['SoMa', 'Mission', 'Union Square', 'Design District / Potrero'].includes(p.neighborhood) ? 'mixed'
-        : 'ok';
-    } else p.safety_flag = 'unknown';
-    const o = safetyCfg.overrides[p.id];
-    if (o) {
-      if (o.flag) p.safety_flag = o.flag;
-      if (o.reviews) p.safety_reviews = o.reviews;
-      if (o.rating) p.review_rating = o.rating;
-      if (o.note) p.safety_note = o.note;
-      if (o.status) p.status = STATUS(o.status);
     }
   }
 

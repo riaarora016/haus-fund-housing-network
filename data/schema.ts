@@ -21,7 +21,7 @@ export type DealChannel = 'owner' | 'receiver' | 'broker' | 'institution' | 'ope
 export type WalkInReady = 'yes' | 'no' | 'unknown';
 // Block-level safety read: neighborhood default, refined by hand checks of online reviews (data/safety.json).
 export type SafetyFlag = 'ok' | 'mixed' | 'rough-block' | 'unknown';
-export type House = 'punk-house' | 'femme-house' | 'alum-house';
+export type House = 'punkhaus' | 'femhaus' | 'alumhaus' | 'safehaus';
 export type Region = 'SF-priority' | 'SF-other' | 'East Bay' | 'Peninsula' | 'North Bay' | 'Remote';
 
 export interface ScoreBreakdown {

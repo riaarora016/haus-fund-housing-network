@@ -38,7 +38,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -82,8 +82,8 @@
       "reviews": "4/5 Birdeye (45 reviews)",
       "audience": "pipeline",
       "houses": [
-        "punk-house",
-        "femme-house"
+        "punkhaus",
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -127,7 +127,7 @@
       "reviews": "4.8/5 Birdeye (6 reviews)",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/upmarket-residences",
@@ -169,7 +169,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -213,7 +213,7 @@
       "reviews": "thin reviews (pods)",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -256,7 +256,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -299,7 +299,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -341,7 +341,7 @@
       "reviews": "8.5/10 Hostelworld (1,668 reviews)",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/4549/hi-san-francisco-downtown-hostel/",
@@ -383,7 +383,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/221-7th-street-residences",
@@ -425,7 +425,7 @@
       "reviews": "8.4/10 Hostelworld (3,881 reviews)",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/17927/amsterdam-hostel/",
@@ -467,7 +467,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/39781/orange-village-hostel/",
@@ -509,8 +509,8 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house",
-        "femme-house"
+        "punkhaus",
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -554,7 +554,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/251-9th-street-residences",
@@ -596,7 +596,7 @@
       "reviews": "4.7/10 Booking (595 reviews)",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/european-hostel",
@@ -638,7 +638,7 @@
       "reviews": "solid (modern tower)",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -680,7 +680,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/300815/adelaide-hostel/",
@@ -722,7 +722,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/301589/ith-pacific-tradewinds-hostel/",
@@ -764,8 +764,8 @@
       "reviews": "mixed (ApartmentRatings + student crime analysis)",
       "audience": "pipeline",
       "houses": [
-        "punk-house",
-        "femme-house"
+        "punkhaus",
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -850,7 +850,7 @@
       "reviews": "n/a (SRO block)",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -934,7 +934,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/1080-folsom-residences",
@@ -976,7 +976,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/524-columbus-residences",
@@ -1018,7 +1018,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/337454/bposhtels-san-francisco-union-square/",
@@ -1060,7 +1060,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1103,7 +1103,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/1821/green-tortoise-hostel/",
@@ -1145,7 +1145,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/310547/samesun-san-francisco/",
@@ -1187,8 +1187,8 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "femme-house",
-        "alum-house"
+        "femhaus",
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/bartlett",
@@ -1230,8 +1230,8 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "femme-house",
-        "alum-house"
+        "femhaus",
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/the-herbert-residences",
@@ -1273,7 +1273,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1315,7 +1315,7 @@
       "reviews": "Booking/TripAdvisor: clean rooms, challenging area",
       "audience": "pipeline",
       "houses": [
-        "femme-house"
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1358,7 +1358,8 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus",
+        "safehaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/1214-polk-street-residences",
@@ -1440,8 +1441,8 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house",
-        "femme-house"
+        "punkhaus",
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1484,7 +1485,7 @@
       "reviews": "no guest reviews (closed to tourists)",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1526,7 +1527,7 @@
       "reviews": "thin reviews",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1568,7 +1569,7 @@
       "reviews": "Yelp 96 reviews, mixed",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/sweden-house",
@@ -1610,7 +1611,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1652,7 +1653,7 @@
       "reviews": "sparse reviews",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1694,8 +1695,8 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house",
-        "femme-house"
+        "punkhaus",
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1738,7 +1739,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1781,7 +1782,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/371-columbus-residences",
@@ -1823,7 +1824,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -1867,8 +1868,8 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "femme-house",
-        "alum-house"
+        "femhaus",
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/hotel-epik-residences",
@@ -1910,7 +1911,8 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus",
+        "safehaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/556-green-street-residences",
@@ -1992,7 +1994,8 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "femme-house"
+        "femhaus",
+        "safehaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/lovely-north-beach-%2F-chinatown-hotel",
@@ -2034,7 +2037,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2074,7 +2077,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2116,7 +2119,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2159,7 +2162,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2202,7 +2205,7 @@
       "reviews": "n/a",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2244,7 +2247,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2286,7 +2289,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2328,8 +2331,8 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "femme-house",
-        "alum-house"
+        "femhaus",
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/2436-mission-residences",
@@ -2371,7 +2374,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": true,
       "bookingUrl": "https://www.hostelworld.com/hostels/p/4551/hi-san-francisco-fisherman-s-wharf-hostel/",
@@ -2413,7 +2416,7 @@
       "reviews": "4/5 Birdeye (45 reviews)",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.hivecolivingsf.com/rooms-doubles",
@@ -2455,7 +2458,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "femme-house"
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2577,7 +2580,7 @@
       "reviews": "market tower",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2620,7 +2623,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://20mish.com/",
@@ -2662,7 +2665,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.monroeresidenceclub.com/",
@@ -2704,7 +2707,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2746,8 +2749,8 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house",
-        "femme-house"
+        "punkhaus",
+        "femhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2870,7 +2873,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2912,7 +2915,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -2994,7 +2997,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.kenmorehotelsf.com/",
@@ -3036,7 +3039,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3198,7 +3201,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3320,8 +3323,9 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "femme-house",
-        "alum-house"
+        "femhaus",
+        "alumhaus",
+        "safehaus"
       ],
       "bookable": false,
       "bookingUrl": "https://www.urbanests.com/properties/the-perramont",
@@ -3443,7 +3447,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3485,7 +3489,8 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "femme-house"
+        "femhaus",
+        "safehaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3527,7 +3532,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3569,7 +3574,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3649,7 +3654,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3689,7 +3694,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3732,7 +3737,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3775,7 +3780,7 @@
       "reviews": "2.5-3/5 aggregate",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3818,7 +3823,7 @@
       "reviews": "low (budget motel)",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3860,7 +3865,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -3902,7 +3907,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -4024,8 +4029,9 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "femme-house",
-        "alum-house"
+        "femhaus",
+        "alumhaus",
+        "safehaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -4067,7 +4073,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -4150,7 +4156,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "https://foundry.today/",
@@ -4192,7 +4198,7 @@
       "reviews": "",
       "audience": "inventory",
       "houses": [
-        "alum-house"
+        "alumhaus"
       ],
       "bookable": false,
       "bookingUrl": "",
@@ -4234,7 +4240,7 @@
       "reviews": "",
       "audience": "pipeline",
       "houses": [
-        "punk-house"
+        "punkhaus"
       ],
       "bookable": false,
       "bookingUrl": "",

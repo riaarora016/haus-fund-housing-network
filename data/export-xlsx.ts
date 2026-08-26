@@ -33,13 +33,13 @@ const priorityRows = props
   .map((p) => ({ p, t: tierOf(p) }))
   .sort((a, b) => a.t[0] - b.t[0] || (b.p.score ?? 0) - (a.p.score ?? 0));
 
-const PRIORITY_HEADER = ['Priority', 'Tier', 'Property', 'What it is', 'Address', 'Neighborhood', 'Beds', '$/bed (est)', '$ verified now', 'Kitchen', 'Safety', 'Reviews say', 'Walk min', 'Sept 15?', 'Walk-in ready', 'Channel', 'Contact person', 'Phone', 'Email / path', 'Template', 'Status', 'Outreach so far', 'House fit', 'Score', 'The play'];
+const PRIORITY_HEADER = ['Priority', 'Tier', 'Property', 'Haus', 'What it is', 'Address', 'Neighborhood', 'Beds', '$/bed (est)', '$ verified now', 'Kitchen', 'Safety', 'Reviews say', 'Walk min', 'Sept 15?', 'Walk-in ready', 'Channel', 'Contact person', 'Phone', 'Email / path', 'Template', 'Status', 'Outreach so far', 'Score', 'The play'];
 const priority = priorityRows.map(({ p, t }, i) => [
-  i + 1, t[1], p.name, p.name_detail, p.address, p.neighborhood, cell(p.beds_est), cell(p.price_per_bed_est),
+  i + 1, t[1], p.name, p.houses.join(', ') || '-', p.name_detail, p.address, p.neighborhood, cell(p.beds_est), cell(p.price_per_bed_est),
   p.price_now != null ? `$${p.price_now} on ${p.last_verified?.slice(0, 10)} (${p.verified_via})` : '',
   p.kitchen, p.safety_flag, [p.safety_reviews, p.review_rating].filter(Boolean).join(': '), cell(walkOf(p)), String(p.sept15_ready), p.walk_in_ready, p.deal_channel,
   p.contact_name, p.contact_phone, p.contact_email || p.contact_path, templateNameFor(p), p.status,
-  [p.outreach_status, p.contacted_by].filter(Boolean).join(' by '), p.houses.join(', '), cell(p.score), p.play,
+  [p.outreach_status, p.contacted_by].filter(Boolean).join(' by '), cell(p.score), p.play,
 ]);
 
 const templates = fs.readdirSync('templates/outreach').filter((f) => f.endsWith('.md')).map((f) => {
@@ -58,7 +58,7 @@ const start = [
   ['DATES: alum house opens Sept 1 · cohort arrives Sept 15 (orientation 17-18) · Fitzgerald starts Sept 27. The gap runs Sept 1-27; a building that takes people Sept 15 beats the Fitzgerald.'],
   [''],
   ['TABS'],
-  ['Priority list - every building, ranked. Tier 1 = call this week. Contacts, phone, safety read, and which template to use are on the row.'],
+  ['Priority list - every building, ranked, with a Haus column showing which house each one could serve: punkhaus (40-50 people), femhaus (~12 women, kitchen), alumhaus (bookable spillover), safehaus (calm block, kitchen, small). Tier 1 = call this week.'],
   ['Punkhaus / Femhaus / Alumhaus - one table per house, already in calling order, and each one doubles as that house\'s outreach log: record the call with Granola, send Claude the notes, and the row\'s Last outreach, Latest note, and Next check get filled in. Rows without a phone number sit below the divider until someone digs one up.'],
   ['Scoring explained - how the 0-100 number is built, one line per part, with two worked examples.'],
   ['Templates - outreach emails + call scripts. The dorm-institution one never mentions the residency (AAU rule: person-to-person, top-down, never automated).'],
@@ -78,7 +78,7 @@ function add(name: string, rows: any[][], widths?: number[]) {
   XLSX.utils.book_append_sheet(wb, ws, name);
 }
 add('Start here', start, [160]);
-add('Priority list', [PRIORITY_HEADER, ...priority], [7, 20, 30, 24, 30, 14, 6, 9, 20, 10, 11, 26, 8, 8, 11, 11, 28, 22, 28, 16, 11, 18, 20, 7, 38]);
+add('Priority list', [PRIORITY_HEADER, ...priority], [7, 20, 30, 24, 22, 30, 14, 6, 9, 20, 10, 11, 26, 8, 8, 11, 11, 28, 22, 28, 16, 11, 18, 7, 38]);
 const scoringExplained: any[][] = [
   ['How the score works'],
   ['Every building gets 0 to 100 points so the best calls float to the top. Four things add points, safety takes points off, and three rules can override the math. One line each:'],

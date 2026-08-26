@@ -1,7 +1,7 @@
 import { PRIORITY_NEIGHBORHOODS, type Property } from './types';
 export type Filters = {
   q: string; nb: string[]; type: string[]; tag: string[]; kitchen: '' | 'yes' | 'no'; status: string[]; outreach: string[];
-  audience: 'all' | 'pipeline' | 'inventory'; house: '' | 'punk-house' | 'femme-house' | 'alum-house'; ready: boolean; eastBay: boolean; nonPriority: boolean; sort: string; dir: 'asc' | 'desc';
+  audience: 'all' | 'pipeline' | 'inventory'; house: '' | 'punkhaus' | 'femhaus' | 'alumhaus' | 'safehaus'; ready: boolean; eastBay: boolean; nonPriority: boolean; sort: string; dir: 'asc' | 'desc';
 };
 export const DEFAULT: Filters = { q: '', nb: [], type: [], tag: [], kitchen: '', status: [], outreach: [], audience: 'all', house: '', ready: false, eastBay: false, nonPriority: true, sort: 'score', dir: 'desc' };
 const L = (v: string | null) => (v ? v.split(',').filter(Boolean) : []);
