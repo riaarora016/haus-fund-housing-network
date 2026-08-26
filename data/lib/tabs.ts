@@ -15,18 +15,22 @@ export function templateNameFor(p: Property): string {
   return 'sro-master-lease';
 }
 
-const HOUSE_HEADER = ['Call #','Property','What it is','Contact person','Phone','Email / path','Template to use','Score','Beds','$/bed est','$ now (verified)','Kitchen','Walk min','Move-in ready','Walk-in ready','Channel','Status','Outreach so far','Address','Neighborhood','The play','id'];
+const HOUSE_HEADER = ['Call #','Property','Contact person','Phone','Email / path','Template to use','Score','Safety','Reviews say','Beds','$/bed est','$ verified now','Kitchen','Walk min','Move-in ready','Status','Last outreach','Latest note','Next check','Address','Neighborhood','id'];
 
 const walkOf = (p: Property) => p.walk_min_from_frontier ?? p.transit_min_to_frontier;
 const cell = (v: unknown) => (v == null ? '' : String(v));
 const hasPhone = (p: Property) => !!p.contact_phone && p.contact_phone.trim() !== '' && p.contact_phone.trim() !== '-';
 
 function houseRow(p: Property, callNo: string): string[] {
-  return [callNo, p.name, p.name_detail, p.contact_name, p.contact_phone, p.contact_email || p.contact_path,
-    templateNameFor(p), cell(p.score), cell(p.beds_est), cell(p.price_per_bed_est),
-    p.price_now != null ? `${p.price_now} (${p.last_verified?.slice(0, 10)} via ${p.verified_via})` : '',
-    p.kitchen, cell(walkOf(p)), String(p.sept15_ready), p.walk_in_ready, p.deal_channel, p.status,
-    [p.outreach_status, p.contacted_by].filter(Boolean).join(' by '), p.address, p.neighborhood, p.play, p.id];
+  const lastDate = (p.last_emailed ?? p.last_verified ?? '').slice(0, 10);
+  const lastOutreach = [p.outreach_status, p.contacted_by && `by ${p.contacted_by}`, lastDate].filter(Boolean).join(' ');
+  const latestNote = (p.notes.split(' | ').pop() ?? '').slice(0, 160);
+  return [callNo, p.name, p.contact_name, p.contact_phone, p.contact_email || p.contact_path,
+    templateNameFor(p), cell(p.score), p.safety_flag, [p.safety_reviews, p.review_rating].filter(Boolean).join(': '),
+    cell(p.beds_est), cell(p.price_per_bed_est),
+    p.price_now != null ? `${p.price_now} (${p.last_verified?.slice(0, 10)})` : '',
+    p.kitchen, cell(walkOf(p)), String(p.sept15_ready), p.status,
+    lastOutreach, latestNote, cell(p.next_check), p.address, p.neighborhood, p.id];
 }
 
 function houseTab(props: Property[], house: House, title: string, note: string): Tab {
@@ -43,12 +47,12 @@ function houseTab(props: Property[], house: House, title: string, note: string):
 }
 
 export function buildTabs(props: Property[]): Tab[] {
-  const punk = houseTab(props, 'punk-house', 'Punk House',
-    'Main cohort house, 40 to 50 people, buildings with 35+ beds in SF. This tab IS the call sheet: rows are in calling order, phone and template on each row. On every call ask for a block of beds from Sept 15, monthly rate per bed, kitchen access, minimum term. If the landlord worries about tenant rights: 3-month program, visa-bound residents, everyone vacates at program end.');
-  const femme = houseTab(props, 'femme-house', 'Femme House',
-    'Femme / safe house: about 10 to 12 women, kitchen required, 3 to 6 months. 2550 Van Ness (Minerva) is the live option; call these in order as backups. Use the femme-house template.');
-  const alum = houseTab(props, 'alum-house', 'Alum House',
-    'Alum house and spillover: operating co-living, hostels and SROs under ~35 beds where one person can just book in. Call in order to confirm current rates and holds. Hive: toured by Elliot, nice kitchen and community, no block available, actively looking for female residents.');
+  const punk = houseTab(props, 'punk-house', 'Punkhaus',
+    'Main cohort house, 40 to 50 people, buildings with 35+ beds in SF. This tab is the call sheet AND the log: make the call (Granola on), send Claude the notes, and Last outreach / Latest note / Next check on the row get filled in. Ask for: block of beds from Sept 15, monthly rate per bed, kitchen access, minimum term. Tenant-rights worry: 3-month program, visa-bound residents, everyone vacates at program end.');
+  const femme = houseTab(props, 'femme-house', 'Femhaus',
+    'Femme / safe house: about 10 to 12 women, kitchen required, 3 to 6 months. 2550 Van Ness (Minerva) is the live option; these are backups in calling order. Safety column matters double here. Calls made with Granola get logged onto the row by Claude.');
+  const alum = houseTab(props, 'alum-house', 'Alumhaus',
+    'Alum house and spillover: operating co-living, hostels and SROs under ~35 beds where one person can just book in. Call in order to confirm rates and holds; Granola notes get logged onto the row. Hive: toured by Elliot, great community reviews, no block available, actively looking for female residents.');
 
   const confirmed = props.filter((p) => p.status === 'confirmed');
   const airtable: Tab = {

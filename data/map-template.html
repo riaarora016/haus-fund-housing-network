@@ -459,9 +459,12 @@ function openSheet(id){
       ${kv('Beds', p.beds!=null?p.beds:'ask (never estimated)')}
       ${kv('Type', esc(p.type))}
       ${kv('Move-in ready', p.sept15===true?'yes':p.sept15===false?'no':'ask')}
+      ${kv('Block safety', p.safety==='rough-block'?'rough block, go see it first':p.safety==='mixed'?'mixed block':p.safety==='ok'?'fine':'no data')}
+      ${p.reviews?kv('Reviews', esc(p.reviews)):''}
       ${p.minStay!=null?kv('Min stay', p.minStay+' nights'):''}
       ${p.pricePriv!=null?kv('Private room', fmt$(p.pricePriv)+'/mo'):''}
       <div class="actions">${acts.join('')||'<span class="note">No public contact on file yet &mdash; the team is sourcing it.</span>'}</div>
+      ${p.safetyNote?`<div class="note"><b style="color:var(--ink)">Safety read:</b> ${esc(p.safetyNote)}</div>`:''}
       <div class="note">Confirm availability before you rely on this. If you take a room here, tell the housing team so the tracker updates for everyone.</div>
     </div>`;
   $('#sheet').classList.add('open'); $('#sheet').setAttribute('aria-hidden','false'); $('#scrim').classList.add('open');

@@ -69,7 +69,7 @@ function blank(): Property {
     lat: null, lng: null, geo_precision: 'none', dist_to_frontier_mi: null, transit_min_to_frontier: null, walk_min_from_frontier: null, walk_source: '',
     type: 'other', type_raw: '', rooms: null, capacity_raw: '', beds_est: null, occupancy_assumption: null,
     price_per_room_low: null, price_per_room_high: null, price_per_bed_est: null, price_raw: '', monthly_total_45_est: null,
-    kitchen: 'unknown', kitchen_raw: '', common_space: '', furnished: 'unknown', bath: 'unknown',
+    kitchen: 'unknown', kitchen_raw: '', safety_flag: 'unknown', safety_reviews: '', review_rating: '', safety_note: '', common_space: '', furnished: 'unknown', bath: 'unknown',
     status: 'active', deal_channel: 'unknown', walk_in_ready: 'unknown', houses: [], timeline_tags: [], aau: false, baseline: false, sept15_ready: 'unknown', cluster_id: null, related_id: null, tier: '',
     score: null, score_breakdown: null, score_sheet: null,
     contact_name: '', contact_org: '', contact_phone: '', contact_email: '', contact_verify: false, contact_path: '', contact_section: '',
@@ -290,6 +290,26 @@ function main() {
       p.dist_to_frontier_mi = distToFrontier(p.lat, p.lng);
       // heuristic transit only for real (address-level) geocodes - a neighbourhood centroid is not a commute
       if (p.walk_min_from_frontier == null && p.geo_precision === 'address') p.transit_min_to_frontier = transitHeuristicMin(p.dist_to_frontier_mi, p.east_bay || !['SF-priority','SF-other'].includes(p.region));
+    }
+  }
+
+  // ----- safety: neighborhood default, then per-building hand checks from data/safety.json -----
+  const safetyCfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'safety.json'), 'utf8')) as { overrides: Record<string, any> };
+  for (const p of props) {
+    const inSF = ['SF-priority', 'SF-other'].includes(p.region);
+    if (inSF) {
+      // Civic Center bucket includes the Tenderloin and Mid-Market per the neighborhood normalisation
+      p.safety_flag = p.neighborhood === 'Civic Center' ? 'rough-block'
+        : ['SoMa', 'Mission', 'Union Square', 'Design District / Potrero'].includes(p.neighborhood) ? 'mixed'
+        : 'ok';
+    } else p.safety_flag = 'unknown';
+    const o = safetyCfg.overrides[p.id];
+    if (o) {
+      if (o.flag) p.safety_flag = o.flag;
+      if (o.reviews) p.safety_reviews = o.reviews;
+      if (o.rating) p.review_rating = o.rating;
+      if (o.note) p.safety_note = o.note;
+      if (o.status) p.status = STATUS(o.status);
     }
   }
 

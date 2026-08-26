@@ -33,20 +33,14 @@ const priorityRows = props
   .map((p) => ({ p, t: tierOf(p) }))
   .sort((a, b) => a.t[0] - b.t[0] || (b.p.score ?? 0) - (a.p.score ?? 0));
 
-const PRIORITY_HEADER = ['Priority', 'Tier', 'Property', 'What it is', 'Address', 'Neighborhood', 'Beds', '$/bed (est)', '$ verified now', 'Kitchen', 'Walk min', 'Sept 15?', 'Walk-in ready', 'Channel', 'Contact person', 'Phone', 'Email / path', 'Template', 'Status', 'Outreach so far', 'House fit', 'Score', 'The play'];
+const PRIORITY_HEADER = ['Priority', 'Tier', 'Property', 'What it is', 'Address', 'Neighborhood', 'Beds', '$/bed (est)', '$ verified now', 'Kitchen', 'Safety', 'Reviews say', 'Walk min', 'Sept 15?', 'Walk-in ready', 'Channel', 'Contact person', 'Phone', 'Email / path', 'Template', 'Status', 'Outreach so far', 'House fit', 'Score', 'The play'];
 const priority = priorityRows.map(({ p, t }, i) => [
   i + 1, t[1], p.name, p.name_detail, p.address, p.neighborhood, cell(p.beds_est), cell(p.price_per_bed_est),
   p.price_now != null ? `$${p.price_now} on ${p.last_verified?.slice(0, 10)} (${p.verified_via})` : '',
-  p.kitchen, cell(walkOf(p)), String(p.sept15_ready), p.walk_in_ready, p.deal_channel,
+  p.kitchen, p.safety_flag, [p.safety_reviews, p.review_rating].filter(Boolean).join(': '), cell(walkOf(p)), String(p.sept15_ready), p.walk_in_ready, p.deal_channel,
   p.contact_name, p.contact_phone, p.contact_email || p.contact_path, templateNameFor(p), p.status,
   [p.outreach_status, p.contacted_by].filter(Boolean).join(' by '), p.houses.join(', '), cell(p.score), p.play,
 ]);
-
-const bookable = props
-  .filter((p) => p.audience === 'inventory' && p.status === 'active')
-  .sort((a, b) => (a.price_now ?? a.price_per_bed_est ?? 99999) - (b.price_now ?? b.price_per_bed_est ?? 99999))
-  .map((p) => [p.name, p.address, p.neighborhood, cell(p.price_now ?? ''), p.last_verified ? `${p.last_verified.slice(0, 10)} via ${p.verified_via}` : 'not verified yet',
-    cell(p.price_per_bed_est), p.kitchen, cell(walkOf(p)), cell(p.min_stay_nights), p.bookable_online ? 'yes' : 'no', p.booking_url, p.contact_phone, p.contact_email || p.contact_path]);
 
 const templates = fs.readdirSync('templates/outreach').filter((f) => f.endsWith('.md')).map((f) => {
   const raw = fs.readFileSync(path.join('templates/outreach', f), 'utf8');
@@ -64,23 +58,18 @@ const start = [
   ['DATES: alum house opens Sept 1 · cohort arrives Sept 15 (orientation 17-18) · Fitzgerald starts Sept 27. The gap runs Sept 1-27; a building that takes people Sept 15 beats the Fitzgerald.'],
   [''],
   ['TABS'],
-  ['Priority list - every building, ranked. Tier 1 = call this week. Contacts, phone, and which template to use are on the row. Duplicates across sources appear once.'],
-  ['Punk House / Femme House / Alum House - one call sheet per house, already in calling order. Phone, contact and which template to use are on every row; rows without a phone number sit below the divider until someone digs one up.'],
-  ['Scoring explained - how the 0-100 number is built, in plain words, with two worked examples.'],
-  ['Bookable now - beds someone can get today, cheapest first, with the date each price was verified. A price with no date is an estimate, not an offer.'],
+  ['Priority list - every building, ranked. Tier 1 = call this week. Contacts, phone, safety read, and which template to use are on the row.'],
+  ['Punkhaus / Femhaus / Alumhaus - one table per house, already in calling order, and each one doubles as that house\'s outreach log: record the call with Granola, send Claude the notes, and the row\'s Last outreach, Latest note, and Next check get filled in. Rows without a phone number sit below the divider until someone digs one up.'],
+  ['Scoring explained - how the 0-100 number is built, one line per part, with two worked examples.'],
   ['Templates - outreach emails + call scripts. The dorm-institution one never mentions the residency (AAU rule: person-to-person, top-down, never automated).'],
-  ['Outreach log - one row per touch. Fill it in as calls happen.'],
   ['Airtable export - rows marked confirmed, flat and ready to import once a deal is set in stone.'],
   [''],
-  ['SCORING (0-100): transit to Frontier 35 pts · price per bed 30 · kitchen 15 · bed-count fit 20. Caps: taken/sold/ruled-out = 0; tourist hotel with no kitchen maxes at 40. +5 if it can take people Sept 15. East Bay scores 0 on transit (ruled out, rows kept).'],
+  ['SCORING (0-100): distance 35 + price 30 + kitchen 15 + size 20, minus up to 15 for safety (rough blocks and bad reviews), +5 if ready for arrival day. Dead deals score 0; a tourist hotel with no kitchen caps at 40. Full plain-words breakdown on the Scoring explained tab.'],
   ['ON EVERY CALL: ask for a block of beds from Sept 15, monthly rate per bed, kitchen access, minimum term. Tenant-rights worry? 3-month program, visa-bound residents, everyone vacates at program end. Block pricing beats their vacancy math.'],
   [''],
   ['HONESTY RULES: nothing here has been re-verified unless it shows a verification date. Numbers marked with a date came from the operator\'s own booking page or a reply from them. Bed counts are never estimated.'],
 ];
 
-const outreachLog = [
-  ['Date', 'Property (match Priority list name)', 'Channel (call/email/tour)', 'Who reached out', 'Person reached', 'Asked (beds from Sept 15 / rate / kitchen / min term)', 'Answer: beds', 'Answer: $/bed', 'Answer: min stay', 'Next step', 'Next check date', 'Notes'],
-];
 
 const wb = XLSX.utils.book_new();
 function add(name: string, rows: any[][], widths?: number[]) {
@@ -89,44 +78,36 @@ function add(name: string, rows: any[][], widths?: number[]) {
   XLSX.utils.book_append_sheet(wb, ws, name);
 }
 add('Start here', start, [160]);
-add('Priority list', [PRIORITY_HEADER, ...priority], [7, 20, 30, 26, 30, 14, 6, 9, 22, 10, 8, 8, 11, 11, 30, 22, 30, 16, 11, 18, 22, 7, 40]);
+add('Priority list', [PRIORITY_HEADER, ...priority], [7, 20, 30, 24, 30, 14, 6, 9, 20, 10, 11, 26, 8, 8, 11, 11, 28, 22, 28, 16, 11, 18, 20, 7, 38]);
 const scoringExplained: any[][] = [
   ['How the score works'],
-  ['Every building gets 0 to 100 points. The number is only a sorting tool: it puts the places most worth a call at the top. It is built from the four things the team said matter, in this order: how close it is to Frontier Tower, what a bed costs, whether people can cook, and whether the building is the right size.'],
+  ['Every building gets 0 to 100 points so the best calls float to the top. Four things add points, safety takes points off, and three rules can override the math. One line each:'],
   [''],
-  ['THE FOUR PARTS'],
-  ['1. Distance to Frontier Tower', 'up to 35 points', 'A 10 minute walk or less gets all 35. Points fall steadily to 0 at 45 minutes. East Bay and anything outside SF gets 0 here, which is why those sink to the bottom without being deleted.'],
-  ['2. Price per bed', 'up to 30 points', 'At or under $1,000 a month per bed gets all 30. Points fall steadily to 0 at $2,200. If we have no price yet it gets 5 points, not 0, so unknowns stay visible instead of vanishing.'],
-  ['3. Kitchen', 'up to 15 points', 'A communal or private kitchen gets all 15. No kitchen gets 0. Unknown gets 5. This is heavy on purpose: three months without a kitchen is what nearly broke people last time.'],
-  ['4. Building size', 'up to 20 points', '40 to 60 beds is the sweet spot and gets all 20 (one building fits the whole cohort). 20 to 39 beds gets 12 (works as a pair of buildings). Over 100 gets 12 to 15 (more than we need, but workable). Under 20 gets 4. Unknown gets 4.'],
+  ['Part', 'Points', 'In one line'],
+  ['Distance to Frontier Tower', 'up to 35', 'A 10 minute walk gets all 35; points fade to 0 by 45 minutes away.'],
+  ['Price per bed', 'up to 30', '$1,000 a month or less gets all 30; points fade to 0 by $2,200; no price yet gets 5 so it stays visible.'],
+  ['Kitchen', 'up to 15', 'Any real kitchen gets 15; no kitchen gets 0; unknown gets 5.'],
+  ['Building size', 'up to 20', '40 to 60 beds is perfect (20); 20 to 39 works as a pair of buildings (12); under 20 gets 4; over 100 gets 12 to 15.'],
+  ['Safety', 'up to -15', 'A rough block (Tenderloin, 6th St, Mid-Market) takes off 8, a mixed block takes off 3, and reviews that flag safety take off up to 7 more.'],
+  ['Move-in bonus', '+5', 'A building confirmed ready for arrival day gets 5 extra.'],
+  ['Dead deal rule', 'score 0', 'Anything taken, sold, or ruled out drops to 0.'],
+  ['Hotel rule', 'cap at 40', 'A tourist hotel with no kitchen can never score above 40, however cheap it is.'],
   [''],
-  ['AFTER ADDING THOSE UP, TWO RULES CAN OVERRIDE'],
-  ['Dead deals score 0', '', 'Anything taken, sold or ruled out drops to 0 no matter how good it looked.'],
-  ['Tourist hotel with no kitchen caps at 40', '', 'Even if it is cheap and close, a hotel where nobody can cook can never rank above 40. That is the failure mode of the current setup and the score is built to never recommend it again.'],
+  ['Reading the number', '', ''],
+  ['80 and up', 'strong fit', 'Close, affordable, has a kitchen, right size, decent block. Call first.'],
+  ['60 to 79', 'good', 'One thing is off, usually price, distance, or the block. Worth a call.'],
+  ['40 to 59', 'ok', 'Two things are off, or a cap kicked in. Backups.'],
+  ['under 40', 'stretch', 'Far, expensive, no kitchen, or dead. Kept for the record.'],
   [''],
-  ['ONE BONUS'],
-  ['Ready for move-in gets +5', '', 'A building that can take people on arrival day beats one that makes everyone wait, so confirmed early availability adds 5 points (capped at 100).'],
+  ['Worked example: European Hostel', '', 'Walk 35 + price 30 + kitchen 15 + size 12 = 92. Rough block takes off 8 and bad safety reviews take off 7 (capped at 15 total) = 77. Move-in ready adds 5. Final: 82. Cheap and close, but the reviews are why it is not number 1 anymore.'],
+  ['Worked example: AAU dorm, 860 Sutter', '', 'Walk 31 + price 30 + kitchen 15 + size 15 = 91. Clean Nob Hill block, nothing comes off. Not confirmed for arrival day, no bonus. Final: 89.'],
   [''],
-  ['READING THE NUMBER'],
-  ['80 and up', 'strong fit', 'close, affordable, has a kitchen, right size. Call these first.'],
-  ['60 to 79', 'good', 'one thing is off, usually price or distance. Worth a call.'],
-  ['40 to 59', 'ok', 'two things are off, or a cap kicked in. Backups.'],
-  ['under 40', 'stretch', 'far, expensive, no kitchen, or dead. Kept for the record.'],
-  [''],
-  ['WORKED EXAMPLE: European Hostel'],
-  ['10 min walk = 35 · $545/bed = 30 · communal kitchen = 15 · 25 beds = 12 · move-in ready = +5. Total 97. That is why it sits at the top.'],
-  [''],
-  ['WORKED EXAMPLE: a dark tourist hotel in Union Square'],
-  ['8 min walk = 35 · $1,750/bed = 11 · no kitchen = 0 · 131 beds = 15. Sum is 61, but the no-kitchen hotel cap pulls it down to 40. Good building, wrong setup for us.'],
-  [''],
-  ['Change the weights in one place (data/score.ts in the repo, or the Weights tab in the source workbook) and every score recalculates the same way for every building. No hand-tuning per row.'],
+  ['Weights live in one place (data/score.ts in the repo). Change one number there and every building rescores the same way. The safety reads come from the neighborhood plus hand-checked reviews (data/safety.json), so a specific building can always be corrected by hand.'],
 ];
 add('Scoring explained', scoringExplained, [44, 14, 110]);
 const tabs = buildTabs(props);
 for (const t of tabs.filter((t) => t.title !== 'Airtable export')) add(t.title, [[t.note ?? ''], t.header, ...t.rows], [6, 27, 24, 26, 21, 27, 16, 7, 6, 9, 22, 10, 8, 11, 11, 11, 11, 18, 28, 14, 36, 30]);
-add('Bookable now', [['Property', 'Address', 'Neighborhood', '$/bed now', 'Verified', '$/bed est', 'Kitchen', 'Walk min', 'Min stay (nights)', 'Book online?', 'Booking link', 'Phone', 'Email'], ...bookable], [28, 30, 14, 9, 22, 9, 10, 8, 10, 10, 44, 20, 28]);
 add('Templates', [['Template', 'Use for', 'Subject', 'Body'], ...templates], [22, 40, 44, 110]);
-add('Outreach log', outreachLog, [10, 30, 12, 12, 22, 34, 10, 10, 10, 18, 12, 40]);
 const at = tabs.find((t) => t.title === 'Airtable export')!;
 add('Airtable export', [[at.note ?? ''], at.header, ...at.rows], [26, 30, 14, 12, 6, 10, 10, 10, 24, 20, 26, 16, 10, 40, 30]);
 
@@ -134,4 +115,4 @@ fs.mkdirSync('data/exports', { recursive: true });
 const out = 'data/exports/biopunk-housing-tracker.xlsx';
 XLSX.writeFile(wb, out);
 const t1 = priorityRows.filter(({ t }) => t[0] === 1).length;
-console.log(`${out}: ${wb.SheetNames.length} tabs (${wb.SheetNames.join(', ')}); priority list ${priority.length} rows, Tier 1 = ${t1}; bookable now ${bookable.length}; ${skipDupes.size} cross-tab duplicates collapsed`);
+console.log(`${out}: ${wb.SheetNames.length} tabs (${wb.SheetNames.join(', ')}); priority list ${priority.length} rows, Tier 1 = ${t1}; ${skipDupes.size} cross-tab duplicates collapsed`);

@@ -4,6 +4,7 @@
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
+from openpyxl.worksheet.table import Table, TableStyleInfo
 
 PATH = 'data/exports/biopunk-housing-tracker.xlsx'
 wb = openpyxl.load_workbook(PATH)
@@ -12,7 +13,7 @@ HEAD = PatternFill('solid', fgColor='1F2937'); HEADF = Font(bold=True, color='FF
 TIER = {'Tier 1': 'D1FAE5', 'Tier 2': 'FEF3C7', 'Tier 3': 'FFF7ED', 'Tier 4': 'F3F4F6', 'BASELINE': 'DBEAFE', 'Parked': 'F3F4F6', 'Dead': 'FEE2E2'}
 thin = Border(bottom=Side(style='hair', color='DDDDDD'))
 TEXT_TABS = ('Start here', 'Scoring explained')
-HOUSE_TABS = ('Punk House', 'Femme House', 'Alum House')
+HOUSE_TABS = ('Punkhaus', 'Femhaus', 'Alumhaus')
 
 def style_header(ws, row):
     for c in ws[row]:
@@ -31,7 +32,10 @@ for name in wb.sheetnames:
             if head.isupper() or head.startswith(('THE JOB', 'DATES', 'SCORING', 'ON EVERY CALL', 'HONESTY', 'WORKED EXAMPLE', 'TABS', '1.', '2.', '3.', '4.')):
                 ws.cell(row=r, column=1).font = BOLD
         continue
-    header_row = 2 if str(ws.cell(row=1, column=1).value or '').startswith('NOTE:') else 1
+    a1 = str(ws.cell(row=1, column=1).value or '')
+    b1 = ws.cell(row=1, column=2).value
+    # a note line is a single long cell in A1 with nothing beside it
+    header_row = 2 if (a1.startswith('NOTE:') or (a1 and b1 in (None, ''))) else 1
     if header_row == 2:
         ws.cell(row=1, column=1).font = Font(italic=True, color='92400E')
         ws.cell(row=1, column=1).alignment = Alignment(wrap_text=True, vertical='top')
@@ -63,11 +67,11 @@ for name in wb.sheetnames:
                 for c in ws[r]:
                     c.font = Font(italic=True, color='92400E')
                 ws.cell(row=r, column=2).fill = PatternFill('solid', fgColor='FEF3C7')
-        ws.auto_filter.ref = f'A{header_row}:{get_column_letter(ws.max_column)}{ws.max_row}'
-    if name == 'Bookable now':
-        for r in range(header_row + 1, ws.max_row + 1):
-            ws.cell(row=r, column=1).font = BOLD
-        ws.auto_filter.ref = f'A{header_row}:{get_column_letter(ws.max_column)}{ws.max_row}'
+        # a real table (banded rows, filter buttons); imports into Google Sheets as a proper table
+        ref = f'A{header_row}:{get_column_letter(ws.max_column)}{ws.max_row}'
+        t = Table(displayName=name.replace(' ', ''), ref=ref)
+        t.tableStyleInfo = TableStyleInfo(name='TableStyleMedium2', showFirstColumn=False, showLastColumn=False, showRowStripes=True, showColumnStripes=False)
+        ws.add_table(t)
     if name == 'Templates':
         for r in range(header_row + 1, ws.max_row + 1):
             ws.row_dimensions[r].height = 150

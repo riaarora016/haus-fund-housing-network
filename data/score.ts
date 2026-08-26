@@ -8,6 +8,7 @@ export const WEIGHTS = {
   target_price: 1000, max_price: 2200,
   walk_full: 10, walk_zero: 45,
   sept15_bonus: 5, tourist_no_kitchen_cap: 40,
+  safety_rough: 8, safety_mixed: 3, reviews_bad: 7, reviews_concerns: 3, safety_floor: 15,
   price_unknown_pts: 5, // workbook README: "Blank price = 5 pts (unknown)"
 };
 
@@ -54,7 +55,16 @@ export function scoreProperty(p: Property): { score: number; breakdown: ScoreBre
   else if (b > 100) beds = 15;
   else { beds = 12; notes.push('beds: 61-100 → 12 (over ideal; partial take)'); }
 
-  let score = transit + price + kitchen + beds;
+  // 5. Safety comes OFF the total: the block rating plus what reviews say, capped at -15.
+  let safety = 0;
+  if (p.safety_flag === 'rough-block') { safety -= WEIGHTS.safety_rough; notes.push(`safety: rough block, minus ${WEIGHTS.safety_rough}`); }
+  else if (p.safety_flag === 'mixed') { safety -= WEIGHTS.safety_mixed; notes.push(`safety: mixed block, minus ${WEIGHTS.safety_mixed}`); }
+  if (p.safety_reviews === 'bad') { safety -= WEIGHTS.reviews_bad; notes.push(`reviews: safety complaints, minus ${WEIGHTS.reviews_bad}`); }
+  else if (p.safety_reviews === 'concerns') { safety -= WEIGHTS.reviews_concerns; notes.push(`reviews: some concerns, minus ${WEIGHTS.reviews_concerns}`); }
+  else if (p.safety_reviews === 'good' && p.review_rating) notes.push(`reviews: good (${p.review_rating})`);
+  safety = Math.max(safety, -WEIGHTS.safety_floor);
+
+  let score = transit + price + kitchen + beds + safety;
 
   // Hard caps
   if (['taken', 'sold', 'ruled-out'].includes(p.status)) { score = 0; caps.push(`status=${p.status} → 0`); }
@@ -67,5 +77,5 @@ export function scoreProperty(p: Property): { score: number; breakdown: ScoreBre
   if (p.sept15_ready === true && score > 0) { sept15_bonus = WEIGHTS.sept15_bonus; score = Math.min(100, score + sept15_bonus); }
 
   score = +score.toFixed(2);
-  return { score, breakdown: { transit, price, kitchen, beds, sept15_bonus, caps_applied: caps, method_notes: notes } };
+  return { score, breakdown: { transit, price, kitchen, beds, safety, sept15_bonus, caps_applied: caps, method_notes: notes } };
 }

@@ -1,0 +1,31 @@
+{
+  "_comment": "Safety layer for scoring. Default block rating comes from the neighborhood (build.ts); the overrides below are per-building hand checks from online reviews, researched 2026-08-24. reviews: good | concerns | bad. flag: ok | mixed | rough-block. A status here overrides the row status.",
+  "overrides": {
+    "inv-european-hostel": { "flag": "rough-block", "reviews": "bad", "rating": "4.7/10 Booking (595 reviews)", "note": "Reviews call it shelter-like with cleanliness and safety complaints; street watch till 7pm, guests told not to go out after. Cheap for a reason, verify in person before sending anyone." },
+    "pl-hive-coliving-was-tribe": { "flag": "mixed", "reviews": "good", "rating": "4/5 Birdeye (45 reviews)", "note": "Strong community reviews, multi-year residents. Folsom St block is standard SoMa." },
+    "inv-hive-coliving-was-tribe": { "flag": "mixed", "reviews": "good", "rating": "4/5 Birdeye (45 reviews)", "note": "Strong community reviews, multi-year residents." },
+    "inv-hive-coliving-bunks": { "flag": "mixed", "reviews": "good", "rating": "4/5 Birdeye (45 reviews)", "note": "Same operator as 1040 Folsom." },
+    "inv-upmarket-residences": { "flag": "mixed", "reviews": "good", "rating": "4.8/5 Birdeye (6 reviews)", "note": "Residents praise the building; 7th St block is standard SoMa, fine by day." },
+    "inv-found-study-16-turk-st": { "flag": "rough-block", "reviews": "concerns", "rating": "mixed (ApartmentRatings + student crime analysis)", "note": "Building itself is secure (overnight security, on-site management) and residents call it safe and quiet inside; the Turk and Taylor block outside is one of the roughest in the city." },
+    "pl-found-study-sf-built-for-exactly-this": { "flag": "rough-block", "reviews": "concerns", "rating": "mixed (ApartmentRatings + student crime analysis)", "note": "Secure building, rough block at Turk and Taylor." },
+    "inv-sweden-house": { "flag": "rough-block", "reviews": "concerns", "rating": "Yelp 96 reviews, mixed", "note": "Guests say clean and safe inside considering the Tenderloin; unmarked entrance, homeless activity on the block." },
+    "pl-boston-hotel-sro": { "flag": "rough-block", "reviews": "concerns", "rating": "Booking/TripAdvisor: clean rooms, challenging area", "note": "Reviews call the hotel itself clean and secure; 140 Turk is core Tenderloin." },
+    "inv-the-mission-hotel-apartments": { "flag": "rough-block", "reviews": "bad", "rating": "Yelp: roaches, cramped", "status": "ruled-out", "note": "Not a market rental: 237 units of permanent supportive housing for formerly homeless adults, run by Tenderloin Housing Clinic since 1999. Ruled out." },
+    "inv-hi-san-francisco-downtown": { "flag": "mixed", "reviews": "good", "rating": "8.5/10 Hostelworld (1,668 reviews)", "note": "Consistently strong reviews; Mason St sits between Union Square and the Tenderloin edge." },
+    "inv-amsterdam-hostel": { "flag": "mixed", "reviews": "good", "rating": "8.4/10 Hostelworld (3,881 reviews)", "note": "Well reviewed; Taylor St is the calmer upper edge of the Tenderloin." },
+    "inv-harcourt-hotel-residence": { "flag": "mixed", "reviews": "concerns", "rating": "sparse reviews", "note": "Larkin at Sutter, Tenderloin edge; long-stay residence hotel, check a room in person." },
+    "pl-crystal-hotel-residential-master-lease-available": { "flag": "mixed", "reviews": "concerns", "rating": "no guest reviews (closed to tourists)", "note": "Report already flags 24th and Mission street conditions as rough but improving under the 2026 police surge." },
+    "pl-mosser-sro-1000-market-st-owner-stuck": { "flag": "rough-block", "reviews": "concerns", "rating": "n/a (SRO block)", "note": "Market at 6th is the roughest stretch of Market St." },
+    "inv-the-mosser-hotel": { "flag": "mixed", "reviews": "good", "rating": "~4/5 aggregate", "note": "Tourist hotel at 4th and Market, standard downtown block." },
+    "pl-brownstone-shared-housing": { "flag": "rough-block", "reviews": "concerns", "rating": "thin reviews (pods)", "note": "1049 Market sits on the 6th to 7th St stretch; pod sleeping, tour before committing." },
+    "inv-panoramic-residences": { "flag": "rough-block", "reviews": "good", "rating": "solid (modern tower)", "note": "Modern secure tower with good resident reviews; 9th and Mission corner outside is rough." },
+    "inv-the-6th-collective-coliving": { "flag": "rough-block", "reviews": "concerns", "rating": "thin reviews", "note": "Howard at 6th; the 6th St corridor is the hardest block in SoMa." },
+    "pl-hotel-whitcomb-floors-blackstone-wants-an-interi": { "flag": "rough-block", "reviews": "concerns", "rating": "2.5-3/5 aggregate", "note": "1231 Market faces UN Plaza / 8th St." },
+    "pl-149-161-hyde-st": { "flag": "rough-block", "reviews": "concerns", "rating": "n/a", "note": "Hyde at Turk, core Tenderloin." },
+    "pl-motel-6-civic-center": { "flag": "rough-block", "reviews": "concerns", "rating": "low (budget motel)", "note": "583 Eddy, core Tenderloin." },
+    "inv-vantaggio-suites-garland": { "flag": "rough-block", "reviews": "concerns", "rating": "mixed", "note": "505 O'Farrell, Tenderloin." },
+    "inv-vantaggio-suites-abigail": { "flag": "rough-block", "reviews": "concerns", "rating": "mixed", "note": "246 McAllister, Civic Center core." },
+    "inv-tl-residences": { "flag": "rough-block", "reviews": "concerns", "rating": "market tower", "note": "361 Turk; the name says it." },
+    "pl-mason-at-hive-auction-july-28-12-days": { "flag": "unknown", "reviews": "concerns", "rating": "n/a", "note": "Oakland auction property, no review base." }
+  }
+}

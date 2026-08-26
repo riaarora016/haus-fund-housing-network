@@ -81,7 +81,7 @@ export function Drawer({ p, all, onClose, onSelect }: { p: Property; all: Proper
         </section>
 
         {p.score_breakdown && <section><h3 className="text-[11px] uppercase tracking-wide text-neutral-500 mb-1">Score breakdown</h3>
-          <div className="grid grid-cols-4 gap-1 text-center">{(['transit', 'price', 'kitchen', 'beds'] as const).map((k) => <div key={k} className="rounded border border-neutral-200 dark:border-neutral-800 py-1"><div className="text-[10px] text-neutral-500">{k}</div><div className="font-mono">{p.score_breakdown![k]}</div></div>)}</div>
+          <div className="grid grid-cols-5 gap-1 text-center">{(['transit', 'price', 'kitchen', 'beds', 'safety'] as const).map((k) => <div key={k} className="rounded border border-neutral-200 dark:border-neutral-800 py-1"><div className="text-[10px] text-neutral-500">{k}</div><div className="font-mono">{(p.score_breakdown as any)[k] ?? 0}</div></div>)}</div>
           <ul className="mt-1 text-[11px] text-neutral-600 dark:text-neutral-400 list-disc pl-4">{p.score_breakdown.sept15_bonus ? <li>sept-15 bonus +{p.score_breakdown.sept15_bonus}</li> : null}{p.score_breakdown.caps_applied.map((c) => <li key={c} className="text-red-600">{c}</li>)}{p.score_breakdown.method_notes.map((n) => <li key={n}>{n}</li>)}{adjScore(p) !== p.score && <li className="text-neutral-500">staleness −{(p.score ?? 0) - (adjScore(p) ?? 0)} (verification 15-45 days old)</li>}</ul></section>}
 
         <section><h3 className="text-[11px] uppercase tracking-wide text-neutral-500 mb-1">Sources</h3>

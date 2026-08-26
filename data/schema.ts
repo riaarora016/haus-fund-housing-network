@@ -19,6 +19,8 @@ export type Sept15 = true | false | 'unknown';
 export type DealChannel = 'owner' | 'receiver' | 'broker' | 'institution' | 'operator' | 'unknown';
 // Elliot: "if we have to retrofit a space, it takes forever for permitting... we don't want to do that."
 export type WalkInReady = 'yes' | 'no' | 'unknown';
+// Block-level safety read: neighborhood default, refined by hand checks of online reviews (data/safety.json).
+export type SafetyFlag = 'ok' | 'mixed' | 'rough-block' | 'unknown';
 export type House = 'punk-house' | 'femme-house' | 'alum-house';
 export type Region = 'SF-priority' | 'SF-other' | 'East Bay' | 'Peninsula' | 'North Bay' | 'Remote';
 
@@ -27,6 +29,7 @@ export interface ScoreBreakdown {
   price: number;
   kitchen: number;
   beds: number;
+  safety: number;
   sept15_bonus: number;
   caps_applied: string[];
   method_notes: string[];
@@ -64,6 +67,10 @@ export interface Property {
 
   kitchen: Kitchen;
   kitchen_raw: string;
+  safety_flag: SafetyFlag;
+  safety_reviews: 'good' | 'concerns' | 'bad' | '';
+  review_rating: string;         // e.g. "8.5/10 Hostelworld (1,668 reviews)"
+  safety_note: string;
   common_space: string;
   furnished: boolean | 'unknown';
   bath: 'private' | 'shared' | 'unknown';
@@ -128,7 +135,7 @@ export const SHEET_COLUMNS: (keyof Property)[] = [
   'lat','lng','geo_precision','dist_to_frontier_mi','transit_min_to_frontier','walk_min_from_frontier','walk_source',
   'type','type_raw','rooms','capacity_raw','beds_est','occupancy_assumption',
   'price_per_room_low','price_per_room_high','price_per_bed_est','price_raw','monthly_total_45_est',
-  'kitchen','kitchen_raw','common_space','furnished','bath',
+  'kitchen','kitchen_raw','safety_flag','safety_reviews','review_rating','safety_note','common_space','furnished','bath',
   'status','deal_channel','walk_in_ready','houses','timeline_tags','aau','baseline','sept15_ready','cluster_id','related_id','tier',
   'score','score_breakdown','score_sheet',
   'contact_name','contact_org','contact_phone','contact_email','contact_verify','contact_path','contact_section',

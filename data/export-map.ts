@@ -10,6 +10,7 @@ const slim = sf.map((p) => ({
   lat: p.lat, lng: p.lng, geo: p.geo_precision, type: p.type, beds: p.beds_est, rooms: p.rooms,
   price: p.price_per_bed_est, priceNow: p.price_now, pricePriv: p.price_private_now, kitchen: p.kitchen,
   walk: walk(p), sept15: p.sept15_ready, walkIn: p.walk_in_ready, score: p.score, status: p.status,
+  safety: p.safety_flag, safetyNote: p.safety_note, reviews: p.review_rating,
   audience: p.audience, houses: p.houses, bookable: p.bookable_online, bookingUrl: p.booking_url,
   phone: p.contact_phone, email: p.contact_email, lastVerified: p.last_verified, verifiedVia: p.verified_via,
   minStay: p.min_stay_nights, priority: p.priority_neighborhood, tags: p.timeline_tags, play: p.play,
