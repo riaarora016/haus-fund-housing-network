@@ -60,11 +60,11 @@ const start = [
   ['TABS'],
   ['Priority list - every building, ranked, with a Haus column showing which house each one could serve: punkhaus (40-50 people), femhaus (~12 women, kitchen), alumhaus (bookable spillover), safehaus (calm block, kitchen, small). Tier 1 = call this week.'],
   ['Punkhaus / Femhaus / Alumhaus - one table per house, already in calling order, and each one doubles as that house\'s outreach log: record the call with Granola, send Claude the notes, and the row\'s Last outreach, Latest note, and Next check get filled in. Rows without a phone number sit below the divider until someone digs one up.'],
-  ['Scoring explained - how the 0-100 number is built, one line per part, with two worked examples.'],
+  ['Scoring - how the 0-100 number is built, one line per part, with two worked examples.'],
   ['Templates - outreach emails + call scripts. The dorm-institution one never mentions the residency (AAU rule: person-to-person, top-down, never automated).'],
   ['Airtable export - rows marked confirmed, flat and ready to import once a deal is set in stone.'],
   [''],
-  ['SCORING (0-100): distance 35 + price 30 + kitchen 15 + size 20, minus up to 15 for safety (rough blocks and bad reviews), +5 if ready for arrival day. Dead deals score 0; a tourist hotel with no kitchen caps at 40. Full plain-words breakdown on the Scoring explained tab.'],
+  ['SCORING (0-100): distance 35 + price 30 + kitchen 15 + size 20, minus up to 15 for safety (rough blocks and bad reviews), +5 if ready for arrival day. Dead deals score 0; a tourist hotel with no kitchen caps at 40. Full plain-words breakdown on the Scoring tab.'],
   ['ON EVERY CALL: ask for a block of beds from Sept 15, monthly rate per bed, kitchen access, minimum term. Tenant-rights worry? 3-month program, visa-bound residents, everyone vacates at program end. Block pricing beats their vacancy math.'],
   [''],
   ['HONESTY RULES: nothing here has been re-verified unless it shows a verification date. Numbers marked with a date came from the operator\'s own booking page or a reply from them. Bed counts are never estimated.'],
@@ -104,7 +104,7 @@ const scoringExplained: any[][] = [
   [''],
   ['Weights live in one place (data/score.ts in the repo). Change one number there and every building rescores the same way. The safety reads come from the neighborhood plus hand-checked reviews (data/safety.json), so a specific building can always be corrected by hand.'],
 ];
-add('Scoring explained', scoringExplained, [44, 14, 110]);
+add('Scoring', scoringExplained, [44, 14, 110]);
 const tabs = buildTabs(props);
 for (const t of tabs.filter((t) => t.title !== 'Airtable export')) add(t.title, [[t.note ?? ''], t.header, ...t.rows], [6, 27, 24, 26, 21, 27, 16, 7, 6, 9, 22, 10, 8, 11, 11, 11, 11, 18, 28, 14, 36, 30]);
 add('Templates', [['Template', 'Use for', 'Subject', 'Body'], ...templates], [22, 40, 44, 110]);

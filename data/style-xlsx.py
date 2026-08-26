@@ -12,7 +12,7 @@ GREY = Font(color='666666'); BOLD = Font(bold=True)
 HEAD = PatternFill('solid', fgColor='1F2937'); HEADF = Font(bold=True, color='FFFFFF', size=10)
 TIER = {'Tier 1': 'D1FAE5', 'Tier 2': 'FEF3C7', 'Tier 3': 'FFF7ED', 'Tier 4': 'F3F4F6', 'BASELINE': 'DBEAFE', 'Parked': 'F3F4F6', 'Dead': 'FEE2E2'}
 thin = Border(bottom=Side(style='hair', color='DDDDDD'))
-TEXT_TABS = ('Start here', 'Scoring explained')
+TEXT_TABS = ('Start here', 'Scoring')
 HOUSE_TABS = ('Punkhaus', 'Femhaus', 'Alumhaus')
 
 def style_header(ws, row):
@@ -31,6 +31,40 @@ for name in wb.sheetnames:
             head = str(ws.cell(row=r, column=1).value or '')
             if head.isupper() or head.startswith(('THE JOB', 'DATES', 'SCORING', 'ON EVERY CALL', 'HONESTY', 'WORKED EXAMPLE', 'TABS', '1.', '2.', '3.', '4.')):
                 ws.cell(row=r, column=1).font = BOLD
+        if name == 'Scoring':
+            box = Border(left=Side('thin', color='B7C4BD'), right=Side('thin', color='B7C4BD'), top=Side('thin', color='B7C4BD'), bottom=Side('thin', color='B7C4BD'))
+            PART_FILL = {
+                'Distance to Frontier Tower': 'D1FAE5', 'Price per bed': 'D1FAE5', 'Kitchen': 'D1FAE5', 'Building size': 'D1FAE5',
+                'Safety': 'FEE2E2', 'Move-in bonus': 'DBEAFE', 'Dead deal rule': 'F3F4F6', 'Hotel rule': 'F3F4F6',
+            }
+            BAND_FILL = {'80 and up': 'D1FAE5', '60 to 79': 'ECFCCB', '40 to 59': 'FEF3C7', 'under 40': 'F3F4F6'}
+            for r in range(1, ws.max_row + 1):
+                a = str(ws.cell(row=r, column=1).value or '')
+                if a == 'Part' or a == 'Reading the number':
+                    for col in range(1, 4):
+                        c = ws.cell(row=r, column=col)
+                        c.fill = HEAD; c.font = HEADF; c.border = box
+                elif a in PART_FILL:
+                    fill = PatternFill('solid', fgColor=PART_FILL[a])
+                    for col in range(1, 4):
+                        c = ws.cell(row=r, column=col)
+                        c.border = box
+                        if col <= 2: c.fill = fill
+                    ws.cell(row=r, column=1).font = BOLD
+                    ws.cell(row=r, column=2).font = BOLD
+                    ws.cell(row=r, column=2).alignment = Alignment(horizontal='center', vertical='top')
+                elif a in BAND_FILL:
+                    fill = PatternFill('solid', fgColor=BAND_FILL[a])
+                    for col in range(1, 4):
+                        c = ws.cell(row=r, column=col)
+                        c.border = box
+                        if col <= 2: c.fill = fill
+                    ws.cell(row=r, column=1).font = BOLD
+                elif a.startswith('Worked example'):
+                    for col in range(1, 4):
+                        c = ws.cell(row=r, column=col)
+                        c.border = box; c.fill = PatternFill('solid', fgColor='EDE9FE')
+                    ws.cell(row=r, column=1).font = BOLD
         continue
     a1 = str(ws.cell(row=1, column=1).value or '')
     b1 = ws.cell(row=1, column=2).value

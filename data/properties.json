@@ -11806,7 +11806,7 @@
   {
     "id": "pl-holy-names-university-dorms",
     "name": "Holy Names University dorms",
-    "name_detail": "",
+    "name_detail": "The Oakland Campus (BH Properties leasing site)",
     "address": "3500 Mountain Blvd, Oakland hills",
     "neighborhood": "Oakland Hills",
     "neighborhood_raw": "Oakland Hills",
@@ -11840,7 +11840,7 @@
     "common_space": "",
     "furnished": true,
     "bath": "shared",
-    "status": "dark",
+    "status": "on-market",
     "deal_channel": "institution",
     "walk_in_ready": "unknown",
     "houses": [],
@@ -11879,11 +11879,12 @@
     "source_links": [
       "SF YIMBY: https://sfyimby.com/2026/02/permits-filed-for-holy-names-university-campus-redevelopment-oakland.html",
       "theoaklandcampus.com: https://theoaklandcampus.com/",
-      "BH Properties: https://www.bhproperties.com/bh-properties-purchases-60-acre-oakland-hills-campus-of-holy-names-university"
+      "BH Properties: https://www.bhproperties.com/bh-properties-purchases-60-acre-oakland-hills-campus-of-holy-names-university",
+      "Upper Campus Complex: https://theoaklandcampus.com/upper-campus-complex"
     ],
     "source": "sheet-pipeline",
     "play": "BH Properties runs an interim-leasing site",
-    "notes": "Verified: BH's interim-leasing site advertises the 181,200 sf Upper Campus Complex (contains the residence halls) plus dining, gym, theatre - and one building is already 'reserved,' so interim deals are getting done. Contacts: Dan Cardenas 341-236-7757, daniel.cardenas@bhproperties.com · Luis Guerra 602-899-5635. Downside: hillside, car-dependent.",
+    "notes": "Verified: BH's interim-leasing site advertises the 181,200 sf Upper Campus Complex (contains the residence halls) plus dining, gym, theatre - and one building is already 'reserved,' so interim deals are getting done. Contacts: Dan Cardenas 341-236-7757, daniel.cardenas@bhproperties.com · Luis Guerra 602-899-5635. Downside: hillside, car-dependent. | Elliot flagged the leasing site Aug 26 (a massive campus in the East Bay). Same campus we track: BH Properties is actively marketing ~387,000 sf across 10 buildings; the 181,200 sf Upper Campus Complex holds Student Residences 1-3 plus cafeteria, chapel event center and student lounge. One building (Raskob School) already reserved, so interim deals are moving. Still East Bay: scores 0 on transit by rule, but it is the strongest expansion-scale dorm stock on the list.",
     "outreach_status": "not-contacted",
     "contacted_by": "",
     "notion_round": null,

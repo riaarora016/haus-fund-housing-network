@@ -228,6 +228,22 @@ function main() {
     props.push(p);
   }
 
+  // ----- hand-curated additions and corrections (data/additions.json) -----
+  const additions = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'additions.json'), 'utf8')) as { updates?: Record<string, any>; new?: any[] };
+  for (const [id, u] of Object.entries(additions.updates ?? {})) {
+    const row = props.find((p) => p.id === id);
+    if (!row) { L(`- ! additions.json update for unknown id ${id}`); continue; }
+    for (const [k, v] of Object.entries(u.set ?? {})) (row as any)[k] = k === 'status' ? STATUS(String(v)) : v;
+    for (const link of u.add_links ?? []) if (!row.source_links.includes(link)) row.source_links.push(link);
+    if (u.note) row.notes = [row.notes, u.note].filter(Boolean).join(' | ');
+  }
+  for (const n of additions.new ?? []) {
+    const row = { ...blank(), ...n, id: uid('add', n.name) };
+    row.status = STATUS(String(n.status ?? 'active')); row.region = REGION(String(n.region ?? 'SF-other')); row.east_bay = row.region === 'East Bay';
+    row.neighborhood_raw = n.neighborhood ?? ''; row.neighborhood = normNeighborhood(row.neighborhood_raw, row.region);
+    row.source = 'sheet-pipeline'; props.push(row as any);
+  }
+
   // ----- related_id: same building on both tabs (do NOT merge - different audiences/tabs) -----
   L('\n## Cross-tab matches (pipeline ↔ inventory, linked via related_id - same building, two audiences)\n');
   const addrKey = (a: string) => { const m = a.match(/(\d{2,5})\s+([A-Za-z0-9']+)/); return m ? `${m[1]} ${m[2].toLowerCase()}` : null; };
