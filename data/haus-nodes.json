@@ -59,10 +59,10 @@
       ],
       "start_date": null,
       "start_date_precision": null,
-      "neighborhood": "Nob Hill",
-      "lat": 37.793,
-      "lng": -122.416,
-      "location_precision": "neighborhood",
+      "neighborhood": null,
+      "lat": null,
+      "lng": null,
+      "location_precision": "none",
       "linked_candidate_ids": [
         "add-2550-van-ness"
       ],

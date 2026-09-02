@@ -35,7 +35,6 @@
     const market = HFI.markets.get(id); if (!market) return;
     $$('[data-market]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.market === id)));
     HFI.map.setAnchor(market.anchor, HFI.NEIGHBORHOODS[id]);
-    $('#go-anchor').textContent = market.anchor?.name || market.name;
     if (fly && market.anchor) HFI.map.flyTo(market.anchor.lat, market.anchor.lng, C.ZOOM.MARKET);
   }
   function init() {
@@ -50,8 +49,8 @@
     $('#search-area').addEventListener('click', () => { HFI.filters.area = HFI.map.getBounds(); HFI.map.markSettled(); $('#search-area').classList.remove('show'); HFI.ui.renderAll(); });
     $('#zin').addEventListener('click', () => HFI.map?.zoomIn()); $('#zout').addEventListener('click', () => HFI.map?.zoomOut());
     $('#fit-inv').addEventListener('click', () => { if (!HFI.map) return; const pts = S.results.filter((r) => r.lat != null && !r.east_bay); if (pts.length) HFI.map.fitPoints(pts); else { const a = HFI.markets.get(HFI.filters.market)?.anchor; if (a) HFI.map.flyTo(a.lat, a.lng, C.ZOOM.MARKET); } });
-    $('#go-anchor').addEventListener('click', () => { const a = HFI.markets.get(HFI.filters.market)?.anchor; if (a && HFI.map) HFI.map.flyTo(a.lat, a.lng, C.ZOOM.HOUSE); });
-    $('#go-world').addEventListener('click', () => HFI.map?.home());
+    $('#panel-toggle').addEventListener('click', () => { const on = document.body.classList.toggle('panel-collapsed'); $('#panel-toggle').setAttribute('aria-expanded', String(!on)); $('#panel-toggle').setAttribute('aria-label', on ? 'Show the search panel' : 'Hide the search panel'); HFI.prefs.panelCollapsed = on; HFI.savePrefs(); });
+    if (HFI.prefs.panelCollapsed) { document.body.classList.add('panel-collapsed'); $('#panel-toggle').setAttribute('aria-expanded', 'false'); }
         $('#legend-toggle').addEventListener('click', () => { const l = $('#legend'); l.classList.toggle('open'); $('#legend-toggle').setAttribute('aria-expanded', String(l.classList.contains('open'))); });
     $$('[data-ovl]').forEach((cb) => cb.addEventListener('change', () => HFI.map?.setOverlay(cb.dataset.ovl, cb.checked)));
     // header

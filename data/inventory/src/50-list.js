@@ -109,8 +109,8 @@
     const f = HFI.filters; const market = HFI.markets.get(f.market);
     $('#list').innerHTML = `<div class="intro">
       <div class="intro-eyebrow">${esc(market?.name || '')}</div>
-      <h2 class="intro-h">Hey punk.</h2>
-      <p class="intro-p">Tell me what the house needs and I will find it.</p>
+      <h2 class="intro-h">Hey Punk!</h2>
+      <p class="intro-p">Describe the housing in plain words.</p>
       <div class="intro-l">Try</div><div class="sug">${(EXAMPLES[f.market] || []).map((t) => `<button class="mini" data-prompt="${esc(t)}">${esc(t)}</button>`).join('')}</div>
     </div>`;
     $$('[data-prompt]').forEach((b) => b.addEventListener('click', () => HFI.runPrompt(b.dataset.prompt)));

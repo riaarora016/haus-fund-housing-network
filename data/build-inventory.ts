@@ -43,13 +43,13 @@ const sizeOf = (L: Layer | null) => (L ? L.tiles.reduce((s, t) => s + t.d.length
   for (let z = 0; z <= 18; z++) {
     const sats: Layer[] = [], labels: Layer[] = [];
     for (const pre of ['w-sat-', 'sat-', 'kobe-sat-']) { const L = await layer(SAT, pre, z, 'image/jpeg'); if (L) sats.push(L); }
-    for (const pre of ['w-place-', 'place-', 'kobe-place-', 'road-', 'kobe-road-']) { if (pre === 'road-' && z < 16) continue; const L = await layer(SAT, pre, z, 'image/png'); if (L) labels.push(L); }   // road-15 is heavy and z15 already carries place labels
+    { const L = await layer(SAT, 'c-lab-', z, 'image/png'); if (L) labels.push(L); }   // CARTO dark_only_labels: thin, clean type over imagery
     const all = [...sats, ...labels]; if (!all.length) continue;
     const n = all.reduce((a, L) => a + L.tiles.length, 0), bytes = all.reduce((a, L) => a + sizeOf(L), 0);
     report.push(`z${z}: ${n} tiles, ${(bytes / 1048576).toFixed(2)} MB`);
     levels.push({ z, maxK: z === 0 ? null : 2 ** (TZ - z) * 1.8, layers: all });
   }
-  const world = { z: TZ, x0: 0, y0: 0, cols: 2 ** TZ, rows: 2 ** TZ, minK: 0.125, levels, street: [] };
+  const world = { z: TZ, x0: 0, y0: 0, cols: 2 ** TZ, rows: 2 ** TZ, minK: 0.2, levels, street: [] };   // never stretch the sharpest imagery past 1.25x
   const tilesets = { world };
   const NB = { sf: { 'SoMa': [37.7785, -122.4056], 'Nob Hill': [37.7930, -122.4160], 'Civic Center': [37.7795, -122.4180], 'FiDi': [37.7940, -122.4000], 'Union Square': [37.7880, -122.4075], 'NoPa/Panhandle': [37.7750, -122.4430] }, kobe: { 'Port Island': [34.6660, 135.2120], 'Sannomiya': [34.6950, 135.1950], 'KBIC': [34.6575, 135.2235] } };
   const tpl = read('data/inventory/template.html');

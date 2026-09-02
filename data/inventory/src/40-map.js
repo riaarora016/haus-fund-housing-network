@@ -76,10 +76,12 @@
     // ---- markers ----
     function markerSvg(m) {
       const dim = m.dim ? ' dim' : '', sel = m.id === selected ? ' sel' : '', hov = m.id === hovered ? ' hov' : '';
-      if (m.kind === 'haus') return `<g class="mk haus${dim}${sel}${hov}${m.approx ? ' approx' : ''}" data-id="${m.id}" data-x="${px(m.lng).toFixed(1)}" data-y="${py(m.lat).toFixed(1)}" data-w="0" role="button" tabindex="0" aria-label="${esc(m.aria)}"><title>${esc(m.aria)}</title><rect x="-9" y="-9" width="18" height="18" rx="3" transform="rotate(45)"/><text y="-16" text-anchor="middle" font-size="12" font-weight="700">${esc(m.label)}</text></g>`;
+      if (m.kind === 'haus') return `<g class="mk haus${dim}${sel}${hov}${m.approx ? ' approx' : ''}" data-id="${m.id}" data-x="${px(m.lng).toFixed(1)}" data-y="${py(m.lat).toFixed(1)}" data-w="0" role="button" tabindex="0" aria-label="${esc(m.aria)}"><title>${esc(m.aria)}</title><rect class="dia" x="-9" y="-9" width="18" height="18" rx="3" transform="rotate(45)"/>${labelPill(m.label, -30)}</g>`;
       const w = m.label ? Math.max(34, m.label.length * 7.4 + 18) : 0;
       return `<g class="mk cand ${m.tone || ''}${dim}${sel}${hov}${m.approx ? ' approx' : ''}${m.signed ? ' signed' : ''}${m.deal ? ' deal' : ''}" data-id="${m.id}" data-x="${px(m.lng).toFixed(1)}" data-y="${py(m.lat).toFixed(1)}" data-w="${w}" role="button" tabindex="0" aria-label="${esc(m.aria)}"><title>${esc(m.aria)}</title><circle class="mdot" r="4.6"/>${m.status ? `<circle class="sdot" cx="5.5" cy="-5.5" r="3"/>` : ''}${m.label ? `<g class="pill${m.est ? ' est' : ''}" visibility="hidden"><rect x="${(-w / 2).toFixed(0)}" y="-34" width="${w}" height="23" rx="11.5"/><text y="-17.5" text-anchor="middle" font-size="12.5">${esc(m.label)}</text></g>` : ''}</g>`;
     }
+    // a small dark pill with light text: readable on imagery without a heavy outline
+    const labelPill = (text, y, size = 11.5) => { const w = text.length * size * 0.58 + 14; return `<g class="lab"><rect x="${(-w / 2).toFixed(1)}" y="${y - 13}" width="${w.toFixed(1)}" height="18" rx="5"/><text y="${y}" text-anchor="middle" font-size="${size}">${esc(text)}</text></g>`; };
     function setMarkers(list) {
       order = list.slice().sort((a, b) => (a.kind === 'haus' ? -1 : 0) - (b.kind === 'haus' ? -1 : 0) || (b.priority || 0) - (a.priority || 0));
       layers.mks.innerHTML = order.map(markerSvg).join('');
@@ -121,10 +123,10 @@
       for (const el of bring) layers.mks.appendChild(el);
       let o = '';
       if (anchor && overlays.rings) { const fx = px(anchor.lng), fy = py(anchor.lat); const mileDeg = 1 / (69.17 * Math.cos(anchor.lat * Math.PI / 180)); const pxMile = px(anchor.lng + mileDeg) - fx;
-        for (const [mi, lab] of [[0.5, '10 min walk'], [1, '20 min walk'], [1.5, '30 min walk']]) { const rr = mi * pxMile; o += `<circle class="ring" cx="${fx}" cy="${fy}" r="${rr.toFixed(0)}" stroke-width="${(1.3 * k).toFixed(1)}" stroke-dasharray="${(4 * k).toFixed(1)} ${(6 * k).toFixed(1)}"/><text class="ring-l" x="${fx}" y="${(fy - rr - 5 * k).toFixed(0)}" text-anchor="middle" font-size="${(11 * k).toFixed(1)}" stroke-width="${(3 * k).toFixed(1)}">${lab}</text>`; } }
+        for (const [mi, lab] of [[0.5, '10 min walk'], [1, '20 min walk'], [1.5, '30 min walk']]) { const rr = mi * pxMile; const w = 78 * k; o += `<circle class="ring" cx="${fx}" cy="${fy}" r="${rr.toFixed(0)}" stroke-width="${(1.2 * k).toFixed(1)}" stroke-dasharray="${(4 * k).toFixed(1)} ${(6 * k).toFixed(1)}"/><rect class="ring-b" x="${(fx - w / 2).toFixed(0)}" y="${(fy - rr - 17 * k).toFixed(0)}" width="${w.toFixed(0)}" height="${(16 * k).toFixed(0)}" rx="${(4 * k).toFixed(1)}"/><text class="ring-l" x="${fx}" y="${(fy - rr - 5.5 * k).toFixed(0)}" text-anchor="middle" font-size="${(10.5 * k).toFixed(1)}">${lab}</text>`; } }
       if (overlays.neighborhoods && neighborhoods) for (const [name, ll] of Object.entries(neighborhoods)) { const X = px(ll[1]), Y = py(ll[0]); o += `<g class="nb" transform="translate(${X.toFixed(0)} ${Y.toFixed(0)}) scale(${k.toFixed(4)})"><circle r="30" /><text text-anchor="middle" dy="4" font-size="11.5" font-weight="700">${esc(name)}</text></g>`; }
       layers.ovl.innerHTML = o;
-      if (anchor) layers.anchor.innerHTML = `<g transform="translate(${px(anchor.lng).toFixed(1)} ${py(anchor.lat).toFixed(1)}) scale(${k.toFixed(4)})"><circle r="15" class="halo"/><rect x="-8" y="-8" width="16" height="16" rx="3" transform="rotate(45)"/><text y="-16" text-anchor="middle" font-size="12" font-weight="700">${esc(anchor.name)}</text></g>`;
+      if (anchor) layers.anchor.innerHTML = `<g transform="translate(${px(anchor.lng).toFixed(1)} ${py(anchor.lat).toFixed(1)}) scale(${k.toFixed(4)})"><circle r="15" class="halo"/><rect class="dia" x="-8" y="-8" width="16" height="16" rx="3" transform="rotate(45)"/>${labelPill(anchor.name, -28)}</g>`; else layers.anchor.innerHTML = '';
     }
     svg.addEventListener('click', () => emit('select', null));
     let pending = null;   // camera request made while the map had no size (hidden tab, collapsed pane): replay it once we have one

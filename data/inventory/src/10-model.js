@@ -41,7 +41,7 @@
   HFI.savePrefs = () => save(C.PREFS_KEY, HFI.prefs);
   HFI.toggleShortlist = (id) => { HFI.shortlist.has(id) ? HFI.shortlist.delete(id) : HFI.shortlist.add(id); save(C.SHORTLIST_KEY, [...HFI.shortlist]); };
   HFI.EDITABLE = ['deal_status', 'inventory_class', 'negotiated_per_bed', 'negotiated_monthly', 'asking_per_bed', 'total_beds', 'available_beds', 'private_rooms', 'shared_rooms', 'available_from', 'available_until', 'minimum_stay_days',
-    'contact_name', 'contact_phone', 'contact_email', 'assigned_owner', 'next_action', 'next_followup_at', 'last_contacted_at', 'last_price_verified_at', 'last_availability_verified_at', 'quoted_terms', 'use', 'beds_reserved', 'cohort_ids', 'haus_node_ids', 'kitchen_status'];
+    'contact_name', 'contact_phone', 'contact_email', 'assigned_owner', 'next_action', 'next_followup_at', 'last_contacted_at', 'last_price_verified_at', 'last_availability_verified_at', 'quoted_terms', 'use', 'beds_reserved', 'cohort_ids', 'haus_node_ids', 'kitchen_status', 'followed_up_by', 'call_phone', 'call_notes'];
   HFI.saveEdit = (id, patch, by = 'human') => {
     const e = (HFI.edits[id] ??= { fields: {}, history: [], notes: [] });
     const base = HFI.raw.get(id) || {};
