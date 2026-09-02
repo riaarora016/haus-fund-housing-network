@@ -1,4 +1,29 @@
-# Biopunk Housing Portal
+# Haus Fund Housing Network
+
+Housing search and deal tracker for Haus (haus.fund) residencies: Punkhaus, Femhaus, Alumhaus, Safehaus in San Francisco, Cellhaus in Kobe.
+Describe what a house needs in plain words, see matching buildings on a satellite map with Google-style streets, open a building for
+its economics, contact and call log, and track deals in the Pipeline and Table views.
+
+Live build: https://claude.ai/code/artifact/3f658a7f-e9da-4e3a-9983-8c154e56c0da (private artifact; ask Ria for access)
+
+## Housing Network app (data/inventory)
+
+```bash
+npm install
+npm run build:inventory      # data/export-inventory.ts -> data/inventory/inventory.json, then data/build-inventory.ts -> data/exports/haus-fund-housing-network.html
+npm run web:dev              # open http://localhost:5173/haus-fund-housing-network.html
+```
+
+- Source of truth for buildings: `sources/biopunk-housing-tracker.xlsx` plus `data/additions.json`, `data/safety.json`, `refresh/state/verifications.json`. `npm run build` regenerates `data/properties.json`; never hand-edit generated JSON.
+- Houses and their housing profiles (bed range, kitchen rule, score weights, walk limit): `data/haus-nodes.json`. Markets and anchors: `data/cohorts.json`.
+- App modules: `data/inventory/src/*.js` (config, model, scoring, filters and prompt parser, map engine, list, drawer, views, app) concatenated into `data/inventory/template.html`.
+- Map imagery is Esri World Imagery tiles cached in `data/tiles-sat/` (not in git, fetch with `data/fetch-tiles-sat.ts`, `data/fetch-tiles-more.ts`, `data/fetch-tiles-world.ts`, `data/fetch-tiles-labels.ts`). Streets and names come from OpenStreetMap via `data/fetch-osm-roads.ts` into `data/inventory/roads.json`.
+- Edits made inside the app (status, call log, follow-ups) are stored in the viewer's browser. Export > "Local edits JSON" hands them back to merge into `refresh/state/verifications.json` or `data/additions.json`.
+- Style rule: no em dashes anywhere, plain hyphens only. Copy is short and human.
+
+The original portal (Google Sheet + Vite site + refresh engine) is documented below and still works.
+
+---
 
 Shareable, auto-updating housing tracker for the 40-50 person Biopunk cohort in San Francisco.
 **The Google Sheet is the database** (humans + agents edit it); the site is static (Vite + React) and reads the Sheet's published CSV; the refresh engine (Playwright + Gmail + Claude) keeps the **Inventory** tab honest every night. Full project context lives in [CLAUDE.md](CLAUDE.md).
