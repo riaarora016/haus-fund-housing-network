@@ -199,7 +199,7 @@ body.view-work .panel, body.view-work .map-top, body.view-work #legend, body.vie
   <header class="top">
     <a class="brand" href="https://haus.fund" target="_blank" rel="noopener" title="haus.fund">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-      <span><span class="wm"><b>Haus Fund</b> Housing Network</span><span class="sub">data <span id="data-date"></span></span></span>
+      <span class="wm"><b>Haus Fund</b> Housing Network</span>
     </a>
     <div class="hgroup" role="group" aria-label="View">
       <button class="hbtn" data-view="map" aria-pressed="true">Map</button><button class="hbtn" data-view="pipeline">Pipeline</button><button class="hbtn" data-view="table">Table</button><button class="hbtn" data-view="compare">Compare</button><button class="hbtn" data-view="haus">Network</button>
@@ -225,8 +225,7 @@ body.view-work .panel, body.view-work .map-top, body.view-work #legend, body.vie
       <div id="list"></div>
     </aside>
     <div class="map-top">
-      <div class="mgroup"><button class="mbtn" data-mode="sat" aria-pressed="true">Satellite</button><button class="mbtn" data-mode="map" aria-pressed="false">Map</button></div>
-      <div class="mgroup"><button class="mbtn" id="fit-inv" title="Fit results"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>Fit</button><button class="mbtn" id="go-anchor" title="Go to the anchor">Frontier Tower</button></div>
+      <div class="mgroup"><button class="mbtn" id="go-world" title="Whole world"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>World</button><button class="mbtn" id="fit-inv" title="Fit results"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>Fit</button><button class="mbtn" id="go-anchor" title="Go to the anchor">Frontier Tower</button></div>
       <button class="mbtn" id="search-area">Search this area</button>
     </div>
     <div class="mctl tr"><button class="mbtn" id="zin" aria-label="Zoom in">+</button><button class="mbtn" id="zout" aria-label="Zoom out">−</button></div>
@@ -238,7 +237,7 @@ body.view-work .panel, body.view-work .map-top, body.view-work #legend, body.vie
       <label><input type="checkbox" data-ovl="rings"> Walk-time rings</label>
       <label><input type="checkbox" data-ovl="neighborhoods"> Preferred neighborhoods</label>
       <div class="unk" style="font-size:11px">Dashed = approximate location. Groups open as you zoom.</div></div></div>
-    <div class="attrib">Imagery Esri, Maxar, Earthstar Geographics · streets OpenStreetMap</div>
+    <div class="attrib">Imagery Esri, Maxar, Earthstar Geographics</div>
     <aside id="drawer" class="glass" aria-hidden="true" aria-label="Property details"></aside>
     <section id="work" class="glass" hidden aria-label="Workspace"><div class="work-head"><h2 id="work-title"></h2><button class="btn sm" id="work-close">Back to map</button></div><div id="work-body"></div></section>
   </div>

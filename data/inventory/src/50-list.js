@@ -106,16 +106,13 @@
 
   const EXAMPLES = { sf: ['40 beds with a kitchen under $1,000 per bed', 'Femhaus: 12 beds, calm block, kitchen', 'Alumhaus, private rooms, near Frontier', 'Nob Hill, verified prices', 'Not contacted yet, 20+ beds'], kobe: ['Cellhaus: 15 beds near KBIC', '12 beds with a kitchen on Port Island'] };
   HFI.ui.renderIntro = () => {
-    const f = HFI.filters; const market = HFI.markets.get(f.market); const n = S.all.filter((r) => r.market === f.market && !r.dead).length;
-    const nodes = [...HFI.nodes.values()].filter((x) => x.market === f.market);
+    const f = HFI.filters; const market = HFI.markets.get(f.market);
     $('#list').innerHTML = `<div class="intro">
       <div class="intro-eyebrow">${esc(market?.name || '')}</div>
-      <h2 class="intro-h">What do you need?</h2>
-      <p class="intro-p">${n ? `${n} buildings on file. Describe the housing in plain words, or pick a house below. Nothing is drawn on the map until you ask.` : 'No buildings logged for this market yet. Pick a house to see its profile, or add candidates through additions.json.'}</p>
-      ${nodes.length ? `<div class="intro-l">Houses</div><div class="hpick">${nodes.map((x) => `<button class="hbtn-card" data-pick-haus="${x.id}"><span class="hdiamond"></span><span><b>${esc(x.name)}</b><small>${x.profile.beds_min} to ${x.profile.beds_max} beds · ${esc(x.status_label)}</small></span></button>`).join('')}</div>` : ''}
+      <h2 class="intro-h">Hey punk.</h2>
+      <p class="intro-p">Tell me what the house needs and I will find it.</p>
       <div class="intro-l">Try</div><div class="sug">${(EXAMPLES[f.market] || []).map((t) => `<button class="mini" data-prompt="${esc(t)}">${esc(t)}</button>`).join('')}</div>
     </div>`;
-    $$('[data-pick-haus]').forEach((b) => b.addEventListener('click', () => { HFI.filters.haus = b.dataset.pickHaus; HFI.ui.renderAll(); }));
     $$('[data-prompt]').forEach((b) => b.addEventListener('click', () => HFI.runPrompt(b.dataset.prompt)));
   };
 

@@ -9,6 +9,7 @@ HFI.CONFIG = {
   PRICE_ZERO_MULTIPLIER: 2.2,        // zero price points at target x this
   WEIGHTS: { price: 25, distance: 25, kitchen: 20, capacity: 15, safety: 10, timing: 5 },
   HAUS_TAG_BONUS: 5,                 // a building already tagged for the selected house gets this on top
+  ZOOM: { MARKET: 14, HOUSE: 16, PROPERTY: 17 },   // google-style zoom levels the app flies to
   STALE: {                           // days: fresh <= a, aging <= b, stale beyond
     price: { fresh: 7, aging: 14, stale: 45 },
     availability: { fresh: 7, aging: 14, stale: 30 },
@@ -16,7 +17,8 @@ HFI.CONFIG = {
   },
   NEGOTIATION_WAIT_DAYS: 14,
   MAP: {
-    CLUSTER_CELL_PX: 56, CLUSTER_MIN_K: 1.1, SEARCH_AREA_MOVE_FRACTION: 0.25, FLY_MS: 380,
+    CLUSTER: false, CLUSTER_CELL_PX: 56, CLUSTER_MIN_K: 1.1,   // clusters are off: plain pins, prices appear as space allows
+    SEARCH_AREA_MOVE_FRACTION: 0.25, FLY_MS: 380,
     WHEEL_SCROLL_RATE: 0.0032,       // trackpad two-finger scroll: zoom factor = exp(-deltaY * rate)
     WHEEL_PINCH_RATE: 0.012,         // trackpad pinch arrives as a wheel event with ctrlKey
     WHEEL_STEP: 1.4,                 // notched mouse wheels zoom by this per notch

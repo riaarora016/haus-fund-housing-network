@@ -9,7 +9,7 @@
     const mx = (lng) => ((lng + 180) / 360) * N, my = (lat) => ((1 - Math.asinh(Math.tan(lat * Math.PI / 180)) / Math.PI) / 2) * N;
     const px = (lng) => (mx(lng) - T.x0) * TS, py = (lat) => (my(lat) - T.y0) * TS;
     const lngOf = (x) => (x / TS + T.x0) / N * 360 - 180, latOf = (y) => Math.atan(Math.sinh(Math.PI * (1 - 2 * (y / TS + T.y0) / N))) * 180 / Math.PI;
-    const anchor = opts.anchor;
+    let anchor = opts.anchor || null, neighborhoods = opts.neighborhoods || null;
     root.innerHTML = '';
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('id', 'map'); svg.setAttribute('role', 'application'); svg.setAttribute('aria-label', 'Housing map'); svg.setAttribute('tabindex', '0');
@@ -22,6 +22,8 @@
     const listeners = {}; const emit = (e, ...a) => (listeners[e] || []).forEach((f) => f(...a));
     let mode = 'sat', view = { x: 0, y: 0, w: MW, h: MH }, markers = new Map(), order = [], selected = null, hovered = null, overlays = { rings: true, neighborhoods: false, haus: true, candidates: true, signed: true };
     const rect = () => svg.getBoundingClientRect();
+    const widthForZoom = (z) => Math.max(1, rect().width) * 2 ** (TZ - z);   // google-style zoom level -> viewBox width
+    const zoomOf = () => +(TZ - Math.log2(view.w / Math.max(1, rect().width))).toFixed(2);
 
     // ---- camera ----
     function applyView() {
@@ -90,7 +92,7 @@
     function rescale() {
       const r = rect(); if (!r.width) return; const k = view.w / r.width;
       for (const l of lvlEls) l.el.style.display = mode === 'sat' && k <= l.maxK ? '' : 'none';
-      const shown = []; const clusterCells = new Map(); const cell = C.MAP.CLUSTER_CELL_PX; const clustering = k >= C.MAP.CLUSTER_MIN_K && overlays.candidates;
+      const shown = []; const clusterCells = new Map(); const cell = C.MAP.CLUSTER_CELL_PX; const clustering = !!C.MAP.CLUSTER && k >= C.MAP.CLUSTER_MIN_K && overlays.candidates;
       const bring = [];
       for (const m of order) {
         const el = markers.get(m.id); if (!el) continue;
@@ -120,12 +122,14 @@
       let o = '';
       if (anchor && overlays.rings) { const fx = px(anchor.lng), fy = py(anchor.lat); const mileDeg = 1 / (69.17 * Math.cos(anchor.lat * Math.PI / 180)); const pxMile = px(anchor.lng + mileDeg) - fx;
         for (const [mi, lab] of [[0.5, '10 min walk'], [1, '20 min walk'], [1.5, '30 min walk']]) { const rr = mi * pxMile; o += `<circle class="ring" cx="${fx}" cy="${fy}" r="${rr.toFixed(0)}" stroke-width="${(1.3 * k).toFixed(1)}" stroke-dasharray="${(4 * k).toFixed(1)} ${(6 * k).toFixed(1)}"/><text class="ring-l" x="${fx}" y="${(fy - rr - 5 * k).toFixed(0)}" text-anchor="middle" font-size="${(11 * k).toFixed(1)}" stroke-width="${(3 * k).toFixed(1)}">${lab}</text>`; } }
-      if (overlays.neighborhoods && opts.neighborhoods) for (const [name, ll] of Object.entries(opts.neighborhoods)) { const X = px(ll[1]), Y = py(ll[0]); o += `<g class="nb" transform="translate(${X.toFixed(0)} ${Y.toFixed(0)}) scale(${k.toFixed(4)})"><circle r="30" /><text text-anchor="middle" dy="4" font-size="11.5" font-weight="700">${esc(name)}</text></g>`; }
+      if (overlays.neighborhoods && neighborhoods) for (const [name, ll] of Object.entries(neighborhoods)) { const X = px(ll[1]), Y = py(ll[0]); o += `<g class="nb" transform="translate(${X.toFixed(0)} ${Y.toFixed(0)}) scale(${k.toFixed(4)})"><circle r="30" /><text text-anchor="middle" dy="4" font-size="11.5" font-weight="700">${esc(name)}</text></g>`; }
       layers.ovl.innerHTML = o;
       if (anchor) layers.anchor.innerHTML = `<g transform="translate(${px(anchor.lng).toFixed(1)} ${py(anchor.lat).toFixed(1)}) scale(${k.toFixed(4)})"><circle r="15" class="halo"/><rect x="-8" y="-8" width="16" height="16" rx="3" transform="rotate(45)"/><text y="-16" text-anchor="middle" font-size="12" font-weight="700">${esc(anchor.name)}</text></g>`;
     }
     svg.addEventListener('click', () => emit('select', null));
-    const ro = new ResizeObserver(() => applyView()); ro.observe(svg);
+    let pending = null;   // camera request made while the map had no size (hidden tab, collapsed pane): replay it once we have one
+    const ro = new ResizeObserver(() => { const r = rect(); if (pending && r.width > 0 && r.height > 0) { const p = pending; pending = null; p(); } else applyView(); }); ro.observe(svg);
+    const whenSized = (fn) => { const r = rect(); if (r.width > 0 && r.height > 0) fn(); else pending = fn; };
 
     const api = {
       el: svg,
@@ -140,13 +144,15 @@
       getOverlays: () => ({ ...overlays }),
       zoomIn: () => animateTo(zoomTarget(view.x + view.w / 2, view.y + view.h / 2, 1.6)),
       zoomOut: () => animateTo(zoomTarget(view.x + view.w / 2, view.y + view.h / 2, 1 / 1.6)),
-      flyTo: (lat, lng, factor = 8) => { const r = rect(); const a = r.height / Math.max(1, r.width); const w = MW / factor; animateTo({ x: px(lng) - w / 2, y: py(lat) - w * a / 2, w, h: 0 }, C.MAP.FLY_MS, true); },
-      fitPoints: (pts, pad = 0.18) => { const r = rect(); const a = r.height / Math.max(1, r.width); const xs = pts.map((p) => px(p.lng)), ys = pts.map((p) => py(p.lat)); if (!xs.length) return api.home(); let x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys); const w0 = Math.max(x1 - x0, (y1 - y0) / a) * (1 + pad * 2); const w = Math.max(MINK * Math.max(1, r.width) * 4, w0); animateTo({ x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - w * a / 2, w, h: 0 }, C.MAP.FLY_MS, true); },
+      flyTo: (lat, lng, z = 16) => whenSized(() => { const r = rect(); const a = r.height / Math.max(1, r.width); const w = widthForZoom(z); animateTo({ x: px(lng) - w / 2, y: py(lat) - w * a / 2, w, h: 0 }, C.MAP.FLY_MS, true); }),
+      fitPoints: (pts, pad = 0.18) => whenSized(() => { const r = rect(); const a = r.height / Math.max(1, r.width); const xs = pts.map((p) => px(p.lng)), ys = pts.map((p) => py(p.lat)); if (!xs.length) return api.home(); let x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys); const w0 = Math.max(x1 - x0, (y1 - y0) / a) * (1 + pad * 2); const w = Math.max(widthForZoom(17), w0); animateTo({ x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - w * a / 2, w, h: 0 }, C.MAP.FLY_MS, true); }),
       home: () => { const r = rect(); const a = r.width > 0 && r.height > 0 ? r.height / r.width : MH / MW; view = { x: 0, y: 0, w: Math.max(MW, MH / a), h: 0 }; applyView(); settled = { ...view }; },
       markSettled: () => { settled = { ...view }; },
       getBounds: () => ({ n: latOf(view.y), s: latOf(view.y + view.h), w: lngOf(view.x), e: lngOf(view.x + view.w) }),
-      getView: () => ({ lat: latOf(view.y + view.h / 2), lng: lngOf(view.x + view.w / 2), z: +(MW / view.w).toFixed(2) }),
-      setView: (v) => { const r = rect(); const a = r.height / Math.max(1, r.width); const w = MW / (v.z || 1); view = { x: px(v.lng) - w / 2, y: py(v.lat) - w * a / 2, w, h: 0 }; applyView(); settled = { ...view }; },
+      getView: () => ({ lat: latOf(view.y + view.h / 2), lng: lngOf(view.x + view.w / 2), z: zoomOf() }),
+      getZoom: zoomOf,
+      setAnchor: (a, nb) => { anchor = a || null; neighborhoods = nb || null; rescale(); },
+      setView: (v) => whenSized(() => { const r = rect(); const a = r.height / Math.max(1, r.width); const w = widthForZoom(v.z ?? 12); view = { x: px(v.lng) - w / 2, y: py(v.lat) - w * a / 2, w, h: 0 }; applyView(); settled = { ...view }; }),
       resize: () => applyView(),
       destroy: () => { stopAnim(); ro.disconnect(); svg.remove(); },
     };
