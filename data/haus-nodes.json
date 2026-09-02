@@ -1,40 +1,285 @@
 {
-  "_comment": "Haus network residences, seeded from the public haus.fund site (read Aug 2026) plus our own planning notes. Only facts we have. start_date_precision: 'day' = exact date published, 'month' = month only, null = active with no start date given. Addresses are intentionally absent where not public.",
+  "_comment": "Haus network residences as published on haus.fund (read Sept 1 2026) plus our own planning notes. Names are spelled the way the site spells them. start_date_precision: 'day' = exact date published, 'month' = month only, null = active or in development with no date. Coordinates are absent where the site gives no address; 'campus' means we placed the pin on the named campus, not a street address. profile = how the housing search should read this house: bed range, kitchen rule, and scoring weights.",
   "nodes": [
-    { "id": "punk-haus", "name": "Punk Haus", "market": "sf", "city": "San Francisco", "status": "active", "kind": "flagship cohort residence",
-      "description": "Flagship fundraising and cohort residence; Cohort 3 home. Communal cohort housing tied to the San Francisco ecosystem.",
-      "cohort_ids": ["c3"], "start_date": "2026-09-15", "start_date_precision": "day",
-      "neighborhood": null, "lat": null, "lng": null, "location_precision": "none",
-      "linked_candidate_ids": ["pl-baseline-fitzgerald-co-living-floors-current-d", "pl-baseline-fitzgerald-hotel-nightly-side"],
-      "planning_note": "Planning call Aug 20: the cohort residence is expected to be the Fitzgerald (620 Post St) from Sept 27, two floors, with the whole building as next year's aim. That deal was 'being signed' on Aug 20; our data does not confirm signature.",
-      "source": "haus.fund (Aug 2026); Ria <> Elliot planning call Aug 20 2026" },
-    { "id": "fem-haus", "name": "Fem Haus", "market": "sf", "city": "San Francisco", "status": "active", "kind": "all-women founder residence",
-      "description": "All-women founder residence for Cohort 3.",
-      "cohort_ids": ["c3"], "start_date": "2026-09-15", "start_date_precision": "day",
-      "neighborhood": "Nob Hill", "lat": 37.7930, "lng": -122.4160, "location_precision": "neighborhood",
-      "linked_candidate_ids": ["add-2550-van-ness"],
-      "planning_note": "Planning call Aug 20: 2550 Van Ness (with Minerva University) is being worked for the femme house or safe house; ~10 to 12 women, kitchen required.",
-      "source": "haus.fund (Aug 2026): Nob Hill, Sept 15 2026 intake" },
-    { "id": "alum-haus", "name": "Alum Haus", "market": "sf", "city": "San Francisco", "status": "active", "kind": "alumni residence",
-      "description": "Alumni house: extended stays and the ongoing founder network. Not a Cohort 3 intake house.",
-      "cohort_ids": [], "start_date": null, "start_date_precision": null,
-      "neighborhood": null, "lat": null, "lng": null, "location_precision": "none",
+    {
+      "id": "punk-haus",
+      "name": "Punkhaus",
+      "market": "sf",
+      "city": "San Francisco",
+      "status": "active",
+      "status_label": "Active",
+      "kind": "Flagship cohort residence",
+      "description": "The fundraising flagship. Cohort housing, communal kitchen, dry-lab workspace, and the weekly dinners where companies go from angel to seed.",
+      "tags": [
+        "Fundraising",
+        "Cohort housing",
+        "Showcase"
+      ],
+      "start_date": null,
+      "start_date_precision": null,
+      "neighborhood": null,
+      "lat": null,
+      "lng": null,
+      "location_precision": "none",
+      "linked_candidate_ids": [
+        "pl-baseline-fitzgerald-co-living-floors-current-d",
+        "pl-baseline-fitzgerald-hotel-nightly-side"
+      ],
+      "planning_note": "Aug 20 planning call: the cohort residence is expected to be the Fitzgerald (620 Post St) from Sept 27, two floors, whole building as next year's aim. That deal was 'being signed' on Aug 20; our data does not confirm a signature.",
+      "profile": {
+        "beds_min": 40,
+        "beds_max": 60,
+        "kitchen": "required",
+        "weights": {
+          "price": 25,
+          "distance": 25,
+          "kitchen": 20,
+          "capacity": 15,
+          "safety": 10,
+          "timing": 5
+        },
+        "note": "One building for the whole cohort, or two buildings close to each other.",
+        "max_walk": 30
+      },
+      "source": "haus.fund/punkhaus (Sept 2026); Ria and Elliot planning call Aug 20 2026"
+    },
+    {
+      "id": "fem-haus",
+      "name": "Femhaus",
+      "market": "sf",
+      "city": "San Francisco",
+      "status": "active",
+      "status_label": "Active",
+      "kind": "All-women founder residence",
+      "description": "The all-women house. A founder residence blending rigorous scientific work, startup building, and a culture of mutual care and ambition.",
+      "tags": [
+        "Women founders",
+        "Cohort housing",
+        "Community"
+      ],
+      "start_date": null,
+      "start_date_precision": null,
+      "neighborhood": "Nob Hill",
+      "lat": 37.793,
+      "lng": -122.416,
+      "location_precision": "neighborhood",
+      "linked_candidate_ids": [
+        "add-2550-van-ness"
+      ],
+      "planning_note": "Aug 20 planning call: 2550 Van Ness (with Minerva University) is being worked for Femhaus or Safehaus; about 10 to 12 women, kitchen required.",
+      "profile": {
+        "beds_min": 10,
+        "beds_max": 16,
+        "kitchen": "required",
+        "weights": {
+          "price": 20,
+          "distance": 20,
+          "kitchen": 20,
+          "capacity": 15,
+          "safety": 20,
+          "timing": 5
+        },
+        "note": "Small, safe, own kitchen. Calm block matters more than price here.",
+        "max_walk": 30
+      },
+      "source": "haus.fund/femhaus (Sept 2026); planning call Aug 20 2026"
+    },
+    {
+      "id": "alum-haus",
+      "name": "Alumhaus",
+      "market": "sf",
+      "city": "San Francisco",
+      "status": "active",
+      "status_label": "Active",
+      "kind": "Alumni residence",
+      "description": "The alumni house. Where graduated founders keep building inside the network: extended stays, ongoing community, and the gravitational center of the alumni layer.",
+      "tags": [
+        "Alumni",
+        "Extended stays",
+        "Network"
+      ],
+      "start_date": null,
+      "start_date_precision": null,
+      "neighborhood": null,
+      "lat": null,
+      "lng": null,
+      "location_precision": "none",
       "linked_candidate_ids": [],
-      "planning_note": "Planning call Aug 20: alum house operational Sept 1 2026.",
-      "source": "haus.fund (Aug 2026); planning call Aug 20 2026" },
-    { "id": "safe-haus", "name": "Safe Haus", "market": "sf", "city": "San Francisco", "status": "planned", "kind": "biosecurity and biodefense residence",
-      "description": "Biosecurity / biodefense residence. Site says Sept 2026; no exact date published.",
-      "cohort_ids": [], "start_date": "2026-09", "start_date_precision": "month",
-      "neighborhood": null, "lat": null, "lng": null, "location_precision": "none",
-      "linked_candidate_ids": ["add-2550-van-ness"],
-      "planning_note": "2550 Van Ness is a candidate for either the femme house or the safe house (Aug 20 call).",
-      "source": "haus.fund (Aug 2026)" },
-    { "id": "cell-haus", "name": "Cell Haus", "market": "kobe", "city": "Kobe, Japan", "status": "planned", "kind": "cell and gene therapy node",
-      "description": "Cell and gene therapy node in Kobe. Site says Sept 2026.",
-      "cohort_ids": [], "start_date": "2026-09", "start_date_precision": "month",
-      "neighborhood": null, "lat": null, "lng": null, "location_precision": "none",
+      "planning_note": "Aug 20 planning call: alum house operational Sept 1 2026.",
+      "profile": {
+        "beds_min": 8,
+        "beds_max": 20,
+        "kitchen": "required",
+        "weights": {
+          "price": 30,
+          "distance": 20,
+          "kitchen": 20,
+          "capacity": 15,
+          "safety": 10,
+          "timing": 5
+        },
+        "note": "Longer stays, so monthly price per bed and a real kitchen weigh most.",
+        "max_walk": 30
+      },
+      "source": "haus.fund (Sept 2026); planning call Aug 20 2026"
+    },
+    {
+      "id": "safe-haus",
+      "name": "Safehaus",
+      "market": "sf",
+      "city": "San Francisco",
+      "status": "planned",
+      "status_label": "Sept 2026",
+      "kind": "Biosecurity and biodefense residence",
+      "description": "The biosecurity house. A live-in residency for founders building defenses against engineered pandemics: countermeasures, DNA-synthesis screening, and biosurveillance.",
+      "tags": [
+        "Biosecurity",
+        "Biodefense",
+        "Countermeasures"
+      ],
+      "start_date": "2026-09",
+      "start_date_precision": "month",
+      "neighborhood": null,
+      "lat": null,
+      "lng": null,
+      "location_precision": "none",
+      "linked_candidate_ids": [
+        "add-2550-van-ness"
+      ],
+      "planning_note": "2550 Van Ness is a candidate for either Femhaus or Safehaus (Aug 20 call).",
+      "profile": {
+        "beds_min": 10,
+        "beds_max": 16,
+        "kitchen": "required",
+        "weights": {
+          "price": 20,
+          "distance": 20,
+          "kitchen": 20,
+          "capacity": 15,
+          "safety": 20,
+          "timing": 5
+        },
+        "note": "Small secure building with its own kitchen.",
+        "max_walk": 30
+      },
+      "source": "haus.fund/safehaus (Sept 2026)"
+    },
+    {
+      "id": "cell-haus",
+      "name": "Cellhaus",
+      "market": "kobe",
+      "city": "Kobe, Japan",
+      "status": "planned",
+      "status_label": "Sep 2026",
+      "kind": "Cell and gene therapy node",
+      "description": "Lab space inside KBIC, the Kobe Biomedical Innovation Cluster, with cohort living space on campus. Bench and bed on the same island. First cohort targeted September 2026 with Frontier Humans, running into Mirai Tech PopUp City on Port Island.",
+      "tags": [
+        "KBIC lab space",
+        "PMDA pathways",
+        "On-campus living"
+      ],
+      "start_date": "2026-09",
+      "start_date_precision": "month",
+      "neighborhood": "Port Island",
+      "lat": 34.6575,
+      "lng": 135.2235,
+      "location_precision": "campus",
       "linked_candidate_ids": [],
       "planning_note": null,
-      "source": "haus.fund (Aug 2026)" }
+      "profile": {
+        "beds_min": 12,
+        "beds_max": 20,
+        "kitchen": "required",
+        "weights": {
+          "price": 25,
+          "distance": 25,
+          "kitchen": 20,
+          "capacity": 15,
+          "safety": 10,
+          "timing": 5
+        },
+        "note": "Walking distance to KBIC on Port Island. No candidates logged yet.",
+        "max_walk": 25
+      },
+      "source": "haus.fund/cellhaus and haus.fund/expansion (Sept 2026)"
+    },
+    {
+      "id": "pharm-haus",
+      "name": "Pharmhaus",
+      "market": "san-juan",
+      "city": "San Juan, Puerto Rico",
+      "status": "development",
+      "status_label": "In development",
+      "kind": "Pharma manufacturing node",
+      "description": "With BioLeap (operated by parallel18), residents get lab space at the Confluence Center in Science City plus cGMP pilot plant access. Cohort housing anchored at Casa Chironja, a beachside coliving compound in San Juan.",
+      "tags": [
+        "cGMP pilot plants",
+        "R&D tax credits",
+        "US jurisdiction"
+      ],
+      "start_date": null,
+      "start_date_precision": null,
+      "neighborhood": null,
+      "lat": null,
+      "lng": null,
+      "location_precision": "none",
+      "linked_candidate_ids": [],
+      "planning_note": null,
+      "profile": {
+        "beds_min": 12,
+        "beds_max": 20,
+        "kitchen": "required",
+        "weights": {
+          "price": 25,
+          "distance": 25,
+          "kitchen": 20,
+          "capacity": 15,
+          "safety": 10,
+          "timing": 5
+        },
+        "note": "No map imagery loaded for San Juan yet.",
+        "max_walk": 30
+      },
+      "source": "haus.fund/expansion (Sept 2026)"
+    },
+    {
+      "id": "green-haus",
+      "name": "Greenhaus",
+      "market": "buenos-aires",
+      "city": "Buenos Aires, Argentina",
+      "status": "development",
+      "status_label": "In development",
+      "kind": "DeSci and agtech node",
+      "description": "With Crecimiento, lab and coworking space at +54 Lab inside the Parque de Innovacion, Buenos Aires' science and technology district.",
+      "tags": [
+        "DeSci",
+        "Agtech",
+        "Lab coworking"
+      ],
+      "start_date": null,
+      "start_date_precision": null,
+      "neighborhood": null,
+      "lat": null,
+      "lng": null,
+      "location_precision": "none",
+      "linked_candidate_ids": [],
+      "planning_note": null,
+      "profile": {
+        "beds_min": 12,
+        "beds_max": 20,
+        "kitchen": "required",
+        "weights": {
+          "price": 25,
+          "distance": 25,
+          "kitchen": 20,
+          "capacity": 15,
+          "safety": 10,
+          "timing": 5
+        },
+        "note": "No map imagery loaded for Buenos Aires yet.",
+        "max_walk": 30
+      },
+      "source": "haus.fund/expansion (Sept 2026)"
+    }
   ]
 }

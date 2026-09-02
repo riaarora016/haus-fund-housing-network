@@ -19,7 +19,7 @@
     "export:xlsx": "tsx data/export-xlsx.ts && python3 data/style-xlsx.py",
     "export:map": "tsx data/export-map.ts",
     "build:map-artifact": "tsx data/export-map.ts && tsx data/build-map-artifact.ts",
-    "build:inventory": "tsx data/export-inventory.ts && tsx data/build-inventory.ts"
+    "build:inventory": "tsx data/export-inventory.ts && tsx data/build-inventory.ts && cp data/exports/haus-fund-housing-network.html web/public/"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/node": "^26.2.0",
     "@types/papaparse": "^5.5.2",
+    "sharp": "^0.35.4",
     "tsx": "^4.23.12",
     "typescript": "^7.0.2",
     "xlsx": "^0.18.5"
