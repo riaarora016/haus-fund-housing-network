@@ -43,7 +43,7 @@ const sizeOf = (L: Layer | null) => (L ? L.tiles.reduce((s, t) => s + t.d.length
   for (let z = 0; z <= 18; z++) {
     const sats: Layer[] = [], labels: Layer[] = [];
     for (const pre of ['w-sat-', 'sat-', 'kobe-sat-']) { const L = await layer(SAT, pre, z, 'image/jpeg'); if (L) sats.push(L); }
-    { const L = await layer(SAT, 'c-lab-', z, 'image/png'); if (L) labels.push(L); }   // CARTO dark_only_labels: thin, clean type over imagery
+    if (z < 14) { const L = await layer(SAT, 'c-lab-', z, 'image/png'); if (L) labels.push(L); }   // CARTO labels at region scale; from z14 streets and names are vectors from OSM
     const all = [...sats, ...labels]; if (!all.length) continue;
     const n = all.reduce((a, L) => a + L.tiles.length, 0), bytes = all.reduce((a, L) => a + sizeOf(L), 0);
     report.push(`z${z}: ${n} tiles, ${(bytes / 1048576).toFixed(2)} MB`);
@@ -54,7 +54,7 @@ const sizeOf = (L: Layer | null) => (L ? L.tiles.reduce((s, t) => s + t.d.length
   const NB = { sf: { 'SoMa': [37.7785, -122.4056], 'Nob Hill': [37.7930, -122.4160], 'Civic Center': [37.7795, -122.4180], 'FiDi': [37.7940, -122.4000], 'Union Square': [37.7880, -122.4075], 'NoPa/Panhandle': [37.7750, -122.4430] }, kobe: { 'Port Island': [34.6660, 135.2120], 'Sannomiya': [34.6950, 135.1950], 'KBIC': [34.6575, 135.2235] } };
   const tpl = read('data/inventory/template.html');
   const tilesJson = JSON.stringify(tilesets);
-  const out = tpl.replace('/*__DATA__*/', () => data).replace('/*__TILES__*/', () => tilesJson).replace('/*__NB__*/', () => JSON.stringify(NB)).replace('/*__APP__*/', () => app);
+  const out = tpl.replace('/*__DATA__*/', () => data).replace('/*__TILES__*/', () => tilesJson).replace('/*__NB__*/', () => JSON.stringify(NB)).replace('/*__ROADS__*/', () => read('data/inventory/roads.json')).replace('/*__APP__*/', () => app);
   fs.mkdirSync('data/exports', { recursive: true });
   fs.writeFileSync('data/exports/haus-fund-housing-network.html', out);
   const mb = (n: number) => (n / 1048576).toFixed(2);

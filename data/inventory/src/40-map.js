@@ -16,8 +16,8 @@
     root.appendChild(svg);
     const tileImgs = (L, z = L.z) => { const f = TS * 2 ** (TZ - z); let o = ''; for (const t of L.tiles) o += `<image href="data:${L.mime};base64,${t.d}" x="${(t.x * f - T.x0 * TS).toFixed(1)}" y="${(t.y * f - T.y0 * TS).toFixed(1)}" width="${(f + 0.6).toFixed(1)}" height="${(f + 0.6).toFixed(1)}"/>`; return o; };
     const levels = (T.levels || []).map((L, i) => ({ maxK: L.maxK ?? Infinity, id: `lvl${i}`, html: `<g class="tiles lvl" id="lvl${i}">${(L.layers || []).map((ly) => tileImgs(ly, L.z)).join('')}</g>` }));
-    svg.innerHTML = `<g id="street" style="display:none"><g class="tiles street">${(T.street || []).map((ly) => tileImgs(ly, ly.z)).join('')}</g></g><g id="sat">${levels.map((l) => l.html).join('')}</g><g id="ovl"></g><g id="clusters"></g><g id="mks"></g><g id="anchor" style="pointer-events:none"></g>`;
-    const layers = { street: $('#street', svg), sat: $('#sat', svg), ovl: $('#ovl', svg), clusters: $('#clusters', svg), mks: $('#mks', svg), anchor: $('#anchor', svg) };
+    svg.innerHTML = `<g id="street" style="display:none"><g class="tiles street">${(T.street || []).map((ly) => tileImgs(ly, ly.z)).join('')}</g></g><g id="sat">${levels.map((l) => l.html).join('')}</g><g id="roads"></g><g id="ovl"></g><g id="clusters"></g><g id="mks"></g><g id="anchor" style="pointer-events:none"></g>`;
+    const layers = { street: $('#street', svg), sat: $('#sat', svg), roads: $('#roads', svg), ovl: $('#ovl', svg), clusters: $('#clusters', svg), mks: $('#mks', svg), anchor: $('#anchor', svg) };
     const lvlEls = levels.map((l) => ({ ...l, el: $('#' + l.id, svg) }));
     const listeners = {}; const emit = (e, ...a) => (listeners[e] || []).forEach((f) => f(...a));
     let mode = 'sat', view = { x: 0, y: 0, w: MW, h: MH }, markers = new Map(), order = [], selected = null, hovered = null, overlays = { rings: true, neighborhoods: false, haus: true, candidates: true, signed: true };
@@ -94,6 +94,7 @@
     function rescale() {
       const r = rect(); if (!r.width) return; const k = view.w / r.width;
       for (const l of lvlEls) l.el.style.display = mode === 'sat' && k <= l.maxK ? '' : 'none';
+      gateRoads(k);
       const shown = []; const clusterCells = new Map(); const cell = C.MAP.CLUSTER_CELL_PX; const clustering = !!C.MAP.CLUSTER && k >= C.MAP.CLUSTER_MIN_K && overlays.candidates;
       const bring = [];
       for (const m of order) {
@@ -128,6 +129,54 @@
       layers.ovl.innerHTML = o;
       if (anchor) layers.anchor.innerHTML = `<g transform="translate(${px(anchor.lng).toFixed(1)} ${py(anchor.lat).toFixed(1)}) scale(${k.toFixed(4)})"><circle r="15" class="halo"/><rect class="dia" x="-8" y="-8" width="16" height="16" rx="3" transform="rotate(45)"/>${labelPill(anchor.name, -28)}</g>`; else layers.anchor.innerHTML = '';
     }
+    // ---- vector streets and place names (OpenStreetMap), drawn the way Google's satellite view does:
+    // yellow arterials, faint minor streets, white street names along the road with a soft dark halo,
+    // uppercase neighbourhood names. Lines keep a constant screen width; text is rescaled per frame on the group.
+    const LINE_MINZ = [9, 11, 12.5, 14, 15], LABEL_MINZ = [13, 13, 14, 15, 16];
+    let lineGroups = [], labelMeta = [], placeMeta = [], textGroups = [], lastGate = null;
+    // data = { marketId: { roads, places } }. Each market's geometry lives in its own group with a local origin,
+    // because text-on-path layout breaks down when SVG coordinates run into the millions (float precision).
+    function setRoads(data) {
+      if (!data) return; let html = ''; const meta = [], pm = []; let i = 0;
+      for (const [mid, m] of Object.entries(data)) {
+        const first = m.roads?.[0]?.p?.[0] || (m.places?.[0] && [m.places[0].lng, m.places[0].lat]); if (!first) continue;
+        const ox = Math.round(px(first[0])), oy = Math.round(py(first[1]));
+        const lines = [[], [], [], [], []], texts = [], places = [];
+        for (const w of m.roads || []) {
+          let pts = w.p.map(([lng, lat]) => [px(lng), py(lat)]); if (pts[0][0] > pts[pts.length - 1][0]) pts = pts.reverse();
+          let len = 0; for (let j = 1; j < pts.length; j++) len += Math.hypot(pts[j][0] - pts[j - 1][0], pts[j][1] - pts[j - 1][1]);
+          const d = pts.map((q, j) => `${j ? 'L' : 'M'}${(q[0] - ox).toFixed(1)} ${(q[1] - oy).toFixed(1)}`).join('');
+          const id = `rd${i++}`; lines[w.c].push(`<path id="${id}" d="${d}"/>`);
+          const textPx = w.n.length * 6.6 + 12; const fitZ = TZ - Math.log2(len / (textPx * 1.15));
+          const minz = Math.max(LABEL_MINZ[w.c], Math.ceil(fitZ * 2) / 2); if (minz > 18.5) continue;
+          const xs = pts.map((q) => q[0]), ys = pts.map((q) => q[1]);
+          meta.push({ minz, x0: Math.min(...xs), x1: Math.max(...xs), y0: Math.min(...ys), y1: Math.max(...ys), on: true });
+          texts.push(`<text data-i="${meta.length - 1}"><textPath href="#${id}" startOffset="50%" text-anchor="middle">${esc(w.n)}</textPath></text>`);
+        }
+        for (const pl of m.places || []) { if (pl.k === 'city' || pl.k === 'town') continue; const X = px(pl.lng), Y = py(pl.lat); pm.push({ x: X, y: Y, on: true }); places.push(`<text class="pn" data-i="${pm.length - 1}" x="${(X - ox).toFixed(1)}" y="${(Y - oy).toFixed(1)}" text-anchor="middle">${esc(pl.n.toUpperCase())}</text>`); }
+        html += `<g class="rg" data-m="${mid}" transform="translate(${ox} ${oy})">${lines.map((l, c) => `<g class="rl rc${c}" data-minz="${LINE_MINZ[c]}">${l.join('')}</g>`).join('')}<g class="rtx">${texts.join('')}</g><g class="pls">${places.join('')}</g></g>`;
+      }
+      layers.roads.innerHTML = html;
+      for (const p of layers.roads.querySelectorAll('.rl path')) p.setAttribute('vector-effect', 'non-scaling-stroke');
+      lineGroups = [...layers.roads.querySelectorAll('.rl')].map((g) => ({ el: g, minz: +g.dataset.minz }));
+      textGroups = [...layers.roads.querySelectorAll('.rtx, .pls')];
+      labelMeta = [...layers.roads.querySelectorAll('.rtx text')].map((el) => ({ ...meta[+el.dataset.i], el }));
+      placeMeta = [...layers.roads.querySelectorAll('.pls text')].map((el) => ({ ...pm[+el.dataset.i], el }));
+      lastGate = null; rescale();
+    }
+    // per frame: text size follows the zoom (group attributes only). On a zoom step or a real move: show only the
+    // labels that fit this zoom and sit near the viewport, so the browser lays out a few hundred labels, not thousands.
+    function gateRoads(k) {
+      if (!lineGroups.length) return; const z = TZ - Math.log2(k); const step = Math.round(z * 4) / 4;
+      for (const g of textGroups) { const pl = g.classList.contains('pls'); g.setAttribute('font-size', ((pl ? 11 : 11.5) * k).toFixed(2)); g.setAttribute('stroke-width', ((pl ? 3 : 2.6) * k).toFixed(2)); g.setAttribute('letter-spacing', ((pl ? 1.3 : 0.25) * k).toFixed(2)); }
+      layers.roads.classList.toggle('z-hi', z >= 15.5);
+      const moved = !lastGate || step !== lastGate.step || Math.abs(view.x - lastGate.x) > view.w * 0.25 || Math.abs(view.y - lastGate.y) > view.h * 0.25;
+      if (!moved) return; lastGate = { step, x: view.x, y: view.y };
+      for (const g of lineGroups) g.el.style.display = z >= g.minz ? '' : 'none';
+      const X0 = view.x - view.w * 0.3, X1 = view.x + view.w * 1.3, Y0 = view.y - view.h * 0.3, Y1 = view.y + view.h * 1.3;
+      for (const m of labelMeta) { const on = z >= m.minz && m.x1 > X0 && m.x0 < X1 && m.y1 > Y0 && m.y0 < Y1; if (on !== m.on) { m.on = on; m.el.style.display = on ? '' : 'none'; } }
+      for (const m of placeMeta) { const on = z >= 13.5 && z < 17.5 && m.x > X0 && m.x < X1 && m.y > Y0 && m.y < Y1; if (on !== m.on) { m.on = on; m.el.style.display = on ? '' : 'none'; } }
+    }
     svg.addEventListener('click', () => emit('select', null));
     let pending = null;   // camera request made while the map had no size (hidden tab, collapsed pane): replay it once we have one
     const ro = new ResizeObserver(() => { const r = rect(); if (pending && r.width > 0 && r.height > 0) { const p = pending; pending = null; p(); } else applyView(); }); ro.observe(svg);
@@ -139,7 +188,7 @@
       hasStreet: () => !!(T.street && T.street.length),
       setMode: (m) => { mode = m === 'map' && api.hasStreet() ? 'map' : 'sat'; layers.street.style.display = mode === 'map' ? '' : 'none'; layers.sat.style.display = mode === 'map' ? 'none' : ''; rescale(); return mode; },
       getMode: () => mode,
-      setMarkers, rescale,
+      setMarkers, rescale, setRoads,
       setSelected: (id) => { selected = id; for (const [mid, el] of markers) el.classList.toggle('sel', mid === id); rescale(); },
       setHover: (id) => { hovered = id; for (const [mid, el] of markers) el.classList.toggle('hov', mid === id); },
       setOverlay: (n, on) => { overlays[n] = on; rescale(); },

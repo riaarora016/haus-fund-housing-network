@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&family=DM+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap">
 <style>
 /* Tokens follow the Haus Fund design system (haus.fund/design-system): canvas, ink, forest, bronze, steel, semantic. */
 :root {
@@ -138,6 +138,14 @@ body.panel-collapsed .map-top, body.panel-collapsed #legend { --panel-w: 0px; }
 #legend label { display: flex; align-items: center; gap: 7px; } .lg-sw { width: 10px; height: 10px; display: inline-block; border-radius: 50%; } .lg-sw.haus { background: var(--forest-4); border-radius: 2px; transform: rotate(45deg); } .lg-sw.anchor { background: #fff; border: 2px solid var(--forest-4); border-radius: 2px; transform: rotate(45deg); } .lg-sw.cand { background: #fff; border-radius: 6px; width: 16px; } .lg-sw.signed { background: var(--positive); border-radius: 6px; width: 16px; }
 .attrib { position: absolute; right: 6px; bottom: 6px; font-size: 10px; color: #D8D4CB; background: var(--glass-dark); padding: 2px 7px; border-radius: 6px; z-index: 15; }
 
+/* streets and names, Google satellite palette: Roboto, white type with a soft dark halo, yellow arterials */
+#roads { font-family: "Roboto", "DM Sans", system-ui, sans-serif; pointer-events: none; }
+#roads .rl path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+#roads .rc0 path { stroke: #F2C255; stroke-width: 3.2px; } #roads .rc1 path { stroke: #F5E2A2; stroke-width: 2.6px; } #roads .rc2 path { stroke: #F5E7B8; stroke-width: 2px; stroke-opacity: .9; }
+#roads .rc3 path { stroke: #FFFFFF; stroke-width: 1.4px; stroke-opacity: .7; } #roads .rc4 path { stroke: #FFFFFF; stroke-width: 1px; stroke-opacity: .45; }
+#roads.z-hi .rc0 path { stroke-width: 5px; } #roads.z-hi .rc1 path { stroke-width: 4px; } #roads.z-hi .rc2 path { stroke-width: 3px; } #roads.z-hi .rc3 path { stroke-width: 2px; } #roads.z-hi .rc4 path { stroke-width: 1.5px; }
+#roads .rtx text { fill: #FFFFFF; font-weight: 500; paint-order: stroke; stroke: rgba(0,0,0,.62); stroke-linejoin: round; }
+#roads .pls text { fill: #FFFFFF; font-weight: 500; paint-order: stroke; stroke: rgba(0,0,0,.6); stroke-linejoin: round; } #roads .pls .city { font-size: 1.9em; letter-spacing: 0; font-weight: 400; }
 /* markers (screen units, scaled by the engine) */
 .mk { cursor: pointer; outline: none; } .mk.dim { opacity: .16; pointer-events: none; }
 .mk .mdot { fill: #FFFFFF; stroke: #0F2419; stroke-width: 1.6; } .mk.deal .mdot { fill: #D4B07C; } .mk.signed .mdot { fill: #3D8C6A; }
@@ -248,14 +256,14 @@ body.view-work .panel, body.view-work .map-top, body.view-work #legend, body.vie
       <label><input type="checkbox" data-ovl="rings"> Walk-time rings</label>
       <label><input type="checkbox" data-ovl="neighborhoods"> Preferred neighborhoods</label>
       <div class="unk" style="font-size:11px">Dashed = approximate location. Groups open as you zoom.</div></div></div>
-    <div class="attrib">Imagery Esri, Maxar, Earthstar Geographics · labels CARTO, OpenStreetMap</div>
+    <div class="attrib">Imagery Esri, Maxar, Earthstar Geographics · streets OpenStreetMap · labels CARTO</div>
     <aside id="drawer" class="glass" aria-hidden="true" aria-label="Property details"></aside>
     <section id="work" class="glass" hidden aria-label="Workspace"><div class="work-head"><h2 id="work-title"></h2><button class="btn sm" id="work-close">Back to map</button></div><div id="work-body"></div></section>
   </div>
 </div>
 <div id="modal" aria-hidden="true" role="dialog" aria-label="Export"><div class="modal-card"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Export</h3><button class="btn sm" id="modal-close">Close</button></div><div id="modal-body"></div></div></div>
-<script>window.HFI_DATA = /*__DATA__*/; window.HFI_TILES = /*__TILES__*/; window.HFI_NEIGHBORHOODS = /*__NB__*/;</script>
+<script>window.HFI_DATA = /*__DATA__*/; window.HFI_TILES = /*__TILES__*/; window.HFI_NEIGHBORHOODS = /*__NB__*/; window.HFI_ROADS = /*__ROADS__*/;</script>
 <script>
 /*__APP__*/
-HFI.DATA = window.HFI_DATA; HFI.TILES = window.HFI_TILES; HFI.NEIGHBORHOODS = window.HFI_NEIGHBORHOODS;
+HFI.DATA = window.HFI_DATA; HFI.TILES = window.HFI_TILES; HFI.NEIGHBORHOODS = window.HFI_NEIGHBORHOODS; HFI.ROADS = window.HFI_ROADS;
 </script>

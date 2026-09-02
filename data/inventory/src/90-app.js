@@ -26,6 +26,7 @@
   function buildMap() {
     if (HFI.map) return;
     HFI.map = HFI.createMap($('#mapwrap'), HFI.TILES.world, {});
+    if (HFI.ROADS) HFI.map.setRoads(HFI.ROADS);
     HFI.map.on('select', (id) => HFI.select(id, { fly: false })).on('hover', (id) => HFI.hover(id))
       .on('moveend', ({ moved }) => { $('#search-area').classList.toggle('show', moved && !HFI.filters.area && HFI.hasIntent(HFI.filters)); if (!moved) HFI.pushUrl(); });
     $$('[data-ovl]').forEach((cb) => { cb.checked = HFI.map.getOverlays()[cb.dataset.ovl]; });
