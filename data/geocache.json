@@ -64,6 +64,13 @@
     "display": "1124, Leavenworth Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
     "query": "1124 Leavenworth St, Nob Hill, San Francisco, CA"
   },
+  "114-120 Powell St, Union Square, San Francisco, CA": {
+    "lat": 37.7915651,
+    "lng": -122.4091395,
+    "precision": "address",
+    "display": "Powell Street, Union Square, Nob Hill, South of Market, San Francisco, California, 94108, United States",
+    "query": "114-120 Powell St, Union Square, San Francisco, CA"
+  },
   "114–120 Powell St, Union Square, San Francisco, CA": {
     "lat": 37.7915651,
     "lng": -122.4091395,
@@ -155,6 +162,13 @@
     "precision": "address",
     "display": "149, New Montgomery Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
     "query": "149 New Montgomery St, SoMa, San Francisco, CA"
+  },
+  "149-161 Hyde St, San Francisco, CA": {
+    "lat": 37.7821269,
+    "lng": -122.4156212,
+    "precision": "address",
+    "display": "Hyde Street, Tenderloin, Civic Center, San Francisco, California, 94102, United States",
+    "query": "149-161 Hyde St, San Francisco, CA"
   },
   "149–161 Hyde St, San Francisco, CA": {
     "lat": 37.8061965,
@@ -292,6 +306,7 @@
     "display": "2235, 3rd Street, Pier 70, Mission Bay, San Francisco, California, 94107, United States",
     "query": "2235 3rd St, Dogpatch, San Francisco, CA"
   },
+  "2350-2380 Valley St, CA": null,
   "2350–2380 Valley St, CA": null,
   "2353 Lombard St, Marina, San Francisco, CA": {
     "lat": 37.7991265,
@@ -335,6 +350,13 @@
     "display": "249;251, 9th Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
     "query": "251 9th St, SoMa, San Francisco, CA"
   },
+  "2550 Van Ness Ave, San Francisco, CA 94109": {
+    "lat": 37.7989566,
+    "lng": -122.4242742,
+    "precision": "address",
+    "display": "2550, Van Ness Avenue, Nob Hill, San Francisco, California, 94109, United States",
+    "query": "2550 Van Ness Ave, San Francisco, CA 94109"
+  },
   "2655 Hyde St, Fisherman's Wharf, San Francisco, CA": {
     "lat": 37.8055058,
     "lng": -122.4206033,
@@ -348,6 +370,13 @@
     "precision": "address",
     "display": "Windsor at Dogpatch, 2660, 3rd Street, Dogpatch, Potrero Hill, San Francisco, California, 94107, United States",
     "query": "2660 3rd St, Dogpatch, San Francisco, CA"
+  },
+  "2766-2770 Mission St , Mission, San Francisco, CA": {
+    "lat": 37.768434,
+    "lng": -122.4200199,
+    "precision": "address",
+    "display": "Mission Street, Mission, San Francisco, California, 94143, United States",
+    "query": "2766-2770 Mission St , Mission, San Francisco, CA"
   },
   "2766–2770 Mission St , Mission, San Francisco, CA": {
     "lat": 37.7416709,
@@ -434,12 +463,26 @@
     "display": "Orange Village Hostel, 411, O'Farrell Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94102, United States",
     "query": "411 O'Farrell St, San Francisco, CA"
   },
+  "415-417 15th St, Downtown Oakland, CA": {
+    "lat": 37.805661,
+    "lng": -122.2724305,
+    "precision": "address",
+    "display": "15th Street, Downtown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "query": "415-417 15th St, Downtown Oakland, CA"
+  },
   "415–417 15th St, Downtown Oakland, CA": {
     "lat": 37.805661,
     "lng": -122.2724305,
     "precision": "address",
     "display": "15th Street, Downtown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
     "query": "415–417 15th St, Downtown Oakland, CA"
+  },
+  "418-432 Geary St, San Francisco, CA": {
+    "lat": 37.7870516,
+    "lng": -122.4107125,
+    "precision": "address",
+    "display": "Geary Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94108, United States",
+    "query": "418-432 Geary St, San Francisco, CA"
   },
   "418–432 Geary St, San Francisco, CA": {
     "lat": 37.7877973,
@@ -532,6 +575,13 @@
     "display": "570, 21st Street, Sherman Heights, Golden Hill, San Diego, San Diego County, California, 92102, United States",
     "query": "570 21st St, CA"
   },
+  "583-585 Eddy St, San Francisco, CA": {
+    "lat": 37.7822704,
+    "lng": -122.425768,
+    "precision": "address",
+    "display": "Eddy Street, Yerba Buena Plaza East, Western Addition, San Francisco, California, 95115, United States",
+    "query": "583-585 Eddy St, San Francisco, CA"
+  },
   "583–585 Eddy St, San Francisco, CA": {
     "lat": 37.7842576,
     "lng": -122.4101495,
@@ -553,6 +603,13 @@
     "precision": "address",
     "display": "620, Post Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94108, United States",
     "query": "620 Post St, San Francisco, CA"
+  },
+  "620-626 O'Farrell St, San Francisco, CA": {
+    "lat": 37.7831861,
+    "lng": -122.4335427,
+    "precision": "address",
+    "display": "O'Farrell Street, Fillmore District, Western Addition, San Francisco, California, 95115, United States",
+    "query": "620-626 O'Farrell St, San Francisco, CA"
   },
   "620–626 O'Farrell St, San Francisco, CA": {
     "lat": 37.781525,

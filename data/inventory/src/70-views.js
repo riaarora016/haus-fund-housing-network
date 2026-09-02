@@ -1,0 +1,61 @@
+// Alternate views: pipeline (kanban by deal status), table, shortlist compare, Haus network panel, export.
+(function () {
+  const $ = HFI.$, $$ = HFI.$$, esc = HFI.esc, fm = HFI.fmtMoney; const S = HFI.state;
+  HFI.views = {
+    render() { const v = S.view; const host = $('#list'); if (v === 'pipeline') host.innerHTML = this.pipeline(); else if (v === 'table') host.innerHTML = this.table(); else if (v === 'compare') host.innerHTML = this.compare(); else if (v === 'haus') host.innerHTML = this.haus(); this.wire(host); },
+    wire(host) {
+      $$('[data-open]', host).forEach((el) => el.addEventListener('click', (e) => { if (e.target.closest('a,button')) return; HFI.select(el.dataset.open, { fly: true }); }));
+      $$('[data-status-set]', host).forEach((sel) => sel.addEventListener('change', () => { HFI.saveEdit(sel.dataset.statusSet, { deal_status: sel.value }); HFI.ui.renderAll(); }));
+      $$('[data-star]', host).forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); HFI.toggleShortlist(b.dataset.star); HFI.ui.renderAll(); }));
+      $$('[data-sort-col]', host).forEach((th) => th.addEventListener('click', () => { const c = th.dataset.sortCol; HFI.prefs.tableSort = HFI.prefs.tableSort?.col === c ? { col: c, dir: -HFI.prefs.tableSort.dir } : { col: c, dir: 1 }; HFI.savePrefs(); HFI.views.render(); }));
+      $$('[data-fly-node]', host).forEach((b) => b.addEventListener('click', () => { const n = HFI.nodes.get(b.dataset.flyNode); if (n?.lat != null) HFI.map.flyTo(n.lat, n.lng, 6); }));
+      $$('[data-node-filter]', host).forEach((b) => b.addEventListener('click', () => { HFI.filters.haus = b.dataset.nodeFilter; S.view = 'map'; HFI.ui.renderAll(); }));
+    },
+    pipeline() {
+      const cols = ['Research', 'Contacted', 'Negotiating', 'Contracting', 'Signed', 'Unavailable'];
+      const rows = S.results.length ? S.results : [];
+      const byCol = Object.fromEntries(cols.map((c) => [c, []])); for (const r of rows) byCol[HFI.statusMeta(r.deal_status).col]?.push(r);
+      return `<div class="pipe">${cols.map((c) => `<div class="pcol"><h4>${c} <span class="cnt">${byCol[c].length}</span><span class="cnt">${byCol[c].reduce((a, r) => a + HFI.bedsOf(r), 0)} beds</span></h4>${byCol[c].map((r) => `<div class="pcard" data-open="${r.id}"><div class="pn">${esc(r.property_name)}</div><div class="pm">${r.price_per_bed != null ? (r.price_kind === 'estimate' ? '~' : '') + fm(r.price_per_bed) + '/bed' : 'price ?'} · ${r.beds ?? '?'} beds · ${r.walk ?? '?'}m</div><div class="pm">${r.contact_name ? esc(r.contact_name.slice(0, 34)) : '<span class="unk">no contact</span>'}${r.next_followup_at ? ` · follow-up ${HFI.fmtDate(r.next_followup_at)}` : ''}</div><select class="mini-sel" data-status-set="${r.id}" aria-label="Change status">${HFI.DEAL_STATUSES.map((s) => `<option value="${s.id}" ${s.id === r.deal_status ? 'selected' : ''}>${s.label}</option>`).join('')}</select></div>`).join('') || '<div class="unk">none</div>'}</div>`).join('')}</div>`;
+    },
+    table() {
+      const cols = [['property_name', 'Property'], ['neighborhood', 'Neighborhood'], ['deal_status', 'Status'], ['price_per_bed', '$/bed'], ['price_kind', 'Price'], ['beds', 'Beds'], ['available_beds', 'Avail'], ['walk', 'Walk'], ['kitchen_status', 'Kitchen'], ['safety_flag', 'Safety'], ['fit', 'Fit'], ['contact_name', 'Contact'], ['contact_phone', 'Phone'], ['last_contacted_at', 'Contacted'], ['next_followup_at', 'Follow-up'], ['assigned_owner', 'Owner']];
+      const ts = HFI.prefs.tableSort; let rows = S.results.slice();
+      if (ts) rows.sort((a, b) => { const va = ts.col === 'fit' ? a.fit.score : a[ts.col], vb = ts.col === 'fit' ? b.fit.score : b[ts.col]; if (va == null) return 1; if (vb == null) return -1; return (typeof va === 'number' ? va - vb : String(va).localeCompare(String(vb))) * ts.dir; });
+      return `<div class="tbl-wrap"><table class="tbl"><thead><tr>${cols.map(([k, l]) => `<th data-sort-col="${k}">${l}${ts?.col === k ? (ts.dir > 0 ? ' ▲' : ' ▼') : ''}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr data-open="${r.id}" class="${S.selected === r.id ? 'sel' : ''}">${cols.map(([k]) => { let v = k === 'fit' ? r.fit.score : r[k]; if (k === 'price_per_bed') v = v == null ? '' : fm(v); if (k === 'deal_status') v = HFI.statusMeta(v).label; if (k === 'walk' && v != null) v = v + (r.walk_is_estimate ? ' est' : ''); if ((k === 'last_contacted_at' || k === 'next_followup_at') && v) v = HFI.fmtDate(v); return `<td>${v == null || v === '' ? '<span class="unk">–</span>' : esc(v)}</td>`; }).join('')}</tr>`).join('')}</tbody></table></div>`;
+    },
+    compare() {
+      const ids = [...HFI.shortlist]; const rows = ids.map(HFI.record).filter(Boolean).map((r) => { r.fit = HFI.hausFit(r, HFI.ctx()); return r; });
+      if (!rows.length) return `<div class="empty"><h3>Nothing shortlisted yet.</h3><p>Star buildings from the list or a detail drawer, then compare 2 to 5 side by side.</p></div>`;
+      const beds = rows.reduce((a, r) => a + (r.beds || 0), 0);
+      const F = [['Beds', (r) => r.beds ?? '?'], ['Available', (r) => r.available_beds ?? 'ask'], ['$/bed', (r) => r.price_per_bed != null ? (r.price_kind === 'estimate' ? '~' : '') + fm(r.price_per_bed) : '?'], ['Total / mo', (r) => r.price_per_bed != null && r.beds != null ? fm(r.price_per_bed * r.beds) : '?'], ['Walk', (r) => r.walk != null ? r.walk + (r.walk_is_estimate ? ' est' : '') : '?'], ['Kitchen', (r) => r.kitchen_ok ? '✓' : r.kitchen_status === 'none' ? 'NONE' : '?'], ['Safety', (r) => ({ ok: 'calm', mixed: 'mixed', 'rough-block': 'rough' }[r.safety_flag] || '?')], ['Move-in', (r) => r.available_from ? HFI.fmtDate(r.available_from) : r.sept15_ready === true ? 'ready' : r.sept15_ready === false ? 'not by start' : '?'], ['Status', (r) => HFI.statusMeta(r.deal_status).label], ['Fit', (r) => r.fit.score]];
+      return `<div class="cmp-head"><b>Shortlist</b> · ${rows.length} properties · ${beds} potential beds</div><div class="tbl-wrap"><table class="tbl cmp"><thead><tr><th></th>${rows.map((r) => `<th data-open="${r.id}">${esc(r.property_name)}<button class="star on" data-star="${r.id}" aria-label="Remove from shortlist">★</button></th>`).join('')}</tr></thead><tbody>${F.map(([l, fn]) => `<tr><th>${l}</th>${rows.map((r) => `<td>${fn(r)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    },
+    haus() {
+      const f = HFI.filters; const nodes = [...HFI.nodes.values()].filter((n) => n.market === f.market);
+      const others = [...HFI.nodes.values()].filter((n) => n.market !== f.market);
+      const card = (n) => { const linked = (n.linked_candidate_ids || []).map(HFI.record).filter(Boolean); const cands = S.all.filter((r) => (r.haus_node_ids || []).includes(n.id) && !linked.some((l) => l.id === r.id));
+        return `<div class="hnode"><div class="hn-top"><span class="hdiamond"></span><b>${esc(n.name)}</b><span class="st ${n.status === 'active' ? 'good' : 'muted'}">${n.status}</span></div>
+          <div class="hn-kind">${esc(n.kind)} · ${esc(n.city)}${n.neighborhood ? ` · ${esc(n.neighborhood)}` : ''}</div>
+          <div class="hn-date ${n.start_date_precision === 'day' ? 'exact' : n.start_date_precision === 'month' ? 'month' : 'none'}">${n.start_date ? (n.start_date_precision === 'day' ? `Starts ${HFI.fmtDate(n.start_date)}, ${n.start_date.slice(0, 4)} <span class="tag ok">exact date</span>` : `${HFI.fmtDate(n.start_date)} <span class="tag">month only</span>`) : 'Active, no start date given'}</div>
+          <div class="hn-desc">${esc(n.description)}</div>${n.planning_note ? `<div class="hn-note">${esc(n.planning_note)}</div>` : ''}
+          <div class="hn-src unk">Source: ${esc(n.source)}${n.location_precision === 'none' ? ' · address not public, not on the map' : n.location_precision === 'neighborhood' ? ' · shown at neighborhood level' : ''}</div>
+          ${linked.length ? `<div class="hn-links">Linked deals: ${linked.map((r) => `<button class="mini" data-open="${r.id}">${esc(r.property_name)} · ${HFI.statusMeta(r.deal_status).label}</button>`).join('')}</div>` : ''}
+          <div class="hn-acts">${n.lat != null ? `<button class="btn sm" data-fly-node="${n.id}">Show on map</button>` : ''}<button class="btn sm" data-node-filter="${n.id}">Candidates for this house (${cands.length + linked.length})</button></div></div>`; };
+      return `<div class="haus-view"><div class="hv-intro">Haus network residences from the public site plus planning notes. Exact dates are marked; month-only dates are not turned into a day.</div>${nodes.map(card).join('')}${others.length ? `<h4 class="hv-other">Other markets</h4>${others.map(card).join('')}` : ''}</div>`;
+    },
+    exportCsv(kind) {
+      const rows = kind === 'signed' ? S.all.filter((r) => r.deal_status === 'signed') : kind === 'all' ? S.all : S.results;
+      const cols = kind === 'signed' ? [['Name', 'property_name'], ['Address', 'address'], ['Neighborhood', 'neighborhood'], ['Type', 'property_type'], ['Beds', 'beds'], ['$/bed agreed', (r) => r.negotiated_per_bed ?? r.verified_per_bed ?? r.asking_per_bed], ['Monthly total', (r) => r.negotiated_monthly], ['Kitchen', 'kitchen_status'], ['Contact', 'contact_name'], ['Phone', 'contact_phone'], ['Email', 'contact_email'], ['House', (r) => (r.haus_node_ids || []).join(', ')], ['Move-in', (r) => r.available_from || ''], ['Notes', 'notes'], ['id', 'id']]
+        : [['id', 'id'], ['property_name', 'property_name'], ['inventory_class', 'inventory_class'], ['deal_status', 'deal_status'], ['address', 'address'], ['neighborhood', 'neighborhood'], ['lat', 'lat'], ['lng', 'lng'], ['property_type', 'property_type'], ['total_beds', 'beds'], ['available_beds', 'available_beds'], ['price_per_bed', 'price_per_bed'], ['price_kind', 'price_kind'], ['negotiated_per_bed', 'negotiated_per_bed'], ['kitchen_status', 'kitchen_status'], ['walk_min', 'walk'], ['walk_is_estimate', 'walk_is_estimate'], ['safety_flag', 'safety_flag'], ['haus_fit', (r) => r.fit?.score], ['contact_name', 'contact_name'], ['contact_phone', 'contact_phone'], ['contact_email', 'contact_email'], ['last_contacted_at', 'last_contacted_at'], ['next_followup_at', 'next_followup_at'], ['last_price_verified_at', 'last_price_verified_at'], ['assigned_owner', 'assigned_owner'], ['haus_node_ids', (r) => (r.haus_node_ids || []).join('|')], ['cohort_ids', (r) => (r.cohort_ids || []).join('|')], ['notes', 'notes']];
+      const cell = (v) => { const s = v == null ? '' : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+      return [cols.map(([h]) => h).join(','), ...rows.map((r) => cols.map(([, k]) => cell(typeof k === 'function' ? k(r) : r[k])).join(','))].join('\n');
+    },
+    openExport() {
+      const m = $('#modal'); m.classList.add('open'); m.setAttribute('aria-hidden', 'false');
+      const render = (kind) => { const csv = kind === 'edits' ? HFI.exportEdits() : this.exportCsv(kind); $('#modal-body').innerHTML = `<div class="modal-tabs">${[['results', 'Current results'], ['all', 'All inventory'], ['signed', 'Airtable (signed)'], ['edits', 'Local edits JSON']].map(([k, l]) => `<button class="fchip${k === kind ? ' on' : ''}" data-kind="${k}">${l}</button>`).join('')}</div><textarea id="csv-out" readonly aria-label="Export text">${esc(csv)}</textarea><div class="modal-actions"><button class="btn sm primary" id="csv-copy">Copy</button><span class="unk">${kind === 'signed' ? 'Airtable-shaped, upsert by id. Empty until a deal is marked signed.' : kind === 'edits' ? 'Send this to Claude to merge into the shared data (verifications.json / additions.json).' : 'Downloads are blocked inside this viewer; copy and paste into a file.'}</span></div>`;
+        $$('[data-kind]', m).forEach((b) => b.addEventListener('click', () => render(b.dataset.kind))); $('#csv-copy').addEventListener('click', () => { navigator.clipboard?.writeText(csv); HFI.toast('Copied'); }); };
+      render('results');
+      $('#modal-close').onclick = () => { m.classList.remove('open'); m.setAttribute('aria-hidden', 'true'); };
+    },
+  };
+})();

@@ -7,6 +7,7 @@ import path from 'node:path';
 // z15 covers the whole city frame; z16 covers the core where nearly all listings sit, so
 // zooming in stays sharp like a real map app without inlining thousands of tiles.
 const LEVELS = [
+  { z: 14, box: { lngMin: -122.487, lngMax: -122.371, latMin: 37.723, latMax: 37.817 } },   // street "Map" mode at city scale
   { z: 15, box: { lngMin: -122.487, lngMax: -122.371, latMin: 37.723, latMax: 37.817 } },
   { z: 16, box: { lngMin: -122.448, lngMax: -122.386, latMin: 37.748, latMax: 37.806 } },
 ];

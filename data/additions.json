@@ -6,9 +6,35 @@
         "name_detail": "The Oakland Campus (BH Properties leasing site)",
         "status": "on-market"
       },
-      "add_links": ["Upper Campus Complex: https://theoaklandcampus.com/upper-campus-complex"],
+      "add_links": [
+        "Upper Campus Complex: https://theoaklandcampus.com/upper-campus-complex"
+      ],
       "note": "Elliot flagged the leasing site Aug 26 (a massive campus in the East Bay). Same campus we track: BH Properties is actively marketing ~387,000 sf across 10 buildings; the 181,200 sf Upper Campus Complex holds Student Residences 1-3 plus cafeteria, chapel event center and student lounge. One building (Raskob School) already reserved, so interim deals are moving. Still East Bay: scores 0 on transit by rule, but it is the strongest expansion-scale dorm stock on the list."
     }
   },
-  "new": []
+  "new": [
+    {
+      "name": "2550 Van Ness",
+      "name_detail": "Minerva University building, femme or safe house candidate",
+      "address": "2550 Van Ness Ave, San Francisco, CA 94109",
+      "neighborhood": "Cathedral Hill",
+      "region": "SF-other",
+      "type": "dorm",
+      "status": "active",
+      "kitchen": "communal",
+      "kitchen_raw": "nice kitchen (Elliot, Aug 20 call)",
+      "timeline_tags": [
+        "femme-house"
+      ],
+      "outreach_status": "contacted",
+      "contacted_by": "Elliot",
+      "contact_org": "Minerva University (joint arrangement)",
+      "tier": "Direct approach",
+      "walk_in_ready": "yes",
+      "play": "Take some rooms alongside Minerva University; earmarked for the femme house or safe house.",
+      "notes": "From the Aug 20 planning call: Elliot is working an agreement with this property together with Minerva University to take over some rooms. Has a nice kitchen; a little far from Frontier. Beds, price and dates not stated in our data. Source: Ria <> Elliot call, Aug 20 2026.",
+      "last_checked_raw": "Aug 20 2026 (planning call)",
+      "sept15_ready": "unknown"
+    }
+  ]
 }

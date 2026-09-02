@@ -18,7 +18,8 @@
     "web:build": "npm --prefix web run build",
     "export:xlsx": "tsx data/export-xlsx.ts && python3 data/style-xlsx.py",
     "export:map": "tsx data/export-map.ts",
-    "build:map-artifact": "tsx data/export-map.ts && tsx data/build-map-artifact.ts"
+    "build:map-artifact": "tsx data/export-map.ts && tsx data/build-map-artifact.ts",
+    "build:inventory": "tsx data/export-inventory.ts && tsx data/build-inventory.ts"
   },
   "keywords": [],
   "author": "",

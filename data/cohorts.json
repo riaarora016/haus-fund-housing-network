@@ -1,0 +1,16 @@
+{
+  "_comment": "Cohorts are first-class. end_date is editable metadata (Haus pages currently disagree on it), target counts are planning estimates from the Aug 20 call ('house 40 to 50 people'), not confirmed numbers.",
+  "cohorts": [
+    { "id": "c3", "name": "Cohort 3", "market": "sf", "city": "San Francisco",
+      "start_date": "2026-09-15", "start_date_precision": "day", "end_date": null, "end_date_note": "not fixed: Haus pages show slightly different end dates; edit when confirmed",
+      "target_residents": 45, "target_residents_note": "planning estimate, 40 to 50 people per Aug 20 call",
+      "target_beds": 45, "target_private_rooms": null, "target_shared_beds": null,
+      "status": "upcoming", "haus_node_ids": ["punk-haus", "fem-haus"],
+      "notes": "Arrival Sept 15 (orientation Sept 17 to 18). Fitzgerald floors start Sept 27, so Sept 15 to 27 is a bridge window. Alum house opens Sept 1." }
+  ],
+  "markets": [
+    { "id": "sf", "name": "San Francisco", "country": "US", "currency": "USD", "anchor": { "name": "Frontier Tower", "address": "995 Market St, San Francisco, CA 94103", "lat": 37.78255, "lng": -122.40935 },
+      "preferred_neighborhoods": ["SoMa", "Nob Hill", "Civic Center", "FiDi", "Union Square", "NoPa/Panhandle"] },
+    { "id": "kobe", "name": "Kobe", "country": "JP", "currency": "JPY", "anchor": null, "preferred_neighborhoods": [] }
+  ]
+}
