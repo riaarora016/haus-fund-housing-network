@@ -1,0 +1,202 @@
+[
+  {
+    "id": "pl-1055-1069-pine-st-80-unit-ex-dorm",
+    "name": "1055-1069 Pine St",
+    "url": "LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
+    "at": "2026-09-02T13:41:42.535Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: net::ERR_ABORTED at loopnet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/"
+  },
+  {
+    "id": "pl-149-161-hyde-st",
+    "name": "149-161 Hyde St",
+    "url": "LoopNet Oakland hotels: https://www.loopnet.com/search/hotels/oakland-ca/for-sale/",
+    "at": "2026-09-02T13:41:42.616Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-150-hegenberger-rd-hotel",
+    "name": "150 Hegenberger Rd hotel",
+    "url": "LoopNet Oakland hotels: https://www.loopnet.com/search/hotels/oakland-ca/for-sale/",
+    "at": "2026-09-02T13:41:42.679Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-1538-polk-st-aau-cluster-pairing",
+    "name": "1538 Polk St + AAU cluster pairing",
+    "url": "LoopNet Nob Hill apartments: https://www.loopnet.com/search/apartment-buildings/nob-hill-san-francisco-ca/for-sale/",
+    "at": "2026-09-02T13:41:42.758Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-17th-broadway-class-a-2br-block",
+    "name": "17th & Broadway",
+    "url": "Apartments.com: https://www.apartments.com/17th-and-broadway-oakland-ca/f6jbmws/",
+    "at": "2026-09-02T13:41:42.826Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: net::ERR_ABORTED at apartments.com: https://www.apartments.com/17th-and-broadway-oakland-ca/f6jbmws/"
+  },
+  {
+    "id": "pl-1900-broadway-co-living-block-verified-pricing",
+    "name": "1900 Broadway co-living block (verified pricing)",
+    "url": "Apartments.com: https://www.apartments.com/1900-broadway-oakland-ca/bht2eec/",
+    "at": "2026-09-02T13:41:42.890Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: net::ERR_ABORTED at apartments.com: https://www.apartments.com/1900-broadway-oakland-ca/bht2eec/"
+  },
+  {
+    "id": "pl-392-11th-st-oakland",
+    "name": "392 11th St, Oakland",
+    "url": "LoopNet Oakland hotels: https://www.loopnet.com/search/hotels/oakland-ca/for-sale/",
+    "at": "2026-09-02T13:41:42.955Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-aau-dorm-1080-bush-st",
+    "name": "AAU dorm",
+    "url": "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
+    "at": "2026-09-02T13:41:43.011Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-aau-dorm-680-sutter-st",
+    "name": "AAU dorm",
+    "url": "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
+    "at": "2026-09-02T13:41:43.075Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-aau-dorm-736-jones-st",
+    "name": "AAU dorm",
+    "url": "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
+    "at": "2026-09-02T13:41:43.131Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-aau-dorm-860-sutter-st",
+    "name": "AAU dorm",
+    "url": "1055 Pine LoopNet: https://www.loopnet.com/Listing/1055-Pine-St-San-Francisco-CA/38157856/",
+    "at": "2026-09-02T13:41:43.186Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-adams-point-cluster-6-listings",
+    "name": "Adams Point cluster (6 listings)",
+    "url": "LoopNet Adams Point: https://www.loopnet.com/search/apartment-buildings/adams-point-oakland-ca/for-sale/",
+    "at": "2026-09-02T13:41:43.241Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-blue-hotel",
+    "name": "Blue Hotel",
+    "url": "Blue Hotel LoopNet: https://www.loopnet.com/Listing/620-OFarrell-St-San-Francisco-CA/25102642/",
+    "at": "2026-09-02T13:41:43.305Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-boston-hotel-sro",
+    "name": "Boston Hotel (SRO)",
+    "url": "Blue Hotel LoopNet: https://www.loopnet.com/Listing/620-OFarrell-St-San-Francisco-CA/25102642/",
+    "at": "2026-09-02T13:41:43.371Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-crystal-hotel-residential-master-lease-available",
+    "name": "Crystal Hotel",
+    "url": "LoopNet listing: https://www.loopnet.com/Listing/2766-2770-Mission-St-San-Francisco-CA/30746850/",
+    "at": "2026-09-02T13:41:43.434Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-ferns-hotel-price-cut-income-hungry",
+    "name": "Ferns Hotel",
+    "url": "Offering brochure (PDF): https://images3.loopnet.com/d2/fcQavuW6QnYRr5iaTP1pTcdxUIxr5FCekoZrGvUWJoQ/document.pdf",
+    "at": "2026-09-02T13:41:43.492Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-motel-6-civic-center",
+    "name": "Motel 6 Civic Center",
+    "url": "LoopNet SF hotels: https://www.loopnet.com/search/hotels/san-francisco-ca/for-sale/",
+    "at": "2026-09-02T13:41:43.545Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-motel-6-lombard-st",
+    "name": "Motel 6 Lombard St",
+    "url": "LoopNet SF motels: https://www.loopnet.com/search/listings/motels/san-francisco-ca/for-sale/",
+    "at": "2026-09-02T13:41:43.597Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-union-square-plaza-hotel",
+    "name": "Union Square Plaza Hotel",
+    "url": "Crexi listing: https://www.crexi.com/properties/2373414/california-union-square-plaza-hotel",
+    "at": "2026-09-02T13:41:43.660Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+  },
+  {
+    "id": "pl-villages-at-treasure-island-cheapest-beds-in-sf",
+    "name": "Villages at Treasure Island",
+    "url": "Apartments.com: https://www.apartments.com/villages-at-treasure-island-san-francisco-ca/87189j0/",
+    "at": "2026-09-02T13:41:43.722Z",
+    "live": null,
+    "price_text": null,
+    "days_on_market": null,
+    "note": "error: page.goto: net::ERR_ABORTED at apartments.com: https://www.apartments.com/villages-at-treasure-island-san-francisco-ca/8"
+  }
+]
