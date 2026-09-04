@@ -4,7 +4,7 @@
     "id": "inv-1214-polk-street-residences",
     "name": "1214 Polk Street Residences",
     "url": "https://www.urbanests.com/properties/1214-polk-street-residences",
-    "at": "2026-09-03T13:34:04.584Z",
+    "at": "2026-09-04T13:31:04.252Z",
     "ok": true,
     "price_now": 1395,
     "price_private_now": 1395,
@@ -18,7 +18,7 @@
     "id": "inv-20-mission-sf-20mish",
     "name": "20 Mission SF (20mish)",
     "url": "https://20mish.com/",
-    "at": "2026-09-03T13:34:07.534Z",
+    "at": "2026-09-04T13:31:09.892Z",
     "ok": true,
     "price_now": 1550,
     "price_private_now": 1625,
@@ -32,7 +32,7 @@
     "id": "inv-221-7th-street-residences",
     "name": "221 7th Street Residences",
     "url": "https://www.urbanests.com/properties/221-7th-street-residences",
-    "at": "2026-09-03T13:34:11.081Z",
+    "at": "2026-09-04T13:31:13.356Z",
     "ok": true,
     "price_now": 1095,
     "price_private_now": 1095,
@@ -46,7 +46,7 @@
     "id": "inv-2436-mission-residences",
     "name": "2436 Mission Residences",
     "url": "https://www.urbanests.com/properties/2436-mission-residences",
-    "at": "2026-09-03T13:34:13.875Z",
+    "at": "2026-09-04T13:31:16.093Z",
     "ok": true,
     "price_now": 1095,
     "price_private_now": 1095,
@@ -60,21 +60,21 @@
     "id": "inv-251-9th-street-residences",
     "name": "251 9th Street Residences",
     "url": "https://www.urbanests.com/properties/251-9th-street-residences",
-    "at": "2026-09-03T13:34:16.641Z",
+    "at": "2026-09-04T13:31:18.853Z",
     "ok": true,
     "price_now": 1095,
     "price_private_now": 1095,
     "beds_available": null,
     "bookable": false,
     "min_stay_nights": 180,
-    "evidence": "per-person from $1095; single from $1095; min 6 - 8 month - Home Properties Process Why Us? Contact Us Blog < Back 251 9th Street Residences 251 9th Street, San Francisco, CA, USA Single Rooms from $1095 Max 1 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot + Cold) Work"
+    "evidence": "per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 251 9th Street Residences 251 9th Street, San Francisco, CA, USA Single Rooms from $1095 Max 1 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater S"
   },
   {
     "adapter": "urbanests",
     "id": "inv-371-columbus-residences",
     "name": "371 Columbus Residences",
     "url": "https://www.urbanests.com/properties/371-columbus-residences",
-    "at": "2026-09-03T13:34:19.409Z",
+    "at": "2026-09-04T13:31:23.448Z",
     "ok": true,
     "price_now": 1095,
     "price_private_now": 1095,
@@ -88,21 +88,21 @@
     "id": "inv-524-columbus-residences",
     "name": "524 Columbus Residences",
     "url": "https://www.urbanests.com/properties/524-columbus-residences",
-    "at": "2026-09-03T13:34:22.182Z",
+    "at": "2026-09-04T13:31:26.181Z",
     "ok": true,
     "price_now": 1095,
     "price_private_now": 1095,
     "beds_available": null,
     "bookable": false,
     "min_stay_nights": 90,
-    "evidence": "per-person from $1095; single from $1095; min 3 - 5 month - Home Properties Process Why Us? Contact Us Blog < Back 524 Columbus Residences 524 Columbus Avenue, San Francisco, CA, USA Single Rooms from $1095 1, 2, 3 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot + Cold)"
+    "evidence": "per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 524 Columbus Residences 524 Columbus Avenue, San Francisco, CA, USA Single Rooms from $1095 1, 2, 3 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Hea"
   },
   {
     "adapter": "urbanests",
     "id": "inv-556-green-st-residences",
     "name": "556 Green St Residences",
     "url": "https://www.urbanests.com/properties/556-green-street-residences",
-    "at": "2026-09-03T13:34:24.972Z",
+    "at": "2026-09-04T13:31:28.952Z",
     "ok": true,
     "price_now": 1395,
     "price_private_now": 1395,
@@ -116,7 +116,7 @@
     "id": "inv-adelaide-hostel",
     "name": "Adelaide Hostel",
     "url": "https://www.hostelworld.com/hostels/p/300815/adelaide-hostel/",
-    "at": "2026-09-03T13:34:27.738Z",
+    "at": "2026-09-04T13:31:31.677Z",
     "ok": true,
     "price_now": 630,
     "price_private_now": null,
@@ -127,8 +127,8 @@
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -137,8 +137,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -152,7 +152,7 @@
     "id": "inv-amsterdam-hostel",
     "name": "Amsterdam Hostel",
     "url": "https://www.hostelworld.com/hostels/p/17927/amsterdam-hostel/",
-    "at": "2026-09-03T13:34:43.044Z",
+    "at": "2026-09-04T13:31:46.800Z",
     "ok": true,
     "price_now": 690,
     "price_private_now": null,
@@ -163,8 +163,8 @@
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -173,8 +173,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -188,7 +188,7 @@
     "id": "inv-bposhtels-sf-union-square",
     "name": "Bposhtels SF Union Square",
     "url": "https://www.hostelworld.com/hostels/p/337454/bposhtels-san-francisco-union-square/",
-    "at": "2026-09-03T13:34:57.652Z",
+    "at": "2026-09-04T13:32:01.148Z",
     "ok": true,
     "price_now": 630,
     "price_private_now": null,
@@ -199,8 +199,8 @@
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -209,8 +209,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -224,7 +224,7 @@
     "id": "inv-european-hostel",
     "name": "European Hostel",
     "url": "https://www.urbanests.com/properties/european-hostel",
-    "at": "2026-09-03T13:35:12.218Z",
+    "at": "2026-09-04T13:32:15.857Z",
     "ok": true,
     "price_now": 545,
     "price_private_now": null,
@@ -238,7 +238,7 @@
     "id": "inv-found-study-16-turk-st",
     "name": "FOUND Study 16 Turk St",
     "url": "https://www.foundstudy.com/sanfrancisco",
-    "at": "2026-09-03T13:35:15.237Z",
+    "at": "2026-09-04T13:32:20.219Z",
     "ok": false,
     "price_now": null,
     "price_private_now": null,
@@ -253,7 +253,7 @@
     "id": "inv-found-study-nob-hill",
     "name": "Found Study (Nob Hill)",
     "url": "https://www.foundstudy.com/sanfrancisco",
-    "at": "2026-09-03T13:35:21.345Z",
+    "at": "2026-09-04T13:32:26.578Z",
     "ok": false,
     "price_now": null,
     "price_private_now": null,
@@ -268,7 +268,7 @@
     "id": "inv-foundry-coliving",
     "name": "Foundry Coliving",
     "url": "https://foundry.today/",
-    "at": "2026-09-03T13:35:26.947Z",
+    "at": "2026-09-04T13:32:32.844Z",
     "ok": true,
     "price_now": 2290,
     "price_private_now": null,
@@ -282,19 +282,19 @@
     "id": "inv-green-tortoise-hostel",
     "name": "Green Tortoise Hostel",
     "url": "https://www.hostelworld.com/hostels/p/1821/green-tortoise-hostel/",
-    "at": "2026-09-03T13:35:31.162Z",
+    "at": "2026-09-04T13:32:36.592Z",
     "ok": true,
     "price_now": 630,
     "price_private_now": null,
     "beds_available": null,
     "bookable": true,
     "min_stay_nights": 1,
-    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel Green Tortoise Hostel 9.4 Superb (2856) San Francisco, USA View map 1.14km from city centre 50+ staying 8 events Sustainability Level 1 Free WiFi Free Breakfast View all 64 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About Discover San Francisco with the Green Tortois",
+    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel Green Tortoise Hostel 9.4 Superb (2856) San Francisco, USA View map 1.14km from city centre 60+ staying 8 events Sustainability Level 1 Free WiFi Free Breakfast View all 64 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About Discover San Francisco with the Green Tortois",
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -303,8 +303,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -318,19 +318,19 @@
     "id": "inv-hi-fisherman-s-wharf-hostel",
     "name": "HI Fisherman's Wharf Hostel",
     "url": "https://www.hostelworld.com/hostels/p/4551/hi-san-francisco-fisherman-s-wharf-hostel/",
-    "at": "2026-09-03T13:35:45.559Z",
+    "at": "2026-09-04T13:32:50.957Z",
     "ok": true,
     "price_now": 630,
     "price_private_now": null,
     "beds_available": null,
     "bookable": true,
     "min_stay_nights": 1,
-    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Fisherman’s Wharf Hostel 9.0 Superb (3217) San Francisco, USA View map 2.77km from city centre 40+ staying 2 events Sustainability Level 1 Free WiFi View all 32 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About There’s no place in San Francisco quite ",
+    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Fisherman’s Wharf Hostel 9.0 Fabulous (3217) San Francisco, USA View map 2.77km from city centre 40+ staying 3 events Sustainability Level 1 Free WiFi View all 32 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About There’s no place in San Francisco quit",
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -339,8 +339,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -354,19 +354,19 @@
     "id": "inv-hi-san-francisco-downtown",
     "name": "HI San Francisco Downtown",
     "url": "https://www.hostelworld.com/hostels/p/4549/hi-san-francisco-downtown-hostel/",
-    "at": "2026-09-03T13:36:00.261Z",
+    "at": "2026-09-04T13:33:05.323Z",
     "ok": true,
     "price_now": 630,
     "price_private_now": null,
     "beds_available": null,
     "bookable": true,
     "min_stay_nights": 1,
-    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Downtown Hostel 8.8 Fabulous (7242) San Francisco, USA View map 0.25km from city centre 60+ staying 6 events Sustainability Level 1 Free WiFi View all 54 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About You won’t find a better location in San Francis",
+    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Downtown Hostel 8.8 Fabulous (7242) San Francisco, USA View map 0.25km from city centre 70+ staying 8 events Sustainability Level 1 Free WiFi View all 54 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About You won’t find a better location in San Francis",
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -375,8 +375,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -390,7 +390,7 @@
     "id": "inv-hive-coliving-bunks",
     "name": "Hive Coliving (bunks)",
     "url": "https://www.hivecolivingsf.com/rooms-triples",
-    "at": "2026-09-03T13:36:14.977Z",
+    "at": "2026-09-04T13:33:20.019Z",
     "ok": true,
     "price_now": 575,
     "price_private_now": null,
@@ -404,7 +404,7 @@
     "id": "inv-hive-coliving-was-tribe",
     "name": "Hive Coliving (was Tribe)",
     "url": "https://www.hivecolivingsf.com/rooms-doubles",
-    "at": "2026-09-03T13:36:18.594Z",
+    "at": "2026-09-04T13:33:23.387Z",
     "ok": true,
     "price_now": 800,
     "price_private_now": null,
@@ -418,7 +418,7 @@
     "id": "inv-hotel-epik-residences",
     "name": "Hotel Epik Residences",
     "url": "https://www.urbanests.com/properties/hotel-epik-residences",
-    "at": "2026-09-03T13:36:21.907Z",
+    "at": "2026-09-04T13:33:26.628Z",
     "ok": true,
     "price_now": 995,
     "price_private_now": 995,
@@ -432,19 +432,19 @@
     "id": "inv-ith-pacific-tradewinds",
     "name": "ITH Pacific Tradewinds",
     "url": "https://www.hostelworld.com/hostels/p/301589/ith-pacific-tradewinds-hostel/",
-    "at": "2026-09-03T13:36:24.677Z",
+    "at": "2026-09-04T13:33:29.526Z",
     "ok": true,
     "price_now": 630,
     "price_private_now": null,
     "beds_available": null,
     "bookable": true,
     "min_stay_nights": 1,
-    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel ITH Pacific Tradewinds Hostel 9.6 Superb (487) San Francisco, USA View map 0.72km from city centre 5+ staying 1 events Sustainability Level 1 Free WiFi Free Breakfast View all 59 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About We are a fun and social hostel built fo",
+    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel ITH Pacific Tradewinds Hostel 9.6 Superb (487) San Francisco, USA View map 0.72km from city centre 5+ staying 2 events Sustainability Level 1 Free WiFi Free Breakfast View all 59 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About We are a fun and social hostel built fo",
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -453,8 +453,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -468,7 +468,7 @@
     "id": "inv-kenmore-residence-hotel",
     "name": "Kenmore Residence Hotel",
     "url": "https://www.kenmorehotelsf.com/",
-    "at": "2026-09-03T13:36:39.247Z",
+    "at": "2026-09-04T13:33:43.901Z",
     "ok": false,
     "error": "page.goto: net::ERR_CONNECTION_RESET at https://www.kenmorehotelsf.com/",
     "price_now": null,
@@ -483,7 +483,7 @@
     "id": "inv-lovely-north-beach-chinatown-hotel",
     "name": "Lovely North Beach / Chinatown Hotel",
     "url": "https://www.urbanests.com/properties/lovely-north-beach-%2F-chinatown-hotel",
-    "at": "2026-09-03T13:36:39.563Z",
+    "at": "2026-09-04T13:33:44.358Z",
     "ok": true,
     "price_now": 1495,
     "price_private_now": 1495,
@@ -497,7 +497,7 @@
     "id": "inv-monroe-residence-club",
     "name": "Monroe Residence Club",
     "url": "https://www.monroeresidenceclub.com/",
-    "at": "2026-09-03T13:36:42.329Z",
+    "at": "2026-09-04T13:33:48.728Z",
     "ok": false,
     "error": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://www.monroeresidenceclub.com/",
     "price_now": null,
@@ -512,19 +512,19 @@
     "id": "inv-orange-village-hostel",
     "name": "Orange Village Hostel",
     "url": "https://www.hostelworld.com/hostels/p/39781/orange-village-hostel/",
-    "at": "2026-09-03T13:36:42.548Z",
+    "at": "2026-09-04T13:33:48.976Z",
     "ok": true,
     "price_now": 690,
     "price_private_now": null,
     "beds_available": null,
     "bookable": true,
     "min_stay_nights": 1,
-    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 7.9 Very Good (2318) San Francisco, USA View map 0.43km from city centre 5+ staying Free WiFi Free Breakfast View all 50 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About Welcome to the Orange Village Hostel! Located in the heart of San Francisco",
+    "evidence": "Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2318) San Francisco, USA View map 0.43km from city centre 5+ staying Free WiFi Free Breakfast View all 50 facilities Book more than 3 days in advance for Free Cancellation. About House Rules Location Reviews Report About Welcome to the Orange Village Hostel! Located in the heart of San Francisco",
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -533,8 +533,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -548,7 +548,7 @@
     "id": "inv-samesun-san-francisco",
     "name": "Samesun San Francisco",
     "url": "https://www.hostelworld.com/hostels/p/310547/samesun-san-francisco/",
-    "at": "2026-09-03T13:36:57.017Z",
+    "at": "2026-09-04T13:34:03.394Z",
     "ok": true,
     "price_now": 690,
     "price_private_now": null,
@@ -559,8 +559,8 @@
     "windows": [
       {
         "window": {
-          "checkin": "2026-09-17",
-          "checkout": "2026-10-17",
+          "checkin": "2026-09-18",
+          "checkout": "2026-10-18",
           "nights": 30,
           "guests": 1
         },
@@ -569,8 +569,8 @@
       },
       {
         "window": {
-          "checkin": "2026-10-18",
-          "checkout": "2026-11-17",
+          "checkin": "2026-10-19",
+          "checkout": "2026-11-18",
           "nights": 30,
           "guests": 1
         },
@@ -584,49 +584,50 @@
     "id": "inv-sweden-house",
     "name": "Sweden House",
     "url": "https://www.urbanests.com/properties/sweden-house",
-    "at": "2026-09-03T13:37:11.511Z",
+    "at": "2026-09-04T13:34:17.625Z",
     "ok": true,
     "price_now": 1395,
     "price_private_now": 1395,
     "beds_available": null,
     "bookable": false,
     "min_stay_nights": null,
-    "evidence": "per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Sweden House 570 O'Farrell St, San Francisco, CA 94102, USA Single Rooms from $1395 1 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot "
+    "evidence": "per-person from $1395; single from $1395 - Home Properties Process Why Us? Contact Us Blog < Back Sweden House 570 O'Farrell St, San Francisco, CA 94102, USA Single Rooms from $1395 1 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot + Cold) Work Space Hi"
   },
   {
     "adapter": "urbanests",
     "id": "inv-the-bartlett-residences",
     "name": "The Bartlett Residences",
     "url": "https://www.urbanests.com/properties/bartlett",
-    "at": "2026-09-03T13:37:14.343Z",
+    "at": "2026-09-04T13:34:20.341Z",
     "ok": true,
     "price_now": 1295,
     "price_private_now": 1295,
     "beds_available": null,
     "bookable": false,
     "min_stay_nights": null,
-    "evidence": "per-person from $1295; single from $1295 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Bartlett Residences 240 O'Farrell St, San Francisco, CA 94102, USA Single Rooms from $1295 1,2 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heat"
+    "evidence": "per-person from $1295; single from $1295 - Home Properties Process Why Us? Contact Us Blog < Back The Bartlett Residences 240 O'Farrell St, San Francisco, CA 94102, USA Single Rooms from $1295 1,2 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater Sink (Hot + Cold) "
   },
   {
     "adapter": "urbanests",
     "id": "inv-the-herbert-residences",
     "name": "The Herbert Residences",
     "url": "https://www.urbanests.com/properties/the-herbert-residences",
-    "at": "2026-09-03T13:37:19.358Z",
-    "ok": true,
-    "price_now": 1295,
-    "price_private_now": 1295,
+    "at": "2026-09-04T13:34:24.368Z",
+    "ok": false,
+    "error": "page.goto: Timeout 45000ms exceeded.",
+    "price_now": null,
+    "price_private_now": null,
     "beds_available": null,
-    "bookable": false,
+    "bookable": null,
     "min_stay_nights": null,
-    "evidence": "per-person from $1295; single from $1295 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Herbert Residences 161 Powell St, San Francisco, CA 94102, USA Single Rooms from $1295 1,2 Occupancy I'm Interested! Click for Amazing Bonus Content OR Call Us @ 4159490067 Bedding Provided Regular Cleaning Room Heater S"
+    "evidence": ""
   },
   {
     "adapter": "urbanests",
     "id": "inv-the-perramont",
     "name": "The Perramont",
     "url": "https://www.urbanests.com/properties/the-perramont",
-    "at": "2026-09-03T13:37:22.174Z",
+    "at": "2026-09-04T13:35:09.443Z",
     "ok": true,
     "price_now": 1395,
     "price_private_now": 1395,
@@ -640,7 +641,7 @@
     "id": "inv-upmarket-residences",
     "name": "UpMarket Residences",
     "url": "https://www.urbanests.com/properties/upmarket-residences",
-    "at": "2026-09-03T13:37:24.977Z",
+    "at": "2026-09-04T13:35:12.261Z",
     "ok": true,
     "price_now": 995,
     "price_private_now": 995,
@@ -654,7 +655,7 @@
     "id": "inv-urbanests-1080-folsom-residences",
     "name": "UrbaNests 1080 Folsom Residences",
     "url": "https://www.urbanests.com/properties/1080-folsom-residences",
-    "at": "2026-09-03T13:37:27.785Z",
+    "at": "2026-09-04T13:35:17.317Z",
     "ok": true,
     "price_now": 1095,
     "price_private_now": 1095,

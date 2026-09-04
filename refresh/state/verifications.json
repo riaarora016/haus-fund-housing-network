@@ -5,12 +5,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:07.534Z",
+    "last_verified": "2026-09-04T13:31:09.892Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-09-02 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-09-03 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-08-22 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) — 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-09-02 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-09-03 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi | [2026-09-04 scrape:pricetext] pricetext: monthly from $1550 (explicit /mo) - 20mish Rates Community Art & Archives Contact Not just a place to crash. 20mish is a 40-bedroom co-living space in the Missi",
+    "updated_at": "2026-09-04T13:35:27.215Z"
   },
   "inv-221-7th-street-residences": {
     "price_now": 1095,
@@ -18,24 +18,24 @@
     "min_stay_nights": 90,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:11.081Z",
+    "last_verified": "2026-09-04T13:31:13.356Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residence",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-08-22 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month — Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residences 221 7th Street, San | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residence | [2026-09-04 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 221 7th Street Residence",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-amsterdam-hostel": {
     "price_now": 690,
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:43.044Z",
+    "last_verified": "2026-09-04T13:31:46.800Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre 10+  | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre 10+  | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre 10+  | [2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre stay | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre stay",
-    "updated_at": "2026-09-03T13:37:38.044Z",
+    "next_check": "2026-09-05",
+    "notes": "[2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre 10+  | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre 10+  | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre 10+  | [2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre stay | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre stay | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Amsterdam Hostel 8.4 Fabulous (3881) San Francisco, USA View map 0.42km from city centre stay",
+    "updated_at": "2026-09-04T13:35:27.216Z",
     "price_private_now": null
   },
   "inv-european-hostel": {
@@ -43,12 +43,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:35:12.218Z",
+    "last_verified": "2026-09-04T13:32:15.857Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-09-02 scrape:urbanests] urbanests: per-person from $545 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​  | [2026-09-03 scrape:urbanests] urbanests: per-person from $545 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ ",
-    "updated_at": "2026-09-03T13:37:38.044Z",
+    "next_check": "2026-09-05",
+    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-08-22 scrape:urbanests] urbanests: per-person from $545 — Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ single, double, quad, | [2026-09-02 scrape:urbanests] urbanests: per-person from $545 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​  | [2026-09-03 scrape:urbanests] urbanests: per-person from $545 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​  | [2026-09-04 scrape:urbanests] urbanests: per-person from $545 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back European Hostel 761 Minna St, San Francisco, CA 94103, USA ​ ",
+    "updated_at": "2026-09-04T13:35:27.216Z",
     "price_private_now": null
   },
   "inv-hive-coliving-was-tribe": {
@@ -56,12 +56,12 @@
     "min_stay_nights": 120,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:18.594Z",
+    "last_verified": "2026-09-04T13:33:23.387Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-09-02 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-09-03 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att",
-    "updated_at": "2026-09-03T13:37:38.044Z",
+    "next_check": "2026-09-05",
+    "notes": "[2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-08-22 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) — Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-09-02 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-09-03 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att | [2026-09-04 scrape:pricetext] pricetext: monthly from $800 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Double Rooms Discover att",
+    "updated_at": "2026-09-04T13:35:27.216Z",
     "price_private_now": null
   },
   "inv-orange-village-hostel": {
@@ -69,12 +69,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:42.548Z",
+    "last_verified": "2026-09-04T13:33:48.976Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 7.9 Very Good (2318) San Francisco, USA View map 0.43km from city centr | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 7.9 Very Good (2318) San Francisco, USA View map 0.43km from city centr",
-    "updated_at": "2026-09-03T13:37:38.045Z",
+    "next_check": "2026-09-05",
+    "notes": "[2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-08-22 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2315) San Francisco, USA View map 0.43km from city centr | [2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 7.9 Very Good (2318) San Francisco, USA View map 0.43km from city centr | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 7.9 Very Good (2318) San Francisco, USA View map 0.43km from city centr | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Orange Village Hostel 8.0 Very Good (2318) San Francisco, USA View map 0.43km from city centr",
+    "updated_at": "2026-09-04T13:35:27.216Z",
     "price_private_now": null
   },
   "inv-upmarket-residences": {
@@ -83,12 +83,12 @@
     "min_stay_nights": 90,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:37:24.977Z",
+    "last_verified": "2026-09-04T13:35:12.261Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-09-02 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412  | [2026-09-03 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 ",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-08-22 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month — Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 Market Street, San Fr | [2026-09-02 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412  | [2026-09-03 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412  | [2026-09-04 scrape:urbanests] urbanests: per-person from $995; single from $995; min 3 - 12 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back UpMarket Residences 1412 ",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-1214-polk-street-residences": {
     "price_now": 1395,
@@ -96,12 +96,12 @@
     "min_stay_nights": 180,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:04.584Z",
+    "last_verified": "2026-09-04T13:31:04.252Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1214 Polk Street Residen | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1214 Polk Street Residen",
-    "updated_at": "2026-09-03T13:37:38.043Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1214 Polk Street Residen | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1214 Polk Street Residen | [2026-09-04 scrape:urbanests] urbanests: per-person from $1395; single from $1395; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1214 Polk Street Residen",
+    "updated_at": "2026-09-04T13:35:27.215Z"
   },
   "inv-2436-mission-residences": {
     "price_now": 1095,
@@ -109,12 +109,12 @@
     "min_stay_nights": 180,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:13.875Z",
+    "last_verified": "2026-09-04T13:31:16.093Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 2436 Mission Residences  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 2436 Mission Residences ",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 2436 Mission Residences  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 2436 Mission Residences  | [2026-09-04 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 2436 Mission Residences ",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-251-9th-street-residences": {
     "price_now": 1095,
@@ -122,12 +122,12 @@
     "min_stay_nights": 180,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:16.641Z",
+    "last_verified": "2026-09-04T13:31:18.853Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 251 9th Street Residence | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Home Properties Process Why Us? Contact Us Blog < Back 251 9th Street Residences 251 9th Street, San",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 251 9th Street Residence | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Home Properties Process Why Us? Contact Us Blog < Back 251 9th Street Residences 251 9th Street, San | [2026-09-04 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 6 - 8 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 251 9th Street Residence",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-371-columbus-residences": {
     "price_now": 1095,
@@ -135,12 +135,12 @@
     "min_stay_nights": 90,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:19.409Z",
+    "last_verified": "2026-09-04T13:31:23.448Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 371 Columbus Residences  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 371 Columbus Residences ",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 371 Columbus Residences  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 371 Columbus Residences  | [2026-09-04 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 4 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 371 Columbus Residences ",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-524-columbus-residences": {
     "price_now": 1095,
@@ -148,12 +148,12 @@
     "min_stay_nights": 90,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:22.182Z",
+    "last_verified": "2026-09-04T13:31:26.181Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 524 Columbus Residences  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Home Properties Process Why Us? Contact Us Blog < Back 524 Columbus Residences 524 Columbus Avenue, ",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 524 Columbus Residences  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Home Properties Process Why Us? Contact Us Blog < Back 524 Columbus Residences 524 Columbus Avenue,  | [2026-09-04 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 524 Columbus Residences ",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-556-green-st-residences": {
     "price_now": 1395,
@@ -161,12 +161,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:24.972Z",
+    "last_verified": "2026-09-04T13:31:28.952Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 556 Green St. Residences 556 Green Street | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 556 Green St. Residences 556 Green Street",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 556 Green St. Residences 556 Green Street | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 556 Green St. Residences 556 Green Street | [2026-09-04 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 556 Green St. Residences 556 Green Street",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-adelaide-hostel": {
     "price_now": 630,
@@ -174,12 +174,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:27.738Z",
+    "last_verified": "2026-09-04T13:31:31.677Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Adelaide Hostel 8.9 Fabulous (284) San Francisco, USA View map 0.39km from city centre stayin | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Adelaide Hostel 8.9 Fabulous (284) San Francisco, USA View map 0.39km from city centre stayin",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Adelaide Hostel 8.9 Fabulous (284) San Francisco, USA View map 0.39km from city centre stayin | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Adelaide Hostel 8.9 Fabulous (284) San Francisco, USA View map 0.39km from city centre stayin | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Adelaide Hostel 8.9 Fabulous (284) San Francisco, USA View map 0.39km from city centre stayin",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-bposhtels-sf-union-square": {
     "price_now": 630,
@@ -187,12 +187,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:34:57.652Z",
+    "last_verified": "2026-09-04T13:32:01.148Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Bposhtels San Francisco - Union Square 9.2 Superb (23) San Francisco, USA View map 0.39km fro | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Bposhtels San Francisco - Union Square 9.2 Superb (23) San Francisco, USA View map 0.39km fro",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Bposhtels San Francisco - Union Square 9.2 Superb (23) San Francisco, USA View map 0.39km fro | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Bposhtels San Francisco - Union Square 9.2 Superb (23) San Francisco, USA View map 0.39km fro | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Bposhtels San Francisco - Union Square 9.2 Superb (23) San Francisco, USA View map 0.39km fro",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-foundry-coliving": {
     "price_now": 2290,
@@ -200,12 +200,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:35:26.947Z",
+    "last_verified": "2026-09-04T13:32:32.844Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:pricetext] pricetext: monthly from $2290 (loose $ match - verify) - The Foundry Live with Ambition What Residents Get Pricing FAQ's Blog Schedule Tour A hacker house and coliving for | [2026-09-03 scrape:pricetext] pricetext: monthly from $2290 (loose $ match - verify) - The Foundry Live with Ambition What Residents Get Pricing FAQ's Blog Schedule Tour A hacker house and coliving for",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:pricetext] pricetext: monthly from $2290 (loose $ match - verify) - The Foundry Live with Ambition What Residents Get Pricing FAQ's Blog Schedule Tour A hacker house and coliving for | [2026-09-03 scrape:pricetext] pricetext: monthly from $2290 (loose $ match - verify) - The Foundry Live with Ambition What Residents Get Pricing FAQ's Blog Schedule Tour A hacker house and coliving for | [2026-09-04 scrape:pricetext] pricetext: monthly from $2290 (loose $ match - verify) - The Foundry Live with Ambition What Residents Get Pricing FAQ's Blog Schedule Tour A hacker house and coliving for",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-green-tortoise-hostel": {
     "price_now": 630,
@@ -213,12 +213,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:35:31.162Z",
+    "last_verified": "2026-09-04T13:32:36.592Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Green Tortoise Hostel 9.4 Superb (2856) San Francisco, USA View map 1.14km from city centre 5 | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Green Tortoise Hostel 9.4 Superb (2856) San Francisco, USA View map 1.14km from city centre 5",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Green Tortoise Hostel 9.4 Superb (2856) San Francisco, USA View map 1.14km from city centre 5 | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Green Tortoise Hostel 9.4 Superb (2856) San Francisco, USA View map 1.14km from city centre 5 | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Green Tortoise Hostel 9.4 Superb (2856) San Francisco, USA View map 1.14km from city centre 6",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-hi-fisherman-s-wharf-hostel": {
     "price_now": 630,
@@ -226,12 +226,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:35:45.559Z",
+    "last_verified": "2026-09-04T13:32:50.957Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Fisherman’s Wharf Hostel 9.0 Fabulous (3216) San Francisco, USA View map 2.7 | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Fisherman’s Wharf Hostel 9.0 Superb (3217) San Francisco, USA View map 2.77k",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Fisherman’s Wharf Hostel 9.0 Fabulous (3216) San Francisco, USA View map 2.7 | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Fisherman’s Wharf Hostel 9.0 Superb (3217) San Francisco, USA View map 2.77k | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Fisherman’s Wharf Hostel 9.0 Fabulous (3217) San Francisco, USA View map 2.7",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-hi-san-francisco-downtown": {
     "price_now": 630,
@@ -239,12 +239,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:00.261Z",
+    "last_verified": "2026-09-04T13:33:05.323Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Downtown Hostel 8.8 Fabulous (7242) San Francisco, USA View map 0.25km from  | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Downtown Hostel 8.8 Fabulous (7242) San Francisco, USA View map 0.25km from ",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Downtown Hostel 8.8 Fabulous (7242) San Francisco, USA View map 0.25km from  | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Downtown Hostel 8.8 Fabulous (7242) San Francisco, USA View map 0.25km from  | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel HI San Francisco Downtown Hostel 8.8 Fabulous (7242) San Francisco, USA View map 0.25km from ",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-hive-coliving-bunks": {
     "price_now": 575,
@@ -252,12 +252,12 @@
     "min_stay_nights": 120,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:14.977Z",
+    "last_verified": "2026-09-04T13:33:20.019Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:pricetext] pricetext: monthly from $575 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Triple Rooms We Make Livi | [2026-09-03 scrape:pricetext] pricetext: monthly from $575 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Triple Rooms We Make Livi",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:pricetext] pricetext: monthly from $575 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Triple Rooms We Make Livi | [2026-09-03 scrape:pricetext] pricetext: monthly from $575 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Triple Rooms We Make Livi | [2026-09-04 scrape:pricetext] pricetext: monthly from $575 (explicit /mo) - Tribe Coliving is now Hive Coliving Call Us!    Rooms About Lifestyle Blog Gallery Meet With Us! Triple Rooms We Make Livi",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-hotel-epik-residences": {
     "price_now": 995,
@@ -265,12 +265,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:21.907Z",
+    "last_verified": "2026-09-04T13:33:26.628Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $995; single from $995 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Hotel Epik Residences 706 Polk St, San Fran | [2026-09-03 scrape:urbanests] urbanests: per-person from $995; single from $995 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Hotel Epik Residences 706 Polk St, San Fran",
-    "updated_at": "2026-09-03T13:37:38.044Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $995; single from $995 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Hotel Epik Residences 706 Polk St, San Fran | [2026-09-03 scrape:urbanests] urbanests: per-person from $995; single from $995 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Hotel Epik Residences 706 Polk St, San Fran | [2026-09-04 scrape:urbanests] urbanests: per-person from $995; single from $995 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Hotel Epik Residences 706 Polk St, San Fran",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-ith-pacific-tradewinds": {
     "price_now": 630,
@@ -278,12 +278,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:24.677Z",
+    "last_verified": "2026-09-04T13:33:29.526Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel ITH Pacific Tradewinds Hostel 9.6 Superb (487) San Francisco, USA View map 0.72km from city c | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel ITH Pacific Tradewinds Hostel 9.6 Superb (487) San Francisco, USA View map 0.72km from city c",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel ITH Pacific Tradewinds Hostel 9.6 Superb (487) San Francisco, USA View map 0.72km from city c | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel ITH Pacific Tradewinds Hostel 9.6 Superb (487) San Francisco, USA View map 0.72km from city c | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel ITH Pacific Tradewinds Hostel 9.6 Superb (487) San Francisco, USA View map 0.72km from city c",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-lovely-north-beach-chinatown-hotel": {
     "price_now": 1495,
@@ -291,12 +291,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:39.563Z",
+    "last_verified": "2026-09-04T13:33:44.358Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1495; single from $1495 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Lovely North Beach / Chinatown Hotel 615  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1495; single from $1495 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Lovely North Beach / Chinatown Hotel 615 ",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1495; single from $1495 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Lovely North Beach / Chinatown Hotel 615  | [2026-09-03 scrape:urbanests] urbanests: per-person from $1495; single from $1495 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Lovely North Beach / Chinatown Hotel 615  | [2026-09-04 scrape:urbanests] urbanests: per-person from $1495; single from $1495 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Lovely North Beach / Chinatown Hotel 615 ",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-samesun-san-francisco": {
     "price_now": 690,
@@ -304,12 +304,12 @@
     "min_stay_nights": 1,
     "bookable_online": true,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:36:57.017Z",
+    "last_verified": "2026-09-04T13:34:03.394Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Samesun San Francisco 8.3 Fabulous (684) San Francisco, USA View map 2.12km from city centre  | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Samesun San Francisco 8.3 Fabulous (685) San Francisco, USA View map 2.12km from city centre ",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Samesun San Francisco 8.3 Fabulous (684) San Francisco, USA View map 2.12km from city centre  | [2026-09-03 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Samesun San Francisco 8.3 Fabulous (685) San Francisco, USA View map 2.12km from city centre  | [2026-09-04 scrape:hostelworld] hostelworld: Where do you want to go? Dates Guests Let's go! English USD Hostel Samesun San Francisco 8.3 Fabulous (685) San Francisco, USA View map 2.12km from city centre ",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-sweden-house": {
     "price_now": 1395,
@@ -317,12 +317,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:37:11.511Z",
+    "last_verified": "2026-09-04T13:34:17.625Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Sweden House 570 O'Farrell St, San Franci | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Sweden House 570 O'Farrell St, San Franci",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Sweden House 570 O'Farrell St, San Franci | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back Sweden House 570 O'Farrell St, San Franci | [2026-09-04 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Home Properties Process Why Us? Contact Us Blog < Back Sweden House 570 O'Farrell St, San Francisco, CA 94102, USA Si",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-the-bartlett-residences": {
     "price_now": 1295,
@@ -330,12 +330,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:37:14.343Z",
+    "last_verified": "2026-09-04T13:34:20.341Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1295; single from $1295 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Bartlett Residences 240 O'Farrell St, | [2026-09-03 scrape:urbanests] urbanests: per-person from $1295; single from $1295 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Bartlett Residences 240 O'Farrell St,",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1295; single from $1295 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Bartlett Residences 240 O'Farrell St, | [2026-09-03 scrape:urbanests] urbanests: per-person from $1295; single from $1295 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Bartlett Residences 240 O'Farrell St, | [2026-09-04 scrape:urbanests] urbanests: per-person from $1295; single from $1295 - Home Properties Process Why Us? Contact Us Blog < Back The Bartlett Residences 240 O'Farrell St, San Francisco, CA 94",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-the-herbert-residences": {
     "price_now": 1295,
@@ -356,12 +356,12 @@
     "min_stay_nights": null,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:37:22.174Z",
+    "last_verified": "2026-09-04T13:35:09.443Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Perramont 2162 Market St, San Francis | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Perramont 2162 Market St, San Francis",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Perramont 2162 Market St, San Francis | [2026-09-03 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Perramont 2162 Market St, San Francis | [2026-09-04 scrape:urbanests] urbanests: per-person from $1395; single from $1395 - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back The Perramont 2162 Market St, San Francis",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   },
   "inv-urbanests-1080-folsom-residences": {
     "price_now": 1095,
@@ -369,11 +369,11 @@
     "min_stay_nights": 90,
     "bookable_online": false,
     "beds_available": null,
-    "last_verified": "2026-09-03T13:37:27.785Z",
+    "last_verified": "2026-09-04T13:35:17.317Z",
     "verified_via": "booking-page",
     "confidence": "high",
-    "next_check": "2026-09-04",
-    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1080 Folsom Residences 1 | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1080 Folsom Residences 1",
-    "updated_at": "2026-09-03T13:37:38.045Z"
+    "next_check": "2026-09-05",
+    "notes": "[2026-09-02 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1080 Folsom Residences 1 | [2026-09-03 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1080 Folsom Residences 1 | [2026-09-04 scrape:urbanests] urbanests: per-person from $1095; single from $1095; min 3 - 5 month - Skip to Main Content Home Properties Process Why Us? Contact Us Blog < Back 1080 Folsom Residences 1",
+    "updated_at": "2026-09-04T13:35:27.216Z"
   }
 }
